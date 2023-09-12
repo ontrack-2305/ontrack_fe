@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   root "welcome#index"
+
+  get "/auth/:provider/callback" => "sessions#omniauth"
 end
