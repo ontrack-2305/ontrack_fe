@@ -57,6 +57,10 @@ group :development, :test do
   gem "launchy"
   gem "orderly"
   gem "simplecov"
+  gem "dotenv-rails"
+  gem "omniauth"
+  gem "omniauth-google-oauth2"
+  gem "omniauth-rails_csrf_protection"
 end
 
 group :development do
