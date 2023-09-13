@@ -1,6 +1,5 @@
 class TasksController < ApplicationController 
   # before_action :find_user
-  # before_action :convert_time_needed, only: [:create]
   
   def index 
 
@@ -11,17 +10,23 @@ class TasksController < ApplicationController
   end
 
   def create
-    response = DatabaseService.new.post(task_params) #pass in user_id
+    response = TasksFacade.new.post(task_params, session[:user_id])
     # Refactor to facade later
-    redirect_to new_task_path if params[:create_another]
-    redirect_to dashboard_path if params[:commit]
-    flash[:notice] = JSON.parse(response.body)["message"]
+    if response.status == 200
+      redirect_to new_task_path if params[:create_another]
+      redirect_to dashboard_path if params[:commit]
+      flash[:notice] = JSON.parse(response.body)["message"]
+    elsif response.status == 400
+      redirect_to new_task_path 
+      flash[:notice] = JSON.parse(response.body)["errors"][0]["detail"]
+      # incorporate ActionCable to stay on page instead of refresh?
+    end
   end
 
   private 
 
   def task_params
-    hash = params.permit(:name, :type, :mandatory, :event_date, :frequency, :description, :estimated_time, :prerequisite).to_h
+    hash = params.permit(:name, :type, :mandatory, :event_date, :frequency, :notes, :estimated_time).to_h
     hash[:time_needed] = time_needed
     hash
   end
