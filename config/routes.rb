@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   # root "articles#index"
   root "welcome#index"
 
-  get "/auth/:provider/callback" => "sessions#omniauth"
+  get "/auth/google_oauth2/callback", to: "sessions#create", as: "google_login"
 end
