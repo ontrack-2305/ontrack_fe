@@ -16,14 +16,14 @@
   <%= form.date_field :event_date %>
 
   <%= form.label "Frequency" %>
-  <%= form.select :frequency, options: ["One Time", "Daily", "Weekly", "Monthly"] %><br>
+  <%= form.select :frequency, options: ["One Time", "Daily", "Weekly", "Monthly", "Annual"] %><br>
 
   <%= form.label "Expected time needed" %>
   <%= form.number_field :hours %>H
   <%= form.number_field :minutes %>M *<br>
 
-  <%= form.label "Description" %>
-  <%= form.text_field :description, size: "100", height: "100" %><br>
+  <%= form.label "Notes" %>
+  <%= form.text_field :notes, size: "100" %><br>
 
   <%= form.submit "Save and Back to Dashboard" %>
   <%= form.submit "Save and Create Another Task", name: "create_another" %>
