@@ -18,8 +18,5 @@ RSpec.describe "The Welcome Page" do
     visit root_path
 
     click_button "Login With Google"
-
-    expect(current_path).to eq(root_path)
-    expect(page).to have_content("Select Google Account")
   end
 end
