@@ -4,15 +4,12 @@ class SessionsController < ApplicationController
   
   def create
     user_info = request.env['omniauth.auth']
-    require 'pry'; binding.pry
-    user = User.find_by(google_id: user_info['uid'])
+    user = User.find_or_create_by(google_id: user_info['uid'])
+    user.name = user_info[:info][:name]
+    user.email = user_info[:info][:email]
+    user.token = user_info[:credentials][:token]
 
-    user ||= User.create!(
-      name: user_info['info']['name'],
-      email: user_info['info']['email'],
-      google_id: user_info['uid']
-    )
-    if user.valid?
+    if user.save
       session[:user_id] = user.id 
       redirect_to dashboard_path(user.id)
     else
