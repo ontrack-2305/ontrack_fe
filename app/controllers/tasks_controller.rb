@@ -11,7 +11,6 @@ class TasksController < ApplicationController
 
   def create
     response = TasksFacade.new.post(task_params, session[:user_id])
-    # Refactor to facade later
     if response.status == 200
       redirect_to new_task_path if params[:create_another]
       redirect_to dashboard_path if params[:commit]
