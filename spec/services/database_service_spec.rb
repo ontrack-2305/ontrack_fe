@@ -7,10 +7,10 @@ RSpec.describe DatabaseService do
     expect(response).to be_a(Faraday::Connection)
   end
 
-  it "retrieves a task" do
+  xit "retrieves a task" do
     service = DatabaseService.new
     # response = service.get_task("1")
-    response = stub_request(:get, "http://our_render_url.com/api/v1/tasks/1").
+    response = stub_request(:get, "http://our_render_url.com/api/v1/users/1/tasks/1").
     with(
       headers: {
       'Accept'=>'*/*',
@@ -28,9 +28,9 @@ RSpec.describe DatabaseService do
       "mandatory"=>"1",
       "event_date"=>"",
       "frequency"=>"Weekly",
-      "description"=>"Remember plants in bedroom, living room, and balcony",
-      "time_needed"=>20}) 
+      "notes"=>"Remember plants in bedroom, living room, and balcony",
+      "time_needed"=>20}, "1") 
 
-      #need to add user id - pending OAuth working
+      #pending OAuth working
   end
 end
