@@ -1,0 +1,32 @@
+<%= button_to "All tasks", tasks_path, method: :get %>
+<%= button_to "Dashboard", dashboard_path, method: :get %>
+
+<% # repurpose into a partial later? %>
+<%= form_with url: tasks_path do |form| %>
+  <%= form.label "Task name" %>
+  <%= form.text_field :name %>*<br>
+
+  <%= form.label "Task type" %>
+  <%= form.select :type, options: ["", "Rest", "Hobby", "Chore"] %>*<br>
+
+  <%= form.label "Mandatory?" %>
+  <%= form.check_box :mandatory %><br>
+
+  <%= form.label "Event date" %>
+  <%= form.date_field :event_date %>
+
+  <%= form.label "Frequency" %>
+  <%= form.select :frequency, options: ["One Time", "Daily", "Weekly", "Monthly", "Annual"] %><br>
+
+  <%= form.label "Expected time needed" %>
+  <%= form.number_field :hours %>H
+  <%= form.number_field :minutes %>M *<br>
+
+  <%= form.label "Notes" %>
+  <%= form.text_field :notes, size: "100" %><br>
+
+  <%= form.submit "Save and Back to Dashboard" %>
+  <%= form.submit "Save and Create Another Task", name: "create_another" %>
+<% end %>
+
+<p>Mandatory fields marked with a *</p>
