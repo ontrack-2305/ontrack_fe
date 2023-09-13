@@ -1,14 +1,18 @@
 class DatabaseService
-  def post(attributes_hash)
-    connection.post("api/v1/tasks") do |faraday|
+  def post(attributes_hash, user_id)
+    connection.post("api/v1/users/#{user_id}/tasks") do |faraday|
       attributes_hash.each do |key, value|
         faraday.params[key] = value
       end
     end
   end
 
-  def get_task(id)
-    connection.get("api/v1/tasks/#{id}")
+  def get_task(task_id, user_id)
+    connection.get("api/v1/users/#{user_id}/tasks/#{task_id}")
+  end
+
+  def get_tasks(user_id)
+    connection.get("api/v1/users/#{user_id}/tasks")
   end
 
   def connection
