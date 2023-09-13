@@ -11,9 +11,10 @@ RSpec.describe "The Welcome Page" do
 
   it "allows me to register for the app with Google" do
     visit root_path
-
+    # save_and_open_page
     click_button "Login With Google"
 
     expect(current_path).to eq(root_path)
+    expect(page).to have_content("Select Google Account")
   end
 end
