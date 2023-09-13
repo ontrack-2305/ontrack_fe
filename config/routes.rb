@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  resources :tasks, only: [:new, :index]
+  get "/dashboard", to: "users#show"
+  resources :tasks, only: [:new, :index, :create]
 end
