@@ -54,10 +54,14 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem "simplecov"
   gem "rspec-rails"
-  gem "webmock"
-  gem "vcr"
   gem "capybara"
   gem "launchy"
+  gem "pry"
+end
+
+group :test do
+  gem "webmock"
+  # gem "vcr"
 end
 
 group :development do
