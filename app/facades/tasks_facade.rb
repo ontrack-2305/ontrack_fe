@@ -20,6 +20,10 @@ class TasksFacade
     @tasks_by_id[task_id] ||= fetch_task(task_id, user_id)
   end
 
+  def delete(task_id, user_id)
+    service.destroy(task_id, user_id)
+  end
+
   def fetch_task(task_id, user_id)
     response = service.get_task(task_id, user_id)
     parsed = JSON.parse(response.body, symbolize_names: true)
