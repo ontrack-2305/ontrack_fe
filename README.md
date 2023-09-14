@@ -14,7 +14,7 @@ This is an SOA app and needs both this repo (front end) AND [![GitHub](https://i
 ### Mod 3 Group Consultancy Project
 OnTrack is a .... Designed for ...... OnTrack has the ability for registered users to ..... 
                                                   <br><br>
-                    <img src="LOGO GOES HERE" width="600" height="400">
+                    <img src="app/assets/images/791227AB-0F84-42C9-9EE3-0BA462397545.png" width="300" height="300">
                     
 
 ## Built With
@@ -52,7 +52,15 @@ rails db:{create,migrate}
 ```
 5. RAILS CREDENTIALS STEPS
 ```
-ADD STEPS HERE
+Run this command to open your credentials file:
+  EDITOR="code --wait" bin/rails credentials:edit
+Add your API key to the credentials file, formatted something like this:
+  google:
+    GOOGLE_CLIENT_ID: hg39874yt1vfh394uhi
+    GOOGLE_CLIENT_SECRET: 934786012394687
+
+You can then call on this API key anytime like this!:
+Rails.application.credentials.google[:google_client_id]
 ```
 6. Get your API key at: https://code.google.com/apis/console/ Note the Client ID and the Client Secret.
 ```
@@ -108,10 +116,12 @@ git push origin feature/AmazingFeature
 
 ## Schema
 ```
-    t.string "name"
     t.string "email"
     t.string "token"
     t.string "google_id"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "refresh_token"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
 ```
