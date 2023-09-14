@@ -58,9 +58,7 @@ ADD STEPS HERE
 ```
 - For more details, read the Google docs: https://developers.google.com/accounts/docs/OAuth2
     - Put your Client ID after `GOOGLE_CLIENT_ID:`
-    - PUT you CLIENT SECRET after `GOOGLE_CLIENT_SECRET:`
-- Create your AWS S3 bucket with these instructions: https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html
-  - Put the relavent information into the application.yml file for `AWS_ACCESS_KEY: AWS_SECRET_ACCESS_KEY: BUCKET_NAME: AWS_REGION:` 
+    - PUT you CLIENT SECRET after `GOOGLE_CLIENT_SECRET:` 
 ```
 7. Run Tests in the terminal to verify everything was set up correctly
 ```
@@ -75,7 +73,7 @@ rails s
 ```
 - Open a web browser and navigate to `http://localhost:5000`
 - The welcome page should display
-- Note: To be able to have full functionality of the site you will also need to setup the backend repo, setup instructions can be found here: [lend-a-toolza](https://github.com/NickTassinari/lend-a-toolza-fe)
+- Note: To be able to have full functionality of the site you will also need to setup the backend repo, setup instructions can be found here: [OnTrack](https://github.com/ontrack-2305/ontrack_be)
 ```
 
 ### <b>Contribute your own code</b>
