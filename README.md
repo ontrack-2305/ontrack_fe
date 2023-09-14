@@ -81,7 +81,7 @@ rails s
 ```
 - Open a web browser and navigate to `http://localhost:5000`
 - The welcome page should display
-- Note: To be able to have full functionality of the site you will also need to setup the backend repo, setup instructions can be found here: [OnTrack](https://github.com/ontrack-2305/ontrack_be)
+- Note: To be able to have full functionality of the site you will also need to setup the backend repo, setup instructions can be found here: [OnTrack Back end repo](https://github.com/ontrack-2305/ontrack_be)
 ```
 
 ### <b>Contribute your own code</b>
@@ -130,7 +130,15 @@ git push origin feature/AmazingFeature
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 ## Thoughts for future contributions:
-ADD MIRO BOARD STICKY NOTES HERE
+- Upcoming birthday notifications
+- Screen reader friendly
+- Choose which holidays a user can be reminded about
+- Choose different country holidays
+- Link holidays and events to people: "Mother's Day, send Mom something
+- Language translation
+- Attach photos such as grocery lists
+- Standalone app
+- Task templates
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
