@@ -1,6 +1,7 @@
 <%= button_to "All tasks", tasks_path, method: :get %>
 <%= button_to "Dashboard", dashboard_path, method: :get %>
-
+<%= button_to "Delete", task_path(@task.id), method: :delete, form: { data: {turbo_confirm: "Are you sure?"}} %>
+<% # can't test whether confirm shows up- test this when BE works and can spin up a server %>
 <% # repurpose into a partial later? (used in new and show) %>
 <%= form_with url: task_path(@task.id), method: :patch do |form| %>
   <%= form.label "Task name" %>
