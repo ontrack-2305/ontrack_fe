@@ -15,6 +15,10 @@ class DatabaseService
     end
   end
 
+  def destroy(task_id, user_id)
+    connection.delete("api/v1/users/#{user_id}/tasks/#{task_id}")
+  end
+
   def get_task(task_id, user_id)
     connection.get("api/v1/users/#{user_id}/tasks/#{task_id}")
   end
