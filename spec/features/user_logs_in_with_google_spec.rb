@@ -31,7 +31,6 @@ RSpec.describe "The Welcome Page" do
     click_button "Login With Google"
 
     expect(current_path).to eq(dashboard_path)
-
     expect(page).to have_content("Welcome, Dani!")
     expect(page).to have_link("Logout")
 
@@ -39,6 +38,7 @@ RSpec.describe "The Welcome Page" do
 
     expect(page).to have_content("Welcome, Dani!")
     expect(page).to have_link("Logout")
+    save_and_open_page
     expect(page).to_not have_button("Login With Google")
   end
 end
