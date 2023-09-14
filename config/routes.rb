@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   get "/dashboard", to: "users#show"
 
   get 'auth/:provider/callback',  to: 'sessions#create'
-  get 'auth/failure', to: redirect('/')
+  # get 'auth/failure', to: redirect('/')
 end
