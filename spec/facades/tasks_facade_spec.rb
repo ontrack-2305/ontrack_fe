@@ -46,15 +46,15 @@ RSpec.describe TasksFacade do
 
   it "can update a task" do
     json_response = {message: "Changes saved!"}.to_json
-    stub_request(:patch, "http://our_render_url.com/api/v1/users/1/tasks?event_date=&frequency=Weekly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20&category=Chore").
-    with(
-      headers: {
-     'Accept'=>'*/*',
-     'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-     'Content-Length'=>'0',
-     'User-Agent'=>'Faraday v2.7.11'
-      }).
-    to_return(status: 200, body: json_response)
+    stub_request(:patch, "http://our_render_url.com/api/v1/users/1/tasks/?category=Chore&event_date=&frequency=Weekly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20").
+         with(
+           headers: {
+          'Accept'=>'*/*',
+          'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+          'Content-Length'=>'0',
+          'User-Agent'=>'Faraday v2.7.11'
+           }).
+         to_return(status: 200, body: json_response)
 
     facade = TasksFacade.new
     response = facade.patch({"name"=>"Water Plants",
