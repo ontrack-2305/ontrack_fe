@@ -3,15 +3,15 @@ require "rails_helper"
 RSpec.describe "Task Create Page" do
   before(:each) do
     # insert helper method to log in a user here when user database exists
-
+    # because all of these should only pass if the user is logged in
     visit new_task_path
   end
 
   it "has a form to create a task" do
     expect(page).to have_content("Task name")
     expect(page).to have_field(:name)
-    expect(page).to have_content("Task type")
-    expect(page).to have_select(:type, with_options: ["", "Rest", "Hobby", "Chore"])
+    expect(page).to have_content("Task category")
+    expect(page).to have_select(:category, with_options: ["", "Rest", "Hobby", "Chore"])
     expect(page).to have_content("Mandatory?")
     expect(page).to have_unchecked_field(:mandatory)
     expect(page).to have_content("Event date")
@@ -47,7 +47,7 @@ RSpec.describe "Task Create Page" do
 
   it "creates a task for the user who is logged in" do
     json_response = {message: "'Water Plants' added!"}.to_json
-    stub_request(:post, "http://our_render_url.com/api/v1/users//tasks?event_date=&frequency=Weekly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20&type=Chore").
+    stub_request(:post, "http://our_render_url.com/api/v1/users//tasks?category=Chore&event_date=&frequency=Weekly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20").
          with(
            headers: {
           'Accept'=>'*/*',
@@ -62,7 +62,7 @@ RSpec.describe "Task Create Page" do
 
     visit new_task_path
     fill_in(:name, with: "Water Plants")
-    select("Chore", from: :type)
+    select("Chore", from: :category)
     check(:mandatory)
     select("Weekly", from: :frequency)
     fill_in(:minutes, with: 20)
@@ -77,7 +77,7 @@ RSpec.describe "Task Create Page" do
 
   it "can refresh page to create another task if 'create and make another' is clicked" do
     json_response = {message: "'Water Plants' added!"}.to_json
-    stub_request(:post, "http://our_render_url.com/api/v1/users//tasks?event_date=&frequency=Weekly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20&type=Chore").
+    stub_request(:post, "http://our_render_url.com/api/v1/users//tasks?event_date=&frequency=Weekly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20&category=Chore").
          with(
            headers: {
           'Accept'=>'*/*',
@@ -92,7 +92,7 @@ RSpec.describe "Task Create Page" do
 
     visit new_task_path
     fill_in(:name, with: "Water Plants")
-    select("Chore", from: :type)
+    select("Chore", from: :category)
     check(:mandatory)
     select("Weekly", from: :frequency)
     fill_in(:minutes, with: 20)
@@ -107,8 +107,8 @@ RSpec.describe "Task Create Page" do
   end
 
   it "does not create a task if any mandatory fields are missing" do
-    json_response = {errors: [{detail: "Validation failed: Name can't be blank, type can't be blank, time needed can't be blank"}]}.to_json
-    stub_request(:post, "http://our_render_url.com/api/v1/users//tasks?event_date=&frequency=One%20Time&mandatory=0&name=&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=0&type=").
+    json_response = {errors: [{detail: "Validation failed: Name can't be blank, category can't be blank, time needed can't be blank"}]}.to_json
+    stub_request(:post, "http://our_render_url.com/api/v1/users//tasks?event_date=&frequency=One%20Time&mandatory=0&name=&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=0&category=").
          with(
            headers: {
           'Accept'=>'*/*',
@@ -121,12 +121,12 @@ RSpec.describe "Task Create Page" do
     expect(page).to have_content("Mandatory fields marked with a *")
     fill_in(:notes, with: "Remember plants in bedroom, living room, and balcony")
     click_button("Save and Back to Dashboard")
-    expect(page).to have_content("Validation failed: Name can't be blank, type can't be blank, time needed can't be blank")
+    expect(page).to have_content("Validation failed: Name can't be blank, category can't be blank, time needed can't be blank")
   end
 
   it "can create a task if optional fields are missing" do
     json_response = {message: "'Water Plants' added!"}.to_json
-    stub_request(:post, "http://our_render_url.com/api/v1/users//tasks?event_date=&frequency=One%20Time&mandatory=0&name=Water%20Plants&notes=&time_needed=20&type=Chore").
+    stub_request(:post, "http://our_render_url.com/api/v1/users//tasks?event_date=&frequency=One%20Time&mandatory=0&name=Water%20Plants&notes=&time_needed=20&category=Chore").
     with(
       headers: {
      'Accept'=>'*/*',
@@ -137,7 +137,7 @@ RSpec.describe "Task Create Page" do
     to_return(status: 200, body: json_response)
 
     fill_in(:name, with: "Water Plants")
-    select("Chore", from: :type)
+    select("Chore", from: :category)
     fill_in(:minutes, with: 20)
     click_button("Save and Back to Dashboard")
     expect(page).to have_content("'Water Plants' added!")
