@@ -100,10 +100,33 @@ RSpec.describe "Task Show/Edit Page" do
     expect(current_path).to eq(task_path("23"))
   end
 
-  xit "can delete task" do
-    # have message asking user if they are sure yes/no
-    # redirect to dashboard after deleting
+  it "can delete task" do
+    json_response = {message: "'thing1' deleted"}.to_json
+    stub_request(:delete, "http://our_render_url.com/api/v1/users//tasks/23").
+    with(
+      headers: {
+      'Accept'=>'*/*',
+      'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+      'User-Agent'=>'Faraday v2.7.11'
+      }).
+    to_return(status: 200, body: json_response)
+
+    expect(page).to have_button("Delete")
+    click_button("Delete")
+    # expect confirmation message?
+    # click "yes" on confirmation message
+    expect(current_path).to eq(dashboard_path)
+    expect(page).to have_content("'thing1' deleted")
+
     # visit index to check it's removed
+  end
+
+  xit "won't delete task if user selects 'cancel' from confirmation" do
+    expect(page).to have_button("Delete")
+    click_button("Delete")
+    # expect confirmation message?
+    # click "cancel" on confirmation message
+    expect(current_path).to eq(task_path("23"))
   end
 
   xit "can generate an AI breakdown of task if not there already" do
