@@ -1,13 +1,13 @@
 <%= button_to "All tasks", tasks_path, method: :get %>
 <%= button_to "Dashboard", dashboard_path, method: :get %>
 
-<% # repurpose into a partial later? %>
+<% # repurpose into a partial later? Used in new and show %>
 <%= form_with url: tasks_path do |form| %>
   <%= form.label "Task name" %>
   <%= form.text_field :name %>*<br>
 
-  <%= form.label "Task type" %>
-  <%= form.select :type, options: ["", "Rest", "Hobby", "Chore"] %>*<br>
+  <%= form.label "Task category" %>
+  <%= form.select :category, options: ["", "Rest", "Hobby", "Chore"] %>*<br>
 
   <%= form.label "Mandatory?" %>
   <%= form.check_box :mandatory %><br>
