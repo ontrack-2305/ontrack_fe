@@ -24,7 +24,7 @@ RSpec.describe DatabaseService do
   xit "accepts a request to post a new task" do
     service = DatabaseService.new
     response = service.post({"name"=>"Water Plants",
-      "type"=>"Chore",
+      "category"=>"Chore",
       "mandatory"=>"1",
       "event_date"=>"",
       "frequency"=>"Weekly",
@@ -32,5 +32,9 @@ RSpec.describe DatabaseService do
       "time_needed"=>20}, "1") 
 
       #pending OAuth working
+  end
+
+  xit "updates a task" do
+
   end
 end
