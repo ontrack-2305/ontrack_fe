@@ -24,5 +24,4 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_14_174737) do
     t.string "last_name"
     t.string "refresh_token"
   end
-
 end
