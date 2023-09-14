@@ -18,5 +18,9 @@ RSpec.describe "The Welcome Page" do
     visit root_path
 
     click_button "Login With Google"
+    #expect page to be some kind of page
+    #expect credentials to be valid
+    #expect login to be successful
+    #expect to be redirected to dashboard path
   end
 end
