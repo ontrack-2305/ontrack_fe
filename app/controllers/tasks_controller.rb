@@ -1,5 +1,6 @@
 class TasksController < ApplicationController 
   # before_action :find_user
+  # Or rename this to :validate_session
   
   def index 
 
@@ -32,6 +33,12 @@ class TasksController < ApplicationController
     flash[:notice] = JSON.parse(response.body)["errors"][0]["detail"] if response.status == 400
   end
 
+  def destroy
+    response = facade.delete(params[:id], session[:user_id])
+    redirect_to dashboard_path
+    flash[:notice] = JSON.parse(response.body)["message"]
+  end
+
   private 
 
   def task_params
@@ -48,6 +55,7 @@ class TasksController < ApplicationController
     @_facade ||= TasksFacade.new
   end
   
+  #rename this to validate_session?
   # def find_user
     #begin 
       # @user = User.find(session[:user_id])
