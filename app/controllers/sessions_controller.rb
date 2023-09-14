@@ -4,7 +4,6 @@ class SessionsController < ApplicationController
   
   def create
     user_info = request.env['omniauth.auth']
-    # require 'pry'; binding.pry
     user = User.find_or_create_by(google_id: user_info[:uid])
     user.name = user_info[:info][:name]
     user.email = user_info[:info][:email]
