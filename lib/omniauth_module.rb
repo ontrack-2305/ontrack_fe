@@ -13,9 +13,7 @@ module OmniauthModule
         },
         'credentials' => {
           'token' =>
-          'token',
-          'expires_at' => 12,
-          'expires' => true
+          'token'
         }
       }
     )
