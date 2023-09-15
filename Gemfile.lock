@@ -106,8 +106,8 @@ GEM
     faraday-net_http (3.0.2)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    hashie (5.0.0)
     hashdiff (1.0.1)
+    hashie (5.0.0)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     importmap-rails (1.2.1)
@@ -224,11 +224,11 @@ GEM
     regexp_parser (2.8.1)
     reline (0.3.8)
       io-console (~> 0.5)
+    rexml (3.2.6)
     rspec (3.12.0)
       rspec-core (~> 3.12.0)
       rspec-expectations (~> 3.12.0)
       rspec-mocks (~> 3.12.0)
-    rexml (3.2.6)
     rspec-core (3.12.2)
       rspec-support (~> 3.12.0)
     rspec-expectations (3.12.3)
@@ -302,6 +302,7 @@ DEPENDENCIES
   capybara
   debug
   dotenv-rails
+  faraday
   importmap-rails
   jbuilder
   launchy
@@ -309,10 +310,6 @@ DEPENDENCIES
   omniauth-google-oauth2
   omniauth-rails_csrf_protection
   orderly
-  faraday
-  importmap-rails
-  jbuilder
-  launchy
   pg (~> 1.1)
   pry
   puma (~> 5.0)
