@@ -14,7 +14,7 @@ This is an SOA app and needs both this repo (front end) AND [![GitHub](https://i
 ### Mod 3 Group Consultancy Project
 OnTrack is a .... Designed for ...... OnTrack has the ability for registered users to ..... 
                                                   <br><br>
-                    <img src="LOGO GOES HERE" width="600" height="400">
+                    <img src="app/assets/images/791227AB-0F84-42C9-9EE3-0BA462397545.png" width="300" height="300">
                     
 
 ## Built With
@@ -52,15 +52,21 @@ rails db:{create,migrate}
 ```
 5. RAILS CREDENTIALS STEPS
 ```
-ADD STEPS HERE
+Run this command to open your credentials file:
+  EDITOR="code --wait" bin/rails credentials:edit
+Add your API key to the credentials file, formatted something like this:
+  google:
+    GOOGLE_CLIENT_ID: hg39874yt1vfh394uhi
+    GOOGLE_CLIENT_SECRET: 934786012394687
+
+You can then call on this API key anytime like this!:
+Rails.application.credentials.google[:google_client_id]
 ```
 6. Get your API key at: https://code.google.com/apis/console/ Note the Client ID and the Client Secret.
 ```
 - For more details, read the Google docs: https://developers.google.com/accounts/docs/OAuth2
     - Put your Client ID after `GOOGLE_CLIENT_ID:`
-    - PUT you CLIENT SECRET after `GOOGLE_CLIENT_SECRET:`
-- Create your AWS S3 bucket with these instructions: https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html
-  - Put the relavent information into the application.yml file for `AWS_ACCESS_KEY: AWS_SECRET_ACCESS_KEY: BUCKET_NAME: AWS_REGION:` 
+    - PUT you CLIENT SECRET after `GOOGLE_CLIENT_SECRET:` 
 ```
 7. Run Tests in the terminal to verify everything was set up correctly
 ```
@@ -75,7 +81,7 @@ rails s
 ```
 - Open a web browser and navigate to `http://localhost:5000`
 - The welcome page should display
-- Note: To be able to have full functionality of the site you will also need to setup the backend repo, setup instructions can be found here: [lend-a-toolza](https://github.com/NickTassinari/lend-a-toolza-fe)
+- Note: To be able to have full functionality of the site you will also need to setup the backend repo, setup instructions can be found here: [OnTrack Back end repo](https://github.com/ontrack-2305/ontrack_be)
 ```
 
 ### <b>Contribute your own code</b>
@@ -110,10 +116,12 @@ git push origin feature/AmazingFeature
 
 ## Schema
 ```
-    t.string "name"
     t.string "email"
     t.string "token"
     t.string "google_id"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "refresh_token"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
 ```
@@ -122,7 +130,15 @@ git push origin feature/AmazingFeature
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 ## Thoughts for future contributions:
-ADD MIRO BOARD STICKY NOTES HERE
+- Upcoming birthday notifications
+- Screen reader friendly
+- Choose which holidays a user can be reminded about
+- Choose different country holidays
+- Link holidays and events to people: "Mother's Day, send Mom something
+- Language translation
+- Attach photos such as grocery lists
+- Standalone app
+- Task templates
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
