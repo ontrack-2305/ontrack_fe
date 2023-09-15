@@ -5,6 +5,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to dashboard_path
     else
+      flash[:error] = "Invalid Credentials"
       redirect_to "/"
     end
   end
