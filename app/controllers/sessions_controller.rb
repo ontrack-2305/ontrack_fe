@@ -9,4 +9,10 @@ class SessionsController < ApplicationController
       redirect_to dashboard_path
     end
   end
+
+  def destroy
+    session.delete(:user_id)
+    @user = nil
+    redirect_to root_path
+  end
 end
