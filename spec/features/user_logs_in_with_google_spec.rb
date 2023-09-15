@@ -50,4 +50,18 @@ RSpec.describe "The Welcome Page" do
     expect(page).to have_content("Invalid Credentials")
     expect(current_path).to eq(root_path)
   end
+
+  it "can log out a user" do
+    visit root_path
+
+    click_button "Login With Google"
+    
+    visit root_path
+
+    click_link "Logout"
+
+    expect(page).to_not have_content("Welcome, Dani!")
+    expect(page).to_not have_content("Logout")
+    expect(page).to have_button("Login With Google")
+  end
 end
