@@ -28,6 +28,6 @@ class DatabaseService
   end
 
   def connection
-    Faraday.new("http://our_render_url.com") # change to render link later
+    Faraday.new("http://localhost:3000") # change to render link later
   end
 end
