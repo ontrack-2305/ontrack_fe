@@ -16,7 +16,7 @@ class TasksController < ApplicationController
 
   def create
     response = facade.post(task_params, session[:user_id])
-    if response.status == 200
+    if response.status == 201
       redirect_to new_task_path if params[:create_another]
       redirect_to dashboard_path if params[:commit]
       flash[:notice] = JSON.parse(response.body)["message"]
