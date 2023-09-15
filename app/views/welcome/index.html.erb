@@ -3,5 +3,5 @@
   <h3>Welcome, <%= "#{current_user.first_name}!" %></h3>
   <%= link_to "Logout" %>
 <% else %>
-  <%= button_to "Login With Google", "/auth/google" %>
+  <%= button_to "Login With Google", "/auth/google_oauth2", data: {turbo: false} %>
 <% end %>
