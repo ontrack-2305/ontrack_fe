@@ -38,7 +38,6 @@ RSpec.describe "The Welcome Page" do
 
     expect(page).to have_content("Welcome, Dani!")
     expect(page).to have_link("Logout")
-    save_and_open_page
     expect(page).to_not have_button("Login With Google")
   end
 end
