@@ -1,5 +1,9 @@
 class User < ApplicationRecord
-  validates_presence_of :first_name, :last_name, :email, :token, :refresh_token, :google_id
+  validates_presence_of :first_name, :last_name, :google_id, :token, :refresh_token
+
+  validate do |user|
+    user.errors.add(:base, "Invalid Credentials") if user.email.blank?
+  end
 
   def self.update_or_create(auth)
     user = User.find_by(google_id: auth[:uid]) || User.new
@@ -11,7 +15,10 @@ class User < ApplicationRecord
       token: auth[:credentials][:token],
       refresh_token: auth[:credentials][:refresh_token]
     }
-    user.save!
-    user
+    if user.save
+      user
+    else
+      user
+    end
   end
 end
