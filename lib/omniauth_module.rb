@@ -15,4 +15,18 @@ module OmniauthModule
       }
     })
   end
+
+  def stub_invalid_user
+    OmniAuth.config.test_mode = true
+    OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
+      provider: "google",
+      uid: "12345678910",
+      info: {
+        first_name: "Invalid",
+        last_name: "User"
+      },
+      credentials: {
+      }
+    })
+  end
 end
