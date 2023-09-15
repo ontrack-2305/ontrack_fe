@@ -1,7 +1,7 @@
 <h3>OnTrack</h3>
-<%
-=begin%>
- <%= image_tag ("logo.png") %> 
-<%
-=end%>
-<%= button_to "Login With Google", '/auth/google_oauth2/callback', method: :get %>
+<% if current_user  %>
+  <h3>Welcome, <%= "#{current_user.first_name}!" %></h3>
+  <%= link_to "Logout" %>
+<% else %>
+  <%= button_to "Login With Google", "/auth/google_oauth2", data: {turbo: false} %>
+<% end %>

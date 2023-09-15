@@ -47,6 +47,8 @@ gem "bootsnap", require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
+gem "omniauth-google-oauth2"
+gem "omniauth-rails_csrf_protection"
 gem "faraday"
 
 group :development, :test do
@@ -59,10 +61,6 @@ group :development, :test do
   gem "shoulda-matchers"
   gem "orderly"
   gem "simplecov"
-  gem "dotenv-rails"
-  gem "omniauth"
-  gem "omniauth-google-oauth2"
-  gem "omniauth-rails_csrf_protection"
 end
 
 group :test do
