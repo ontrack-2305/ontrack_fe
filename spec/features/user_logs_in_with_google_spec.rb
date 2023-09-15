@@ -24,7 +24,7 @@ RSpec.describe "The Welcome Page" do
     expect(page).to have_link("Logout")
   end
 
-  xit "as a logged in user, I see a welcome and a logout link" do
+  it "as a logged in user, I see a welcome and a logout link" do
     visit root_path
 
     expect(page).to have_button("Login With Google")
