@@ -6,26 +6,27 @@ class Task
               :event_date,
               :time_needed,
               :frequency,
-              :notes,
               :user_id
 
-  def initialize(data)
-    @id = data[:id]
-    @name = data[:attributes][:name]
-    @category = data[:attributes][:category]
-    @mandatory = data[:attributes][:mandatory]
-    @event_date = data[:attributes][:event_date]
-    @frequency = data[:attributes][:frequency]
-    @time_needed = data[:attributes][:time_needed]
-    @notes = data[:attributes][:notes]
-    @user_id = data[:attributes][:user_id]
+  attr_accessor :notes
+
+  def initialize(data, id = nil)
+    @id = id
+    @name = data[:name]
+    @category = data[:category]
+    @mandatory = data[:mandatory]
+    @event_date = data[:event_date]
+    @frequency = data[:frequency]
+    @time_needed = data[:time_needed]
+    @notes = data[:notes]
+    @user_id = data[:user_id]
   end
 
   def hours
-    @time_needed / 60
+    @time_needed / 60 unless @time_needed.nil?
   end
 
   def minutes 
-    @time_needed % 60
+    @time_needed % 60 unless @time_needed.nil?
   end
 end
