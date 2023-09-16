@@ -56,12 +56,11 @@ rails db:{create,migrate}
 Run this command to open your credentials file:
   EDITOR="code --wait" bin/rails credentials:edit
 Add your API key to the credentials file, formatted something like this:
-  google:
     GOOGLE_CLIENT_ID: hg39874yt1vfh394uhi
     GOOGLE_CLIENT_SECRET: 934786012394687
 
 You can then call on this API key anytime like this!:
-Rails.application.credentials.google[:google_client_id]
+Rails.application.credentials[:google_client_id]
 ```
 6. Get your API key at: https://code.google.com/apis/console/ Note the Client ID and the Client Secret.
 ```
