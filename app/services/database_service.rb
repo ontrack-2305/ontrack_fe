@@ -26,6 +26,10 @@ class DatabaseService
   def get_tasks(user_id)
     connection.get("api/v1/users/#{user_id}/tasks")
   end
+  
+  def get_ai_breakdown(task_name)
+    connection.get("api/v1/chat_service?task=#{task_name.downcase}")
+  end
 
   def connection
     Faraday.new("http://localhost:3000") # change to render link later
