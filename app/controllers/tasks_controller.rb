@@ -7,6 +7,9 @@ class TasksController < ApplicationController
 
   def show
     @task = facade.get_task(params[:id], session[:user_id])
+    if params[:add_notes]
+      @task.notes = facade.get_ai_breakdown(@task.name)[:notes]
+    end
   end
 
   def new
@@ -33,6 +36,8 @@ class TasksController < ApplicationController
   end
 
   def update 
+    return redirect_to task_path(id: params[:id], add_notes: true) if params[:get_ai].present?
+
     response = facade.patch(task_params, session[:user_id])
     redirect_to task_path(params[:id])
     flash[:notice] = JSON.parse(response.body)["message"]
