@@ -1,32 +1,7 @@
-<%= button_to "All tasks", tasks_path, method: :get %>
-<%= button_to "Dashboard", dashboard_path, method: :get %>
-<%= button_to "Delete", task_path(@task.id), method: :delete, form: { data: {turbo_confirm: "Are you sure?"}} %>
-<% # can't test whether confirm shows up- test this when BE works and can spin up a server %>
-<% # repurpose into a partial later? (used in new and show) %>
-<%= form_with url: task_path(@task.id), method: :patch do |form| %>
-  <%= form.label "Task name" %>
-  <%= form.text_field :name, value: @task.name %>*<br>
-
-  <%= form.label "Task category" %>
-  <%= form.select :category, options_for_select(["", "Rest", "Hobby", "Chore"], @task.category) %>*<br>
-
-  <%= form.label "Mandatory?" %>
-  <%= form.check_box :mandatory, checked: @task.mandatory %><br>
-
-  <%= form.label "Event date" %>
-  <%= form.date_field :event_date, value: @task.event_date %>
-
-  <%= form.label "Frequency" %>
-  <%= form.select :frequency, options_for_select(["One Time", "Daily", "Weekly", "Monthly", "Annual"], @task.frequency) %><br>
-
-  <%= form.label "Expected time needed" %>
-  <%= form.number_field :hours, value: @task.hours %>H
-  <%= form.number_field :minutes, value: @task.minutes %>M *<br>
-
-  <%= form.label "Notes" %>
-  <%= form.text_field :notes, size: "100", value: @task.notes %><br>
-
-  <%= form.submit "Save Changes" %>
-<% end %>
-
-<p>Mandatory fields marked with a *</p>
+<%= render partial: '_form', locals: {
+  url: task_path(@task.id),
+  method: :patch, 
+  button_text: "Save Changes"
+  }
+  %><br>
+<% # can't test whether confirm to delete shows up- test this when BE works and can spin up a server %>
