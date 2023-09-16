@@ -1,63 +1,50 @@
 require "rails_helper"
 
-RSpec.describe TasksFacade do
-  it "can post a task" do
-    json_response = {message: "'Water Plants' added!"}.to_json
-    stub_request(:post, "http://our_render_url.com/api/v1/users/1/tasks?event_date=&frequency=Weekly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20&category=Chore").
-         with(
-           headers: {
-          'Accept'=>'*/*',
-          'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-          'Content-Length'=>'0',
-          'User-Agent'=>'Faraday v2.7.11'
-           }).
-         to_return(status: 200, body: json_response)
-    
+RSpec.describe TasksFacade, :vcr do
+  xit "can post a task" do    
     facade = TasksFacade.new 
+    count = facade.get_tasks("1").count
     response = facade.post({"name"=>"Water Plants",
-      "category"=>"Chore",
+      "category"=>"chore",
       "mandatory"=>"1",
       "event_date"=>"",
-      "frequency"=>"Weekly",
+      "frequency"=>"weekly",
       "notes"=>"Remember plants in bedroom, living room, and balcony",
       "time_needed"=>20}, "1")
 
+    expect(facade.get_tasks("1").count).to eq(count + 1)
     parsed_response = JSON.parse(response.body, symbolize_names: true)
-    expect(parsed_response[:message]).to eq("'Water Plants' added!")
+    expect(parsed_response[:message]).to eq("'Water Plants' added!") ## pending backend update
   end
 
   it "can fetch all tasks" do
-    json_response = File.read("spec/fixtures/mock_tasks.json")
-    stub_request(:get, "http://our_render_url.com/api/v1/users/2/tasks").
-    with(
-      headers: {
-      'Accept'=>'*/*',
-      'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-      'User-Agent'=>'Faraday v2.7.11'
-      }).
-    to_return(status: 200, body: json_response)
-
-
     facade = TasksFacade.new
-    tasks = facade.get_tasks("2")
+    facade.post({"name"=>"Water Plants",
+      "category"=>"chore",
+      "mandatory"=>"1",
+      "event_date"=>"",
+      "frequency"=>"weekly",
+      "notes"=>"Remember plants in bedroom, living room, and balcony",
+      "time_needed"=>20}, "1")
+    facade.post({"name"=>"Prune Plants",
+        "category"=>"chore",
+        "mandatory"=>"1",
+        "event_date"=>"",
+        "frequency"=>"weekly",
+        "notes"=>"Remember plants in bedroom, living room, and balcony",
+        "time_needed"=>20}, "1")
+
+    tasks = facade.get_tasks("1")
     expect(tasks).to be_an(Array)
     expect(tasks).to all be_a(Task)
+    expect(tasks.count >= 2).to eq(true)
   end
 
-  it "can update a task" do
-    json_response = {message: "Changes saved!"}.to_json
-    stub_request(:patch, "http://our_render_url.com/api/v1/users/1/tasks/?category=Chore&event_date=&frequency=Weekly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20").
-         with(
-           headers: {
-          'Accept'=>'*/*',
-          'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-          'Content-Length'=>'0',
-          'User-Agent'=>'Faraday v2.7.11'
-           }).
-         to_return(status: 200, body: json_response)
-
+  xit "can update a task" do
     facade = TasksFacade.new
-    response = facade.patch({"name"=>"Water Plants",
+    response = facade.patch({
+      "id"=>"1",
+      "name"=>"Water Plants",
       "category"=>"Chore",
       "mandatory"=>"1",
       "event_date"=>"",
@@ -66,6 +53,50 @@ RSpec.describe TasksFacade do
       "time_needed"=>20}, "1")
     
     parsed = JSON.parse(response.body, symbolize_names: true)
-    expect(parsed[:message]).to eq("Changes saved!")
+    expect(parsed[:message]).to eq("Changes saved!")  ##pending backend update
+  end
+
+  it "can get one task" do
+    facade = TasksFacade.new
+    facade.post({"name"=>"Repot Plants",
+      "category"=>"chore",
+      "mandatory"=>"1",
+      "event_date"=>"",
+      "frequency"=>"weekly",
+      "notes"=>"Remember plants in bedroom, living room, and balcony",
+      "time_needed"=>20}, "1")
+    tasks = facade.get_tasks("1")
+
+    task = facade.get_task(tasks.last.id, "1")
+    expect(task).to be_a(Task)
+    expect(task.name).to eq("Repot Plants")
+  end
+
+ xit "can delete a task" do
+    facade = TasksFacade.new
+    facade.post({"name"=>"Water Plants",
+      "category"=>"chore",
+      "mandatory"=>"1",
+      "event_date"=>"",
+      "frequency"=>"weekly",
+      "notes"=>"Remember plants in bedroom, living room, and balcony",
+      "time_needed"=>20}, "1")
+    tasks = facade.get_tasks("1")
+    task = facade.get_task(tasks.first.id, "1")
+    task_count = tasks.count
+    response = facade.delete(task.id, "1")
+    expect(facade.get_tasks("1").count).to eq(task_count - 1)
+
+    parsed = JSON.parse(response.body, symbolize_names: true) ##pending backend update
+    expect(parsed[:message]).to eq("'Water Plants' deleted.") # pending backend update
+  end
+
+  it "can fetch an AI breakdown for a task name" do
+    facade = TasksFacade.new
+    response = facade.get_ai_breakdown("Water Plants")
+    expect(response).to have_key(:notes)
+    expect(response[:notes]).to be_a(String)
+    sad_response = facade.get_ai_breakdown("")
+    expect(sad_response[:notes]).to eq("No task provided to breakdown")
   end
 end
