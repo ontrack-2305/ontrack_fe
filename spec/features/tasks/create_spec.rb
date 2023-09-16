@@ -104,15 +104,29 @@ RSpec.describe "Task Create Page", :vcr do
     # expect(page).to have_content("'Water Plants' added!")  #need backend update: success messages 
   end
 
-  it "can generate an AI-powered notes" do
-    expect(page).to have_field(:notes) # how to test it's empty?
+  # it "can generate AI-powered notes" do
+  #   expect(page).to have_field(:notes) # how to test it's empty?
+  #   fill_in(:name, with: "Water Plants")
+  #   click_button("Generate a Suggested Breakdown of this Task (Powered by AI)")
+  #   expect(page).to have_field(:name, with: "Water Plants")
+  #   expect(page).to have_field(:notes) # how to test it's now got something?
+  # end
+
+  it "can generate AI-powered notes" do
+    expect(page).to have_field(:notes) do |field|
+      expect(field.value).to be_nil
+    end
+    
     fill_in(:name, with: "Water Plants")
-    click_button("Generate a Suggested Breakdown of this Task")
+    click_button("Generate a Suggested Breakdown of this Task (Powered by AI)")
     expect(page).to have_field(:name, with: "Water Plants")
-    expect(page).to have_field(:notes) # how to test it's now got something?
+  
+    expect(page).to have_field(:notes) do |field|
+      expect(field.value).to_not be_empty
+    end
   end
 
-  it "ai generation doesn't work if no name added yet" do # similar test applicable to show page
+  it "ai generation doesn't work if no name added yet" do
     click_button("Generate a Suggested Breakdown of this Task (Powered by AI)")
     expect(page).to have_content("No task provided to breakdown")
   end
