@@ -27,9 +27,9 @@ class TasksFacade
   def get_ai_breakdown(task_name)
     response = service.get_ai_breakdown(task_name)
     if response.status == 200
-      JSON.parse(response.body, symbolize_names: true)[:response][0][:text]
+      {notes: JSON.parse(response.body, symbolize_names: true)[:response][0][:text], status: 200 }
     else
-      JSON.parse(response.body, symbolize_names: true)[:errors][0][:title]
+      {notes: JSON.parse(response.body, symbolize_names: true)[:errors][0][:title], status: 400 }
     end
   end
 
