@@ -1,0 +1,104 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/chat_service?task=water%20plants
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"cc4f6066e23ff0aefa03105ee7301911"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c4db4690-2c3f-4f2c-9b13-5c20d2364712
+      X-Runtime:
+      - '2.201954'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.10, process_action.action_controller;dur=2164.84
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"response":[{"text":"1. Gather watering can and any necessary gardening
+        tools. 2. Check each plant''s soil moisture level. 3. Fill the watering can
+        with water. 4. Water each plant according to its specific needs. 5. Empty
+        excess water from the watering can and store tools."}]}'
+  recorded_at: Sat, 16 Sep 2023 17:39:17 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/chat_service?task=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - af4c833f-63c9-4b79-8907-d8f1cd9539b5
+      X-Runtime:
+      - '0.031823'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.20, process_action.action_controller;dur=20.79
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"errors":[{"status":"400","title":"No task provided to breakdown"}]}'
+  recorded_at: Sat, 16 Sep 2023 17:40:11 GMT
+recorded_with: VCR 6.2.0

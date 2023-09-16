@@ -5,47 +5,49 @@ RSpec.describe "The Welcome Page" do
   before(:each) do
     stub_omniauth
   end
+
   it "displays the logo/app name and Google login button" do
     visit root_path
 
     expect(page).to have_content("OnTrack")
-    expect(page).to have_button("Login With Google")
-    expect("OnTrack").to appear_before("Login With Google")
+    expect(page).to have_button("Log In With Google")
+    expect("OnTrack").to appear_before("Log In With Google")
   end
 
-  it "allows a user to register/login to the app with Google" do
+  it "allows a user to register/log in to the app with Google" do
     visit root_path
 
-    expect(page).to have_button("Login With Google")
-    click_button "Login With Google"
+    expect(page).to have_button("Log In With Google")
+    click_button "Log In With Google"
     expect(current_path).to eq(dashboard_path)
     expect(page).to have_content("Welcome, Dani!")
-    expect(page).to have_link("Logout")
+    save_and_open_page
+    expect(page).to have_link("Log Out")
   end
 
   it "as a logged in user, I see a welcome and a logout link" do
     visit root_path
 
-    expect(page).to have_button("Login With Google")
-    click_button "Login With Google"
+    expect(page).to have_button("Log In With Google")
+    click_button "Log In With Google"
 
     expect(current_path).to eq(dashboard_path)
     expect(page).to have_content("Welcome, Dani!")
-    expect(page).to have_link("Logout")
+    expect(page).to have_link("Log Out")
 
     visit root_path
 
     expect(page).to have_content("Welcome, Dani!")
-    expect(page).to have_link("Logout")
-    expect(page).to_not have_button("Login With Google")
+    expect(page).to have_link("Log Out")
+    expect(page).to_not have_button("Log In With Google")
   end
 
-  it "does not allow invalid credentials to login" do
+  it "does not allow invalid credentials to log in" do
     stub_invalid_user
 
     visit root_path
 
-    click_button "Login With Google"
+    click_button "Log In With Google"
 
     expect(page).to have_content("Invalid Credentials")
     expect(current_path).to eq(root_path)
@@ -54,14 +56,14 @@ RSpec.describe "The Welcome Page" do
   it "can log out a user" do
     visit root_path
 
-    click_button "Login With Google"
+    click_button "Log In With Google"
     
     visit root_path
 
-    click_link "Logout"
+    click_link "Log Out"
 
     expect(page).to_not have_content("Welcome, Dani!")
-    expect(page).to_not have_content("Logout")
-    expect(page).to have_button("Login With Google")
+    expect(page).to_not have_content("Log Out")
+    expect(page).to have_button("Log In With Google")
   end
 end

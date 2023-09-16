@@ -1,33 +1,41 @@
 require "rails_helper"
 
-RSpec.describe "Task Show/Edit Page" do
+RSpec.describe "Task Show/Edit Page", :vcr do
+  include OmniauthModule  
+
   before(:each) do
-    json_response = File.read("spec/fixtures/mock_one_task.json")
-    stub_request(:get, "http://our_render_url.com/api/v1/users//tasks/23").
-    with(
-      headers: {
-     'Accept'=>'*/*',
-     'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-     'User-Agent'=>'Faraday v2.7.11'
-      }).
-    to_return(status: 200, body: json_response)
+    @facade = TasksFacade.new
+    stub_omniauth
+    visit root_path
+    click_button "Log In With Google"
+
+    @user = User.last
+
+    @facade.post({"name"=>"Water Plants",
+      "category"=>"chore",
+      "mandatory"=>"1",
+      "event_date"=>"",
+      "frequency"=>"weekly",
+      "notes"=>"Remember plants in bedroom, living room, and balcony",
+      "time_needed"=>20}, @user.id)
+
+    @task = @facade.get_tasks(@user.id).last
 
 
-    @task = TasksFacade.new.get_task("23", nil)
-    visit task_path("23")
+    visit task_path(@task.id)
   end
 
   it "has a form with pre-filled current attributes of the task" do
     expect(page).to have_content("Task name")
     expect(page).to have_field(:name, with: @task.name)
     expect(page).to have_content("Task category")
-    expect(page).to have_select(:category, with_options: ["", "Rest", "Hobby", "Chore"], selected: @task.category)
+    expect(page).to have_select(:category, with_options: ["", :rest, :hobby, :chore], selected: @task.category)
     expect(page).to have_content("Mandatory?")
     expect(page).to have_checked_field(:mandatory)
     expect(page).to have_content("Event date")
     expect(page).to have_field(:event_date, with: @task.event_date)
     expect(page).to have_content("Frequency")
-    expect(page).to have_select(:frequency, with_options: ["One Time", "Daily", "Weekly", "Monthly", "Annual"], selected: @task.frequency)
+    expect(page).to have_select(:frequency, with_options: [:once, :daily, :weekly, :monthly, :annual], selected: @task.frequency)
     expect(page).to have_content("Expected time needed")
     expect(page).to have_field(:hours, with: @task.hours)
     expect(page).to have_field(:minutes, with: @task.minutes)
@@ -47,78 +55,46 @@ RSpec.describe "Task Show/Edit Page" do
     expect(current_path).to eq(dashboard_path)
   end
 
-  xit "cannot be accessed if no user is logged in" do
-    pending "user sessions created"
-    log_out
+  it "cannot be accessed if no user is logged in" do
+    visit root_path
+    click_on("Log Out")
     visit dashboard_path
     expect(current_path).to eq(root_path)
-    expect(page).to have_content("Please log in") # exact message pending
+    expect(page).to have_content("Please Log In")
   end
 
-  it "can update attributes of task" do
-    json_response = {message: "Changes saved!"}.to_json
-    stub_request(:patch, "http://our_render_url.com/api/v1/users//tasks/23?event_date=2024-10-27&frequency=One%20Time&mandatory=1&name=thing1&notes=Different%20notes&time_needed=20&category=Hobby").
-         with(
-           headers: {
-          'Accept'=>'*/*',
-          'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-          'Content-Length'=>'0',
-          'User-Agent'=>'Faraday v2.7.11'
-           }).
-         to_return(status: 200, body: json_response)
-
-    expect(page).to have_field(:notes, with: "stuff")
+  xit "can update attributes of task" do
+    expect(page).to have_field(:notes, with: @task.notes)
     fill_in(:notes, with: "Different notes")
     click_button("Save Changes")
-    expect(page).to have_content("Changes saved!")
-    expect(current_path).to eq(task_path("23"))
+    expect(page).to have_content("Changes saved!") #pending backend update
+    expect(current_path).to eq(task_path(@task.id))
 
-    # visit task_path("23")  ##Add these lines after full functionality working, and can check that task actually updated
-    # expect(page).to have_field(:notes, with: "Different notes")
-
-    # Potential: First test that save button is disabled,
-    # Then becomes enabled if anything is changed?
-    # Not sure how to live update a page without refreshing
-    # Through googling it sounds like you need to add JavaScript event listeners
+    visit task_path(@task.id)
+    expect(page).to have_field(:notes, with: "Different notes")
   end
 
-  it "has an error if any mandatory fields are deleted" do
-    json_response = {errors: [{detail: "Validation failed: Name can't be blank"}]}.to_json
-    stub_request(:patch, "http://our_render_url.com/api/v1/users//tasks/23?event_date=2024-10-27&frequency=One%20Time&mandatory=1&name=&notes=stuff&time_needed=20&category=Hobby").
-         with(
-           headers: {
-          'Accept'=>'*/*',
-          'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-          'Content-Length'=>'0',
-          'User-Agent'=>'Faraday v2.7.11'
-           }).
-         to_return(status: 400, body: json_response)
-
+  xit "has an error if any mandatory fields are deleted" do
     fill_in(:name, with: "")
     click_button("Save Changes")
-    expect(page).to have_content("Validation failed: Name can't be blank")
-    expect(current_path).to eq(task_path("23"))
+    expect(page).to have_content("Validation failed: Name can't be blank") ##pending update from backend, reformat errors
+    expect(current_path).to eq(task_path(@task.id))
   end
 
-  it "can delete task" do
-    json_response = {message: "'thing1' deleted"}.to_json
-    stub_request(:delete, "http://our_render_url.com/api/v1/users//tasks/23").
-    with(
-      headers: {
-      'Accept'=>'*/*',
-      'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-      'User-Agent'=>'Faraday v2.7.11'
-      }).
-    to_return(status: 200, body: json_response)
+  xit "can delete task" do
+    visit tasks_path
+    expect(page).to have_content("Water Plants")
 
+    visit task_path(@task.id)
     expect(page).to have_button("Delete")
     click_button("Delete")
     # expect confirmation message?
     # click "yes" on confirmation message
     expect(current_path).to eq(dashboard_path)
-    expect(page).to have_content("'thing1' deleted")
+    expect(page).to have_content("'Water Plants' deleted.")  ##pending update from backend
 
-    # visit index to check it's removed
+    visit tasks_path
+    expect(page).to_not have_content("Water Plants")
   end
 
   xit "won't delete task if user selects 'cancel' from confirmation" do
@@ -126,22 +102,19 @@ RSpec.describe "Task Show/Edit Page" do
     click_button("Delete")
     # expect confirmation message?
     # click "cancel" on confirmation message
-    expect(current_path).to eq(task_path("23"))
+    expect(current_path).to eq(task_path(@task.id))
   end
 
-  xit "can generate an AI breakdown of task if not there already" do
-
-  end
-
-  xit "will replace any current notes if user uses AI generation button" do
+  it "can generate an AI breakdown of task" do
+    old_notes = @task.notes
+    expect(page).to have_field(:notes, with: old_notes)
+    click_button("Generate a Suggested Breakdown of this Task (Powered by AI)")
     
+    expect(page).to have_field(:name, with: "Water Plants")
+    expect(page).to_not have_field(:notes, with: @task.notes)
+
+    click_button("Save Changes")
+    updated_task = @facade.get_task(@task.id, @user.id)
+    expect(updated_task.notes).to_not eq(old_notes)
   end
-
-  xit "throws an error if user changes anything, does NOT click save, and tries to navigate away" do
-    # "You have unsaved changes"
-    # ask user if they want to confirm leaving page, or stay 
-    # might need javascript... nix for MVP?
-  end
-
-
 end
