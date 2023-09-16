@@ -1,0 +1,917 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/146/tasks?category=chore&event_date=&frequency=once&mandatory=0&name=Water%20Plants&notes=&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Request-Id:
+      - c390bf95-df40-4b83-969e-ff08645ec4c1
+      X-Runtime:
+      - '0.014423'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, process_action.action_controller;dur=0.27
+      Content-Length:
+      - '18324'
+    body:
+      encoding: UTF-8
+      string: '{"status":500,"error":"Internal Server Error","exception":"#\u003cArgumentError:
+        ''once'' is not a valid frequency\u003e","traces":{"Application Trace":[{"exception_object_id":22320,"id":15,"trace":"app/controllers/api/v1/tasks_controller.rb:3:in
+        `create''"}],"Framework Trace":[{"exception_object_id":22320,"id":0,"trace":"activerecord
+        (7.0.8) lib/active_record/enum.rb:157:in `assert_valid_value''"},{"exception_object_id":22320,"id":1,"trace":"activemodel
+        (7.0.8) lib/active_model/attribute.rb:76:in `with_value_from_user''"},{"exception_object_id":22320,"id":2,"trace":"activemodel
+        (7.0.8) lib/active_model/attribute_set.rb:55:in `write_from_user''"},{"exception_object_id":22320,"id":3,"trace":"activerecord
+        (7.0.8) lib/active_record/attribute_methods/write.rb:42:in `_write_attribute''"},{"exception_object_id":22320,"id":4,"trace":"activemodel
+        (7.0.8) lib/active_model/attribute_methods.rb:271:in `frequency=''"},{"exception_object_id":22320,"id":5,"trace":"activemodel
+        (7.0.8) lib/active_model/attribute_assignment.rb:49:in `public_send''"},{"exception_object_id":22320,"id":6,"trace":"activemodel
+        (7.0.8) lib/active_model/attribute_assignment.rb:49:in `_assign_attribute''"},{"exception_object_id":22320,"id":7,"trace":"activerecord
+        (7.0.8) lib/active_record/attribute_assignment.rb:21:in `block in _assign_attributes''"},{"exception_object_id":22320,"id":8,"trace":"activerecord
+        (7.0.8) lib/active_record/attribute_assignment.rb:13:in `each''"},{"exception_object_id":22320,"id":9,"trace":"activerecord
+        (7.0.8) lib/active_record/attribute_assignment.rb:13:in `_assign_attributes''"},{"exception_object_id":22320,"id":10,"trace":"activemodel
+        (7.0.8) lib/active_model/attribute_assignment.rb:34:in `assign_attributes''"},{"exception_object_id":22320,"id":11,"trace":"activerecord
+        (7.0.8) lib/active_record/core.rb:468:in `initialize''"},{"exception_object_id":22320,"id":12,"trace":"activerecord
+        (7.0.8) lib/active_record/inheritance.rb:75:in `new''"},{"exception_object_id":22320,"id":13,"trace":"activerecord
+        (7.0.8) lib/active_record/inheritance.rb:75:in `new''"},{"exception_object_id":22320,"id":14,"trace":"activerecord
+        (7.0.8) lib/active_record/persistence.rb:54:in `create!''"},{"exception_object_id":22320,"id":16,"trace":"actionpack
+        (7.0.8) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action''"},{"exception_object_id":22320,"id":17,"trace":"actionpack
+        (7.0.8) lib/abstract_controller/base.rb:215:in `process_action''"},{"exception_object_id":22320,"id":18,"trace":"actionpack
+        (7.0.8) lib/action_controller/metal/rendering.rb:165:in `process_action''"},{"exception_object_id":22320,"id":19,"trace":"actionpack
+        (7.0.8) lib/abstract_controller/callbacks.rb:234:in `block in process_action''"},{"exception_object_id":22320,"id":20,"trace":"activesupport
+        (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks''"},{"exception_object_id":22320,"id":21,"trace":"actionpack
+        (7.0.8) lib/abstract_controller/callbacks.rb:233:in `process_action''"},{"exception_object_id":22320,"id":22,"trace":"actionpack
+        (7.0.8) lib/action_controller/metal/rescue.rb:23:in `process_action''"},{"exception_object_id":22320,"id":23,"trace":"actionpack
+        (7.0.8) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action''"},{"exception_object_id":22320,"id":24,"trace":"activesupport
+        (7.0.8) lib/active_support/notifications.rb:206:in `block in instrument''"},{"exception_object_id":22320,"id":25,"trace":"activesupport
+        (7.0.8) lib/active_support/notifications/instrumenter.rb:24:in `instrument''"},{"exception_object_id":22320,"id":26,"trace":"activesupport
+        (7.0.8) lib/active_support/notifications.rb:206:in `instrument''"},{"exception_object_id":22320,"id":27,"trace":"actionpack
+        (7.0.8) lib/action_controller/metal/instrumentation.rb:66:in `process_action''"},{"exception_object_id":22320,"id":28,"trace":"actionpack
+        (7.0.8) lib/action_controller/metal/params_wrapper.rb:259:in `process_action''"},{"exception_object_id":22320,"id":29,"trace":"activerecord
+        (7.0.8) lib/active_record/railties/controller_runtime.rb:27:in `process_action''"},{"exception_object_id":22320,"id":30,"trace":"actionpack
+        (7.0.8) lib/abstract_controller/base.rb:151:in `process''"},{"exception_object_id":22320,"id":31,"trace":"actionpack
+        (7.0.8) lib/action_controller/metal.rb:188:in `dispatch''"},{"exception_object_id":22320,"id":32,"trace":"actionpack
+        (7.0.8) lib/action_controller/metal.rb:251:in `dispatch''"},{"exception_object_id":22320,"id":33,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/routing/route_set.rb:49:in `dispatch''"},{"exception_object_id":22320,"id":34,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/routing/route_set.rb:32:in `serve''"},{"exception_object_id":22320,"id":35,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/journey/router.rb:50:in `block in serve''"},{"exception_object_id":22320,"id":36,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/journey/router.rb:32:in `each''"},{"exception_object_id":22320,"id":37,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/journey/router.rb:32:in `serve''"},{"exception_object_id":22320,"id":38,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/routing/route_set.rb:852:in `call''"},{"exception_object_id":22320,"id":39,"trace":"rack
+        (2.2.8) lib/rack/etag.rb:27:in `call''"},{"exception_object_id":22320,"id":40,"trace":"rack
+        (2.2.8) lib/rack/conditional_get.rb:40:in `call''"},{"exception_object_id":22320,"id":41,"trace":"rack
+        (2.2.8) lib/rack/head.rb:12:in `call''"},{"exception_object_id":22320,"id":42,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:638:in `call''"},{"exception_object_id":22320,"id":43,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call''"},{"exception_object_id":22320,"id":44,"trace":"activesupport
+        (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks''"},{"exception_object_id":22320,"id":45,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"exception_object_id":22320,"id":46,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":22320,"id":47,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call''"},{"exception_object_id":22320,"id":48,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call''"},{"exception_object_id":22320,"id":49,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":22320,"id":50,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":22320,"id":51,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `block in call''"},{"exception_object_id":22320,"id":52,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged''"},{"exception_object_id":22320,"id":53,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged''"},{"exception_object_id":22320,"id":54,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged''"},{"exception_object_id":22320,"id":55,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `call''"},{"exception_object_id":22320,"id":56,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":22320,"id":57,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":22320,"id":58,"trace":"rack
+        (2.2.8) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":22320,"id":59,"trace":"activesupport
+        (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":22320,"id":60,"trace":"actionpack (7.0.8)
+        lib/action_dispatch/middleware/server_timing.rb:61:in `block in call''"},{"exception_object_id":22320,"id":61,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events''"},{"exception_object_id":22320,"id":62,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call''"},{"exception_object_id":22320,"id":63,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":22320,"id":64,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":22320,"id":65,"trace":"rack
+        (2.2.8) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":22320,"id":66,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":22320,"id":67,"trace":"railties
+        (7.0.8) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":22320,"id":68,"trace":"puma
+        (5.6.7) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":22320,"id":69,"trace":"puma
+        (5.6.7) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":22320,"id":70,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":22320,"id":71,"trace":"puma
+        (5.6.7) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":22320,"id":72,"trace":"puma
+        (5.6.7) lib/puma/server.rb:443:in `process_client''"},{"exception_object_id":22320,"id":73,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}],"Full Trace":[{"exception_object_id":22320,"id":0,"trace":"activerecord
+        (7.0.8) lib/active_record/enum.rb:157:in `assert_valid_value''"},{"exception_object_id":22320,"id":1,"trace":"activemodel
+        (7.0.8) lib/active_model/attribute.rb:76:in `with_value_from_user''"},{"exception_object_id":22320,"id":2,"trace":"activemodel
+        (7.0.8) lib/active_model/attribute_set.rb:55:in `write_from_user''"},{"exception_object_id":22320,"id":3,"trace":"activerecord
+        (7.0.8) lib/active_record/attribute_methods/write.rb:42:in `_write_attribute''"},{"exception_object_id":22320,"id":4,"trace":"activemodel
+        (7.0.8) lib/active_model/attribute_methods.rb:271:in `frequency=''"},{"exception_object_id":22320,"id":5,"trace":"activemodel
+        (7.0.8) lib/active_model/attribute_assignment.rb:49:in `public_send''"},{"exception_object_id":22320,"id":6,"trace":"activemodel
+        (7.0.8) lib/active_model/attribute_assignment.rb:49:in `_assign_attribute''"},{"exception_object_id":22320,"id":7,"trace":"activerecord
+        (7.0.8) lib/active_record/attribute_assignment.rb:21:in `block in _assign_attributes''"},{"exception_object_id":22320,"id":8,"trace":"activerecord
+        (7.0.8) lib/active_record/attribute_assignment.rb:13:in `each''"},{"exception_object_id":22320,"id":9,"trace":"activerecord
+        (7.0.8) lib/active_record/attribute_assignment.rb:13:in `_assign_attributes''"},{"exception_object_id":22320,"id":10,"trace":"activemodel
+        (7.0.8) lib/active_model/attribute_assignment.rb:34:in `assign_attributes''"},{"exception_object_id":22320,"id":11,"trace":"activerecord
+        (7.0.8) lib/active_record/core.rb:468:in `initialize''"},{"exception_object_id":22320,"id":12,"trace":"activerecord
+        (7.0.8) lib/active_record/inheritance.rb:75:in `new''"},{"exception_object_id":22320,"id":13,"trace":"activerecord
+        (7.0.8) lib/active_record/inheritance.rb:75:in `new''"},{"exception_object_id":22320,"id":14,"trace":"activerecord
+        (7.0.8) lib/active_record/persistence.rb:54:in `create!''"},{"exception_object_id":22320,"id":15,"trace":"app/controllers/api/v1/tasks_controller.rb:3:in
+        `create''"},{"exception_object_id":22320,"id":16,"trace":"actionpack (7.0.8)
+        lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action''"},{"exception_object_id":22320,"id":17,"trace":"actionpack
+        (7.0.8) lib/abstract_controller/base.rb:215:in `process_action''"},{"exception_object_id":22320,"id":18,"trace":"actionpack
+        (7.0.8) lib/action_controller/metal/rendering.rb:165:in `process_action''"},{"exception_object_id":22320,"id":19,"trace":"actionpack
+        (7.0.8) lib/abstract_controller/callbacks.rb:234:in `block in process_action''"},{"exception_object_id":22320,"id":20,"trace":"activesupport
+        (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks''"},{"exception_object_id":22320,"id":21,"trace":"actionpack
+        (7.0.8) lib/abstract_controller/callbacks.rb:233:in `process_action''"},{"exception_object_id":22320,"id":22,"trace":"actionpack
+        (7.0.8) lib/action_controller/metal/rescue.rb:23:in `process_action''"},{"exception_object_id":22320,"id":23,"trace":"actionpack
+        (7.0.8) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action''"},{"exception_object_id":22320,"id":24,"trace":"activesupport
+        (7.0.8) lib/active_support/notifications.rb:206:in `block in instrument''"},{"exception_object_id":22320,"id":25,"trace":"activesupport
+        (7.0.8) lib/active_support/notifications/instrumenter.rb:24:in `instrument''"},{"exception_object_id":22320,"id":26,"trace":"activesupport
+        (7.0.8) lib/active_support/notifications.rb:206:in `instrument''"},{"exception_object_id":22320,"id":27,"trace":"actionpack
+        (7.0.8) lib/action_controller/metal/instrumentation.rb:66:in `process_action''"},{"exception_object_id":22320,"id":28,"trace":"actionpack
+        (7.0.8) lib/action_controller/metal/params_wrapper.rb:259:in `process_action''"},{"exception_object_id":22320,"id":29,"trace":"activerecord
+        (7.0.8) lib/active_record/railties/controller_runtime.rb:27:in `process_action''"},{"exception_object_id":22320,"id":30,"trace":"actionpack
+        (7.0.8) lib/abstract_controller/base.rb:151:in `process''"},{"exception_object_id":22320,"id":31,"trace":"actionpack
+        (7.0.8) lib/action_controller/metal.rb:188:in `dispatch''"},{"exception_object_id":22320,"id":32,"trace":"actionpack
+        (7.0.8) lib/action_controller/metal.rb:251:in `dispatch''"},{"exception_object_id":22320,"id":33,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/routing/route_set.rb:49:in `dispatch''"},{"exception_object_id":22320,"id":34,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/routing/route_set.rb:32:in `serve''"},{"exception_object_id":22320,"id":35,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/journey/router.rb:50:in `block in serve''"},{"exception_object_id":22320,"id":36,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/journey/router.rb:32:in `each''"},{"exception_object_id":22320,"id":37,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/journey/router.rb:32:in `serve''"},{"exception_object_id":22320,"id":38,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/routing/route_set.rb:852:in `call''"},{"exception_object_id":22320,"id":39,"trace":"rack
+        (2.2.8) lib/rack/etag.rb:27:in `call''"},{"exception_object_id":22320,"id":40,"trace":"rack
+        (2.2.8) lib/rack/conditional_get.rb:40:in `call''"},{"exception_object_id":22320,"id":41,"trace":"rack
+        (2.2.8) lib/rack/head.rb:12:in `call''"},{"exception_object_id":22320,"id":42,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:638:in `call''"},{"exception_object_id":22320,"id":43,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call''"},{"exception_object_id":22320,"id":44,"trace":"activesupport
+        (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks''"},{"exception_object_id":22320,"id":45,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"exception_object_id":22320,"id":46,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":22320,"id":47,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call''"},{"exception_object_id":22320,"id":48,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call''"},{"exception_object_id":22320,"id":49,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":22320,"id":50,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":22320,"id":51,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `block in call''"},{"exception_object_id":22320,"id":52,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged''"},{"exception_object_id":22320,"id":53,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged''"},{"exception_object_id":22320,"id":54,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged''"},{"exception_object_id":22320,"id":55,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `call''"},{"exception_object_id":22320,"id":56,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":22320,"id":57,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":22320,"id":58,"trace":"rack
+        (2.2.8) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":22320,"id":59,"trace":"activesupport
+        (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":22320,"id":60,"trace":"actionpack (7.0.8)
+        lib/action_dispatch/middleware/server_timing.rb:61:in `block in call''"},{"exception_object_id":22320,"id":61,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events''"},{"exception_object_id":22320,"id":62,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call''"},{"exception_object_id":22320,"id":63,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":22320,"id":64,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":22320,"id":65,"trace":"rack
+        (2.2.8) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":22320,"id":66,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":22320,"id":67,"trace":"railties
+        (7.0.8) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":22320,"id":68,"trace":"puma
+        (5.6.7) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":22320,"id":69,"trace":"puma
+        (5.6.7) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":22320,"id":70,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":22320,"id":71,"trace":"puma
+        (5.6.7) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":22320,"id":72,"trace":"puma
+        (5.6.7) lib/puma/server.rb:443:in `process_client''"},{"exception_object_id":22320,"id":73,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}]}}'
+  recorded_at: Sat, 16 Sep 2023 03:54:16 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/161/tasks?category=chore&event_date=&frequency=weekly&mandatory=0&name=Water%20Plants&notes=&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"0c4ef6f7e02201858cff519ab421c946"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1293e8c8-7ba0-402a-bb67-59aa9e813fe1
+      X-Runtime:
+      - '0.006396'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.29, process_action.action_controller;dur=2.14
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"21","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":false,"event_date":"","frequency":"weekly","time_needed":20,"user_id":161,"notes":""}}}'
+  recorded_at: Sat, 16 Sep 2023 03:55:43 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/186/tasks?category=chore&event_date=&frequency=weekly&mandatory=0&name=Water%20Plants&notes=&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"ff0b860c147b538474cd8a0a1b2674c6"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2aaff265-10a6-46fc-94bd-8ae8cd25dd9b
+      X-Runtime:
+      - '0.007506'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=1.40, process_action.action_controller;dur=2.24
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"24","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":false,"event_date":"","frequency":"weekly","time_needed":20,"user_id":186,"notes":""}}}'
+  recorded_at: Sat, 16 Sep 2023 04:44:04 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/199/tasks?category=chore&event_date=&frequency=weekly&mandatory=0&name=Water%20Plants&notes=&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"678b29597c92eb1bc8d3280483cf4e55"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ae59db37-bb7d-44da-b8f5-268df7af236a
+      X-Runtime:
+      - '0.006855'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.43, process_action.action_controller;dur=2.35
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"27","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":false,"event_date":"","frequency":"weekly","time_needed":20,"user_id":199,"notes":""}}}'
+  recorded_at: Sat, 16 Sep 2023 04:52:34 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/217/tasks?category=chore&event_date=&frequency=weekly&mandatory=0&name=Water%20Plants&notes=&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8c6c887ea8c8e61e0ab2cdd7a9789a76"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2891a283-085a-4171-8559-6068f1f55460
+      X-Runtime:
+      - '0.007372'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.48, process_action.action_controller;dur=2.70
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"30","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":false,"event_date":"","frequency":"weekly","time_needed":20,"user_id":217,"notes":""}}}'
+  recorded_at: Sat, 16 Sep 2023 04:59:30 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/226/tasks?category=chore&event_date=&frequency=weekly&mandatory=0&name=Water%20Plants&notes=&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"0dc70c0236bcdedb948051746bb30a62"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ac59ea26-a8ed-4263-8084-69aa379a66b6
+      X-Runtime:
+      - '0.007154'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.86, process_action.action_controller;dur=2.68
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"33","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":false,"event_date":"","frequency":"weekly","time_needed":20,"user_id":226,"notes":""}}}'
+  recorded_at: Sat, 16 Sep 2023 05:00:43 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/235/tasks?category=chore&event_date=&frequency=weekly&mandatory=0&name=Water%20Plants&notes=&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"27da442fdbee4b76420d938ad611e146"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 373b711f-b067-40c6-a4fd-12b37400fb0f
+      X-Runtime:
+      - '0.007091'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.25, process_action.action_controller;dur=2.08
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"36","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":false,"event_date":"","frequency":"weekly","time_needed":20,"user_id":235,"notes":""}}}'
+  recorded_at: Sat, 16 Sep 2023 05:01:43 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/244/tasks?category=chore&event_date=&frequency=weekly&mandatory=0&name=Water%20Plants&notes=&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"6a1123409aad597a5dd74b3b132c1215"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 604fd9bc-59b7-4cd7-97c3-3b95d4de7d38
+      X-Runtime:
+      - '0.006862'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.67, process_action.action_controller;dur=2.54
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"39","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":false,"event_date":"","frequency":"weekly","time_needed":20,"user_id":244,"notes":""}}}'
+  recorded_at: Sat, 16 Sep 2023 05:02:40 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/253/tasks?category=chore&event_date=&frequency=weekly&mandatory=0&name=Water%20Plants&notes=&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"5feb345a68108598b188467f8dc7ca84"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 97bcd61d-b289-442c-8437-e550ca5dc7cf
+      X-Runtime:
+      - '0.008213'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.14, process_action.action_controller;dur=1.98
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"42","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":false,"event_date":"","frequency":"weekly","time_needed":20,"user_id":253,"notes":""}}}'
+  recorded_at: Sat, 16 Sep 2023 05:03:00 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/281/tasks?category=chore&event_date=&frequency=weekly&mandatory=0&name=Water%20Plants&notes=&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"98a69a84f6ec1f4ea850e201ff3099f7"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 18e138dd-e2e4-4f26-a3a6-ded296fc8705
+      X-Runtime:
+      - '0.008338'
+      Server-Timing:
+      - start_processing.action_controller;dur=1.51, sql.active_record;dur=1.66, process_action.action_controller;dur=2.55
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"45","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":false,"event_date":"","frequency":"weekly","time_needed":20,"user_id":281,"notes":""}}}'
+  recorded_at: Sat, 16 Sep 2023 05:26:54 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/291/tasks?category=chore&event_date=&frequency=weekly&mandatory=0&name=Water%20Plants&notes=&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"59c38efa20610457e31bdb5fb1704c4f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - dfef8a26-f128-47e2-92c8-6fa2f7e47acc
+      X-Runtime:
+      - '0.006987'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.21, process_action.action_controller;dur=2.06
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"48","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":false,"event_date":"","frequency":"weekly","time_needed":20,"user_id":291,"notes":""}}}'
+  recorded_at: Sat, 16 Sep 2023 05:31:35 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/301/tasks?category=chore&event_date=&frequency=weekly&mandatory=0&name=Water%20Plants&notes=&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"5b0ae52e9106646f91305bfbfc9b59bc"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 456817cc-16cf-4e25-9b86-427bc298d8b6
+      X-Runtime:
+      - '0.006814'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.57, process_action.action_controller;dur=2.44
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"51","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":false,"event_date":"","frequency":"weekly","time_needed":20,"user_id":301,"notes":""}}}'
+  recorded_at: Sat, 16 Sep 2023 05:31:54 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/311/tasks?category=chore&event_date=&frequency=weekly&mandatory=0&name=Water%20Plants&notes=&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"704bcdc3531084e37f29e44a137d483f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1c891f2d-cf8a-4627-9501-4de5c264af96
+      X-Runtime:
+      - '0.007925'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.52, process_action.action_controller;dur=2.37
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"54","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":false,"event_date":"","frequency":"weekly","time_needed":20,"user_id":311,"notes":""}}}'
+  recorded_at: Sat, 16 Sep 2023 05:34:37 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/321/tasks?category=chore&event_date=&frequency=weekly&mandatory=0&name=Water%20Plants&notes=&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"6f1c04054eb8d5156ed8a09a4943fbd1"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8376ce07-34e4-4387-ba70-d7552866abf1
+      X-Runtime:
+      - '0.006617'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.53, process_action.action_controller;dur=2.35
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"57","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":false,"event_date":"","frequency":"weekly","time_needed":20,"user_id":321,"notes":""}}}'
+  recorded_at: Sat, 16 Sep 2023 05:35:07 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/351/tasks?category=chore&event_date=&frequency=weekly&mandatory=0&name=Water%20Plants&notes=&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"22f1df0cc4a39c64e5379ae2a7608446"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 76bd8f76-01c8-45ca-bac8-f9a14671859a
+      X-Runtime:
+      - '0.020122'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=10.11,
+        process_action.action_controller;dur=15.65
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"60","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":false,"event_date":"","frequency":"weekly","time_needed":20,"user_id":351,"notes":""}}}'
+  recorded_at: Sat, 16 Sep 2023 15:10:20 GMT
+recorded_with: VCR 6.2.0
