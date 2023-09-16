@@ -24,6 +24,7 @@ OnTrack is a .... Designed for ...... OnTrack has the ability for registered use
 * ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 * ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
 * ![Postman Badge](https://img.shields.io/badge/Postman-FF6C37?logo=postman&logoColor=fff&style=for-the-badge)
+* ![Miro Board](https://img.shields.io/badge/Miro-050038?style=for-the-badge&logo=Miro&logoColor=white)
 
 WHAT ELSE??
 
@@ -139,6 +140,7 @@ Contributions are what make the open source community such an amazing place to l
 - Attach photos such as grocery lists
 - Standalone app
 - Task templates
+- Implement secondary way to log in
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
