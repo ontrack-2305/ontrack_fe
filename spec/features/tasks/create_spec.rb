@@ -1,9 +1,11 @@
 require "rails_helper"
 
 RSpec.describe "Task Create Page" do
+  include OmniauthModule  
   before(:each) do
-    # insert helper method to log in a user here when user database exists
-    # because all of these should only pass if the user is logged in
+    stub_omniauth
+    visit root_path
+    click_button "Login With Google"
     visit new_task_path
   end
 
@@ -48,14 +50,14 @@ RSpec.describe "Task Create Page" do
   it "creates a task for the user who is logged in" do
     json_response = {message: "'Water Plants' added!"}.to_json
     stub_request(:post, "http://our_render_url.com/api/v1/users//tasks?category=Chore&event_date=&frequency=Weekly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20").
-         with(
-           headers: {
+          with(
+            headers: {
           'Accept'=>'*/*',
           'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
           'Content-Length'=>'0',
           'User-Agent'=>'Faraday v2.7.11'
-           }).
-         to_return(status: 200, body: json_response)
+          }).
+        to_return(status: 200, body: json_response)
 
     visit tasks_path
     expect(page).to_not have_content("Water Plants")
