@@ -79,7 +79,7 @@ end
 VCR.configure do |config|
   config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
   config.hook_into :webmock
-  config.filter_sensitive_data('<HIDDEN_KEY>') { Rails.application.credentials.google[:google_client_id] }
+  config.filter_sensitive_data('<HIDDEN_KEY>') { Rails.application.credentials[:google_client_id] }
   config.configure_rspec_metadata!
   config.default_cassette_options = { re_record_interval: 20.days, record: :new_episodes }
 end
