@@ -113,7 +113,7 @@ RSpec.describe "Task Create Page", :vcr do
   end
 
   it "ai generation doesn't work if no name added yet" do # similar test applicable to show page
-    click_button("Generate a Suggested Breakdown of this Task")
-    expect(page).to have_field(:notes, with: "No task provided to breakdown")
+    click_button("Generate a Suggested Breakdown of this Task (Powered by AI)")
+    expect(page).to have_content("No task provided to breakdown")
   end
 end
