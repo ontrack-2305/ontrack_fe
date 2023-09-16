@@ -8,7 +8,7 @@ class DatabaseService
   end
 
   def patch(attributes_hash, user_id)
-    connection.patch("api/v1/users/#{user_id}/tasks/#{attributes_hash["id"]}") do |faraday|
+    connection.patch("api/v1/users/#{user_id}/tasks/#{attributes_hash[:id]}") do |faraday|
       attributes_hash.each do |key, value|
         faraday.params[key] = value if key != "id"
       end
