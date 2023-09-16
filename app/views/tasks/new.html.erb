@@ -4,26 +4,27 @@
 <% # repurpose into a partial later? Used in new and show %>
 <%= form_with url: tasks_path do |form| %>
   <%= form.label "Task name" %>
-  <%= form.text_field :name %>*<br>
+  <%= form.text_field :name, value: @task&.name %>*<br>
 
   <%= form.label "Task category" %>
-  <%= form.select :category, options: ["", "Rest", "Hobby", "Chore"] %>*<br>
+  <%= form.select :category, options_for_select(["", :rest, :hobby, :chore], @task&.category) %>*<br>
 
   <%= form.label "Mandatory?" %>
-  <%= form.check_box :mandatory %><br>
+  <%= form.check_box :mandatory, value: @task&.mandatory %><br>
 
   <%= form.label "Event date" %>
-  <%= form.date_field :event_date %>
+  <%= form.date_field :event_date, value: @task&.event_date %>
 
   <%= form.label "Frequency" %>
-  <%= form.select :frequency, options: ["One Time", "Daily", "Weekly", "Monthly", "Annual"] %><br>
+  <%= form.select :frequency, options_for_select([:once, :daily, :weekly, :monthly, :annual], @task&.frequency) %><br>
 
   <%= form.label "Expected time needed" %>
-  <%= form.number_field :hours %>H
-  <%= form.number_field :minutes %>M *<br>
+  <%= form.number_field :hours, value: @task&.hours %>H
+  <%= form.number_field :minutes, value: @task&.minutes %>M *<br>
 
   <%= form.label "Notes" %>
-  <%= form.text_field :notes, size: "100" %><br>
+  <%= form.text_field :notes, size: "100", value: @task&.notes %><br>
+  <%= form.submit "Generate a Suggested Breakdown of this Task", name: "get_ai" %><br>
 
   <%= form.submit "Save and Back to Dashboard" %>
   <%= form.submit "Save and Create Another Task", name: "create_another" %>
