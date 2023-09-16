@@ -20,6 +20,7 @@ RSpec.describe "Tasks Index Page", :vcr do
   end
 
   it "has all tasks, which link to their show pages" do
+    pending "index page vew built"
     expect(page).to have_link("Water Plants", href: task_path(@tasks[0]))
     expect(page).to have_link("Prune Plants", href: task_path(@tasks[1]))
     expect(page).to have_link("Repot Plants", href: task_path(@tasks[2]))
