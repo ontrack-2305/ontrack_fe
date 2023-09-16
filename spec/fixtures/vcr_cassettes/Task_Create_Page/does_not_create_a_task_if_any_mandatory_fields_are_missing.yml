@@ -2357,4 +2357,106 @@ http_interactions:
       string: '{"errors":[{"status":"400","title":"Validation failed: Name can''t
         be blank, Category can''t be blank, Time needed can''t be blank"}]}'
   recorded_at: Sat, 16 Sep 2023 18:26:07 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/39/tasks?category=&event_date=&frequency=weekly&mandatory=0&name=&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 87fa164f-820c-4b85-9e13-64874b540218
+      X-Runtime:
+      - '0.116624'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, process_action.action_controller;dur=110.52
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"errors":[{"status":"400","title":"Validation failed: Name can''t
+        be blank, Category can''t be blank, Time needed can''t be blank"}]}'
+  recorded_at: Sat, 16 Sep 2023 21:26:17 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/60/tasks?category=&event_date=&frequency=weekly&mandatory=0&name=&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 925d1fb4-b92f-46fa-adc0-748129cf5269
+      X-Runtime:
+      - '0.003403'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, process_action.action_controller;dur=0.95
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"errors":[{"status":"400","title":"Validation failed: Name can''t
+        be blank, Category can''t be blank, Time needed can''t be blank"}]}'
+  recorded_at: Sat, 16 Sep 2023 21:40:50 GMT
 recorded_with: VCR 6.2.0

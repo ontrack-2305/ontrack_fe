@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/chat_service?task=water%20plants
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"477e2d78c940da7dd82fff57492bbd53"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d7a59ee6-24b4-4602-9a22-08b653ad1a5a
+      X-Runtime:
+      - '1.920237'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, process_action.action_controller;dur=1916.95
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"response":[{"text":"1. Prepare water can. 2. Identify plants that
+        need watering. 3. Check soil moisture level. 4. Adjust watering schedule as
+        needed. 5. Water plants thoroughly, avoiding leaves."}]}'
+  recorded_at: Sat, 16 Sep 2023 21:26:19 GMT
+recorded_with: VCR 6.2.0

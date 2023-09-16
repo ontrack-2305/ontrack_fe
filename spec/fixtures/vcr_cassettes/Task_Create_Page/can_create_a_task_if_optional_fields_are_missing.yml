@@ -1688,4 +1688,108 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":{"id":"66","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":false,"event_date":"","frequency":"weekly","time_needed":20,"user_id":729,"notes":""}}}'
   recorded_at: Sat, 16 Sep 2023 18:26:07 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/40/tasks?category=chore&event_date=&frequency=weekly&mandatory=0&name=Water%20Plants&notes=&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"2f90f85ae5149536b937f136186a82ef"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4d3750cc-7aa7-44f0-8f73-5974acb23050
+      X-Runtime:
+      - '0.004958'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.43, process_action.action_controller;dur=2.39
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":false,"event_date":"","frequency":"weekly","time_needed":20,"user_id":40,"notes":""}}}'
+  recorded_at: Sat, 16 Sep 2023 21:26:17 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/61/tasks?category=chore&event_date=&frequency=weekly&mandatory=0&name=Water%20Plants&notes=&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"9312bfdd37c224c2953c6b8e066787b2"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 73f2b548-d9a5-4e72-99cb-90f8f4ef9762
+      X-Runtime:
+      - '0.004728'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.37, process_action.action_controller;dur=2.27
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"11","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":false,"event_date":"","frequency":"weekly","time_needed":20,"user_id":61,"notes":""}}}'
+  recorded_at: Sat, 16 Sep 2023 21:40:50 GMT
 recorded_with: VCR 6.2.0
