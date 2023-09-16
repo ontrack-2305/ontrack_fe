@@ -1,5 +1,4 @@
 require "rails_helper"
-require "omniauth_module"
 
 RSpec.describe "The Welcome Page" do
   include OmniauthModule
@@ -39,5 +38,30 @@ RSpec.describe "The Welcome Page" do
     expect(page).to have_content("Welcome, Dani!")
     expect(page).to have_link("Logout")
     expect(page).to_not have_button("Login With Google")
+  end
+
+  it "does not allow invalid credentials to login" do
+    stub_invalid_user
+
+    visit root_path
+
+    click_button "Login With Google"
+
+    expect(page).to have_content("Invalid Credentials")
+    expect(current_path).to eq(root_path)
+  end
+
+  it "can log out a user" do
+    visit root_path
+
+    click_button "Login With Google"
+    
+    visit root_path
+
+    click_link "Logout"
+
+    expect(page).to_not have_content("Welcome, Dani!")
+    expect(page).to_not have_content("Logout")
+    expect(page).to have_button("Login With Google")
   end
 end
