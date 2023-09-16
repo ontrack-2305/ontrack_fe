@@ -25,6 +25,10 @@ RSpec.describe "Task Show/Edit Page", :vcr do
     visit task_path(@task.id)
   end
 
+  after(:each) do
+    @facade.delete(@task.id, @user.id)
+  end
+
   it "has a form with pre-filled current attributes of the task" do
     expect(page).to have_content("Task name")
     expect(page).to have_field(:name, with: @task.name)
@@ -63,25 +67,27 @@ RSpec.describe "Task Show/Edit Page", :vcr do
     expect(page).to have_content("Please Log In")
   end
 
-  xit "can update attributes of task" do
+  it "can update attributes of task" do
     expect(page).to have_field(:notes, with: @task.notes)
     fill_in(:notes, with: "Different notes")
     click_button("Save Changes")
-    expect(page).to have_content("Changes saved!") #pending backend update
+    expect(page).to have_content("Changes saved!")
     expect(current_path).to eq(task_path(@task.id))
 
     visit task_path(@task.id)
     expect(page).to have_field(:notes, with: "Different notes")
   end
 
-  xit "has an error if any mandatory fields are deleted" do
+  it "has an error if any mandatory fields are deleted" do
+    pending "error formatting fixed"
     fill_in(:name, with: "")
     click_button("Save Changes")
-    expect(page).to have_content("Validation failed: Name can't be blank") ##pending update from backend, reformat errors
+    expect(page).to have_content("Validation failed: Name can't be blank")
     expect(current_path).to eq(task_path(@task.id))
   end
 
-  xit "can delete task" do
+  it "can delete task" do
+    pending "backend removes 204 code from delete action"
     visit tasks_path
     expect(page).to have_content("Water Plants")
 
@@ -91,13 +97,14 @@ RSpec.describe "Task Show/Edit Page", :vcr do
     # expect confirmation message?
     # click "yes" on confirmation message
     expect(current_path).to eq(dashboard_path)
-    expect(page).to have_content("'Water Plants' deleted.")  ##pending update from backend
+    expect(page).to have_content("'Water Plants' deleted.")
 
     visit tasks_path
     expect(page).to_not have_content("Water Plants")
   end
 
-  xit "won't delete task if user selects 'cancel' from confirmation" do
+  it "won't delete task if user selects 'cancel' from confirmation" do
+    pending "confirmation message working"
     expect(page).to have_button("Delete")
     click_button("Delete")
     # expect confirmation message?

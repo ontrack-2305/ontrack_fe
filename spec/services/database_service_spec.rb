@@ -4,7 +4,19 @@ RSpec.describe DatabaseService, :vcr do
   before(:each) do
     @service = DatabaseService.new
     @attributes_hash = {:name=>"Water Plants", :category=>"chore", :mandatory=>"1", :event_date=>"", :frequency=>"weekly", :notes=>"Remember plants in bedroom, living room, and balcony", :time_needed=>20}
-    # @attributes_hash_with_id = {:id => "26", :name=>"Water Plants", :category=>"chore", :mandatory=>"1", :event_date=>"", :frequency=>"weekly", :notes=>"Remember plants in bedroom, living room, and balcony", :time_needed=>20}
+    @user_id = "24"
+  end
+
+  after(:each) do
+    facade = TasksFacade.new
+    begin
+      tasks = facade.get_tasks(@user_id)
+    rescue
+      tasks = []
+    end
+    tasks.each do |task|
+      facade.delete(task.id, @user_id)
+    end
   end
 
   it "connects to database" do
@@ -12,56 +24,76 @@ RSpec.describe DatabaseService, :vcr do
     expect(response).to be_a(Faraday::Connection)
   end
 
-  xit "posts a task" do
-    response = @service.post(@attributes_hash, "24")
-    message = JSON.parse(response.body, symbolize_names: true)[:message] ##pending update from BE
+  it "posts a task" do
+    response = @service.post(@attributes_hash, @user_id)
+
+    message = JSON.parse(response.body, symbolize_names: true)[:message]
     expect(message).to eq("'Water Plants' added!")
-    fetched = @service.get_tasks("24")
+    fetched = @service.get_tasks(@user_id)
     data = JSON.parse(fetched.body, symbolize_names: true)[:data][-1]
     expect(data[:attributes][:name]).to eq("Water Plants")
   end
 
-  xit "patches a task" do
-    @service.post(@attributes_hash, "24")
-    response1 = @service.get_tasks("24")
+  it "patches a task" do
+    @service.post(@attributes_hash, @user_id)
+    response1 = @service.get_tasks(@user_id)
     task_id = JSON.parse(response1.body, symbolize_names: true)[:data][-1][:id]
 
-    response2 = @service.patch({frequency: "daily", id: task_id}, "24")
+    response2 = @service.patch({frequency: "daily", id: task_id}, @user_id)
     message = JSON.parse(response2.body, symbolize_names: true)[:message]
-    expect(message).to eq("Changes saved") ##pending update from BE
+    expect(message).to eq("Changes saved!")
     
-    fetched = @service.get_task(task_id, "24")
+    fetched = @service.get_task(task_id, @user_id)
     data = JSON.parse(fetched.body, symbolize_names: true)[:data]
 
     expect(data[:attributes][:name]).to eq("Water Plants")
     expect(data[:attributes][:frequency]).to eq("daily")
   end
 
-  xit "destroys a task" do
-    @service.post(@attributes_hash, "24")
-    response1 = @service.get_tasks("24")
+  it "destroys a task" do
+    pending "backend removes status 204 from task destroy action"
+    pending "update of error message formatting"
+    @service.post(@attributes_hash, @user_id)
+    response1 = @service.get_tasks(@user_id)
     task_id = JSON.parse(response1.body, symbolize_names: true)[:data][-1][:id]
 
-    response2 = @service.destroy(task_id, "24")
+    response2 = @service.destroy(task_id, @user_id)
+
     message = JSON.parse(response2.body, symbolize_names: true)[:message]
-    expect(message).to eq("Changes saved") ##pending update from BE
+    expect(message).to eq("'Water Plants' deleted.")
     
-    fetched = @service.get_task(task_id, "24")
-    data = JSON.parse(fetched.body, symbolize_names: true)[:data]
+    not_found = @service.get_task(task_id, @user_id)
+    error = JSON.parse(not_found.body, symbolize_names: true)[:errors][0][:detail]
 
-    expect(data[:attributes][:name]).to eq("Water Plants")
-    expect(data[:attributes][:frequency]).to eq("daily")
+    expect(error).to eq("Couldn't find Task with 'id'=#{task_id}")
   end
 
-  xit "gets one task" do
+  it "gets one task" do
+    @service.post(@attributes_hash, @user_id)
+    response1 = @service.get_tasks(@user_id)
+    task_id = JSON.parse(response1.body, symbolize_names: true)[:data][-1][:id]
 
+    response2 = @service.get_task(task_id, @user_id)
+    task_data = JSON.parse(response2.body, symbolize_names: true)[:data]
+
+    expect(task_data[:id]).to eq(task_id)
+    expect(task_data[:attributes][:name]).to eq("Water Plants")
   end
 
-  xit "gets all tasks for a user" do
-
+  it "gets all tasks for a user" do
+    response = @service.get_tasks(@user_id)
+    3.times { @service.post(@attributes_hash, @user_id) }
+    response = @service.get_tasks(@user_id)
+    
+    tasks = JSON.parse(response.body, symbolize_names: true)[:data]
+    expect(tasks.count).to eq(3)
   end
 
-  xit "gets an ai breakdown" do
+  it "gets an ai breakdown" do
+    response = @service.get_ai_breakdown("Water Plants")
+    parsed = JSON.parse(response.body, symbolize_names: true)
 
+    expect(parsed).to have_key(:response)
+    expect(parsed[:response][0][:text]).to be_a(String)
   end
 end

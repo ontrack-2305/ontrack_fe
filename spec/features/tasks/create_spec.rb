@@ -6,7 +6,20 @@ RSpec.describe "Task Create Page", :vcr do
     stub_omniauth
     visit root_path
     click_button "Log In With Google"
+    @user_id = User.last.id
     visit new_task_path
+  end
+
+  after(:each) do
+    facade = TasksFacade.new
+    begin
+      tasks = facade.get_tasks(@user_id)
+    rescue
+      tasks = []
+    end
+    tasks.each do |task|
+      facade.delete(task.id, @user_id)
+    end
   end
 
   it "has a form to create a task" do
@@ -44,7 +57,7 @@ RSpec.describe "Task Create Page", :vcr do
     click_link("Log Out")
     visit dashboard_path
     expect(current_path).to eq(root_path)
-    expect(page).to have_content("Please Log In") # exact message pending
+    expect(page).to have_content("Please Log In")
   end
 
   it "creates a task for the user who is logged in" do
@@ -61,7 +74,7 @@ RSpec.describe "Task Create Page", :vcr do
     click_button("Save and Back to Dashboard")
     
     expect(current_path).to eq(dashboard_path)
-    # expect(page).to have_content("'Water Plants' added!")  #need backend update: success messages
+    expect(page).to have_content("'Water Plants' added!") 
     visit tasks_path
     expect(page).to have_content("Water Plants")
   end
@@ -80,19 +93,20 @@ RSpec.describe "Task Create Page", :vcr do
     click_button("Save and Create Another Task")
     
     expect(current_path).to eq(new_task_path)
-    # expect(page).to have_content("'Water Plants' added!")   ##need backend update: success messages
+    expect(page).to have_content("'Water Plants' added!")
 
     visit tasks_path
     expect(page).to have_content("Water Plants")
   end
 
-  it "does not create a task if any mandatory fields are missing" do  
+  it "does not create a task if any mandatory fields are missing" do 
+    pending "update backend error message formatting"
     expect(page).to have_content("Mandatory fields marked with a *")
     select(:weekly, from: :frequency)
     fill_in(:notes, with: "Remember plants in bedroom, living room, and balcony")
     click_button("Save and Back to Dashboard")
     expect(current_path).to eq(new_task_path)
-    # expect(page).to have_content("Validation failed: Name can't be blank, Category can't be blank, Time needed can't be blank") ##need backend update: error messages in different format
+    expect(page).to have_content("Validation failed: Name can't be blank, Category can't be blank, Time needed can't be blank")
   end
 
   it "can create a task if optional fields are missing" do
@@ -101,22 +115,14 @@ RSpec.describe "Task Create Page", :vcr do
     select(:weekly, from: :frequency)
     fill_in(:minutes, with: 20)
     click_button("Save and Back to Dashboard")
-    # expect(page).to have_content("'Water Plants' added!")  #need backend update: success messages 
+    expect(page).to have_content("'Water Plants' added!") 
   end
-
-  # it "can generate AI-powered notes" do
-  #   expect(page).to have_field(:notes) # how to test it's empty?
-  #   fill_in(:name, with: "Water Plants")
-  #   click_button("Generate a Suggested Breakdown of this Task (Powered by AI)")
-  #   expect(page).to have_field(:name, with: "Water Plants")
-  #   expect(page).to have_field(:notes) # how to test it's now got something?
-  # end
 
   it "can generate AI-powered notes" do
     expect(page).to have_field(:notes) do |field|
       expect(field.value).to be_nil
     end
-    
+
     fill_in(:name, with: "Water Plants")
     click_button("Generate a Suggested Breakdown of this Task (Powered by AI)")
     expect(page).to have_field(:name, with: "Water Plants")
