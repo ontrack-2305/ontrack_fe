@@ -1,7 +1,6 @@
-class TasksController < ApplicationController 
-  # before_action :find_user
-  # Or rename this to :validate_session
-  
+class TasksController < ApplicationController
+  before_action :validate_session
+
   def index 
 
   end
@@ -54,14 +53,11 @@ class TasksController < ApplicationController
   def facade 
     @_facade ||= TasksFacade.new
   end
-  
-  #rename this to validate_session?
-  # def find_user
-    #begin 
-      # @user = User.find(session[:user_id])
-    # rescue
-      # redirect_to root_path
-      # flash[:notice] = "Please log in"
-    # end
-  # end
+
+  def validate_session
+    if session[:user_id].nil?
+      redirect_to root_path
+      flash[:alert] = "Please Log In"
+    end
+  end
 end
