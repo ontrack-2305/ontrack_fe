@@ -1,0 +1,652 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/888/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"497ff6d64382bc9d34ed64acc2e4b32b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - eba584d6-6dd1-46d4-9bd3-ddf48d7aedcd
+      X-Runtime:
+      - '0.007210'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=1.52, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=2.46
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"''Water Plants'' added!"}'
+  recorded_at: Sat, 16 Sep 2023 23:49:53 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/888/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Prune%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8d9a5e5b97f6415e3939f11e6357482b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c76f18dc-40ab-4098-8158-eb43386aabb3
+      X-Runtime:
+      - '0.007004'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.53, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=2.46
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"''Prune Plants'' added!"}'
+  recorded_at: Sat, 16 Sep 2023 23:49:53 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/888/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Repot%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=40
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"b0ac0dd06b5cd52efa10a017ab4954f2"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 61e55dc6-d9b4-4a3d-8530-c4e9daf7be99
+      X-Runtime:
+      - '0.009699'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=1.60, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=2.49
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"''Repot Plants'' added!"}'
+  recorded_at: Sat, 16 Sep 2023 23:49:53 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/888/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Wash%20Dishes&notes=&time_needed=30
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"912cff38d85472dbb44a8353893215c8"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 75d5dd99-8642-47d0-9760-6ae0feb2a544
+      X-Runtime:
+      - '0.006399'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.46, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=2.22
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"''Wash Dishes'' added!"}'
+  recorded_at: Sat, 16 Sep 2023 23:49:53 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/888/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Clean%20Room&notes=Pick%20up%20clothes,%20vacuum,%20clear%20off%20desk&time_needed=120
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8964f1b3b483c03642a640e1b00d188c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - fcb25a3c-d28f-43a2-87df-36fb20f8d68f
+      X-Runtime:
+      - '0.006440'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.36, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=2.08
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"''Clean Room'' added!"}'
+  recorded_at: Sat, 16 Sep 2023 23:49:53 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/888/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Buy%20more%20plants&notes=I%20need%20them&time_needed=60
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"91ada798bd76bec310be6744a6ba6bb7"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0cab0c91-b199-4727-9efb-99e73d4de0a7
+      X-Runtime:
+      - '0.006345'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.41, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=2.41
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"''Buy more plants'' added!"}'
+  recorded_at: Sat, 16 Sep 2023 23:49:53 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/888/tasks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"e53dfe823df98442632456d9e7f95fa8"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 46f23bf5-b8b0-49c7-b6a8-e13be7d7ac19
+      X-Runtime:
+      - '0.005375'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.40, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.34
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"59","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":888,"notes":"Remember
+        plants in bedroom, living room, and balcony"}},{"id":"60","type":"task","attributes":{"name":"Prune
+        Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":888,"notes":"Remember
+        plants in bedroom, living room, and balcony"}},{"id":"61","type":"task","attributes":{"name":"Repot
+        Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":40,"user_id":888,"notes":"Remember
+        plants in bedroom, living room, and balcony"}},{"id":"62","type":"task","attributes":{"name":"Wash
+        Dishes","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":30,"user_id":888,"notes":""}},{"id":"63","type":"task","attributes":{"name":"Clean
+        Room","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":120,"user_id":888,"notes":"Pick
+        up clothes, vacuum, clear off desk"}},{"id":"64","type":"task","attributes":{"name":"Buy
+        more plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":60,"user_id":888,"notes":"I
+        need them"}}]}'
+  recorded_at: Sat, 16 Sep 2023 23:49:53 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/api/v1/users/888/tasks/59
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Vary:
+      - Accept
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 6a622960-598a-4d57-a95f-21e94bea6977
+      X-Runtime:
+      - '0.005936'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.39, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.98
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Sat, 16 Sep 2023 23:49:53 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/api/v1/users/888/tasks/60
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Vary:
+      - Accept
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - e60fcdf4-781a-4596-9af6-ca23b08f0b7e
+      X-Runtime:
+      - '0.005796'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.57, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=2.02
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Sat, 16 Sep 2023 23:49:53 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/api/v1/users/888/tasks/61
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Vary:
+      - Accept
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - f18ad21d-4db8-4904-a72b-5c17c167fc72
+      X-Runtime:
+      - '0.006674'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.68, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=2.13
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Sat, 16 Sep 2023 23:49:53 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/api/v1/users/888/tasks/62
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Vary:
+      - Accept
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 7e34b1e9-a0d9-4d6e-8fa1-9d320023759b
+      X-Runtime:
+      - '0.006132'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.68, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=2.21
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Sat, 16 Sep 2023 23:49:53 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/api/v1/users/888/tasks/63
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Vary:
+      - Accept
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 6ffe7897-33f9-4349-96b6-65719725bf47
+      X-Runtime:
+      - '0.006236'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.30, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.76
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Sat, 16 Sep 2023 23:49:53 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/api/v1/users/888/tasks/64
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Vary:
+      - Accept
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - '008f7dad-fd01-49c4-affd-a1d9abbd6b07'
+      X-Runtime:
+      - '0.012904'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.03, sql.active_record;dur=8.22, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=8.83
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Sat, 16 Sep 2023 23:49:53 GMT
+recorded_with: VCR 6.2.0

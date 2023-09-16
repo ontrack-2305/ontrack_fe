@@ -35,77 +35,27 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"1fbdd60c0328f93c66cfa0ec5b55c527"
+      - W/"27ddeb62306846c75ada332320113f70"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1f1633a4-8b35-42c5-9426-c01d78a1c4cd
+      - 1d961a24-3a9e-474a-a29d-a9ec63f798b3
       X-Runtime:
-      - '2.606517'
+      - '2.329368'
       Server-Timing:
-      - start_processing.action_controller;dur=0.05, process_action.action_controller;dur=2596.15
+      - start_processing.action_controller;dur=5.99, process_action.action_controller;dur=2287.19
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"response":[{"text":"1. Gather necessary watering supplies (such as
-        a watering can or hose). 2. Identify the plants that need water (based on
-        plant type and time since last watering). 3. Fill the watering container with
-        an appropriate amount of water. 4. Direct water to the base of each plant,
-        making sure to evenly distribute the water. 5. Clean up any excess water or
-        spillage."}]}'
-  recorded_at: Sat, 16 Sep 2023 23:19:14 GMT
+      string: '{"response":[{"text":"1. Gather necessary supplies (watering can, plant
+        food, gloves). 2. Identify which plants need watering. 3. Fill the watering
+        can with water. 4. Water each plant, making sure to evenly distribute water.
+        5. Optionally, add plant food as needed."}]}'
+  recorded_at: Sat, 16 Sep 2023 20:05:48 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/chat_service?task=
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Cache-Control:
-      - no-cache
-      X-Request-Id:
-      - 305ebff8-030e-4eb8-aa84-f1b79500a362
-      X-Runtime:
-      - '0.007606'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.07, process_action.action_controller;dur=1.07
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"errors":[{"status":"400","title":"No task provided to breakdown"}]}'
-  recorded_at: Sat, 16 Sep 2023 23:19:14 GMT
-- request:
-    method: get
-    uri: http://localhost:3000/api/v1/users/20/tasks
+    uri: http://localhost:3000/api/v1/users/836/tasks
     body:
       encoding: US-ASCII
       string: ''
@@ -142,15 +92,65 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6d68280b-bdc8-413a-a40f-54b5066dbf0c
+      - 766ac9fc-d1f3-4865-a54c-cccf19cc5b7d
       X-Runtime:
-      - '0.005921'
+      - '0.005431'
       Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.58, process_action.action_controller;dur=1.13
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.42, process_action.action_controller;dur=0.94
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Sat, 16 Sep 2023 23:19:14 GMT
+  recorded_at: Sat, 16 Sep 2023 22:51:14 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/886/tasks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1b7ed3a6-7a92-4371-8a73-e05e24027d27
+      X-Runtime:
+      - '0.005338'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.42, process_action.action_controller;dur=0.97
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Sat, 16 Sep 2023 23:49:53 GMT
 recorded_with: VCR 6.2.0

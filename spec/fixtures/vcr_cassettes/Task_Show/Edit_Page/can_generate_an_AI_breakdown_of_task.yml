@@ -4288,4 +4288,3198 @@ http_interactions:
         with water. 3. Identify plants that need watering. 4. Pour water into each
         plant pot until the soil is moist. 5. Clean up any spills or excess water."}}}'
   recorded_at: Sat, 16 Sep 2023 18:26:08 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/770/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"30c0001ef5bbc17f3a161fd8f37ff42d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a6542861-4004-4e7f-bd9a-e078ddd4ec07
+      X-Runtime:
+      - '0.007916'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.30, process_action.action_controller;dur=2.22
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"82","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":770,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 20:05:48 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/770/tasks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"39941b4f82edf11e33335d20f0cf8999"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 30ef5903-af9c-4c07-9a34-299683198e1e
+      X-Runtime:
+      - '0.005008'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.43, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=0.97
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"82","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":770,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}]}'
+  recorded_at: Sat, 16 Sep 2023 20:05:48 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/770/tasks/82
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"30c0001ef5bbc17f3a161fd8f37ff42d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 39a27d66-4c1d-438a-b29d-63a8488a9ecc
+      X-Runtime:
+      - '0.005097'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.47, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=0.90
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"82","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":770,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 20:05:48 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/770/tasks/82
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"30c0001ef5bbc17f3a161fd8f37ff42d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 708fa572-4f34-45a6-8d0d-10994665a4fa
+      X-Runtime:
+      - '0.005198'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.54, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.06
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"82","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":770,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 20:05:48 GMT
+- request:
+    method: patch
+    uri: http://localhost:3000/api/v1/users/770/tasks/82?category=chore&event_date=&frequency=weekly&id=82&mandatory=1&name=Water%20Plants&notes=1.%20Gather%20necessary%20materials:%20watering%20can,%20plants.%202.%20Fill%20the%20watering%20can%20with%20water.%203.%20Identify%20plants%20that%20need%20watering.%204.%20Pour%20water%20into%20each%20plant%20pot%20until%20the%20soil%20is%20moist.%205.%20Clean%20up%20any%20spills%20or%20excess%20water.&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"ac090559e82a57997ab1401e85c07c01"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e1384708-9641-45ba-ab1a-a85bcba2acb6
+      X-Runtime:
+      - '0.018912'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=13.56,
+        instantiation.active_record;dur=0.02, unpermitted_parameters.action_controller;dur=0.06,
+        process_action.action_controller;dur=14.63
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"82","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":770,"notes":"1.
+        Gather necessary materials: watering can, plants. 2. Fill the watering can
+        with water. 3. Identify plants that need watering. 4. Pour water into each
+        plant pot until the soil is moist. 5. Clean up any spills or excess water."}}}'
+  recorded_at: Sat, 16 Sep 2023 20:05:48 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/770/tasks/82
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"ac090559e82a57997ab1401e85c07c01"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2e4aed30-973f-4787-be53-c1d8a7aa684a
+      X-Runtime:
+      - '0.005001'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.38, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=0.94
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"82","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":770,"notes":"1.
+        Gather necessary materials: watering can, plants. 2. Fill the watering can
+        with water. 3. Identify plants that need watering. 4. Pour water into each
+        plant pot until the soil is moist. 5. Clean up any spills or excess water."}}}'
+  recorded_at: Sat, 16 Sep 2023 20:05:48 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/770/tasks/82
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"ac090559e82a57997ab1401e85c07c01"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - bc56be9f-a9d0-4667-9c21-33c4c412bf6a
+      X-Runtime:
+      - '0.021065'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.24, sql.active_record;dur=1.50, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=11.74
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"82","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":770,"notes":"1.
+        Gather necessary materials: watering can, plants. 2. Fill the watering can
+        with water. 3. Identify plants that need watering. 4. Pour water into each
+        plant pot until the soil is moist. 5. Clean up any spills or excess water."}}}'
+  recorded_at: Sat, 16 Sep 2023 20:05:48 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/790/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"dabf461e4bb738c4e8f8f817d8f19424"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c6d3e49b-9111-465c-9a09-b1690ce198f3
+      X-Runtime:
+      - '0.011360'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=5.50, process_action.action_controller;dur=6.47
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"90","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":790,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 20:52:25 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/790/tasks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"58f4e59da690ca2aef8fea674c684cbe"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 97e1c97b-d56b-4175-8f48-a477f548dade
+      X-Runtime:
+      - '0.006468'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=0.42, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.11
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"90","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":790,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}]}'
+  recorded_at: Sat, 16 Sep 2023 20:52:25 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/790/tasks/90
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"dabf461e4bb738c4e8f8f817d8f19424"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 37eeb816-2fe3-4848-a322-22a26395f4a7
+      X-Runtime:
+      - '0.016553'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.20, sql.active_record;dur=1.89, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=10.58
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"90","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":790,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 20:52:25 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/790/tasks/90
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"dabf461e4bb738c4e8f8f817d8f19424"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9e186d53-15f0-4d56-a1d8-9acd9857e43f
+      X-Runtime:
+      - '0.005402'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.41, instantiation.active_record;dur=0.04,
+        process_action.action_controller;dur=0.99
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"90","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":790,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 20:52:25 GMT
+- request:
+    method: patch
+    uri: http://localhost:3000/api/v1/users/790/tasks/90?category=chore&event_date=&frequency=weekly&id=90&mandatory=1&name=Water%20Plants&notes=1.%20Gather%20necessary%20materials:%20watering%20can,%20plants.%202.%20Fill%20the%20watering%20can%20with%20water.%203.%20Identify%20plants%20that%20need%20watering.%204.%20Pour%20water%20into%20each%20plant%20pot%20until%20the%20soil%20is%20moist.%205.%20Clean%20up%20any%20spills%20or%20excess%20water.&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"1854c580b921a95b10effdfac4ca450b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - bc09f229-e0bb-476c-9ed3-2e9ffe95b05a
+      X-Runtime:
+      - '0.014595'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.07, sql.active_record;dur=6.21, instantiation.active_record;dur=0.02,
+        unpermitted_parameters.action_controller;dur=0.05, process_action.action_controller;dur=8.35
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"90","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":790,"notes":"1.
+        Gather necessary materials: watering can, plants. 2. Fill the watering can
+        with water. 3. Identify plants that need watering. 4. Pour water into each
+        plant pot until the soil is moist. 5. Clean up any spills or excess water."}}}'
+  recorded_at: Sat, 16 Sep 2023 20:52:25 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/790/tasks/90
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"1854c580b921a95b10effdfac4ca450b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f47a86f6-d559-4ac3-abf3-2364fc44e6a3
+      X-Runtime:
+      - '0.006010'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.42, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.21
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"90","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":790,"notes":"1.
+        Gather necessary materials: watering can, plants. 2. Fill the watering can
+        with water. 3. Identify plants that need watering. 4. Pour water into each
+        plant pot until the soil is moist. 5. Clean up any spills or excess water."}}}'
+  recorded_at: Sat, 16 Sep 2023 20:52:25 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/790/tasks/90
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"1854c580b921a95b10effdfac4ca450b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - caeb42ba-812f-49b5-a372-76ab3b1a1302
+      X-Runtime:
+      - '0.005957'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=0.36, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.02
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"90","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":790,"notes":"1.
+        Gather necessary materials: watering can, plants. 2. Fill the watering can
+        with water. 3. Identify plants that need watering. 4. Pour water into each
+        plant pot until the soil is moist. 5. Clean up any spills or excess water."}}}'
+  recorded_at: Sat, 16 Sep 2023 20:52:25 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/810/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"497ff6d64382bc9d34ed64acc2e4b32b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 81079e61-ae70-478f-aefb-6c9371717f8e
+      X-Runtime:
+      - '0.007582'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=1.88, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=3.02
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"''Water Plants'' added!"}'
+  recorded_at: Sat, 16 Sep 2023 20:54:03 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/810/tasks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"3f4726230bd22e9638f4e41d869bba60"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1ab45368-136d-488a-83a3-13f030ff91ec
+      X-Runtime:
+      - '0.005342'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.48, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.07
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"98","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":810,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}]}'
+  recorded_at: Sat, 16 Sep 2023 20:54:03 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/810/tasks/98
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"1beaad5bd34bb30e62c8c4438ff94d4a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 37fcda8b-d55d-4efa-a1af-b132ce7501cf
+      X-Runtime:
+      - '0.005941'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.20, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.68
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"98","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":810,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 20:54:03 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/810/tasks/98
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"1beaad5bd34bb30e62c8c4438ff94d4a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c62447cd-d317-4500-8c59-2be8cfccb807
+      X-Runtime:
+      - '0.012008'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.20, sql.active_record;dur=0.67, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=6.68
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"98","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":810,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 20:54:03 GMT
+- request:
+    method: patch
+    uri: http://localhost:3000/api/v1/users/810/tasks/98?category=chore&event_date=&frequency=weekly&id=98&mandatory=1&name=Water%20Plants&notes=1.%20Gather%20necessary%20materials:%20watering%20can,%20plants.%202.%20Fill%20the%20watering%20can%20with%20water.%203.%20Identify%20plants%20that%20need%20watering.%204.%20Pour%20water%20into%20each%20plant%20pot%20until%20the%20soil%20is%20moist.%205.%20Clean%20up%20any%20spills%20or%20excess%20water.&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"975ae9eb447bcbd21fb53e1b5b48dac5"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c71359a9-fb14-4b71-8517-e65642ab51cc
+      X-Runtime:
+      - '0.011013'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.07, sql.active_record;dur=3.37, instantiation.active_record;dur=0.03,
+        unpermitted_parameters.action_controller;dur=0.08, process_action.action_controller;dur=5.93
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"Changes saved!"}'
+  recorded_at: Sat, 16 Sep 2023 20:54:03 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/810/tasks/98
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"60aa0daab0e5ffd579ca2c82c209f07d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 97715083-ed65-407e-8fc4-0d3a99d8736a
+      X-Runtime:
+      - '0.037395'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.07, sql.active_record;dur=30.29,
+        instantiation.active_record;dur=0.05, process_action.action_controller;dur=32.26
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"98","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":810,"notes":"1.
+        Gather necessary materials: watering can, plants. 2. Fill the watering can
+        with water. 3. Identify plants that need watering. 4. Pour water into each
+        plant pot until the soil is moist. 5. Clean up any spills or excess water."}}}'
+  recorded_at: Sat, 16 Sep 2023 20:54:03 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/810/tasks/98
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"60aa0daab0e5ffd579ca2c82c209f07d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ef63251b-4747-410f-8b91-6de2285c71fc
+      X-Runtime:
+      - '0.006280'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.81, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.46
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"98","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":810,"notes":"1.
+        Gather necessary materials: watering can, plants. 2. Fill the watering can
+        with water. 3. Identify plants that need watering. 4. Pour water into each
+        plant pot until the soil is moist. 5. Clean up any spills or excess water."}}}'
+  recorded_at: Sat, 16 Sep 2023 20:54:03 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/842/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"497ff6d64382bc9d34ed64acc2e4b32b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6e7d75a3-a4b1-402a-bac9-3d0a12f9d064
+      X-Runtime:
+      - '0.007551'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.79, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=3.22
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"''Water Plants'' added!"}'
+  recorded_at: Sat, 16 Sep 2023 23:24:59 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/842/tasks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"15a331fdb7ecb8b01f361e0c6db8ce95"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9423b871-a2a5-4885-b785-739cf2e26205
+      X-Runtime:
+      - '0.005029'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.37, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=0.88
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"20","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":842,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}]}'
+  recorded_at: Sat, 16 Sep 2023 23:24:59 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/842/tasks/20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"1f376cb10853f5f5a0585ddc7775a24e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e5729392-24eb-4c6f-9e91-1d5ac6d16fb9
+      X-Runtime:
+      - '0.004900'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.03, sql.active_record;dur=0.33, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=0.72
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"20","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":842,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 23:24:59 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/842/tasks/20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"1f376cb10853f5f5a0585ddc7775a24e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 35fa3e65-957c-4901-9f01-6bc45415e201
+      X-Runtime:
+      - '0.005273'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.36, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=0.85
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"20","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":842,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 23:24:59 GMT
+- request:
+    method: patch
+    uri: http://localhost:3000/api/v1/users/842/tasks/20?category=chore&event_date=&frequency=weekly&id=20&mandatory=1&name=Water%20Plants&notes=1.%20Gather%20necessary%20materials:%20watering%20can,%20plants.%202.%20Fill%20the%20watering%20can%20with%20water.%203.%20Identify%20plants%20that%20need%20watering.%204.%20Pour%20water%20into%20each%20plant%20pot%20until%20the%20soil%20is%20moist.%205.%20Clean%20up%20any%20spills%20or%20excess%20water.&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"975ae9eb447bcbd21fb53e1b5b48dac5"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - aee1b39f-0e9a-4f7e-9da7-d0dc41f68e95
+      X-Runtime:
+      - '0.012442'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=6.41, instantiation.active_record;dur=0.03,
+        unpermitted_parameters.action_controller;dur=0.05, process_action.action_controller;dur=7.71
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"Changes saved!"}'
+  recorded_at: Sat, 16 Sep 2023 23:25:00 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/842/tasks/20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"f964e6e3e9b1e8c7a0fa90b05d15e555"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5bf6dad9-387d-4eb2-b02f-82820bacf532
+      X-Runtime:
+      - '0.005641'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.31, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=0.83
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"20","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":842,"notes":"1.
+        Gather necessary materials: watering can, plants. 2. Fill the watering can
+        with water. 3. Identify plants that need watering. 4. Pour water into each
+        plant pot until the soil is moist. 5. Clean up any spills or excess water."}}}'
+  recorded_at: Sat, 16 Sep 2023 23:25:00 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/842/tasks/20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"f964e6e3e9b1e8c7a0fa90b05d15e555"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b83844da-bdc3-475f-89bf-39675d96d6f7
+      X-Runtime:
+      - '0.005137'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.36, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=0.84
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"20","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":842,"notes":"1.
+        Gather necessary materials: watering can, plants. 2. Fill the watering can
+        with water. 3. Identify plants that need watering. 4. Pour water into each
+        plant pot until the soil is moist. 5. Clean up any spills or excess water."}}}'
+  recorded_at: Sat, 16 Sep 2023 23:25:00 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/api/v1/users/842/tasks/20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Vary:
+      - Accept
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 6b2b432e-3e6c-40e1-b9e5-5ebd99e3080c
+      X-Runtime:
+      - '0.006904'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.33, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.85
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Sat, 16 Sep 2023 23:25:00 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/851/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"497ff6d64382bc9d34ed64acc2e4b32b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 82d729b8-0049-448d-990e-960e37e3355d
+      X-Runtime:
+      - '0.008426'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=2.18, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=3.77
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"''Water Plants'' added!"}'
+  recorded_at: Sat, 16 Sep 2023 23:25:51 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/851/tasks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"41d26a17ba37d02720ef4d6c8760903d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8f72eace-5142-4bcb-84a2-e0b22258b449
+      X-Runtime:
+      - '0.005095'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.46, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.15
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"29","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":851,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}]}'
+  recorded_at: Sat, 16 Sep 2023 23:25:51 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/851/tasks/29
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"05208d9a74d63b4be6c3bcd9cccea8c6"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3b975e2b-d8c2-4775-9d29-40e6c8e3d210
+      X-Runtime:
+      - '0.007976'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.09, sql.active_record;dur=1.40, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=2.50
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"29","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":851,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 23:25:51 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/851/tasks/29
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"05208d9a74d63b4be6c3bcd9cccea8c6"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2be1939f-9a4b-4261-8554-05cc56f3b580
+      X-Runtime:
+      - '0.005354'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.47, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.02
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"29","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":851,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 23:25:51 GMT
+- request:
+    method: patch
+    uri: http://localhost:3000/api/v1/users/851/tasks/29?category=chore&event_date=&frequency=weekly&id=29&mandatory=1&name=Water%20Plants&notes=1.%20Gather%20necessary%20materials:%20watering%20can,%20plants.%202.%20Fill%20the%20watering%20can%20with%20water.%203.%20Identify%20plants%20that%20need%20watering.%204.%20Pour%20water%20into%20each%20plant%20pot%20until%20the%20soil%20is%20moist.%205.%20Clean%20up%20any%20spills%20or%20excess%20water.&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"975ae9eb447bcbd21fb53e1b5b48dac5"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 75217d0b-2fec-477d-a77e-2c02f221f8f3
+      X-Runtime:
+      - '0.019922'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=12.12,
+        instantiation.active_record;dur=0.02, unpermitted_parameters.action_controller;dur=0.05,
+        process_action.action_controller;dur=13.36
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"Changes saved!"}'
+  recorded_at: Sat, 16 Sep 2023 23:25:51 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/851/tasks/29
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"cc60e5098a5f126f34aa9f23c8cdd6d2"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 224ad438-efb6-4a95-99ac-5fdc0ca9b677
+      X-Runtime:
+      - '0.005056'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.38, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=0.90
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"29","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":851,"notes":"1.
+        Gather necessary materials: watering can, plants. 2. Fill the watering can
+        with water. 3. Identify plants that need watering. 4. Pour water into each
+        plant pot until the soil is moist. 5. Clean up any spills or excess water."}}}'
+  recorded_at: Sat, 16 Sep 2023 23:25:51 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/851/tasks/29
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"cc60e5098a5f126f34aa9f23c8cdd6d2"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2c6e2668-7d15-4c62-a4bc-4f75515862d8
+      X-Runtime:
+      - '0.005420'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.35, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.26
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"29","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":851,"notes":"1.
+        Gather necessary materials: watering can, plants. 2. Fill the watering can
+        with water. 3. Identify plants that need watering. 4. Pour water into each
+        plant pot until the soil is moist. 5. Clean up any spills or excess water."}}}'
+  recorded_at: Sat, 16 Sep 2023 23:25:52 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/api/v1/users/851/tasks/29
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Vary:
+      - Accept
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 33c34cf0-2eb2-4300-a3ba-b48759bebaf6
+      X-Runtime:
+      - '0.006107'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.62, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=2.16
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Sat, 16 Sep 2023 23:25:52 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/868/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"497ff6d64382bc9d34ed64acc2e4b32b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 297d037e-0c4f-4ef0-b6d1-21f172f24cf6
+      X-Runtime:
+      - '0.007274'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=2.01, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=2.98
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"''Water Plants'' added!"}'
+  recorded_at: Sat, 16 Sep 2023 23:28:48 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/868/tasks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8ad3388390acaa49a4b67c465128d137"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3ef2d95c-9853-4bbb-8b08-4678ff32b8af
+      X-Runtime:
+      - '0.005031'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.36, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.24
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"46","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":868,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}]}'
+  recorded_at: Sat, 16 Sep 2023 23:28:48 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/868/tasks/46
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"0da396b82a151af20564ffef7ffee75c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6f32398c-edb1-4eb0-8092-061ead054838
+      X-Runtime:
+      - '0.005036'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.43, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=0.89
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"46","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":868,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 23:28:48 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/868/tasks/46
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"0da396b82a151af20564ffef7ffee75c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6b558817-3d15-4a6f-864a-18113a311d1c
+      X-Runtime:
+      - '0.005527'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.69, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.14
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"46","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":868,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 23:28:48 GMT
+- request:
+    method: patch
+    uri: http://localhost:3000/api/v1/users/868/tasks/46?category=chore&event_date=&frequency=weekly&id=46&mandatory=1&name=Water%20Plants&notes=1.%20Gather%20necessary%20materials:%20watering%20can,%20plants.%202.%20Fill%20the%20watering%20can%20with%20water.%203.%20Identify%20plants%20that%20need%20watering.%204.%20Pour%20water%20into%20each%20plant%20pot%20until%20the%20soil%20is%20moist.%205.%20Clean%20up%20any%20spills%20or%20excess%20water.&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"975ae9eb447bcbd21fb53e1b5b48dac5"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - fe3b2e9f-46cf-4ca0-bf38-5480d51b853b
+      X-Runtime:
+      - '0.023086'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.08, sql.active_record;dur=16.21,
+        instantiation.active_record;dur=0.05, unpermitted_parameters.action_controller;dur=0.11,
+        process_action.action_controller;dur=18.10
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"Changes saved!"}'
+  recorded_at: Sat, 16 Sep 2023 23:28:48 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/868/tasks/46
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"73032268cba73d4865140547c21e4e91"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3fca0b0d-0c70-46b5-99f1-347a626daf10
+      X-Runtime:
+      - '0.004990'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.34, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=0.82
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"46","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":868,"notes":"1.
+        Gather necessary materials: watering can, plants. 2. Fill the watering can
+        with water. 3. Identify plants that need watering. 4. Pour water into each
+        plant pot until the soil is moist. 5. Clean up any spills or excess water."}}}'
+  recorded_at: Sat, 16 Sep 2023 23:28:48 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/868/tasks/46
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"73032268cba73d4865140547c21e4e91"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - afc9e870-6c4e-4906-a541-9ff9b4323232
+      X-Runtime:
+      - '0.004939'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.34, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=0.79
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"46","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":868,"notes":"1.
+        Gather necessary materials: watering can, plants. 2. Fill the watering can
+        with water. 3. Identify plants that need watering. 4. Pour water into each
+        plant pot until the soil is moist. 5. Clean up any spills or excess water."}}}'
+  recorded_at: Sat, 16 Sep 2023 23:28:49 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/api/v1/users/868/tasks/46
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Vary:
+      - Accept
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - e5c659e2-020b-4123-898c-d8998e52ad68
+      X-Runtime:
+      - '0.006788'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.51, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=2.11
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Sat, 16 Sep 2023 23:28:49 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/877/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"497ff6d64382bc9d34ed64acc2e4b32b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3f8ed849-134e-4393-b1db-0037cf72a116
+      X-Runtime:
+      - '0.006902'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.62, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=2.64
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"''Water Plants'' added!"}'
+  recorded_at: Sat, 16 Sep 2023 23:29:50 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/877/tasks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"42f5e569de483c9e5e4b8e5ffba2f68b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b90664c3-d727-4106-b685-6a07ebc26cca
+      X-Runtime:
+      - '0.004968'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.49, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.00
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"55","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":877,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}]}'
+  recorded_at: Sat, 16 Sep 2023 23:29:50 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/877/tasks/55
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"dd4320ef5bde7b3280a645ed5e757fde"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 40d3b4b7-eaea-46cb-9a5a-db48b218da32
+      X-Runtime:
+      - '0.004850'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.34, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=0.76
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"55","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":877,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 23:29:50 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/877/tasks/55
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"dd4320ef5bde7b3280a645ed5e757fde"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3521b4ae-c022-4eba-bc4c-52d41be7beea
+      X-Runtime:
+      - '0.004939'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.30, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=0.75
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"55","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":877,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 23:29:50 GMT
+- request:
+    method: patch
+    uri: http://localhost:3000/api/v1/users/877/tasks/55?category=chore&event_date=&frequency=weekly&id=55&mandatory=1&name=Water%20Plants&notes=1.%20Gather%20necessary%20materials:%20watering%20can,%20plants.%202.%20Fill%20the%20watering%20can%20with%20water.%203.%20Identify%20plants%20that%20need%20watering.%204.%20Pour%20water%20into%20each%20plant%20pot%20until%20the%20soil%20is%20moist.%205.%20Clean%20up%20any%20spills%20or%20excess%20water.&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"975ae9eb447bcbd21fb53e1b5b48dac5"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 05b9f0fb-f979-476e-b9f3-1b6c9b2b591d
+      X-Runtime:
+      - '0.007666'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.49, instantiation.active_record;dur=0.02,
+        unpermitted_parameters.action_controller;dur=0.04, process_action.action_controller;dur=2.46
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"Changes saved!"}'
+  recorded_at: Sat, 16 Sep 2023 23:29:50 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/877/tasks/55
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"2b5b0e8553fd6a5ad473e69b8c8799f5"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 44dc5ca3-cbad-4023-9bbd-c7819f23333c
+      X-Runtime:
+      - '0.005498'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.30, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=0.80
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"55","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":877,"notes":"1.
+        Gather necessary materials: watering can, plants. 2. Fill the watering can
+        with water. 3. Identify plants that need watering. 4. Pour water into each
+        plant pot until the soil is moist. 5. Clean up any spills or excess water."}}}'
+  recorded_at: Sat, 16 Sep 2023 23:29:50 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/877/tasks/55
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"2b5b0e8553fd6a5ad473e69b8c8799f5"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a655ec63-ca66-418c-bec6-b30ca5c2d5f9
+      X-Runtime:
+      - '0.004905'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.33, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.07
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"55","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":877,"notes":"1.
+        Gather necessary materials: watering can, plants. 2. Fill the watering can
+        with water. 3. Identify plants that need watering. 4. Pour water into each
+        plant pot until the soil is moist. 5. Clean up any spills or excess water."}}}'
+  recorded_at: Sat, 16 Sep 2023 23:29:50 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/api/v1/users/877/tasks/55
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Vary:
+      - Accept
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 3c6376b0-e307-44bd-944f-efc9a8ece41f
+      X-Runtime:
+      - '0.010620'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.07, sql.active_record;dur=1.51, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=5.79
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Sat, 16 Sep 2023 23:29:50 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/897/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"497ff6d64382bc9d34ed64acc2e4b32b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1ee696ff-028d-4806-bc2a-3c965d0263b8
+      X-Runtime:
+      - '0.007701'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.54, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=2.54
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"''Water Plants'' added!"}'
+  recorded_at: Sat, 16 Sep 2023 23:49:54 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/897/tasks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"ef6d839bdeb87728093ded1153b8f1eb"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e2ee31ae-2e14-4442-ab12-11e39bdfefa9
+      X-Runtime:
+      - '0.004732'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.38, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=0.87
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"73","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":897,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}]}'
+  recorded_at: Sat, 16 Sep 2023 23:49:54 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/897/tasks/73
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"61d00b70319d980d03a1845639503402"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c69e01e9-f51a-475a-bce4-1edb92c49a06
+      X-Runtime:
+      - '0.005534'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.63, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.13
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"73","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":897,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 23:49:54 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/897/tasks/73
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"61d00b70319d980d03a1845639503402"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b9cd4ac5-3fbf-492b-8bc5-613ff42c5c55
+      X-Runtime:
+      - '0.004942'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.28, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=0.73
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"73","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":897,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 23:49:54 GMT
+- request:
+    method: patch
+    uri: http://localhost:3000/api/v1/users/897/tasks/73?category=chore&event_date=&frequency=weekly&id=73&mandatory=1&name=Water%20Plants&notes=1.%20Gather%20necessary%20materials:%20watering%20can,%20plants.%202.%20Fill%20the%20watering%20can%20with%20water.%203.%20Identify%20plants%20that%20need%20watering.%204.%20Pour%20water%20into%20each%20plant%20pot%20until%20the%20soil%20is%20moist.%205.%20Clean%20up%20any%20spills%20or%20excess%20water.&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"975ae9eb447bcbd21fb53e1b5b48dac5"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4d59f5b7-1f7f-4630-a97c-12e14f03eb16
+      X-Runtime:
+      - '0.007110'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.76, instantiation.active_record;dur=0.02,
+        unpermitted_parameters.action_controller;dur=0.04, process_action.action_controller;dur=2.70
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"Changes saved!"}'
+  recorded_at: Sat, 16 Sep 2023 23:49:54 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/897/tasks/73
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"e2ce2815b335a204d09c9a970befd4fa"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b6bb5ae8-6e15-44df-9c54-e701d2d33ac2
+      X-Runtime:
+      - '0.004777'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.34, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=0.76
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"73","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":897,"notes":"1.
+        Gather necessary materials: watering can, plants. 2. Fill the watering can
+        with water. 3. Identify plants that need watering. 4. Pour water into each
+        plant pot until the soil is moist. 5. Clean up any spills or excess water."}}}'
+  recorded_at: Sat, 16 Sep 2023 23:49:54 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/897/tasks/73
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"e2ce2815b335a204d09c9a970befd4fa"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 65312488-7ad5-4e12-a010-321eda00f47a
+      X-Runtime:
+      - '0.005230'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.62, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.08
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"73","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":897,"notes":"1.
+        Gather necessary materials: watering can, plants. 2. Fill the watering can
+        with water. 3. Identify plants that need watering. 4. Pour water into each
+        plant pot until the soil is moist. 5. Clean up any spills or excess water."}}}'
+  recorded_at: Sat, 16 Sep 2023 23:49:54 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/api/v1/users/897/tasks/73
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Vary:
+      - Accept
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - f9a9f9f9-a7f2-45a5-acb3-729c1f728574
+      X-Runtime:
+      - '0.006149'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.77, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=2.30
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Sat, 16 Sep 2023 23:49:54 GMT
 recorded_with: VCR 6.2.0
