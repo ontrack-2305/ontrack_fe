@@ -2,6 +2,7 @@
 require 'simplecov'
 SimpleCov.start
 require 'spec_helper'
+require 'omniauth_module'
 ENV['RAILS_ENV'] ||= 'test'
 require 'json'
 require 'test_helper'
