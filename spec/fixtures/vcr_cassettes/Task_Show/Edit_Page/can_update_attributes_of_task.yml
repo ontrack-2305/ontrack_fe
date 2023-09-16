@@ -1,0 +1,2240 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/1/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"3366280f3fc4844e1c723e5b52493b15"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 034fa367-7832-4467-8dcc-5fcb9853379e
+      X-Runtime:
+      - '0.008064'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=1.74, process_action.action_controller;dur=2.99
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"16","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":1,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 17:50:57 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/1/tasks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"e9c6ddc272f14300ac24a2cad2c07307"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 894fe60a-3a43-43b5-894f-dd344913b311
+      X-Runtime:
+      - '0.005450'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.46, instantiation.active_record;dur=0.04,
+        process_action.action_controller;dur=1.38
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"2","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":1,"notes":"Remember
+        plants in bedroom, living room, and balcony"}},{"id":"3","type":"task","attributes":{"name":"Water
+        Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":1,"notes":"Remember
+        plants in bedroom, living room, and balcony"}},{"id":"4","type":"task","attributes":{"name":"Water
+        Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":1,"notes":"Remember
+        plants in bedroom, living room, and balcony"}},{"id":"5","type":"task","attributes":{"name":"Water
+        Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":1,"notes":"Remember
+        plants in bedroom, living room, and balcony"}},{"id":"6","type":"task","attributes":{"name":"Prune
+        Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":1,"notes":"Remember
+        plants in bedroom, living room, and balcony"}},{"id":"7","type":"task","attributes":{"name":"Repot
+        Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":1,"notes":"Remember
+        plants in bedroom, living room, and balcony"}},{"id":"8","type":"task","attributes":{"name":"Water
+        Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":1,"notes":"Remember
+        plants in bedroom, living room, and balcony"}},{"id":"12","type":"task","attributes":{"name":"Water
+        Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":1,"notes":"Remember
+        plants in bedroom, living room, and balcony"}},{"id":"13","type":"task","attributes":{"name":"Water
+        Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":1,"notes":"Remember
+        plants in bedroom, living room, and balcony"}},{"id":"14","type":"task","attributes":{"name":"Water
+        Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":1,"notes":"Remember
+        plants in bedroom, living room, and balcony"}},{"id":"15","type":"task","attributes":{"name":"Water
+        Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":1,"notes":"Remember
+        plants in bedroom, living room, and balcony"}},{"id":"16","type":"task","attributes":{"name":"Water
+        Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":1,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}]}'
+  recorded_at: Sat, 16 Sep 2023 17:50:57 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/635/tasks/16
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"3366280f3fc4844e1c723e5b52493b15"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c88b46a1-70d9-45bd-b99f-839931a4fd61
+      X-Runtime:
+      - '0.005186'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.36, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=0.88
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"16","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":1,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 17:50:58 GMT
+- request:
+    method: patch
+    uri: http://localhost:3000/api/v1/users/635/tasks/?category=chore&event_date=&frequency=weekly&id=16&mandatory=1&name=Water%20Plants&notes=Different%20notes&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Request-Id:
+      - 45e670b6-2c73-4bab-85dc-85066e795e48
+      X-Runtime:
+      - '0.005792'
+      Server-Timing:
+      - ''
+      Content-Length:
+      - '6339'
+    body:
+      encoding: UTF-8
+      string: '{"status":404,"error":"Not Found","exception":"#\u003cActionController::RoutingError:
+        No route matches [PATCH] \"/api/v1/users/635/tasks\"\u003e","traces":{"Application
+        Trace":[],"Framework Trace":[{"exception_object_id":22440,"id":0,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call''"},{"exception_object_id":22440,"id":1,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":22440,"id":2,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":22440,"id":3,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `block in call''"},{"exception_object_id":22440,"id":4,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged''"},{"exception_object_id":22440,"id":5,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged''"},{"exception_object_id":22440,"id":6,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged''"},{"exception_object_id":22440,"id":7,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `call''"},{"exception_object_id":22440,"id":8,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":22440,"id":9,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":22440,"id":10,"trace":"rack
+        (2.2.8) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":22440,"id":11,"trace":"activesupport
+        (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":22440,"id":12,"trace":"actionpack (7.0.8)
+        lib/action_dispatch/middleware/server_timing.rb:61:in `block in call''"},{"exception_object_id":22440,"id":13,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events''"},{"exception_object_id":22440,"id":14,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call''"},{"exception_object_id":22440,"id":15,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":22440,"id":16,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":22440,"id":17,"trace":"rack
+        (2.2.8) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":22440,"id":18,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":22440,"id":19,"trace":"railties
+        (7.0.8) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":22440,"id":20,"trace":"puma
+        (5.6.7) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":22440,"id":21,"trace":"puma
+        (5.6.7) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":22440,"id":22,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":22440,"id":23,"trace":"puma
+        (5.6.7) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":22440,"id":24,"trace":"puma
+        (5.6.7) lib/puma/server.rb:443:in `process_client''"},{"exception_object_id":22440,"id":25,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}],"Full Trace":[{"exception_object_id":22440,"id":0,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call''"},{"exception_object_id":22440,"id":1,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":22440,"id":2,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":22440,"id":3,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `block in call''"},{"exception_object_id":22440,"id":4,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged''"},{"exception_object_id":22440,"id":5,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged''"},{"exception_object_id":22440,"id":6,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged''"},{"exception_object_id":22440,"id":7,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `call''"},{"exception_object_id":22440,"id":8,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":22440,"id":9,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":22440,"id":10,"trace":"rack
+        (2.2.8) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":22440,"id":11,"trace":"activesupport
+        (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":22440,"id":12,"trace":"actionpack (7.0.8)
+        lib/action_dispatch/middleware/server_timing.rb:61:in `block in call''"},{"exception_object_id":22440,"id":13,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events''"},{"exception_object_id":22440,"id":14,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call''"},{"exception_object_id":22440,"id":15,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":22440,"id":16,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":22440,"id":17,"trace":"rack
+        (2.2.8) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":22440,"id":18,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":22440,"id":19,"trace":"railties
+        (7.0.8) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":22440,"id":20,"trace":"puma
+        (5.6.7) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":22440,"id":21,"trace":"puma
+        (5.6.7) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":22440,"id":22,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":22440,"id":23,"trace":"puma
+        (5.6.7) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":22440,"id":24,"trace":"puma
+        (5.6.7) lib/puma/server.rb:443:in `process_client''"},{"exception_object_id":22440,"id":25,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}]}}'
+  recorded_at: Sat, 16 Sep 2023 17:50:58 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/635/tasks/16
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"3366280f3fc4844e1c723e5b52493b15"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c9d1832e-9c82-4e8e-9462-43d0c5eb2102
+      X-Runtime:
+      - '0.007134'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.32, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=0.85
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"16","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":1,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 17:50:58 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/640/tasks/16
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"3366280f3fc4844e1c723e5b52493b15"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4bd0a75d-5c48-4c9e-af11-42bf673ae2be
+      X-Runtime:
+      - '0.005370'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.39, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.14
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"16","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":1,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 17:51:07 GMT
+- request:
+    method: patch
+    uri: http://localhost:3000/api/v1/users/640/tasks/?category=chore&event_date=&frequency=weekly&id=16&mandatory=1&name=Water%20Plants&notes=Different%20notes&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Request-Id:
+      - 236c0e3b-51ed-4223-b49c-2d78203ff159
+      X-Runtime:
+      - '0.006472'
+      Server-Timing:
+      - ''
+      Content-Length:
+      - '6339'
+    body:
+      encoding: UTF-8
+      string: '{"status":404,"error":"Not Found","exception":"#\u003cActionController::RoutingError:
+        No route matches [PATCH] \"/api/v1/users/640/tasks\"\u003e","traces":{"Application
+        Trace":[],"Framework Trace":[{"exception_object_id":22760,"id":0,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call''"},{"exception_object_id":22760,"id":1,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":22760,"id":2,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":22760,"id":3,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `block in call''"},{"exception_object_id":22760,"id":4,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged''"},{"exception_object_id":22760,"id":5,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged''"},{"exception_object_id":22760,"id":6,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged''"},{"exception_object_id":22760,"id":7,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `call''"},{"exception_object_id":22760,"id":8,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":22760,"id":9,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":22760,"id":10,"trace":"rack
+        (2.2.8) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":22760,"id":11,"trace":"activesupport
+        (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":22760,"id":12,"trace":"actionpack (7.0.8)
+        lib/action_dispatch/middleware/server_timing.rb:61:in `block in call''"},{"exception_object_id":22760,"id":13,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events''"},{"exception_object_id":22760,"id":14,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call''"},{"exception_object_id":22760,"id":15,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":22760,"id":16,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":22760,"id":17,"trace":"rack
+        (2.2.8) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":22760,"id":18,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":22760,"id":19,"trace":"railties
+        (7.0.8) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":22760,"id":20,"trace":"puma
+        (5.6.7) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":22760,"id":21,"trace":"puma
+        (5.6.7) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":22760,"id":22,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":22760,"id":23,"trace":"puma
+        (5.6.7) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":22760,"id":24,"trace":"puma
+        (5.6.7) lib/puma/server.rb:443:in `process_client''"},{"exception_object_id":22760,"id":25,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}],"Full Trace":[{"exception_object_id":22760,"id":0,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call''"},{"exception_object_id":22760,"id":1,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":22760,"id":2,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":22760,"id":3,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `block in call''"},{"exception_object_id":22760,"id":4,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged''"},{"exception_object_id":22760,"id":5,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged''"},{"exception_object_id":22760,"id":6,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged''"},{"exception_object_id":22760,"id":7,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `call''"},{"exception_object_id":22760,"id":8,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":22760,"id":9,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":22760,"id":10,"trace":"rack
+        (2.2.8) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":22760,"id":11,"trace":"activesupport
+        (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":22760,"id":12,"trace":"actionpack (7.0.8)
+        lib/action_dispatch/middleware/server_timing.rb:61:in `block in call''"},{"exception_object_id":22760,"id":13,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events''"},{"exception_object_id":22760,"id":14,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call''"},{"exception_object_id":22760,"id":15,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":22760,"id":16,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":22760,"id":17,"trace":"rack
+        (2.2.8) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":22760,"id":18,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":22760,"id":19,"trace":"railties
+        (7.0.8) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":22760,"id":20,"trace":"puma
+        (5.6.7) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":22760,"id":21,"trace":"puma
+        (5.6.7) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":22760,"id":22,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":22760,"id":23,"trace":"puma
+        (5.6.7) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":22760,"id":24,"trace":"puma
+        (5.6.7) lib/puma/server.rb:443:in `process_client''"},{"exception_object_id":22760,"id":25,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}]}}'
+  recorded_at: Sat, 16 Sep 2023 17:51:07 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/640/tasks/16
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"3366280f3fc4844e1c723e5b52493b15"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c3c58ad0-402e-4670-a385-5638728329c1
+      X-Runtime:
+      - '0.004917'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.47, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=0.95
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"16","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":1,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 17:51:07 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/645/tasks/16
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"3366280f3fc4844e1c723e5b52493b15"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ba4fd564-213f-4e04-9666-ada33260c44a
+      X-Runtime:
+      - '0.005190'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.38, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=0.93
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"16","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":1,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 17:51:17 GMT
+- request:
+    method: patch
+    uri: http://localhost:3000/api/v1/users/645/tasks/?category=chore&event_date=&frequency=weekly&id=16&mandatory=1&name=Water%20Plants&notes=Different%20notes&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Request-Id:
+      - d18f933b-29a8-4760-b266-2218a37ec44c
+      X-Runtime:
+      - '0.006600'
+      Server-Timing:
+      - ''
+      Content-Length:
+      - '6339'
+    body:
+      encoding: UTF-8
+      string: '{"status":404,"error":"Not Found","exception":"#\u003cActionController::RoutingError:
+        No route matches [PATCH] \"/api/v1/users/645/tasks\"\u003e","traces":{"Application
+        Trace":[],"Framework Trace":[{"exception_object_id":23080,"id":0,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call''"},{"exception_object_id":23080,"id":1,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":23080,"id":2,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":23080,"id":3,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `block in call''"},{"exception_object_id":23080,"id":4,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged''"},{"exception_object_id":23080,"id":5,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged''"},{"exception_object_id":23080,"id":6,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged''"},{"exception_object_id":23080,"id":7,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `call''"},{"exception_object_id":23080,"id":8,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":23080,"id":9,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":23080,"id":10,"trace":"rack
+        (2.2.8) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":23080,"id":11,"trace":"activesupport
+        (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":23080,"id":12,"trace":"actionpack (7.0.8)
+        lib/action_dispatch/middleware/server_timing.rb:61:in `block in call''"},{"exception_object_id":23080,"id":13,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events''"},{"exception_object_id":23080,"id":14,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call''"},{"exception_object_id":23080,"id":15,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":23080,"id":16,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":23080,"id":17,"trace":"rack
+        (2.2.8) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":23080,"id":18,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":23080,"id":19,"trace":"railties
+        (7.0.8) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":23080,"id":20,"trace":"puma
+        (5.6.7) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":23080,"id":21,"trace":"puma
+        (5.6.7) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":23080,"id":22,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":23080,"id":23,"trace":"puma
+        (5.6.7) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":23080,"id":24,"trace":"puma
+        (5.6.7) lib/puma/server.rb:443:in `process_client''"},{"exception_object_id":23080,"id":25,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}],"Full Trace":[{"exception_object_id":23080,"id":0,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call''"},{"exception_object_id":23080,"id":1,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":23080,"id":2,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":23080,"id":3,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `block in call''"},{"exception_object_id":23080,"id":4,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged''"},{"exception_object_id":23080,"id":5,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged''"},{"exception_object_id":23080,"id":6,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged''"},{"exception_object_id":23080,"id":7,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `call''"},{"exception_object_id":23080,"id":8,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":23080,"id":9,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":23080,"id":10,"trace":"rack
+        (2.2.8) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":23080,"id":11,"trace":"activesupport
+        (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":23080,"id":12,"trace":"actionpack (7.0.8)
+        lib/action_dispatch/middleware/server_timing.rb:61:in `block in call''"},{"exception_object_id":23080,"id":13,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events''"},{"exception_object_id":23080,"id":14,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call''"},{"exception_object_id":23080,"id":15,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":23080,"id":16,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":23080,"id":17,"trace":"rack
+        (2.2.8) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":23080,"id":18,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":23080,"id":19,"trace":"railties
+        (7.0.8) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":23080,"id":20,"trace":"puma
+        (5.6.7) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":23080,"id":21,"trace":"puma
+        (5.6.7) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":23080,"id":22,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":23080,"id":23,"trace":"puma
+        (5.6.7) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":23080,"id":24,"trace":"puma
+        (5.6.7) lib/puma/server.rb:443:in `process_client''"},{"exception_object_id":23080,"id":25,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}]}}'
+  recorded_at: Sat, 16 Sep 2023 17:51:17 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/645/tasks/16
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"3366280f3fc4844e1c723e5b52493b15"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 640298b1-0fa2-4497-a75b-82ac264ceb49
+      X-Runtime:
+      - '0.005103'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.36, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=0.90
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"16","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":1,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 17:51:17 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/645/tasks/16
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"3366280f3fc4844e1c723e5b52493b15"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 59054358-72e5-4e91-b3d9-35ff7331b9d4
+      X-Runtime:
+      - '0.005118'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.36, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.04
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"16","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":1,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 17:51:17 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/646/tasks/16
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"3366280f3fc4844e1c723e5b52493b15"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e4f541c3-5eeb-412d-a7a7-be60cb0e6109
+      X-Runtime:
+      - '0.063996'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.09, sql.active_record;dur=1.13, instantiation.active_record;dur=0.20,
+        process_action.action_controller;dur=54.59
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"16","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":1,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 17:52:37 GMT
+- request:
+    method: patch
+    uri: http://localhost:3000/api/v1/users/646/tasks/?category=chore&event_date=&frequency=weekly&id=16&mandatory=1&name=Water%20Plants&notes=Different%20notes&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Request-Id:
+      - 00ea32fc-315a-43fa-8b92-ebc52862d2d1
+      X-Runtime:
+      - '0.021661'
+      Server-Timing:
+      - ''
+      Content-Length:
+      - '6339'
+    body:
+      encoding: UTF-8
+      string: '{"status":404,"error":"Not Found","exception":"#\u003cActionController::RoutingError:
+        No route matches [PATCH] \"/api/v1/users/646/tasks\"\u003e","traces":{"Application
+        Trace":[],"Framework Trace":[{"exception_object_id":23240,"id":0,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call''"},{"exception_object_id":23240,"id":1,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":23240,"id":2,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":23240,"id":3,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `block in call''"},{"exception_object_id":23240,"id":4,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged''"},{"exception_object_id":23240,"id":5,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged''"},{"exception_object_id":23240,"id":6,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged''"},{"exception_object_id":23240,"id":7,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `call''"},{"exception_object_id":23240,"id":8,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":23240,"id":9,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":23240,"id":10,"trace":"rack
+        (2.2.8) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":23240,"id":11,"trace":"activesupport
+        (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":23240,"id":12,"trace":"actionpack (7.0.8)
+        lib/action_dispatch/middleware/server_timing.rb:61:in `block in call''"},{"exception_object_id":23240,"id":13,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events''"},{"exception_object_id":23240,"id":14,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call''"},{"exception_object_id":23240,"id":15,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":23240,"id":16,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":23240,"id":17,"trace":"rack
+        (2.2.8) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":23240,"id":18,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":23240,"id":19,"trace":"railties
+        (7.0.8) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":23240,"id":20,"trace":"puma
+        (5.6.7) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":23240,"id":21,"trace":"puma
+        (5.6.7) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":23240,"id":22,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":23240,"id":23,"trace":"puma
+        (5.6.7) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":23240,"id":24,"trace":"puma
+        (5.6.7) lib/puma/server.rb:443:in `process_client''"},{"exception_object_id":23240,"id":25,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}],"Full Trace":[{"exception_object_id":23240,"id":0,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call''"},{"exception_object_id":23240,"id":1,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":23240,"id":2,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":23240,"id":3,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `block in call''"},{"exception_object_id":23240,"id":4,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged''"},{"exception_object_id":23240,"id":5,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged''"},{"exception_object_id":23240,"id":6,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged''"},{"exception_object_id":23240,"id":7,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `call''"},{"exception_object_id":23240,"id":8,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":23240,"id":9,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":23240,"id":10,"trace":"rack
+        (2.2.8) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":23240,"id":11,"trace":"activesupport
+        (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":23240,"id":12,"trace":"actionpack (7.0.8)
+        lib/action_dispatch/middleware/server_timing.rb:61:in `block in call''"},{"exception_object_id":23240,"id":13,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events''"},{"exception_object_id":23240,"id":14,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call''"},{"exception_object_id":23240,"id":15,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":23240,"id":16,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":23240,"id":17,"trace":"rack
+        (2.2.8) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":23240,"id":18,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":23240,"id":19,"trace":"railties
+        (7.0.8) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":23240,"id":20,"trace":"puma
+        (5.6.7) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":23240,"id":21,"trace":"puma
+        (5.6.7) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":23240,"id":22,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":23240,"id":23,"trace":"puma
+        (5.6.7) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":23240,"id":24,"trace":"puma
+        (5.6.7) lib/puma/server.rb:443:in `process_client''"},{"exception_object_id":23240,"id":25,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}]}}'
+  recorded_at: Sat, 16 Sep 2023 17:52:37 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/650/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"fb08c0e67403d1431be04be54f1b8b01"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 42568e15-8392-49cb-8285-b02f9aa054a5
+      X-Runtime:
+      - '0.007366'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=1.68, process_action.action_controller;dur=2.71
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"19","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":650,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 17:58:57 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/650/tasks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"a118fd3ad60f970d058b3074e86ec669"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 89e34e73-3132-4b64-ac52-e5325f89a59d
+      X-Runtime:
+      - '0.007048'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.09, sql.active_record;dur=0.77, instantiation.active_record;dur=0.05,
+        process_action.action_controller;dur=1.79
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"19","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":650,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}]}'
+  recorded_at: Sat, 16 Sep 2023 17:58:57 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/650/tasks/19
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"fb08c0e67403d1431be04be54f1b8b01"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 442dbe50-57b4-4a28-9a72-10411255190a
+      X-Runtime:
+      - '0.007411'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=0.44, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.28
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"19","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":650,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 17:58:57 GMT
+- request:
+    method: patch
+    uri: http://localhost:3000/api/v1/users/650/tasks/?category=chore&event_date=&frequency=weekly&id=19&mandatory=1&name=Water%20Plants&notes=Different%20notes&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Request-Id:
+      - b389c6bf-49cf-45b8-aaa7-6a4378ee0965
+      X-Runtime:
+      - '0.009860'
+      Server-Timing:
+      - ''
+      Content-Length:
+      - '6339'
+    body:
+      encoding: UTF-8
+      string: '{"status":404,"error":"Not Found","exception":"#\u003cActionController::RoutingError:
+        No route matches [PATCH] \"/api/v1/users/650/tasks\"\u003e","traces":{"Application
+        Trace":[],"Framework Trace":[{"exception_object_id":23640,"id":0,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call''"},{"exception_object_id":23640,"id":1,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":23640,"id":2,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":23640,"id":3,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `block in call''"},{"exception_object_id":23640,"id":4,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged''"},{"exception_object_id":23640,"id":5,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged''"},{"exception_object_id":23640,"id":6,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged''"},{"exception_object_id":23640,"id":7,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `call''"},{"exception_object_id":23640,"id":8,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":23640,"id":9,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":23640,"id":10,"trace":"rack
+        (2.2.8) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":23640,"id":11,"trace":"activesupport
+        (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":23640,"id":12,"trace":"actionpack (7.0.8)
+        lib/action_dispatch/middleware/server_timing.rb:61:in `block in call''"},{"exception_object_id":23640,"id":13,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events''"},{"exception_object_id":23640,"id":14,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call''"},{"exception_object_id":23640,"id":15,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":23640,"id":16,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":23640,"id":17,"trace":"rack
+        (2.2.8) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":23640,"id":18,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":23640,"id":19,"trace":"railties
+        (7.0.8) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":23640,"id":20,"trace":"puma
+        (5.6.7) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":23640,"id":21,"trace":"puma
+        (5.6.7) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":23640,"id":22,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":23640,"id":23,"trace":"puma
+        (5.6.7) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":23640,"id":24,"trace":"puma
+        (5.6.7) lib/puma/server.rb:443:in `process_client''"},{"exception_object_id":23640,"id":25,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}],"Full Trace":[{"exception_object_id":23640,"id":0,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call''"},{"exception_object_id":23640,"id":1,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":23640,"id":2,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":23640,"id":3,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `block in call''"},{"exception_object_id":23640,"id":4,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged''"},{"exception_object_id":23640,"id":5,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged''"},{"exception_object_id":23640,"id":6,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged''"},{"exception_object_id":23640,"id":7,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `call''"},{"exception_object_id":23640,"id":8,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":23640,"id":9,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":23640,"id":10,"trace":"rack
+        (2.2.8) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":23640,"id":11,"trace":"activesupport
+        (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":23640,"id":12,"trace":"actionpack (7.0.8)
+        lib/action_dispatch/middleware/server_timing.rb:61:in `block in call''"},{"exception_object_id":23640,"id":13,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events''"},{"exception_object_id":23640,"id":14,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call''"},{"exception_object_id":23640,"id":15,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":23640,"id":16,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":23640,"id":17,"trace":"rack
+        (2.2.8) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":23640,"id":18,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":23640,"id":19,"trace":"railties
+        (7.0.8) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":23640,"id":20,"trace":"puma
+        (5.6.7) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":23640,"id":21,"trace":"puma
+        (5.6.7) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":23640,"id":22,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":23640,"id":23,"trace":"puma
+        (5.6.7) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":23640,"id":24,"trace":"puma
+        (5.6.7) lib/puma/server.rb:443:in `process_client''"},{"exception_object_id":23640,"id":25,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}]}}'
+  recorded_at: Sat, 16 Sep 2023 17:58:57 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/651/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"7de06cb9ef5ff5c08ba0cb72b59ba3ac"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - bf5540a3-cc1f-4c4d-937a-00b5b8a2829f
+      X-Runtime:
+      - '0.024908'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.09, sql.active_record;dur=15.16,
+        process_action.action_controller;dur=17.96
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"20","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":651,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 17:59:09 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/651/tasks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"a71f838fb3aed995b8daa9f49f88315a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 75bff867-2c30-466b-960d-09a12ab3b739
+      X-Runtime:
+      - '0.006390'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=0.79, instantiation.active_record;dur=0.07,
+        process_action.action_controller;dur=1.82
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"20","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":651,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}]}'
+  recorded_at: Sat, 16 Sep 2023 17:59:09 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/651/tasks/20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"7de06cb9ef5ff5c08ba0cb72b59ba3ac"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2ea49c03-5400-461c-8b2c-2390d6fba233
+      X-Runtime:
+      - '0.006263'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=0.44, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.20
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"20","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":651,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 17:59:10 GMT
+- request:
+    method: patch
+    uri: http://localhost:3000/api/v1/users/651/tasks/?category=chore&event_date=&frequency=weekly&id=20&mandatory=1&name=Water%20Plants&notes=Different%20notes&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Request-Id:
+      - 03244a30-b1aa-465e-b3ff-83d8134eaf3b
+      X-Runtime:
+      - '0.006519'
+      Server-Timing:
+      - ''
+      Content-Length:
+      - '6339'
+    body:
+      encoding: UTF-8
+      string: '{"status":404,"error":"Not Found","exception":"#\u003cActionController::RoutingError:
+        No route matches [PATCH] \"/api/v1/users/651/tasks\"\u003e","traces":{"Application
+        Trace":[],"Framework Trace":[{"exception_object_id":23800,"id":0,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call''"},{"exception_object_id":23800,"id":1,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":23800,"id":2,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":23800,"id":3,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `block in call''"},{"exception_object_id":23800,"id":4,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged''"},{"exception_object_id":23800,"id":5,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged''"},{"exception_object_id":23800,"id":6,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged''"},{"exception_object_id":23800,"id":7,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `call''"},{"exception_object_id":23800,"id":8,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":23800,"id":9,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":23800,"id":10,"trace":"rack
+        (2.2.8) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":23800,"id":11,"trace":"activesupport
+        (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":23800,"id":12,"trace":"actionpack (7.0.8)
+        lib/action_dispatch/middleware/server_timing.rb:61:in `block in call''"},{"exception_object_id":23800,"id":13,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events''"},{"exception_object_id":23800,"id":14,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call''"},{"exception_object_id":23800,"id":15,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":23800,"id":16,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":23800,"id":17,"trace":"rack
+        (2.2.8) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":23800,"id":18,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":23800,"id":19,"trace":"railties
+        (7.0.8) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":23800,"id":20,"trace":"puma
+        (5.6.7) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":23800,"id":21,"trace":"puma
+        (5.6.7) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":23800,"id":22,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":23800,"id":23,"trace":"puma
+        (5.6.7) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":23800,"id":24,"trace":"puma
+        (5.6.7) lib/puma/server.rb:443:in `process_client''"},{"exception_object_id":23800,"id":25,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}],"Full Trace":[{"exception_object_id":23800,"id":0,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call''"},{"exception_object_id":23800,"id":1,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":23800,"id":2,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":23800,"id":3,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `block in call''"},{"exception_object_id":23800,"id":4,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged''"},{"exception_object_id":23800,"id":5,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged''"},{"exception_object_id":23800,"id":6,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged''"},{"exception_object_id":23800,"id":7,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `call''"},{"exception_object_id":23800,"id":8,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":23800,"id":9,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":23800,"id":10,"trace":"rack
+        (2.2.8) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":23800,"id":11,"trace":"activesupport
+        (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":23800,"id":12,"trace":"actionpack (7.0.8)
+        lib/action_dispatch/middleware/server_timing.rb:61:in `block in call''"},{"exception_object_id":23800,"id":13,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events''"},{"exception_object_id":23800,"id":14,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call''"},{"exception_object_id":23800,"id":15,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":23800,"id":16,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":23800,"id":17,"trace":"rack
+        (2.2.8) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":23800,"id":18,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":23800,"id":19,"trace":"railties
+        (7.0.8) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":23800,"id":20,"trace":"puma
+        (5.6.7) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":23800,"id":21,"trace":"puma
+        (5.6.7) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":23800,"id":22,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":23800,"id":23,"trace":"puma
+        (5.6.7) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":23800,"id":24,"trace":"puma
+        (5.6.7) lib/puma/server.rb:443:in `process_client''"},{"exception_object_id":23800,"id":25,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}]}}'
+  recorded_at: Sat, 16 Sep 2023 17:59:10 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/651/tasks/20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"7de06cb9ef5ff5c08ba0cb72b59ba3ac"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4490b0e5-9274-4ba1-9d91-08a43d6041c1
+      X-Runtime:
+      - '0.005455'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.60, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.18
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"20","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":651,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 17:59:10 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/651/tasks/20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"7de06cb9ef5ff5c08ba0cb72b59ba3ac"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 26048947-b8d8-481e-9c33-2d371ef33f34
+      X-Runtime:
+      - '0.004996'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.55, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.00
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"20","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":651,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 17:59:10 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/652/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"0b76933ae33178e714c500775c56e684"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f9e7bbe1-4a13-4e69-9153-bc2fa4328aeb
+      X-Runtime:
+      - '0.026430'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.10, sql.active_record;dur=2.78, process_action.action_controller;dur=17.00
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"21","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":652,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 17:59:24 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/652/tasks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"d7b68e00990ef777e054d04c1bf12d3b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1fa96734-c135-4bf5-a4b4-491827f442fa
+      X-Runtime:
+      - '0.020612'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=1.54, instantiation.active_record;dur=0.26,
+        process_action.action_controller;dur=3.96
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"21","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":652,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}]}'
+  recorded_at: Sat, 16 Sep 2023 17:59:24 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/652/tasks/21
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"0b76933ae33178e714c500775c56e684"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8b089e47-7892-4e29-8e95-b4ad0a807f5e
+      X-Runtime:
+      - '0.005200'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.47, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.03
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"21","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":652,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 17:59:24 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/653/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"6b387c542cac1b75c0695a6fc8c6cc52"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d3e3b25c-88fb-4ef5-a8ec-6dd48b4d7335
+      X-Runtime:
+      - '0.018597'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.14, sql.active_record;dur=2.43, process_action.action_controller;dur=6.23
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"22","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":653,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 18:00:26 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/653/tasks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"455d06e2e6bb95d85b424eb78115ffb4"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 15b6e057-6ea7-4dc0-9216-d3af9e5dcc83
+      X-Runtime:
+      - '0.007877'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.08, sql.active_record;dur=0.81, instantiation.active_record;dur=0.09,
+        process_action.action_controller;dur=2.54
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"22","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":653,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}]}'
+  recorded_at: Sat, 16 Sep 2023 18:00:26 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/653/tasks/22
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"6b387c542cac1b75c0695a6fc8c6cc52"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - df7d219b-635a-4293-a081-ea1e8641ad30
+      X-Runtime:
+      - '0.006580'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=0.34, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.00
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"22","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":653,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 18:00:26 GMT
+- request:
+    method: patch
+    uri: http://localhost:3000/api/v1/users/653/tasks/22?category=chore&event_date=&frequency=weekly&id=22&mandatory=1&name=Water%20Plants&notes=Different%20notes&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"ee2b024f68cf3072fb6cf4fa352055ee"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 54d999a6-bd65-4e2d-96e6-396533a31af0
+      X-Runtime:
+      - '0.010741'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=2.86, instantiation.active_record;dur=0.03,
+        unpermitted_parameters.action_controller;dur=0.06, process_action.action_controller;dur=6.20
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"22","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":653,"notes":"Different
+        notes"}}}'
+  recorded_at: Sat, 16 Sep 2023 18:00:26 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/653/tasks/22
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"ee2b024f68cf3072fb6cf4fa352055ee"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8f0b5938-588f-448b-ac58-51c19fd4208b
+      X-Runtime:
+      - '0.005286'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.29, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=0.79
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"22","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":653,"notes":"Different
+        notes"}}}'
+  recorded_at: Sat, 16 Sep 2023 18:00:26 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/653/tasks/22
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"ee2b024f68cf3072fb6cf4fa352055ee"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - dc0254cd-7c2e-470b-bed8-57cd01b5270c
+      X-Runtime:
+      - '0.008901'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=0.50, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=2.18
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"22","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":653,"notes":"Different
+        notes"}}}'
+  recorded_at: Sat, 16 Sep 2023 18:00:26 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/654/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"fcdfc082eaa3c2fcdaa1e75dd28edaf9"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a130932e-e777-4c27-b5bb-1b095b235bea
+      X-Runtime:
+      - '0.014256'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.09, sql.active_record;dur=3.57, process_action.action_controller;dur=6.73
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"23","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":654,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 18:00:35 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/654/tasks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"e2a4c6ae311970765bef768bab295378"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1237475a-f264-4eab-8f1d-28bf1e29b197
+      X-Runtime:
+      - '0.011540'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.12, sql.active_record;dur=1.12, instantiation.active_record;dur=0.20,
+        process_action.action_controller;dur=3.86
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"23","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":654,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}]}'
+  recorded_at: Sat, 16 Sep 2023 18:00:35 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/654/tasks/23
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"fcdfc082eaa3c2fcdaa1e75dd28edaf9"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3a40897a-c9ac-41f5-9a48-625a4319851c
+      X-Runtime:
+      - '0.011370'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.07, sql.active_record;dur=0.44, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.09
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"23","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":654,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sat, 16 Sep 2023 18:00:35 GMT
+- request:
+    method: patch
+    uri: http://localhost:3000/api/v1/users/654/tasks/23?category=chore&event_date=&frequency=weekly&id=23&mandatory=1&name=Water%20Plants&notes=Different%20notes&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"d02ffe7e91fcd8ae65c6572b503147bb"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 942d7e5a-d742-4461-8660-05d096b8fca7
+      X-Runtime:
+      - '0.020136'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.07, sql.active_record;dur=6.62, instantiation.active_record;dur=0.03,
+        unpermitted_parameters.action_controller;dur=0.07, process_action.action_controller;dur=13.38
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"23","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":654,"notes":"Different
+        notes"}}}'
+  recorded_at: Sat, 16 Sep 2023 18:00:35 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/654/tasks/23
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"d02ffe7e91fcd8ae65c6572b503147bb"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - decfd031-bbb2-4690-9361-b1e95a96368a
+      X-Runtime:
+      - '0.007217'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.39, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=2.96
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"23","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":654,"notes":"Different
+        notes"}}}'
+  recorded_at: Sat, 16 Sep 2023 18:00:35 GMT
+recorded_with: VCR 6.2.0
