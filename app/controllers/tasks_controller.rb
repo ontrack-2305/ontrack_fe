@@ -11,8 +11,10 @@ class TasksController < ApplicationController
 
   def new
     if params[:add_notes]
+      response = facade.get_ai_breakdown(params[:name])
       @task = Task.new(task_params)
-      @task.notes = facade.get_ai_breakdown(params[:name])
+      @task.notes = response[:notes] if response[:status] == 200
+      flash[:alert] = response[:notes] if response[:status] == 400
     end
   end
 
