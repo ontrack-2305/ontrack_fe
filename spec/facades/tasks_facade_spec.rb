@@ -56,6 +56,42 @@ RSpec.describe TasksFacade, :vcr do
     expect(tasks.count).to eq(2)
   end
 
+  it "can filter all tasks by criteria" do
+    pending "BE has index endpoint updated to take search queries"
+
+    facade = TasksFacade.new
+    facade.post({"name"=>"Water Plants",
+      "category"=>"chore",
+      "mandatory"=>"1",
+      "frequency"=>"weekly",
+      "notes"=>"Remember plants in bedroom, living room, and balcony",
+      "time_needed"=>20}, @user_id)
+    facade.post({"name"=>"Prune Plants",
+      "category"=>"chore",
+      "mandatory"=>"1",
+      "frequency"=>"monthly",
+      "notes"=>"Remember plants in bedroom, living room, and balcony",
+      "time_needed"=>20}, @user_id)
+    facade.post({"name"=>"Take Bath",
+      "category"=>"rest",
+      "mandatory"=>"0",
+      "frequency"=>"monthly",
+      "notes"=>"Light a candle and have some music and relax!",
+      "time_needed"=>60}, @user_id)
+
+    mandatory_tasks = facade.get_tasks(@user_id, {mandatory: true})
+    expect(mandatory_tasks).to be_an(Array)
+    expect(mandatory_tasks).to all be_a(Task)
+    expect(mandatory_tasks.count).to eq(2)
+    expect(mandatory_tasks[1].name).to eq("Water Plants")
+    expect(mandatory_tasks[2].name).to eq("Prune Plants")
+
+    monthly_tasks = facade.get_tasks(@user_id, {frequency: :monthly})
+    expect(monthly_tasks.count).to eq(2)
+    expect(monthly_tasks[0].name).to eq("Prune Plants")
+    expect(monthly_tasks[1].name).to eq("Take Bath")
+  end
+
   it "can update a task" do
     facade = TasksFacade.new
     facade.post({
