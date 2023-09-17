@@ -2,6 +2,7 @@ class TasksController < ApplicationController
   before_action :validate_session
 
   def index 
+    return @tasks = facade.get_tasks(session[:user_id], filters) if params[:filter]
     @tasks = facade.get_tasks(session[:user_id])
   end
 
@@ -60,6 +61,20 @@ class TasksController < ApplicationController
 
   def time_needed
     params[:hours].to_i * 60 + params[:minutes].to_i
+  end
+
+  def filters
+    hash = params.permit(:frequency, :mandatory, :category).to_h
+    hash[:mandatory] = modify_value(hash[:mandatory])
+    hash.each { |key, value| value.include?("Select") ? hash.delete(key) : hash[key] }
+  end
+
+  def modify_value(value)
+    if value == :mandatory
+      "1"
+    elsif value == :optional 
+      "0"
+    end
   end
 
   def facade 
