@@ -37,22 +37,19 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"dad4a28ff0487b87f76b032237afd1e2"
+      - W/"b0ac0dd06b5cd52efa10a017ab4954f2"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b3293187-c279-4bff-a581-b94de1ae65c1
+      - 5fb852dc-3de4-4044-bf1a-787b7b7c298b
       X-Runtime:
-      - '0.016724'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.10, sql.active_record;dur=3.25, process_action.action_controller;dur=5.74
+      - '0.004886'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"7","type":"task","attributes":{"name":"Repot Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":1,"notes":"Remember
-        plants in bedroom, living room, and balcony"}}}'
-  recorded_at: Sat, 16 Sep 2023 17:33:10 GMT
+      string: '{"message":"''Repot Plants'' added!"}'
+  recorded_at: Sun, 17 Sep 2023 17:07:38 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/users/1/tasks
@@ -88,38 +85,27 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"78aa26abb9159eb0e98a044d1393b4ef"
+      - W/"579734c2e7f60da0ee3db317d140936e"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 832e4bf2-beaa-4838-869f-e172cfa44864
+      - acb0b067-0f16-4f42-a459-743bf2443156
       X-Runtime:
-      - '0.017759'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.04, sql.active_record;dur=11.98,
-        instantiation.active_record;dur=0.12, process_action.action_controller;dur=13.18
+      - '0.001188'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":1,"notes":"Remember
-        plants in bedroom, living room, and balcony window"}},{"id":"2","type":"task","attributes":{"name":"Water
+      string: '{"data":[{"id":"3581","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":1,"notes":"Remember
+        plants in bedroom, living room, and balcony"}},{"id":"3582","type":"task","attributes":{"name":"Prune
         Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":1,"notes":"Remember
-        plants in bedroom, living room, and balcony"}},{"id":"3","type":"task","attributes":{"name":"Water
-        Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":1,"notes":"Remember
-        plants in bedroom, living room, and balcony"}},{"id":"4","type":"task","attributes":{"name":"Water
-        Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":1,"notes":"Remember
-        plants in bedroom, living room, and balcony"}},{"id":"5","type":"task","attributes":{"name":"Water
-        Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":1,"notes":"Remember
-        plants in bedroom, living room, and balcony"}},{"id":"6","type":"task","attributes":{"name":"Prune
-        Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":1,"notes":"Remember
-        plants in bedroom, living room, and balcony"}},{"id":"7","type":"task","attributes":{"name":"Repot
+        plants in bedroom, living room, and balcony"}},{"id":"3583","type":"task","attributes":{"name":"Repot
         Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":1,"notes":"Remember
         plants in bedroom, living room, and balcony"}}]}'
-  recorded_at: Sat, 16 Sep 2023 17:33:10 GMT
+  recorded_at: Sun, 17 Sep 2023 17:07:38 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/1/tasks/7
+    uri: http://localhost:3000/api/v1/users/1/tasks/3583
     body:
       encoding: US-ASCII
       string: ''
@@ -152,21 +138,18 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"dad4a28ff0487b87f76b032237afd1e2"
+      - W/"93974eaaf43a59e44ac4d78108f6934f"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 589bef11-18e8-4236-9c04-aa968ef52ada
+      - 8910b4b8-64e7-44fa-b4d1-470e50420adb
       X-Runtime:
-      - '0.011082'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.07, sql.active_record;dur=2.14, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=4.45
+      - '0.004074'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"7","type":"task","attributes":{"name":"Repot Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":1,"notes":"Remember
+      string: '{"data":{"id":"3583","type":"task","attributes":{"name":"Repot Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":1,"notes":"Remember
         plants in bedroom, living room, and balcony"}}}'
-  recorded_at: Sat, 16 Sep 2023 17:33:10 GMT
+  recorded_at: Sun, 17 Sep 2023 17:07:38 GMT
 recorded_with: VCR 6.2.0

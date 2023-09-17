@@ -11,11 +11,23 @@
   </head>
 
   <body>
-  <% flash.each do |type, message| %>
-    <section class=<%= type %>>
-      <p><%= message %></p>
-    </section>
-  <% end %>
+    <% flash.each do |type, message| %>
+    <div class="alert alert-warning">
+      <section class=<%= type %>>
+        <strong><p><%= message %></p></strong>
+      </section>
+      </div>
+    <% end %>
+
+    <% if current_user %>
+      <div class="btn-group-vertical">
+        <button type="button" class="btn btn-primary" href= >&#128161;</button>
+        <button type="button" class="btn btn-primary" href= new_task_path>&#10133;</button>
+        <button type="button" class="btn btn-primary" >&#128578;</button>
+        <button type="button" class="btn btn-primary">&#9881;&#65039;</button>
+      </div>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>

@@ -35,24 +35,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"cc4f6066e23ff0aefa03105ee7301911"
+      - W/"0ed5f2590fba1eceba21c86c9e0fedb9"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c4db4690-2c3f-4f2c-9b13-5c20d2364712
+      - 2ac4354e-c741-4f57-a7e9-307f93fc4e03
       X-Runtime:
-      - '2.201954'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.10, process_action.action_controller;dur=2164.84
+      - '3.028185'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"response":[{"text":"1. Gather watering can and any necessary gardening
-        tools. 2. Check each plant''s soil moisture level. 3. Fill the watering can
-        with water. 4. Water each plant according to its specific needs. 5. Empty
-        excess water from the watering can and store tools."}]}'
-  recorded_at: Sat, 16 Sep 2023 17:39:17 GMT
+      string: '{"response":[{"text":"1. Gather necessary gardening tools and materials.
+        2. Check each plant for signs of dryness or wilting. 3. Pour water directly
+        at the base of each plant, avoiding foliage. 4. Allow excess water to drain
+        away. 5. Clean and store gardening tools properly after use."}]}'
+  recorded_at: Sun, 17 Sep 2023 17:07:41 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/chat_service?task=
@@ -90,15 +88,13 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - af4c833f-63c9-4b79-8907-d8f1cd9539b5
+      - f959bfb1-6563-4a46-afd3-4a8880e7e83c
       X-Runtime:
-      - '0.031823'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.20, process_action.action_controller;dur=20.79
+      - '0.000875'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"errors":[{"status":"400","title":"No task provided to breakdown"}]}'
-  recorded_at: Sat, 16 Sep 2023 17:40:11 GMT
+      string: '{"errors":[{"detail":"No task provided to breakdown"}]}'
+  recorded_at: Sun, 17 Sep 2023 17:07:41 GMT
 recorded_with: VCR 6.2.0
