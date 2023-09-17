@@ -2,110 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/chat_service?task=water%20plants
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"1fbdd60c0328f93c66cfa0ec5b55c527"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 1f1633a4-8b35-42c5-9426-c01d78a1c4cd
-      X-Runtime:
-      - '2.606517'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.05, process_action.action_controller;dur=2596.15
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"response":[{"text":"1. Gather necessary watering supplies (such as
-        a watering can or hose). 2. Identify the plants that need water (based on
-        plant type and time since last watering). 3. Fill the watering container with
-        an appropriate amount of water. 4. Direct water to the base of each plant,
-        making sure to evenly distribute the water. 5. Clean up any excess water or
-        spillage."}]}'
-  recorded_at: Sat, 16 Sep 2023 23:19:14 GMT
-- request:
-    method: get
-    uri: http://localhost:3000/api/v1/chat_service?task=
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Cache-Control:
-      - no-cache
-      X-Request-Id:
-      - 305ebff8-030e-4eb8-aa84-f1b79500a362
-      X-Runtime:
-      - '0.007606'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.07, process_action.action_controller;dur=1.07
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"errors":[{"status":"400","title":"No task provided to breakdown"}]}'
-  recorded_at: Sat, 16 Sep 2023 23:19:14 GMT
-- request:
-    method: get
-    uri: http://localhost:3000/api/v1/users/20/tasks
+    uri: http://localhost:3000/api/v1/users/831/tasks
     body:
       encoding: US-ASCII
       string: ''
@@ -142,15 +39,115 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6d68280b-bdc8-413a-a40f-54b5066dbf0c
+      - 1209e14d-0744-4335-85fe-dd9871c17e3b
       X-Runtime:
-      - '0.005921'
+      - '0.005129'
       Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.58, process_action.action_controller;dur=1.13
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.42, process_action.action_controller;dur=0.95
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Sat, 16 Sep 2023 23:19:14 GMT
+  recorded_at: Sat, 16 Sep 2023 22:51:13 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/881/tasks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 648b4da6-8c97-41db-9525-e66c867d4792
+      X-Runtime:
+      - '0.006286'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.41, process_action.action_controller;dur=0.94
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Sat, 16 Sep 2023 23:49:52 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/905/tasks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f917f174-6cba-4596-b1f6-3f65dd9b9ce2
+      X-Runtime:
+      - '0.005810'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.52, process_action.action_controller;dur=1.03
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Sat, 16 Sep 2023 23:55:25 GMT
 recorded_with: VCR 6.2.0
