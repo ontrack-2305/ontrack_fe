@@ -11,11 +11,26 @@
   </head>
 
   <body>
-  <% flash.each do |type, message| %>
-    <section class=<%= type %>>
-      <p><%= message %></p>
-    </section>
-  <% end %>
+  <body class="<%= cookies[:theme] %>">
+    <%= cookies[:theme] %>
+
+    <%= form_with url: set_theme_path, method: :get do |form| %>
+      <button type="submit" name="theme" value="light">Light Mode</button>
+    <% end %>
+
+    <%= form_with url: set_theme_path, method: :get do |form| %>
+      <button type="submit" name="theme" value="dark">Dark Mode</button>
+    <% end %>
+
+    <%= form_with url: set_theme_path, method: :get do |form| %>
+      <button type="submit" name="theme" value="">System Default</button>
+    <% end %>
+
+    <% flash.each do |type, message| %>
+      <section class=<%= type %>>
+        <p><%= message %></p>
+      </section>
+    <% end %>
     <%= yield %>
   </body>
 </html>

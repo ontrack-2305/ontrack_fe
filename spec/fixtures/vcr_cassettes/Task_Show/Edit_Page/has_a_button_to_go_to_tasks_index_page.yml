@@ -1571,4 +1571,452 @@ http_interactions:
       string: '{"data":[{"id":"68","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":734,"notes":"Remember
         plants in bedroom, living room, and balcony"}}]}'
   recorded_at: Sat, 16 Sep 2023 18:26:07 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/72/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Request-Id:
+      - 1235bdbf-de2d-434d-8919-6cd19a4295a6
+      X-Runtime:
+      - '0.012966'
+      Server-Timing:
+      - sql.active_record;dur=3.15
+      Content-Length:
+      - '9312'
+    body:
+      encoding: UTF-8
+      string: '{"status":500,"error":"Internal Server Error","exception":"#\u003cActiveRecord::PendingMigrationError:\"\\n\\nMigrations
+        are pending. To resolve this issue, run:\\n\\n        bin/rails db:migrate
+        RAILS_ENV=development\\n\\nYou have 2 pending migrations:\\n\\n20230913161805_create_tasks.rb\\n20230915023139_edit_event_date_column.rb\\n\\n\\n\"\u003e","traces":{"Application
+        Trace":[],"Framework Trace":[{"exception_object_id":11400,"id":0,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:662:in `check_pending!''"},{"exception_object_id":11400,"id":1,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:627:in `block (2 levels) in call''"},{"exception_object_id":11400,"id":2,"trace":"activesupport
+        (7.0.8) lib/active_support/file_update_checker.rb:83:in `execute''"},{"exception_object_id":11400,"id":3,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:632:in `block in call''"},{"exception_object_id":11400,"id":4,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:624:in `synchronize''"},{"exception_object_id":11400,"id":5,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:624:in `call''"},{"exception_object_id":11400,"id":6,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call''"},{"exception_object_id":11400,"id":7,"trace":"activesupport
+        (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks''"},{"exception_object_id":11400,"id":8,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"exception_object_id":11400,"id":9,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":11400,"id":10,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call''"},{"exception_object_id":11400,"id":11,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call''"},{"exception_object_id":11400,"id":12,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":11400,"id":13,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":11400,"id":14,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `block in call''"},{"exception_object_id":11400,"id":15,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged''"},{"exception_object_id":11400,"id":16,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged''"},{"exception_object_id":11400,"id":17,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged''"},{"exception_object_id":11400,"id":18,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `call''"},{"exception_object_id":11400,"id":19,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":11400,"id":20,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":11400,"id":21,"trace":"rack
+        (2.2.8) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":11400,"id":22,"trace":"activesupport
+        (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":11400,"id":23,"trace":"actionpack (7.0.8)
+        lib/action_dispatch/middleware/server_timing.rb:61:in `block in call''"},{"exception_object_id":11400,"id":24,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events''"},{"exception_object_id":11400,"id":25,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call''"},{"exception_object_id":11400,"id":26,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":11400,"id":27,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":11400,"id":28,"trace":"rack
+        (2.2.8) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":11400,"id":29,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":11400,"id":30,"trace":"railties
+        (7.0.8) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":11400,"id":31,"trace":"puma
+        (5.6.7) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":11400,"id":32,"trace":"puma
+        (5.6.7) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":11400,"id":33,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":11400,"id":34,"trace":"puma
+        (5.6.7) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":11400,"id":35,"trace":"puma
+        (5.6.7) lib/puma/server.rb:443:in `process_client''"},{"exception_object_id":11400,"id":36,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}],"Full Trace":[{"exception_object_id":11400,"id":0,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:662:in `check_pending!''"},{"exception_object_id":11400,"id":1,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:627:in `block (2 levels) in call''"},{"exception_object_id":11400,"id":2,"trace":"activesupport
+        (7.0.8) lib/active_support/file_update_checker.rb:83:in `execute''"},{"exception_object_id":11400,"id":3,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:632:in `block in call''"},{"exception_object_id":11400,"id":4,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:624:in `synchronize''"},{"exception_object_id":11400,"id":5,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:624:in `call''"},{"exception_object_id":11400,"id":6,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call''"},{"exception_object_id":11400,"id":7,"trace":"activesupport
+        (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks''"},{"exception_object_id":11400,"id":8,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"exception_object_id":11400,"id":9,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":11400,"id":10,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call''"},{"exception_object_id":11400,"id":11,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call''"},{"exception_object_id":11400,"id":12,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":11400,"id":13,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":11400,"id":14,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `block in call''"},{"exception_object_id":11400,"id":15,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged''"},{"exception_object_id":11400,"id":16,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged''"},{"exception_object_id":11400,"id":17,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged''"},{"exception_object_id":11400,"id":18,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `call''"},{"exception_object_id":11400,"id":19,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":11400,"id":20,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":11400,"id":21,"trace":"rack
+        (2.2.8) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":11400,"id":22,"trace":"activesupport
+        (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":11400,"id":23,"trace":"actionpack (7.0.8)
+        lib/action_dispatch/middleware/server_timing.rb:61:in `block in call''"},{"exception_object_id":11400,"id":24,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events''"},{"exception_object_id":11400,"id":25,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call''"},{"exception_object_id":11400,"id":26,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":11400,"id":27,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":11400,"id":28,"trace":"rack
+        (2.2.8) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":11400,"id":29,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":11400,"id":30,"trace":"railties
+        (7.0.8) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":11400,"id":31,"trace":"puma
+        (5.6.7) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":11400,"id":32,"trace":"puma
+        (5.6.7) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":11400,"id":33,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":11400,"id":34,"trace":"puma
+        (5.6.7) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":11400,"id":35,"trace":"puma
+        (5.6.7) lib/puma/server.rb:443:in `process_client''"},{"exception_object_id":11400,"id":36,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}]}}'
+  recorded_at: Sat, 16 Sep 2023 22:52:05 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/72/tasks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Request-Id:
+      - 9f6b1d79-f3be-4af1-b968-56fb5f706c13
+      X-Runtime:
+      - '0.011439'
+      Server-Timing:
+      - sql.active_record;dur=2.34
+      Content-Length:
+      - '9312'
+    body:
+      encoding: UTF-8
+      string: '{"status":500,"error":"Internal Server Error","exception":"#\u003cActiveRecord::PendingMigrationError:\"\\n\\nMigrations
+        are pending. To resolve this issue, run:\\n\\n        bin/rails db:migrate
+        RAILS_ENV=development\\n\\nYou have 2 pending migrations:\\n\\n20230913161805_create_tasks.rb\\n20230915023139_edit_event_date_column.rb\\n\\n\\n\"\u003e","traces":{"Application
+        Trace":[],"Framework Trace":[{"exception_object_id":11440,"id":0,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:662:in `check_pending!''"},{"exception_object_id":11440,"id":1,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:627:in `block (2 levels) in call''"},{"exception_object_id":11440,"id":2,"trace":"activesupport
+        (7.0.8) lib/active_support/file_update_checker.rb:83:in `execute''"},{"exception_object_id":11440,"id":3,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:632:in `block in call''"},{"exception_object_id":11440,"id":4,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:624:in `synchronize''"},{"exception_object_id":11440,"id":5,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:624:in `call''"},{"exception_object_id":11440,"id":6,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call''"},{"exception_object_id":11440,"id":7,"trace":"activesupport
+        (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks''"},{"exception_object_id":11440,"id":8,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"exception_object_id":11440,"id":9,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":11440,"id":10,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call''"},{"exception_object_id":11440,"id":11,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call''"},{"exception_object_id":11440,"id":12,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":11440,"id":13,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":11440,"id":14,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `block in call''"},{"exception_object_id":11440,"id":15,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged''"},{"exception_object_id":11440,"id":16,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged''"},{"exception_object_id":11440,"id":17,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged''"},{"exception_object_id":11440,"id":18,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `call''"},{"exception_object_id":11440,"id":19,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":11440,"id":20,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":11440,"id":21,"trace":"rack
+        (2.2.8) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":11440,"id":22,"trace":"activesupport
+        (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":11440,"id":23,"trace":"actionpack (7.0.8)
+        lib/action_dispatch/middleware/server_timing.rb:61:in `block in call''"},{"exception_object_id":11440,"id":24,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events''"},{"exception_object_id":11440,"id":25,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call''"},{"exception_object_id":11440,"id":26,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":11440,"id":27,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":11440,"id":28,"trace":"rack
+        (2.2.8) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":11440,"id":29,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":11440,"id":30,"trace":"railties
+        (7.0.8) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":11440,"id":31,"trace":"puma
+        (5.6.7) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":11440,"id":32,"trace":"puma
+        (5.6.7) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":11440,"id":33,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":11440,"id":34,"trace":"puma
+        (5.6.7) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":11440,"id":35,"trace":"puma
+        (5.6.7) lib/puma/server.rb:443:in `process_client''"},{"exception_object_id":11440,"id":36,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}],"Full Trace":[{"exception_object_id":11440,"id":0,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:662:in `check_pending!''"},{"exception_object_id":11440,"id":1,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:627:in `block (2 levels) in call''"},{"exception_object_id":11440,"id":2,"trace":"activesupport
+        (7.0.8) lib/active_support/file_update_checker.rb:83:in `execute''"},{"exception_object_id":11440,"id":3,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:632:in `block in call''"},{"exception_object_id":11440,"id":4,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:624:in `synchronize''"},{"exception_object_id":11440,"id":5,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:624:in `call''"},{"exception_object_id":11440,"id":6,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call''"},{"exception_object_id":11440,"id":7,"trace":"activesupport
+        (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks''"},{"exception_object_id":11440,"id":8,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"exception_object_id":11440,"id":9,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":11440,"id":10,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call''"},{"exception_object_id":11440,"id":11,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call''"},{"exception_object_id":11440,"id":12,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":11440,"id":13,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":11440,"id":14,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `block in call''"},{"exception_object_id":11440,"id":15,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged''"},{"exception_object_id":11440,"id":16,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged''"},{"exception_object_id":11440,"id":17,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged''"},{"exception_object_id":11440,"id":18,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `call''"},{"exception_object_id":11440,"id":19,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":11440,"id":20,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":11440,"id":21,"trace":"rack
+        (2.2.8) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":11440,"id":22,"trace":"activesupport
+        (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":11440,"id":23,"trace":"actionpack (7.0.8)
+        lib/action_dispatch/middleware/server_timing.rb:61:in `block in call''"},{"exception_object_id":11440,"id":24,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events''"},{"exception_object_id":11440,"id":25,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call''"},{"exception_object_id":11440,"id":26,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":11440,"id":27,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":11440,"id":28,"trace":"rack
+        (2.2.8) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":11440,"id":29,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":11440,"id":30,"trace":"railties
+        (7.0.8) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":11440,"id":31,"trace":"puma
+        (5.6.7) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":11440,"id":32,"trace":"puma
+        (5.6.7) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":11440,"id":33,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":11440,"id":34,"trace":"puma
+        (5.6.7) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":11440,"id":35,"trace":"puma
+        (5.6.7) lib/puma/server.rb:443:in `process_client''"},{"exception_object_id":11440,"id":36,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}]}}'
+  recorded_at: Sat, 16 Sep 2023 22:52:05 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/13/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Request-Id:
+      - 8d1be360-86cd-454c-9319-a36d97761de8
+      X-Runtime:
+      - '0.013516'
+      Server-Timing:
+      - sql.active_record;dur=4.06
+      Content-Length:
+      - '9312'
+    body:
+      encoding: UTF-8
+      string: '{"status":500,"error":"Internal Server Error","exception":"#\u003cActiveRecord::PendingMigrationError:\"\\n\\nMigrations
+        are pending. To resolve this issue, run:\\n\\n        bin/rails db:migrate
+        RAILS_ENV=development\\n\\nYou have 2 pending migrations:\\n\\n20230913161805_create_tasks.rb\\n20230915023139_edit_event_date_column.rb\\n\\n\\n\"\u003e","traces":{"Application
+        Trace":[],"Framework Trace":[{"exception_object_id":11360,"id":0,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:662:in `check_pending!''"},{"exception_object_id":11360,"id":1,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:627:in `block (2 levels) in call''"},{"exception_object_id":11360,"id":2,"trace":"activesupport
+        (7.0.8) lib/active_support/file_update_checker.rb:83:in `execute''"},{"exception_object_id":11360,"id":3,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:632:in `block in call''"},{"exception_object_id":11360,"id":4,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:624:in `synchronize''"},{"exception_object_id":11360,"id":5,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:624:in `call''"},{"exception_object_id":11360,"id":6,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call''"},{"exception_object_id":11360,"id":7,"trace":"activesupport
+        (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks''"},{"exception_object_id":11360,"id":8,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"exception_object_id":11360,"id":9,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":11360,"id":10,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call''"},{"exception_object_id":11360,"id":11,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call''"},{"exception_object_id":11360,"id":12,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":11360,"id":13,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":11360,"id":14,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `block in call''"},{"exception_object_id":11360,"id":15,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged''"},{"exception_object_id":11360,"id":16,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged''"},{"exception_object_id":11360,"id":17,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged''"},{"exception_object_id":11360,"id":18,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `call''"},{"exception_object_id":11360,"id":19,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":11360,"id":20,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":11360,"id":21,"trace":"rack
+        (2.2.8) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":11360,"id":22,"trace":"activesupport
+        (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":11360,"id":23,"trace":"actionpack (7.0.8)
+        lib/action_dispatch/middleware/server_timing.rb:61:in `block in call''"},{"exception_object_id":11360,"id":24,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events''"},{"exception_object_id":11360,"id":25,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call''"},{"exception_object_id":11360,"id":26,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":11360,"id":27,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":11360,"id":28,"trace":"rack
+        (2.2.8) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":11360,"id":29,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":11360,"id":30,"trace":"railties
+        (7.0.8) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":11360,"id":31,"trace":"puma
+        (5.6.7) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":11360,"id":32,"trace":"puma
+        (5.6.7) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":11360,"id":33,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":11360,"id":34,"trace":"puma
+        (5.6.7) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":11360,"id":35,"trace":"puma
+        (5.6.7) lib/puma/server.rb:443:in `process_client''"},{"exception_object_id":11360,"id":36,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}],"Full Trace":[{"exception_object_id":11360,"id":0,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:662:in `check_pending!''"},{"exception_object_id":11360,"id":1,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:627:in `block (2 levels) in call''"},{"exception_object_id":11360,"id":2,"trace":"activesupport
+        (7.0.8) lib/active_support/file_update_checker.rb:83:in `execute''"},{"exception_object_id":11360,"id":3,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:632:in `block in call''"},{"exception_object_id":11360,"id":4,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:624:in `synchronize''"},{"exception_object_id":11360,"id":5,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:624:in `call''"},{"exception_object_id":11360,"id":6,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call''"},{"exception_object_id":11360,"id":7,"trace":"activesupport
+        (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks''"},{"exception_object_id":11360,"id":8,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"exception_object_id":11360,"id":9,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":11360,"id":10,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call''"},{"exception_object_id":11360,"id":11,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call''"},{"exception_object_id":11360,"id":12,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":11360,"id":13,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":11360,"id":14,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `block in call''"},{"exception_object_id":11360,"id":15,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged''"},{"exception_object_id":11360,"id":16,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged''"},{"exception_object_id":11360,"id":17,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged''"},{"exception_object_id":11360,"id":18,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `call''"},{"exception_object_id":11360,"id":19,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":11360,"id":20,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":11360,"id":21,"trace":"rack
+        (2.2.8) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":11360,"id":22,"trace":"activesupport
+        (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":11360,"id":23,"trace":"actionpack (7.0.8)
+        lib/action_dispatch/middleware/server_timing.rb:61:in `block in call''"},{"exception_object_id":11360,"id":24,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events''"},{"exception_object_id":11360,"id":25,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call''"},{"exception_object_id":11360,"id":26,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":11360,"id":27,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":11360,"id":28,"trace":"rack
+        (2.2.8) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":11360,"id":29,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":11360,"id":30,"trace":"railties
+        (7.0.8) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":11360,"id":31,"trace":"puma
+        (5.6.7) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":11360,"id":32,"trace":"puma
+        (5.6.7) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":11360,"id":33,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":11360,"id":34,"trace":"puma
+        (5.6.7) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":11360,"id":35,"trace":"puma
+        (5.6.7) lib/puma/server.rb:443:in `process_client''"},{"exception_object_id":11360,"id":36,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}]}}'
+  recorded_at: Sat, 16 Sep 2023 23:13:19 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/13/tasks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Request-Id:
+      - 9f45c6b2-1b49-4d22-b044-4c2c0f92e4c3
+      X-Runtime:
+      - '0.012130'
+      Server-Timing:
+      - sql.active_record;dur=2.76
+      Content-Length:
+      - '9312'
+    body:
+      encoding: UTF-8
+      string: '{"status":500,"error":"Internal Server Error","exception":"#\u003cActiveRecord::PendingMigrationError:\"\\n\\nMigrations
+        are pending. To resolve this issue, run:\\n\\n        bin/rails db:migrate
+        RAILS_ENV=development\\n\\nYou have 2 pending migrations:\\n\\n20230913161805_create_tasks.rb\\n20230915023139_edit_event_date_column.rb\\n\\n\\n\"\u003e","traces":{"Application
+        Trace":[],"Framework Trace":[{"exception_object_id":11400,"id":0,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:662:in `check_pending!''"},{"exception_object_id":11400,"id":1,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:627:in `block (2 levels) in call''"},{"exception_object_id":11400,"id":2,"trace":"activesupport
+        (7.0.8) lib/active_support/file_update_checker.rb:83:in `execute''"},{"exception_object_id":11400,"id":3,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:632:in `block in call''"},{"exception_object_id":11400,"id":4,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:624:in `synchronize''"},{"exception_object_id":11400,"id":5,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:624:in `call''"},{"exception_object_id":11400,"id":6,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call''"},{"exception_object_id":11400,"id":7,"trace":"activesupport
+        (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks''"},{"exception_object_id":11400,"id":8,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"exception_object_id":11400,"id":9,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":11400,"id":10,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call''"},{"exception_object_id":11400,"id":11,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call''"},{"exception_object_id":11400,"id":12,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":11400,"id":13,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":11400,"id":14,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `block in call''"},{"exception_object_id":11400,"id":15,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged''"},{"exception_object_id":11400,"id":16,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged''"},{"exception_object_id":11400,"id":17,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged''"},{"exception_object_id":11400,"id":18,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `call''"},{"exception_object_id":11400,"id":19,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":11400,"id":20,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":11400,"id":21,"trace":"rack
+        (2.2.8) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":11400,"id":22,"trace":"activesupport
+        (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":11400,"id":23,"trace":"actionpack (7.0.8)
+        lib/action_dispatch/middleware/server_timing.rb:61:in `block in call''"},{"exception_object_id":11400,"id":24,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events''"},{"exception_object_id":11400,"id":25,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call''"},{"exception_object_id":11400,"id":26,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":11400,"id":27,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":11400,"id":28,"trace":"rack
+        (2.2.8) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":11400,"id":29,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":11400,"id":30,"trace":"railties
+        (7.0.8) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":11400,"id":31,"trace":"puma
+        (5.6.7) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":11400,"id":32,"trace":"puma
+        (5.6.7) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":11400,"id":33,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":11400,"id":34,"trace":"puma
+        (5.6.7) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":11400,"id":35,"trace":"puma
+        (5.6.7) lib/puma/server.rb:443:in `process_client''"},{"exception_object_id":11400,"id":36,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}],"Full Trace":[{"exception_object_id":11400,"id":0,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:662:in `check_pending!''"},{"exception_object_id":11400,"id":1,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:627:in `block (2 levels) in call''"},{"exception_object_id":11400,"id":2,"trace":"activesupport
+        (7.0.8) lib/active_support/file_update_checker.rb:83:in `execute''"},{"exception_object_id":11400,"id":3,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:632:in `block in call''"},{"exception_object_id":11400,"id":4,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:624:in `synchronize''"},{"exception_object_id":11400,"id":5,"trace":"activerecord
+        (7.0.8) lib/active_record/migration.rb:624:in `call''"},{"exception_object_id":11400,"id":6,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call''"},{"exception_object_id":11400,"id":7,"trace":"activesupport
+        (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks''"},{"exception_object_id":11400,"id":8,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"exception_object_id":11400,"id":9,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":11400,"id":10,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call''"},{"exception_object_id":11400,"id":11,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call''"},{"exception_object_id":11400,"id":12,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":11400,"id":13,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":11400,"id":14,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `block in call''"},{"exception_object_id":11400,"id":15,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged''"},{"exception_object_id":11400,"id":16,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged''"},{"exception_object_id":11400,"id":17,"trace":"activesupport
+        (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged''"},{"exception_object_id":11400,"id":18,"trace":"railties
+        (7.0.8) lib/rails/rack/logger.rb:25:in `call''"},{"exception_object_id":11400,"id":19,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":11400,"id":20,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":11400,"id":21,"trace":"rack
+        (2.2.8) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":11400,"id":22,"trace":"activesupport
+        (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":11400,"id":23,"trace":"actionpack (7.0.8)
+        lib/action_dispatch/middleware/server_timing.rb:61:in `block in call''"},{"exception_object_id":11400,"id":24,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events''"},{"exception_object_id":11400,"id":25,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call''"},{"exception_object_id":11400,"id":26,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":11400,"id":27,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":11400,"id":28,"trace":"rack
+        (2.2.8) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":11400,"id":29,"trace":"actionpack
+        (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":11400,"id":30,"trace":"railties
+        (7.0.8) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":11400,"id":31,"trace":"puma
+        (5.6.7) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":11400,"id":32,"trace":"puma
+        (5.6.7) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":11400,"id":33,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":11400,"id":34,"trace":"puma
+        (5.6.7) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":11400,"id":35,"trace":"puma
+        (5.6.7) lib/puma/server.rb:443:in `process_client''"},{"exception_object_id":11400,"id":36,"trace":"puma
+        (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}]}}'
+  recorded_at: Sat, 16 Sep 2023 23:13:19 GMT
 recorded_with: VCR 6.2.0
