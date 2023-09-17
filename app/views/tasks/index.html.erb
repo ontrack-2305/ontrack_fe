@@ -1,3 +1,16 @@
+<h1>All Tasks</h1>
+
+<%= form_with url: tasks_path, method: :get do |form| %>
+  <%= form.select :frequency, options_for_select(["Select Frequency", :once, :daily, :weekly, :monthly, :annual]) %><br>
+  <%= form.select :mandatory, options_for_select(["Select Priority", :mandatory, :optional]) %>
+  <%= form.select :category, options_for_select(["Select Category", :rest, :hobby, :chore]) %>
+  <%= form.submit "Filter Tasks", name: :filter %>
+<% end %>
+
+
 <% @tasks.each do |task| %>
-  <%= task.name %>
+  <div id="task-<%= task.id %>">
+    <%= link_to task.name, task_path(task.id) %>
+  </div>
+  <br>
 <% end %>
