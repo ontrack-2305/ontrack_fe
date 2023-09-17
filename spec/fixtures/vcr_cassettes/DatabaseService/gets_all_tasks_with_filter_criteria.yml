@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:3000/api/v1/users/123/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20
+    uri: http://localhost:3000/api/v1/users/24/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20
     body:
       encoding: UTF-8
       string: ''
@@ -41,21 +41,21 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3867d669-d31b-4283-a2be-53c2094f9e8e
+      - 17830135-a7f1-45f3-a00d-91a54fb507d9
       X-Runtime:
-      - '0.045889'
+      - '0.007857'
       Server-Timing:
-      - start_processing.action_controller;dur=0.12, sql.active_record;dur=12.94,
-        instantiation.active_record;dur=0.04, process_action.action_controller;dur=37.28
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=1.86, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=3.10
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"message":"''Water Plants'' added!"}'
-  recorded_at: Sun, 17 Sep 2023 03:31:02 GMT
+  recorded_at: Sun, 17 Sep 2023 04:33:58 GMT
 - request:
     method: post
-    uri: http://localhost:3000/api/v1/users/123/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Clean%20fish%20tank&notes=Vacuum%20the%20gravel,%20wipe%20algae%20off%20plants&time_needed=20
+    uri: http://localhost:3000/api/v1/users/24/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20
     body:
       encoding: UTF-8
       string: ''
@@ -90,25 +90,25 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"f63f6f1c8e4212e1d3cf28557677ffe4"
+      - W/"497ff6d64382bc9d34ed64acc2e4b32b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - bc57af44-4c85-48e5-a3ba-dec6d6ab1982
+      - 30e4ec54-87c8-4bd7-bb38-3b8660120ea1
       X-Runtime:
-      - '0.023856'
+      - '0.007108'
       Server-Timing:
-      - start_processing.action_controller;dur=0.06, sql.active_record;dur=9.86, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=16.55
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.65, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=2.63
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"message":"''Clean fish tank'' added!"}'
-  recorded_at: Sun, 17 Sep 2023 03:31:03 GMT
+      string: '{"message":"''Water Plants'' added!"}'
+  recorded_at: Sun, 17 Sep 2023 04:33:58 GMT
 - request:
     method: post
-    uri: http://localhost:3000/api/v1/users/123/tasks?category=rest&event_date=&frequency=monthly&mandatory=0&name=Take%20nice%20bath&notes=Remember%20the%20fancy%20bathbombs%20under%20the%20cupboard,%20get%20a%20milkshake%20and%20light%20a%20candle&time_needed=60
+    uri: http://localhost:3000/api/v1/users/24/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20
     body:
       encoding: UTF-8
       string: ''
@@ -143,184 +143,131 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"8c811900f0de52049bd12e1c0902219f"
+      - W/"497ff6d64382bc9d34ed64acc2e4b32b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8a38a200-1466-4c61-96e2-416d29d96734
-      X-Runtime:
-      - '0.008097'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=2.18, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=3.07
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"message":"''Take nice bath'' added!"}'
-  recorded_at: Sun, 17 Sep 2023 03:31:03 GMT
-- request:
-    method: post
-    uri: http://localhost:3000/api/v1/users/123/tasks?category=rest&event_date=&frequency=daily&mandatory=0&name=Meditate&notes=&time_needed=30
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Content-Length:
-      - '0'
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 201
-      message: Created
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"c3cee8d841bdb485261d06b4c86dead3"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 6c59bb5a-ba78-4bce-ac77-b3db59e4d9bc
-      X-Runtime:
-      - '0.006722'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.50, instantiation.active_record;dur=0.01,
-        process_action.action_controller;dur=2.26
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"message":"''Meditate'' added!"}'
-  recorded_at: Sun, 17 Sep 2023 03:31:03 GMT
-- request:
-    method: post
-    uri: http://localhost:3000/api/v1/users/123/tasks?category=hobby&event_date=&frequency=daily&mandatory=0&name=Practice%20guitar&notes=Do%20scale%20exercises,%20work%20through%20the%20books%20I%20bought&time_needed=120
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Content-Length:
-      - '0'
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 201
-      message: Created
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"1e4dbe1c867322018d9ad23724afb6df"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 677ad1ee-125b-47d1-a98b-a50620ba9e06
-      X-Runtime:
-      - '0.007061'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.94, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=2.77
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"message":"''Practice guitar'' added!"}'
-  recorded_at: Sun, 17 Sep 2023 03:31:03 GMT
-- request:
-    method: post
-    uri: http://localhost:3000/api/v1/users/123/tasks?category=hobby&event_date=&frequency=daily&mandatory=0&name=Practice%20drawing&notes=Do%20some%20studies%20on%20hands%20and%20gestures&time_needed=60
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Content-Length:
-      - '0'
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 201
-      message: Created
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"e406f91ea12949f55a96ab055260ca2e"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 8612e5a2-199e-4b28-aa93-cd30205f3940
+      - d42d4263-b75e-4db0-bc6b-03dd8e6b2f2a
       X-Runtime:
       - '0.006388'
       Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.47, instantiation.active_record;dur=0.01,
-        process_action.action_controller;dur=2.14
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.45, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=2.24
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"message":"''Practice drawing'' added!"}'
-  recorded_at: Sun, 17 Sep 2023 03:31:03 GMT
+      string: '{"message":"''Water Plants'' added!"}'
+  recorded_at: Sun, 17 Sep 2023 04:33:58 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/24/tasks?category=chore&event_date=&frequency=monthly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"497ff6d64382bc9d34ed64acc2e4b32b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d826d30f-c704-4a54-a722-8b638d741cf7
+      X-Runtime:
+      - '0.006370'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.58, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=2.35
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"''Water Plants'' added!"}'
+  recorded_at: Sun, 17 Sep 2023 04:33:58 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/24/tasks?category=chore&event_date=&frequency=monthly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"497ff6d64382bc9d34ed64acc2e4b32b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9351525c-aa22-4075-8588-2dfe1c1a7673
+      X-Runtime:
+      - '0.007042'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.51, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=2.30
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"''Water Plants'' added!"}'
+  recorded_at: Sun, 17 Sep 2023 04:33:58 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/123/tasks
+    uri: http://localhost:3000/api/v1/users/24/tasks?frequency=weekly
     body:
       encoding: US-ASCII
       string: ''
@@ -353,34 +300,34 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"b5fb330045c919d9631d0bfd469740ab"
+      - W/"0c41feb9380864700404d90e9655bbc0"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 404a52d4-43c5-4317-98ab-4f202995ef5e
+      - 3094bb4d-c5ec-4203-a89c-d2d1b49092c3
       X-Runtime:
-      - '0.006008'
+      - '0.005130'
       Server-Timing:
-      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.55, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.54
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.42, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.03
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"15","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"Remember
-        plants in bedroom, living room, and balcony"}},{"id":"16","type":"task","attributes":{"name":"Clean
-        fish tank","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"Vacuum
-        the gravel, wipe algae off plants"}},{"id":"17","type":"task","attributes":{"name":"Take
-        nice bath","category":"rest","mandatory":false,"event_date":"","frequency":"monthly","time_needed":60,"user_id":123,"notes":"Remember
-        the fancy bathbombs under the cupboard, get a milkshake and light a candle"}},{"id":"18","type":"task","attributes":{"name":"Meditate","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":30,"user_id":123,"notes":""}},{"id":"19","type":"task","attributes":{"name":"Practice
-        guitar","category":"hobby","mandatory":false,"event_date":"","frequency":"daily","time_needed":120,"user_id":123,"notes":"Do
-        scale exercises, work through the books I bought"}},{"id":"20","type":"task","attributes":{"name":"Practice
-        drawing","category":"hobby","mandatory":false,"event_date":"","frequency":"daily","time_needed":60,"user_id":123,"notes":"Do
-        some studies on hands and gestures"}}]}'
-  recorded_at: Sun, 17 Sep 2023 03:31:03 GMT
+      string: '{"data":[{"id":"57","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":24,"notes":"Remember
+        plants in bedroom, living room, and balcony"}},{"id":"58","type":"task","attributes":{"name":"Water
+        Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":24,"notes":"Remember
+        plants in bedroom, living room, and balcony"}},{"id":"59","type":"task","attributes":{"name":"Water
+        Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":24,"notes":"Remember
+        plants in bedroom, living room, and balcony"}},{"id":"60","type":"task","attributes":{"name":"Water
+        Plants","category":"chore","mandatory":true,"event_date":"","frequency":"monthly","time_needed":20,"user_id":24,"notes":"Remember
+        plants in bedroom, living room, and balcony"}},{"id":"61","type":"task","attributes":{"name":"Water
+        Plants","category":"chore","mandatory":true,"event_date":"","frequency":"monthly","time_needed":20,"user_id":24,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}]}'
+  recorded_at: Sun, 17 Sep 2023 04:33:58 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/123/tasks
+    uri: http://localhost:3000/api/v1/users/24/tasks?frequency=monthly
     body:
       encoding: US-ASCII
       string: ''
@@ -413,34 +360,34 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"b5fb330045c919d9631d0bfd469740ab"
+      - W/"0c41feb9380864700404d90e9655bbc0"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2711f6bb-ff00-4404-87e3-ced56d9ad932
+      - 86a16391-c587-4c3c-84a0-4dec2f5c0d25
       X-Runtime:
-      - '0.005345'
+      - '0.005563'
       Server-Timing:
-      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.45, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.07
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.42, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.03
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"15","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"Remember
-        plants in bedroom, living room, and balcony"}},{"id":"16","type":"task","attributes":{"name":"Clean
-        fish tank","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"Vacuum
-        the gravel, wipe algae off plants"}},{"id":"17","type":"task","attributes":{"name":"Take
-        nice bath","category":"rest","mandatory":false,"event_date":"","frequency":"monthly","time_needed":60,"user_id":123,"notes":"Remember
-        the fancy bathbombs under the cupboard, get a milkshake and light a candle"}},{"id":"18","type":"task","attributes":{"name":"Meditate","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":30,"user_id":123,"notes":""}},{"id":"19","type":"task","attributes":{"name":"Practice
-        guitar","category":"hobby","mandatory":false,"event_date":"","frequency":"daily","time_needed":120,"user_id":123,"notes":"Do
-        scale exercises, work through the books I bought"}},{"id":"20","type":"task","attributes":{"name":"Practice
-        drawing","category":"hobby","mandatory":false,"event_date":"","frequency":"daily","time_needed":60,"user_id":123,"notes":"Do
-        some studies on hands and gestures"}}]}'
-  recorded_at: Sun, 17 Sep 2023 03:31:03 GMT
+      string: '{"data":[{"id":"57","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":24,"notes":"Remember
+        plants in bedroom, living room, and balcony"}},{"id":"58","type":"task","attributes":{"name":"Water
+        Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":24,"notes":"Remember
+        plants in bedroom, living room, and balcony"}},{"id":"59","type":"task","attributes":{"name":"Water
+        Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":24,"notes":"Remember
+        plants in bedroom, living room, and balcony"}},{"id":"60","type":"task","attributes":{"name":"Water
+        Plants","category":"chore","mandatory":true,"event_date":"","frequency":"monthly","time_needed":20,"user_id":24,"notes":"Remember
+        plants in bedroom, living room, and balcony"}},{"id":"61","type":"task","attributes":{"name":"Water
+        Plants","category":"chore","mandatory":true,"event_date":"","frequency":"monthly","time_needed":20,"user_id":24,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}]}'
+  recorded_at: Sun, 17 Sep 2023 04:33:58 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/123/tasks
+    uri: http://localhost:3000/api/v1/users/24/tasks
     body:
       encoding: US-ASCII
       string: ''
@@ -473,34 +420,94 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"b5fb330045c919d9631d0bfd469740ab"
+      - W/"0c41feb9380864700404d90e9655bbc0"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f87e89f7-4f53-4430-97c5-7debf86bba72
+      - 142eb5cd-cd99-4305-a978-a2f4d6fc9c99
       X-Runtime:
-      - '0.005595'
+      - '0.005252'
       Server-Timing:
-      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.50, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=1.24
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.40, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.39
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"15","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"Remember
-        plants in bedroom, living room, and balcony"}},{"id":"16","type":"task","attributes":{"name":"Clean
-        fish tank","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"Vacuum
-        the gravel, wipe algae off plants"}},{"id":"17","type":"task","attributes":{"name":"Take
-        nice bath","category":"rest","mandatory":false,"event_date":"","frequency":"monthly","time_needed":60,"user_id":123,"notes":"Remember
-        the fancy bathbombs under the cupboard, get a milkshake and light a candle"}},{"id":"18","type":"task","attributes":{"name":"Meditate","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":30,"user_id":123,"notes":""}},{"id":"19","type":"task","attributes":{"name":"Practice
-        guitar","category":"hobby","mandatory":false,"event_date":"","frequency":"daily","time_needed":120,"user_id":123,"notes":"Do
-        scale exercises, work through the books I bought"}},{"id":"20","type":"task","attributes":{"name":"Practice
-        drawing","category":"hobby","mandatory":false,"event_date":"","frequency":"daily","time_needed":60,"user_id":123,"notes":"Do
-        some studies on hands and gestures"}}]}'
-  recorded_at: Sun, 17 Sep 2023 03:31:03 GMT
+      string: '{"data":[{"id":"57","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":24,"notes":"Remember
+        plants in bedroom, living room, and balcony"}},{"id":"58","type":"task","attributes":{"name":"Water
+        Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":24,"notes":"Remember
+        plants in bedroom, living room, and balcony"}},{"id":"59","type":"task","attributes":{"name":"Water
+        Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":24,"notes":"Remember
+        plants in bedroom, living room, and balcony"}},{"id":"60","type":"task","attributes":{"name":"Water
+        Plants","category":"chore","mandatory":true,"event_date":"","frequency":"monthly","time_needed":20,"user_id":24,"notes":"Remember
+        plants in bedroom, living room, and balcony"}},{"id":"61","type":"task","attributes":{"name":"Water
+        Plants","category":"chore","mandatory":true,"event_date":"","frequency":"monthly","time_needed":20,"user_id":24,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}]}'
+  recorded_at: Sun, 17 Sep 2023 04:33:58 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/24/tasks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"0c41feb9380864700404d90e9655bbc0"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a0da7eb1-8f07-4892-87cd-2ffdba3c1b43
+      X-Runtime:
+      - '0.004738'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.38, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=0.95
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"57","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":24,"notes":"Remember
+        plants in bedroom, living room, and balcony"}},{"id":"58","type":"task","attributes":{"name":"Water
+        Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":24,"notes":"Remember
+        plants in bedroom, living room, and balcony"}},{"id":"59","type":"task","attributes":{"name":"Water
+        Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":24,"notes":"Remember
+        plants in bedroom, living room, and balcony"}},{"id":"60","type":"task","attributes":{"name":"Water
+        Plants","category":"chore","mandatory":true,"event_date":"","frequency":"monthly","time_needed":20,"user_id":24,"notes":"Remember
+        plants in bedroom, living room, and balcony"}},{"id":"61","type":"task","attributes":{"name":"Water
+        Plants","category":"chore","mandatory":true,"event_date":"","frequency":"monthly","time_needed":20,"user_id":24,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}]}'
+  recorded_at: Sun, 17 Sep 2023 04:33:58 GMT
 - request:
     method: delete
-    uri: http://localhost:3000/api/v1/users/123/tasks/15
+    uri: http://localhost:3000/api/v1/users/24/tasks/57
     body:
       encoding: US-ASCII
       string: ''
@@ -533,19 +540,19 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - db1deb14-1cca-4d33-b1bf-355a8b140f32
+      - efeefe04-a865-4464-b71b-37dd2a0fb478
       X-Runtime:
-      - '0.018355'
+      - '0.005834'
       Server-Timing:
-      - start_processing.action_controller;dur=0.04, sql.active_record;dur=3.17, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=14.41
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.56, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=2.06
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Sun, 17 Sep 2023 03:31:03 GMT
+  recorded_at: Sun, 17 Sep 2023 04:33:58 GMT
 - request:
     method: delete
-    uri: http://localhost:3000/api/v1/users/123/tasks/16
+    uri: http://localhost:3000/api/v1/users/24/tasks/58
     body:
       encoding: US-ASCII
       string: ''
@@ -578,19 +585,19 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 31993d83-c4c0-4a7b-8f62-8eb628509be9
+      - a81ded88-4aea-4109-a942-186e0dd29038
       X-Runtime:
-      - '0.007178'
+      - '0.005726'
       Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.33, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.95
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.60, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=2.02
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Sun, 17 Sep 2023 03:31:03 GMT
+  recorded_at: Sun, 17 Sep 2023 04:33:58 GMT
 - request:
     method: delete
-    uri: http://localhost:3000/api/v1/users/123/tasks/17
+    uri: http://localhost:3000/api/v1/users/24/tasks/59
     body:
       encoding: US-ASCII
       string: ''
@@ -623,19 +630,19 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - d98837e2-9beb-4abf-b616-c94cf1e3e3bb
+      - 00a2536b-39b0-4f8a-8ab9-e0afaace5bab
       X-Runtime:
-      - '0.011819'
+      - '0.005771'
       Server-Timing:
-      - start_processing.action_controller;dur=0.06, sql.active_record;dur=1.68, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=2.32
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.32, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.82
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Sun, 17 Sep 2023 03:31:03 GMT
+  recorded_at: Sun, 17 Sep 2023 04:33:58 GMT
 - request:
     method: delete
-    uri: http://localhost:3000/api/v1/users/123/tasks/18
+    uri: http://localhost:3000/api/v1/users/24/tasks/60
     body:
       encoding: US-ASCII
       string: ''
@@ -668,19 +675,19 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 1a847f6f-0bd9-46d8-afdb-96fadd35f0cf
+      - 508f7794-3b4c-4e5b-9d4a-b7191a368978
       X-Runtime:
-      - '0.007456'
+      - '0.005659'
       Server-Timing:
-      - start_processing.action_controller;dur=0.04, sql.active_record;dur=3.02, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=3.55
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.20, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.66
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Sun, 17 Sep 2023 03:31:03 GMT
+  recorded_at: Sun, 17 Sep 2023 04:33:58 GMT
 - request:
     method: delete
-    uri: http://localhost:3000/api/v1/users/123/tasks/19
+    uri: http://localhost:3000/api/v1/users/24/tasks/61
     body:
       encoding: US-ASCII
       string: ''
@@ -713,59 +720,14 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - f33de6fc-b1e6-42ac-8d33-6bc82adc383e
+      - 502e73d9-e3d4-4b93-b08f-bdd48c6b2fa9
       X-Runtime:
-      - '0.006095'
+      - '0.017471'
       Server-Timing:
-      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.84, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=2.32
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=12.41,
+        instantiation.active_record;dur=0.02, process_action.action_controller;dur=12.93
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Sun, 17 Sep 2023 03:31:03 GMT
-- request:
-    method: delete
-    uri: http://localhost:3000/api/v1/users/123/tasks/20
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 204
-      message: No Content
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Vary:
-      - Accept
-      Cache-Control:
-      - no-cache
-      X-Request-Id:
-      - 3f319034-4cab-4ed7-92ad-6a14adebbff4
-      X-Runtime:
-      - '0.008833'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.54, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=2.03
-    body:
-      encoding: UTF-8
-      string: ''
-  recorded_at: Sun, 17 Sep 2023 03:31:03 GMT
+  recorded_at: Sun, 17 Sep 2023 04:33:58 GMT
 recorded_with: VCR 6.2.0
