@@ -23,8 +23,12 @@ class DatabaseService
     connection.get("api/v1/users/#{user_id}/tasks/#{task_id}")
   end
 
-  def get_tasks(user_id)
-    connection.get("api/v1/users/#{user_id}/tasks")
+  def get_tasks(user_id, filters = {})
+    connection.get("api/v1/users/#{user_id}/tasks") do |faraday|
+      filters.each do |key, value|
+        faraday.params[key] = value
+      end
+    end
   end
   
   def get_ai_breakdown(task_name)
@@ -32,6 +36,6 @@ class DatabaseService
   end
 
   def connection
-    Faraday.new("http://localhost:3000") # change to render link later
+    Faraday.new("http://localhost:3000") # change to heroku link later
   end
 end
