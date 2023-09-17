@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/830/tasks
+    uri: http://localhost:3000/api/v1/users/123/tasks
     body:
       encoding: US-ASCII
       string: ''
@@ -39,115 +39,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2ee4c556-2658-4690-85c0-a7f72fdc08d1
+      - 9a9cf57d-059f-444f-b104-5d356bbf11af
       X-Runtime:
-      - '0.006226'
+      - '0.005809'
       Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.36, process_action.action_controller;dur=1.97
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.49, process_action.action_controller;dur=1.44
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Sat, 16 Sep 2023 22:51:13 GMT
-- request:
-    method: get
-    uri: http://localhost:3000/api/v1/users/880/tasks
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"8fe32e407a1038ee38753b70e5374b3a"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - d985a932-ece1-4e43-85d1-547e3e676354
-      X-Runtime:
-      - '0.005853'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.43, process_action.action_controller;dur=1.21
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":[]}'
-  recorded_at: Sat, 16 Sep 2023 23:49:52 GMT
-- request:
-    method: get
-    uri: http://localhost:3000/api/v1/users/904/tasks
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"8fe32e407a1038ee38753b70e5374b3a"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 57c49cb0-1102-419f-a460-443b392e7b6a
-      X-Runtime:
-      - '0.006832'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.63, process_action.action_controller;dur=1.20
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":[]}'
-  recorded_at: Sat, 16 Sep 2023 23:55:25 GMT
+  recorded_at: Sun, 17 Sep 2023 01:53:05 GMT
 recorded_with: VCR 6.2.0
