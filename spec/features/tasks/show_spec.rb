@@ -5,11 +5,10 @@ RSpec.describe "Task Show/Edit Page", :vcr do
 
   before(:each) do
     @facade = TasksFacade.new
+    stub_user
     stub_omniauth
     visit root_path
     click_button "Log In With Google"
-
-    @user = User.last
 
     @facade.post({"name"=>"Water Plants",
       "category"=>"chore",
