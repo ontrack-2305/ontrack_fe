@@ -20,13 +20,31 @@
     <% end %>
 
     <% if current_user %>
-      <div class="btn-group-vertical">
-        <button type="button" class="btn btn-primary" href= >&#128161;</button>
-        <button type="button" class="btn btn-primary" href= new_task_path>&#10133;</button>
-        <button type="button" class="btn btn-primary" >&#128578;</button>
-        <button type="button" class="btn btn-primary">&#9881;&#65039;</button>
+      <div class="btn-group">
+        <button type="button" class="btn" title="dashboard" href="<%=dashboard_path%>">&#127968;</button>
+        <div class="btn-group">
+          <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" title="light/dark mode">&#128161;</button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" title="light mode" href="#">&#127773;</a>
+            <a class="dropdown-item" title="dark mode" href="#">&#127770;</a>
+            <a class="dropdown-item" title="default" href="#">default</a>
+          </div>
+        </div>
+        <button type="button" class="btn" title="add new task" href="<%=new_task_path(current_user)%>">&#10133;</button>
+        <div class="btn-group">
+        <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" title="change mood" href="input mood toggle path here">&#128578;</button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" title="happy" href="#">&#128578;</a>
+            <a class="dropdown-item" title="sad" href="#">&#128528;</a>
+            <a class="dropdown-item" title="meh" href="#">&#128577;</a>
+          </div>
+        </div>
+        <button type="button" class="btn" title="view all tasks" href="<%=tasks_path(current_user)%>">&#128466;</button>
+        <button type="button" class="btn" title="log out" href="<%=logout_path%>">&#128682;</button>
       </div>
     <% end %>
+
+
 
     <%= yield %>
   </body>
