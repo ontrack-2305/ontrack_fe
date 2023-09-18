@@ -78,7 +78,6 @@ RSpec.describe "Task Show/Edit Page", :vcr do
   end
 
   it "has an error if any mandatory fields are deleted" do
-    pending "error formatting fixed"
     fill_in(:name, with: "")
     click_button("Save Changes")
     expect(page).to have_content("Validation failed: Name can't be blank")
@@ -86,7 +85,6 @@ RSpec.describe "Task Show/Edit Page", :vcr do
   end
 
   it "can delete task" do
-    pending "backend removes 204 code from delete action"
     visit tasks_path
     expect(page).to have_content("Water Plants")
 

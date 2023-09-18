@@ -100,7 +100,6 @@ RSpec.describe "Task Create Page", :vcr do
   end
 
   it "does not create a task if any mandatory fields are missing" do 
-    pending "update backend error message formatting"
     expect(page).to have_content("Mandatory fields marked with a *")
     select(:weekly, from: :frequency)
     fill_in(:notes, with: "Remember plants in bedroom, living room, and balcony")
