@@ -182,8 +182,6 @@ RSpec.describe TasksFacade, :vcr do
 
     by_mood = facade.tasks_by_mood(@user_id, "good")
 
-    # tasks = TasksFacade.new.tasks_by_mood(@user_id, "good")
-
-    expect(tasks).to be_an(Array)
+    expect(by_mood).to be_an(Array)
   end
 end
