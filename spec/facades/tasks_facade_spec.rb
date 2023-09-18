@@ -57,8 +57,6 @@ RSpec.describe TasksFacade, :vcr do
   end
 
   it "can filter all tasks by criteria" do
-    pending "BE has index endpoint updated to take search queries"
-
     facade = TasksFacade.new
     facade.post({"name"=>"Water Plants",
       "category"=>"chore",
@@ -83,8 +81,8 @@ RSpec.describe TasksFacade, :vcr do
     expect(mandatory_tasks).to be_an(Array)
     expect(mandatory_tasks).to all be_a(Task)
     expect(mandatory_tasks.count).to eq(2)
-    expect(mandatory_tasks[1].name).to eq("Water Plants")
-    expect(mandatory_tasks[2].name).to eq("Prune Plants")
+    expect(mandatory_tasks[0].name).to eq("Water Plants")
+    expect(mandatory_tasks[1].name).to eq("Prune Plants")
 
     monthly_tasks = facade.get_tasks(@user_id, {frequency: :monthly})
     expect(monthly_tasks.count).to eq(2)
@@ -128,7 +126,6 @@ RSpec.describe TasksFacade, :vcr do
   end
 
   it "can delete a task" do
-    pending "backend removes 204 code from delete response"
     facade = TasksFacade.new
     facade.post({"name"=>"Water Plants",
       "category"=>"chore",
