@@ -30,7 +30,7 @@ class TasksFacade
     if response.status == 200
       {notes: JSON.parse(response.body, symbolize_names: true)[:response][0][:text], status: 200 }
     else
-      {notes: JSON.parse(response.body, symbolize_names: true)[:errors][0][:title], status: 400 }
+      {notes: JSON.parse(response.body, symbolize_names: true)[:errors][0][:detail], status: 400 }
     end
   end
 
