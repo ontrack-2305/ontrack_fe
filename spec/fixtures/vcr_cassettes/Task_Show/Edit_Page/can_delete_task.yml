@@ -41,18 +41,18 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 74c479e0-4ad8-48c7-98a1-2458dae5bb95
+      - 75b2e8ad-cddc-4e7a-92ef-036621fd6262
       X-Runtime:
-      - '0.007935'
+      - '0.008121'
       Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=2.49, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=3.58
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=2.13, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=3.22
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"message":"''Water Plants'' added!"}'
-  recorded_at: Sun, 17 Sep 2023 04:58:43 GMT
+  recorded_at: Sun, 17 Sep 2023 18:32:53 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/users/123/tasks
@@ -88,130 +88,26 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"34574b8e1758daef4299a8b90259768a"
+      - W/"aa0e3cd485250c7a90fc06edd26bf18d"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1ea42df8-d2c3-4138-b99e-64f4cf631a66
+      - 80d6069b-7dcb-4281-b2bb-452e279f85f1
       X-Runtime:
-      - '0.006272'
+      - '0.005446'
       Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.71, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.77
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":[{"id":"75","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"Remember
-        plants in bedroom, living room, and balcony"}}]}'
-  recorded_at: Sun, 17 Sep 2023 04:58:43 GMT
-- request:
-    method: get
-    uri: http://localhost:3000/api/v1/users/123/tasks/75
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"e87b9db45e2358e1b4bf8e7e93c60a5c"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - cbd93b89-e17a-4f51-bf27-02a5a67c4b99
-      X-Runtime:
-      - '0.005151'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.42, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=1.01
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"75","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"Remember
-        plants in bedroom, living room, and balcony"}}}'
-  recorded_at: Sun, 17 Sep 2023 04:58:43 GMT
-- request:
-    method: get
-    uri: http://localhost:3000/api/v1/users/123/tasks
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"34574b8e1758daef4299a8b90259768a"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - fd6d8632-5734-48fd-8c78-d0c1a2db373d
-      X-Runtime:
-      - '0.005419'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.40, instantiation.active_record;dur=0.02,
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.39, instantiation.active_record;dur=0.02,
         process_action.action_controller;dur=0.96
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"75","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"Remember
+      string: '{"data":[{"id":"135","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"Remember
         plants in bedroom, living room, and balcony"}}]}'
-  recorded_at: Sun, 17 Sep 2023 04:58:43 GMT
+  recorded_at: Sun, 17 Sep 2023 18:32:53 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/123/tasks/75
+    uri: http://localhost:3000/api/v1/users/123/tasks/135
     body:
       encoding: US-ASCII
       string: ''
@@ -244,26 +140,26 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"e87b9db45e2358e1b4bf8e7e93c60a5c"
+      - W/"7954e2952b41658c4aff2027123759f4"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9886ec3c-2341-4497-b40c-0d60669c4b3f
+      - '08848186-36c4-425e-8153-82b4bf24a977'
       X-Runtime:
-      - '0.006035'
+      - '0.005592'
       Server-Timing:
-      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.33, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=1.86
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.41, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.18
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"75","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"Remember
+      string: '{"data":{"id":"135","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"Remember
         plants in bedroom, living room, and balcony"}}}'
-  recorded_at: Sun, 17 Sep 2023 04:58:43 GMT
+  recorded_at: Sun, 17 Sep 2023 18:32:53 GMT
 - request:
-    method: delete
-    uri: http://localhost:3000/api/v1/users/123/tasks/75
+    method: get
+    uri: http://localhost:3000/api/v1/users/123/tasks
     body:
       encoding: US-ASCII
       string: ''
@@ -276,8 +172,8 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 204
-      message: No Content
+      code: 200
+      message: OK
     headers:
       X-Frame-Options:
       - SAMEORIGIN
@@ -291,24 +187,184 @@ http_interactions:
       - none
       Referrer-Policy:
       - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
       Vary:
       - Accept
+      Etag:
+      - W/"aa0e3cd485250c7a90fc06edd26bf18d"
       Cache-Control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b84dc2e2-0e34-4236-9d05-21543d9fb223
+      - 2ea6f940-7917-4091-9485-cbb425cdb65a
       X-Runtime:
-      - '0.006325'
+      - '0.005417'
       Server-Timing:
-      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.71, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=2.28
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.37, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=0.95
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: UTF-8
+      string: '{"data":[{"id":"135","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}]}'
+  recorded_at: Sun, 17 Sep 2023 18:32:53 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/123/tasks/135
+    body:
+      encoding: US-ASCII
       string: ''
-  recorded_at: Sun, 17 Sep 2023 04:58:43 GMT
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"7954e2952b41658c4aff2027123759f4"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 65cd9237-629d-47c2-b1a6-bae647e191e0
+      X-Runtime:
+      - '0.006285'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.02, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.86
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"135","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"Remember
+        plants in bedroom, living room, and balcony"}}}'
+  recorded_at: Sun, 17 Sep 2023 18:32:53 GMT
 - request:
     method: delete
-    uri: http://localhost:3000/api/v1/users/123/tasks/75
+    uri: http://localhost:3000/api/v1/users/123/tasks/135
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"4b0443fcb4b80622b62a546a28246f66"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7d5e186c-9885-4058-88a2-0f958a09086d
+      X-Runtime:
+      - '0.006292'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.25, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=2.08
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"''Water Plants'' deleted."}'
+  recorded_at: Sun, 17 Sep 2023 18:32:53 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/123/tasks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 94c6ef90-d718-4446-bad7-4cfbc62eb582
+      X-Runtime:
+      - '0.005037'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.38, process_action.action_controller;dur=0.83
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Sun, 17 Sep 2023 18:32:53 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/api/v1/users/123/tasks/135
     body:
       encoding: US-ASCII
       string: ''
@@ -343,16 +399,16 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - df8830a7-a5e6-4d89-999f-d34cdad36e6f
+      - 413bde12-c107-4c8b-b87d-eea2c7987e6d
       X-Runtime:
-      - '0.004576'
+      - '0.004832'
       Server-Timing:
-      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.32, instantiation.active_record;dur=0.01,
-        process_action.action_controller;dur=0.67
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.30, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=0.72
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"errors":[{"status":"404","title":"Couldn''t find Task with ''id''=75"}]}'
-  recorded_at: Sun, 17 Sep 2023 04:58:43 GMT
+      string: '{"errors":[{"detail":"Couldn''t find Task with ''id''=135"}]}'
+  recorded_at: Sun, 17 Sep 2023 18:32:53 GMT
 recorded_with: VCR 6.2.0

@@ -35,26 +35,24 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"1e019c9d926360b0eba30f7a7ebbaf06"
+      - W/"334678075d6718a6da68206aff4be3bd"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 01a644e5-6409-44f8-a092-5cb28ae7b930
+      - 43beb832-7fbd-4769-959d-f8257b812a0d
       X-Runtime:
-      - '3.219407'
+      - '3.855750'
       Server-Timing:
-      - start_processing.action_controller;dur=0.05, process_action.action_controller;dur=3214.28
+      - start_processing.action_controller;dur=0.06, process_action.action_controller;dur=3851.35
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"response":[{"text":"1. Gather necessary tools: watering can, hose,
-        or spray bottle. 2. Check individual plant''s needs: sunlight, water quantity,
-        and frequency. 3. Prepare water: if tap water, let it sit for a day to allow
-        any chemicals to evaporate. 4. Water plants accordingly, adjusting quantity
-        for each plant. 5. Monitor plant health, making sure soil is moist but not
-        waterlogged."}]}'
-  recorded_at: Sun, 17 Sep 2023 01:51:56 GMT
+      string: '{"response":[{"text":"1. Gather necessary materials: watering can,
+        plants, and water source. 2. Check soil moisture level for each plant. 3.
+        Fill the watering can with water. 4. Water each plant according to its specific
+        needs. 5. Clean up any spills or excess water."}]}'
+  recorded_at: Sun, 17 Sep 2023 18:32:50 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/users/123/tasks
@@ -94,15 +92,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a077ea88-f8a3-438b-8391-0cf083f1c20e
+      - 87ac9bc4-7ed9-42ed-9bc7-f5a90975991f
       X-Runtime:
-      - '0.005817'
+      - '0.016197'
       Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.64, process_action.action_controller;dur=1.17
+      - start_processing.action_controller;dur=0.13, sql.active_record;dur=3.36, process_action.action_controller;dur=7.13
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Sun, 17 Sep 2023 01:53:05 GMT
+  recorded_at: Sun, 17 Sep 2023 18:32:50 GMT
 recorded_with: VCR 6.2.0

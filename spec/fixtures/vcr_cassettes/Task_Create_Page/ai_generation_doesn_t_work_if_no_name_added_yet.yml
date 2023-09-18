@@ -37,17 +37,17 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 75603e1f-170c-4498-ba11-ea28a4638aaf
+      - bfb114ba-ca59-4441-bccb-0a0489e9e37a
       X-Runtime:
-      - '0.005215'
+      - '0.010083'
       Server-Timing:
-      - start_processing.action_controller;dur=0.05, process_action.action_controller;dur=0.21
+      - start_processing.action_controller;dur=0.08, process_action.action_controller;dur=0.55
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"errors":[{"status":"400","title":"No task provided to breakdown"}]}'
-  recorded_at: Sun, 17 Sep 2023 01:51:56 GMT
+      string: '{"errors":[{"detail":"No task provided to breakdown"}]}'
+  recorded_at: Sun, 17 Sep 2023 18:32:50 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/users/123/tasks
@@ -87,15 +87,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b59a001f-e4b5-4025-8112-666b1a8154d0
+      - 8435482b-5e07-44a7-a61f-96ce8b70302e
       X-Runtime:
-      - '0.007199'
+      - '0.006441'
       Server-Timing:
-      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.40, process_action.action_controller;dur=0.97
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=0.45, process_action.action_controller;dur=1.31
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Sun, 17 Sep 2023 01:53:05 GMT
+  recorded_at: Sun, 17 Sep 2023 18:32:50 GMT
 recorded_with: VCR 6.2.0

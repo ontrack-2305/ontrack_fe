@@ -35,26 +35,23 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"1fbdd60c0328f93c66cfa0ec5b55c527"
+      - W/"9ba96a542d57f4e176777cd20afb383d"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1f1633a4-8b35-42c5-9426-c01d78a1c4cd
+      - 79a6501e-1554-4f1a-934b-a3dccd186234
       X-Runtime:
-      - '2.606517'
+      - '1.990210'
       Server-Timing:
-      - start_processing.action_controller;dur=0.05, process_action.action_controller;dur=2596.15
+      - start_processing.action_controller;dur=0.07, process_action.action_controller;dur=1973.97
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"response":[{"text":"1. Gather necessary watering supplies (such as
-        a watering can or hose). 2. Identify the plants that need water (based on
-        plant type and time since last watering). 3. Fill the watering container with
-        an appropriate amount of water. 4. Direct water to the base of each plant,
-        making sure to evenly distribute the water. 5. Clean up any excess water or
-        spillage."}]}'
-  recorded_at: Sat, 16 Sep 2023 23:19:14 GMT
+      string: '{"response":[{"text":"1. Gather watering can and tools. 2. Check moisture
+        level of soil. 3. Fill watering can with water. 4. Water plants until soil
+        is moist. 5. Clean up and put away tools."}]}'
+  recorded_at: Sun, 17 Sep 2023 18:32:45 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/chat_service?task=
@@ -92,17 +89,17 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 305ebff8-030e-4eb8-aa84-f1b79500a362
+      - a13789cf-544e-4262-9bb7-2ef4f5debc50
       X-Runtime:
-      - '0.007606'
+      - '0.007936'
       Server-Timing:
-      - start_processing.action_controller;dur=0.07, process_action.action_controller;dur=1.07
+      - start_processing.action_controller;dur=0.07, process_action.action_controller;dur=0.26
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"errors":[{"status":"400","title":"No task provided to breakdown"}]}'
-  recorded_at: Sat, 16 Sep 2023 23:19:14 GMT
+      string: '{"errors":[{"detail":"No task provided to breakdown"}]}'
+  recorded_at: Sun, 17 Sep 2023 18:32:45 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/users/20/tasks
@@ -142,15 +139,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6d68280b-bdc8-413a-a40f-54b5066dbf0c
+      - 477ad415-0922-40c1-957a-8b8ad710425e
       X-Runtime:
-      - '0.005921'
+      - '0.006967'
       Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.58, process_action.action_controller;dur=1.13
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.70, process_action.action_controller;dur=1.63
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Sat, 16 Sep 2023 23:19:14 GMT
+  recorded_at: Sun, 17 Sep 2023 18:32:45 GMT
 recorded_with: VCR 6.2.0

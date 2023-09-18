@@ -39,66 +39,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a04b2478-eab0-4362-a86f-fe186a6daf21
+      - 4727901d-1bc1-495c-8624-c6e1f4be7f20
       X-Runtime:
-      - '0.069432'
+      - '0.039411'
       Server-Timing:
-      - sql.active_record;dur=19.71, start_processing.action_controller;dur=0.06,
-        process_action.action_controller;dur=12.96
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=0.75, process_action.action_controller;dur=32.02
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Sun, 17 Sep 2023 01:53:04 GMT
-- request:
-    method: get
-    uri: http://localhost:3000/api/v1/users/123/tasks
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"8fe32e407a1038ee38753b70e5374b3a"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 367677bd-c50c-4b1e-8c06-6946292d38f1
-      X-Runtime:
-      - '0.041982'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.08, sql.active_record;dur=0.87, process_action.action_controller;dur=35.13
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":[]}'
-  recorded_at: Sun, 17 Sep 2023 01:56:42 GMT
+  recorded_at: Sun, 17 Sep 2023 18:32:45 GMT
 recorded_with: VCR 6.2.0

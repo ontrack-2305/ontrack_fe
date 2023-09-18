@@ -41,18 +41,18 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 364a96b6-6f07-4b6f-a83b-21d70f427bbd
+      - b1036417-1968-4796-911b-4aa49f825f63
       X-Runtime:
-      - '0.007326'
+      - '0.007323'
       Server-Timing:
-      - start_processing.action_controller;dur=0.06, sql.active_record;dur=1.47, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=2.83
+      - start_processing.action_controller;dur=0.23, sql.active_record;dur=1.35, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=2.38
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"message":"''Water Plants'' added!"}'
-  recorded_at: Sun, 17 Sep 2023 04:58:42 GMT
+  recorded_at: Sun, 17 Sep 2023 18:32:52 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/users/123/tasks
@@ -88,26 +88,26 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"db3e5c06d89b7b4087f4a2cdc311d868"
+      - W/"4b3f6f7384b179288f4f71a81bad9357"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d9ca26b3-b07d-45e8-afe0-69dfe9502c3e
+      - fe5fc876-c9a7-4c31-b709-4ebca0a4e7b8
       X-Runtime:
-      - '0.005148'
+      - '0.006049'
       Server-Timing:
-      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.42, instantiation.active_record;dur=0.01,
-        process_action.action_controller;dur=0.93
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.23, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.79
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"71","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"Remember
+      string: '{"data":[{"id":"131","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"Remember
         plants in bedroom, living room, and balcony"}}]}'
-  recorded_at: Sun, 17 Sep 2023 04:58:42 GMT
+  recorded_at: Sun, 17 Sep 2023 18:32:52 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/123/tasks/71
+    uri: http://localhost:3000/api/v1/users/123/tasks/131
     body:
       encoding: US-ASCII
       string: ''
@@ -140,26 +140,26 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"d4cf721716b1a5e5ba8fe6891fc9875d"
+      - W/"713c201ef8d7f6e38af54f5e7ca8f6cf"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4041bdec-3366-4003-81c9-695545eaa6a5
+      - fd9a861d-40b1-455c-9906-ef4a45285b94
       X-Runtime:
-      - '0.005226'
+      - '0.005016'
       Server-Timing:
-      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.34, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.09
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.35, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=0.87
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"71","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"Remember
+      string: '{"data":{"id":"131","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"Remember
         plants in bedroom, living room, and balcony"}}}'
-  recorded_at: Sun, 17 Sep 2023 04:58:42 GMT
+  recorded_at: Sun, 17 Sep 2023 18:32:52 GMT
 - request:
     method: delete
-    uri: http://localhost:3000/api/v1/users/123/tasks/71
+    uri: http://localhost:3000/api/v1/users/123/tasks/131
     body:
       encoding: US-ASCII
       string: ''
@@ -172,8 +172,8 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 204
-      message: No Content
+      code: 200
+      message: OK
     headers:
       X-Frame-Options:
       - SAMEORIGIN
@@ -187,19 +187,25 @@ http_interactions:
       - none
       Referrer-Policy:
       - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
       Vary:
       - Accept
+      Etag:
+      - W/"4b0443fcb4b80622b62a546a28246f66"
       Cache-Control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 690f6540-6551-4c9a-a7cf-81aae9f2ad00
+      - 5ed59887-8562-4632-8c64-92f4411fbcab
       X-Runtime:
-      - '0.006216'
+      - '0.007049'
       Server-Timing:
-      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.34, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.96
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=1.42, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=2.07
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: UTF-8
-      string: ''
-  recorded_at: Sun, 17 Sep 2023 04:58:42 GMT
+      string: '{"message":"''Water Plants'' deleted."}'
+  recorded_at: Sun, 17 Sep 2023 18:32:52 GMT
 recorded_with: VCR 6.2.0

@@ -39,18 +39,18 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - c70e631b-0a9c-42a4-a075-1c0713290efa
+      - d0ecfbf6-4efe-42df-b83f-572a5c5864f8
       X-Runtime:
-      - '0.006836'
+      - '0.005743'
       Server-Timing:
-      - start_processing.action_controller;dur=0.05, process_action.action_controller;dur=1.80
+      - start_processing.action_controller;dur=0.05, process_action.action_controller;dur=1.08
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"errors":[{"status":"400","title":"Validation failed: Name can''t
-        be blank, Category can''t be blank, Time needed can''t be blank"}]}'
-  recorded_at: Sun, 17 Sep 2023 01:51:52 GMT
+      string: '{"errors":[{"detail":"Validation failed: Name can''t be blank, Category
+        can''t be blank, Time needed can''t be blank"}]}'
+  recorded_at: Sun, 17 Sep 2023 18:32:46 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/users/123/tasks
@@ -90,15 +90,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2eaa332f-4ba5-4a29-b296-4c00758478d5
+      - 325de660-45f1-47e6-816b-ba8e7a4f12ab
       X-Runtime:
-      - '0.005379'
+      - '0.006062'
       Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.39, process_action.action_controller;dur=0.92
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.67, process_action.action_controller;dur=1.57
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Sun, 17 Sep 2023 01:53:05 GMT
+  recorded_at: Sun, 17 Sep 2023 18:32:46 GMT
 recorded_with: VCR 6.2.0
