@@ -152,4 +152,38 @@ RSpec.describe TasksFacade, :vcr do
     sad_response = facade.get_ai_breakdown("")
     expect(sad_response[:notes]).to eq("No task provided to breakdown")
   end
+
+  it "can fetch tasks by mood" do
+    facade = TasksFacade.new
+    facade.post({"name"=>"Water Plants",
+      "category"=>"chore",
+      "mandatory"=>"1",
+      "frequency"=>"weekly",
+      "notes"=>"Remember plants in bedroom, living room, and balcony",
+      "time_needed"=>20}, @user_id)
+    facade.post({"name"=>"Prune Plants",
+      "category"=>"chore",
+      "mandatory"=>"1",
+      "frequency"=>"monthly",
+      "notes"=>"Remember plants in bedroom, living room, and balcony",
+      "time_needed"=>20}, @user_id)
+    facade.post({"name"=>"Take Bath",
+      "category"=>"rest",
+      "mandatory"=>"0",
+      "frequency"=>"monthly",
+      "notes"=>"Light a candle and have some music and relax!",
+      "time_needed"=>60}, @user_id)
+    facade.post({"name"=>"Crochet",
+      "category"=>"hobby",
+      "mandatory"=>"0",
+      "frequency"=>"monthly",
+      "notes"=>"Light a candle and have some music and relax!",
+      "time_needed"=>60}, @user_id)
+
+    by_mood = facade.tasks_by_mood(@user_id, "good")
+
+    # tasks = TasksFacade.new.tasks_by_mood(@user_id, "good")
+
+    expect(tasks).to be_an(Array)
+  end
 end

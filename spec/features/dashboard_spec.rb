@@ -50,16 +50,12 @@ RSpec.describe "the user dashboard page", :vcr do
     end
 
     it "displays a mood button for 'meh', 'good', and 'bad' days" do
-      visit dashboard_path
-
       page.has_css?("good_button")
       page.has_css?("meh_button")
       page.has_css?("bad_button")
     end
 
-    xit "when I click on a button, that button stays highlighted" do
-      visit dashboard_path
-
+    it "when I click on a button, that button stays highlighted" do
       click_button("happy face button image")
     end
   end
