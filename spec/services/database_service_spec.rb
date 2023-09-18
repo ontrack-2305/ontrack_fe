@@ -51,8 +51,6 @@ RSpec.describe DatabaseService, :vcr do
   end
 
   it "destroys a task" do
-    pending "backend removes status 204 from task destroy action"
-    pending "update of error message formatting"
     @service.post(@attributes_hash, @user_id)
     response1 = @service.get_tasks(@user_id)
     task_id = JSON.parse(response1.body, symbolize_names: true)[:data][-1][:id]
@@ -89,8 +87,6 @@ RSpec.describe DatabaseService, :vcr do
   end
 
   it "gets all tasks, with filter criteria" do
-    pending "BE has index endpoint updated to take search queries"
-
     3.times { @service.post(@attributes_hash, @user_id) }
     @attributes_hash[:frequency] = "monthly"
     2.times { @service.post(@attributes_hash, @user_id) }
