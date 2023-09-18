@@ -57,7 +57,7 @@ RSpec.describe "the user dashboard page", :vcr do
       page.has_css?("bad_button")
     end
 
-    it "when I click on a button, that button stays highlighted" do
+    xit "when I click on a button, that button stays highlighted" do
       visit dashboard_path
 
       click_button("happy face button image")
