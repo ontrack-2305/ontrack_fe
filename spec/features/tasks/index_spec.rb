@@ -10,7 +10,7 @@ RSpec.describe "Tasks Index Page", :vcr do
     
     @facade = TasksFacade.new
     generate_tasks_for(@user)
-    @tasks = @facade.get_tasks(@user.id)
+    @tasks = @facade.get_tasks(@user.id, {})
     
     visit tasks_path
   end
@@ -29,7 +29,6 @@ RSpec.describe "Tasks Index Page", :vcr do
   end
 
   it "can filter tasks by frequency" do
-    pending "BE index endpoint updated to take search queries"
     expect(page).to have_select(:frequency, with_options: ["Select Frequency", :once, :daily, :weekly, :monthly, :annual])
     select(:daily, from: :frequency)
     click_button("Filter Tasks")
@@ -44,7 +43,6 @@ RSpec.describe "Tasks Index Page", :vcr do
   end
 
   it "can filter tasks by mandatory status" do
-    pending "BE index endpoint updated to take search queries"
     expect(page).to have_select(:mandatory, with_options: ["Select Priority", :mandatory, :optional])
     select(:mandatory, from: :mandatory)
     click_button("Filter Tasks")
@@ -59,7 +57,6 @@ RSpec.describe "Tasks Index Page", :vcr do
   end
 
   it "can filter tasks by category" do
-    pending "BE index endpoint updated to take search queries"
     expect(page).to have_select(:category, with_options: ["Select Category", :rest, :hobby, :chore])
     select(:rest, from: :category)
     click_button("Filter Tasks")
@@ -74,7 +71,7 @@ RSpec.describe "Tasks Index Page", :vcr do
   end
 
   it "can filter by all categories at once" do
-    pending "BE index endpoint updated to take search queries"
+    pending "BE updates endpoint to take multiple params"
     select(:daily, from: :frequency)
     select(:rest, from: :category)
     select(:optional, from: :mandatory)
@@ -90,15 +87,14 @@ RSpec.describe "Tasks Index Page", :vcr do
   end
 
   it "can reset/clear filters" do
-    pending "BE index endpoint updated to take search queries"
     select(:daily, from: :frequency)
     select(:rest, from: :category)
     select(:optional, from: :mandatory)
     click_button("Filter Tasks")
-    
-    expect(page).to have_select(:frequency, selected: :daily)
-    expect(page).to have_select(:mandatory, selected: :optional)
-    expect(page).to have_select(:category, selected: :rest)
+
+    expect(page).to have_select(:frequency, selected: "daily")
+    expect(page).to have_select(:mandatory, selected: "optional")
+    expect(page).to have_select(:category, selected: "rest")
 
     expect(page).to have_button("Clear Filters")
     click_button("Clear Filters")
