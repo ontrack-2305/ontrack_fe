@@ -220,4 +220,106 @@ http_interactions:
         Apollo","category":"chore","mandatory":false,"event_date":"","frequency":"weekly","time_needed":5,"user_id":123,"notes":"he
         shed"}}]}'
   recorded_at: Mon, 18 Sep 2023 17:20:45 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/api/v1/users/123/tasks/4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"3c34faca09aa8671bd5933e01c04e61a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f273f24a-9443-4517-bdad-4f70b12c233c
+      X-Runtime:
+      - '0.024464'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.09, sql.active_record;dur=7.78, instantiation.active_record;dur=0.14,
+        process_action.action_controller;dur=16.18
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"''Take Vitamins'' deleted."}'
+  recorded_at: Mon, 18 Sep 2023 19:30:30 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/api/v1/users/123/tasks/7
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"4851d0caff86c665f1a5515cf3e8732a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5084eb42-6da6-4682-90e0-a98231a13b6e
+      X-Runtime:
+      - '0.012751'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=1.39, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.92
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"''Brush Apollo'' deleted."}'
+  recorded_at: Mon, 18 Sep 2023 19:30:30 GMT
 recorded_with: VCR 6.2.0
