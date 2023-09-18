@@ -30,6 +30,12 @@ class DatabaseService
       end
     end
   end
+
+  def get_daily_tasks(user_id, mood)
+    connection.get("api/v1/users/#{user_id}/daily_tasks/") do |faraday|
+      faraday.params["mood"] = mood
+    end 
+  end
   
   def get_ai_breakdown(task_name)
     connection.get("api/v1/chat_service?task=#{task_name.downcase}")
