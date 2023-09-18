@@ -37,12 +37,15 @@ class DatabaseService
 
   def authenticate(user)
     response = connection.post do |req|
-      req.url '/api/v1/authenticate'  
+      req.url '/api/v1/users/authenticate'  
       req.headers['Content-Type'] = 'application/json'
       req.body = { 
         access_token: user.token, 
-        user_id: user.id 
+        user_id: user.id, 
+        google_id: user.google_id,
+        email: user.email
       }.to_json
+    end
   end
 
 
