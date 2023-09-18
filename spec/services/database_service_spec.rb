@@ -51,8 +51,6 @@ RSpec.describe DatabaseService, :vcr do
   end
 
   it "destroys a task" do
-    pending "backend removes status 204 from task destroy action"
-    pending "update of error message formatting"
     @service.post(@attributes_hash, @user_id)
     response1 = @service.get_tasks(@user_id)
     task_id = JSON.parse(response1.body, symbolize_names: true)[:data][-1][:id]
@@ -81,12 +79,29 @@ RSpec.describe DatabaseService, :vcr do
   end
 
   it "gets all tasks for a user" do
-    response = @service.get_tasks(@user_id)
     3.times { @service.post(@attributes_hash, @user_id) }
     response = @service.get_tasks(@user_id)
     
     tasks = JSON.parse(response.body, symbolize_names: true)[:data]
     expect(tasks.count).to eq(3)
+  end
+
+  it "gets all tasks, with filter criteria" do
+    3.times { @service.post(@attributes_hash, @user_id) }
+    @attributes_hash[:frequency] = "monthly"
+    2.times { @service.post(@attributes_hash, @user_id) }
+
+    weekly_response = @service.get_tasks(@user_id, {frequency: "weekly"})
+    monthly_response = @service.get_tasks(@user_id, {frequency: "monthly"})
+    all_tasks_response = @service.get_tasks(@user_id)
+
+    weeklies = JSON.parse(weekly_response.body, symbolize_names: true)[:data]
+    monthlies = JSON.parse(monthly_response.body, symbolize_names: true)[:data]
+    all = JSON.parse(all_tasks_response.body, symbolize_names: true)[:data]
+
+    expect(weeklies.count).to eq(3)
+    expect(monthlies.count).to eq(2)
+    expect(all.count).to eq(5)
   end
 
   it "gets an ai breakdown" do

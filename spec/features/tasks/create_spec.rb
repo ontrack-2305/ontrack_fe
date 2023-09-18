@@ -3,22 +3,22 @@ require "rails_helper"
 RSpec.describe "Task Create Page", :vcr do
   include OmniauthModule  
   before(:each) do
+    stub_user
     stub_omniauth
     visit root_path
     click_button "Log In With Google"
-    @user_id = User.last.id
     visit new_task_path
   end
 
   after(:each) do
     facade = TasksFacade.new
     begin
-      tasks = facade.get_tasks(@user_id)
+      tasks = facade.get_tasks("123")
     rescue
       tasks = []
     end
     tasks.each do |task|
-      facade.delete(task.id, @user_id)
+      facade.delete(task.id, "123")
     end
   end
 
@@ -100,7 +100,6 @@ RSpec.describe "Task Create Page", :vcr do
   end
 
   it "does not create a task if any mandatory fields are missing" do 
-    pending "update backend error message formatting"
     expect(page).to have_content("Mandatory fields marked with a *")
     select(:weekly, from: :frequency)
     fill_in(:notes, with: "Remember plants in bedroom, living room, and balcony")

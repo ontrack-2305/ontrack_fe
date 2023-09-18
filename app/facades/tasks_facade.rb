@@ -7,8 +7,8 @@ class TasksFacade
     service.patch(attributes_hash, user_id)
   end
 
-  def get_tasks(user_id)
-    response = service.get_tasks(user_id)
+  def get_tasks(user_id, filters = {})
+    response = service.get_tasks(user_id, filters)
     task_hashes = JSON.parse(response.body, symbolize_names: true)[:data]
     task_hashes.map do |task_hash|
       Task.new(task_hash[:attributes], task_hash[:id])
@@ -30,7 +30,7 @@ class TasksFacade
     if response.status == 200
       {notes: JSON.parse(response.body, symbolize_names: true)[:response][0][:text], status: 200 }
     else
-      {notes: JSON.parse(response.body, symbolize_names: true)[:errors][0][:title], status: 400 }
+      {notes: JSON.parse(response.body, symbolize_names: true)[:errors][0][:detail], status: 400 }
     end
   end
 
