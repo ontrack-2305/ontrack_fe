@@ -11,6 +11,21 @@
   </head>
 
   <body>
+  <body class="<%= cookies[:theme] %>">
+    <%= cookies[:theme] %>
+
+    <%= form_with url: set_theme_path, method: :get do |form| %>
+      <button type="submit" name="theme" value="light">Light Mode</button>
+    <% end %>
+
+    <%= form_with url: set_theme_path, method: :get do |form| %>
+      <button type="submit" name="theme" value="dark">Dark Mode</button>
+    <% end %>
+    
+    <%= form_with url: set_theme_path, method: :get do |form| %>
+      <button type="submit" name="theme" value="">System Default</button>
+    <% end %>
+
     <% flash.each do |type, message| %>
     <div class="alert alert-warning">
       <section class=<%= type %>>
