@@ -11,6 +11,4 @@ Rails.application.routes.draw do
   get "logout", to: "sessions#destroy"
 
   get '/set_theme', to: 'theme#update'
-
-  get '/get_mood', to: 'moods#create'
 end
