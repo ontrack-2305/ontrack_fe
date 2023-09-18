@@ -1,21 +1,21 @@
 <h2>Welcome, <%= @user.first_name %>!</h2>
 
 <div style = "display: flex; justify-content: space-evenly;">
-  <%= form_tag("api/v1/users/@user.id/daily_tasks", method: :get) do %>
+  <%= form_tag("/get_mood", method: :get) do %>
     <%= hidden_field_tag :mood, 'good' %>
     <button class="good_button" type="submit">
       <img src="<%= asset_path('legit_happy.png') %>" alt="happy face button image">
     </button>
   <% end %>
 
-  <%= form_tag("api/v1/users/@user.id/daily_tasks", method: :get) do %>
+  <%= form_tag("/get_mood", method: :get) do %>
     <%= hidden_field_tag :mood, 'meh' %>
     <button class="meh_button" type="submit">
       <img src="<%= asset_path('legit_meh.png') %>" alt="meh face button image">
     </button>
   <% end %>
 
-  <%= form_tag("api/v1/users/@user.id/daily_tasks", method: :get) do %>
+  <%= form_tag("/get_mood", method: :get) do %>
     <%= hidden_field_tag :mood, 'bad' %>
     <button class="bad_button" type="submit">
       <img src="<%= asset_path('legit_sad.png') %>" alt="sad face button image">
