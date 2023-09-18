@@ -35,6 +35,17 @@ class DatabaseService
     connection.get("api/v1/chat_service?task=#{task_name.downcase}")
   end
 
+  def authenticate(user)
+    response = connection.post do |req|
+      req.url '/api/v1/authenticate'  
+      req.headers['Content-Type'] = 'application/json'
+      req.body = { 
+        access_token: user.token, 
+        user_id: user.id 
+      }.to_json
+  end
+
+
   def connection
     Faraday.new("http://localhost:3000") # change to heroku link later
   end

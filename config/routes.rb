@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get "logout", to: "sessions#destroy"
   
   resources :tasks, only: [:new, :index, :create]
-
   get '/set_theme', to: 'theme#update'
+  
+  get "/authenticate", to: "users#authenticate"
 end
