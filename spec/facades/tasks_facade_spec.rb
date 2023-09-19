@@ -181,7 +181,7 @@ RSpec.describe TasksFacade, :vcr do
       "notes"=>"Light a candle and have some music and relax!",
       "time_needed"=>60}, @user_id)
 
-    by_mood = facade.task_by_mood(@user_id, "good").first
+    by_mood = facade.task_by_mood(@user_id, "good")
     expect(by_mood).to be_a Task
     expect(by_mood.name).to eq("Water Plants")
   end
