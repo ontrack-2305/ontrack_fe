@@ -45,10 +45,6 @@ RSpec.describe "the user dashboard page", :vcr do
       @facade.delete(@another_mandatory.id, @user.id)
     end
 
-    it "displays a welcome message with the user first name" do #edit to be a non-persisting flash message only
-      expect(page).to have_content("Welcome, John!")
-    end
-
     it "displays a mood button for 'meh', 'good', and 'bad' days" do
       page.has_css?("good_button")
       page.has_css?("meh_button")
