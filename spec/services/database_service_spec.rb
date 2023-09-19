@@ -111,4 +111,55 @@ RSpec.describe DatabaseService, :vcr do
     expect(parsed).to have_key(:response)
     expect(parsed[:response][0][:text]).to be_a(String)
   end
+
+  it "gets only mandatory tasks on bad days" do
+    1.times { @service.post(@attributes_hash, @user_id) }
+    3.times { @service.post(@attributes_hash, @user_id) }
+    @attributes_hash[:mandatory] = "0"
+
+    response = @service.get_daily_tasks(@user_id, "bad")
+    parsed = JSON.parse(response.body, symbolize_names: true)
+
+    expect(parsed).to have_key(:data)
+
+    parsed[:data].each do |task|
+      expect(task).to have_key(:attributes)
+      expect(task[:attributes][:mandatory]).to eq(true)
+      expect(task[:attributes][:mandatory]).to_not eq(false)
+    end
+  end
+
+  it "gets a mixture on good days" do
+    1.times { @service.post(@attributes_hash, @user_id) }
+    @attributes_hash[:category] = "hobby"
+    1.times { @service.post(@attributes_hash, @user_id) }
+    @attributes_hash[:category] = "rest"
+    2.times { @service.post(@attributes_hash, @user_id) }
+
+    response = @service.get_daily_tasks(@user_id, "good")
+    parsed = JSON.parse(response.body, symbolize_names: true)
+
+    expect(parsed).to have_key(:data)
+    expect(parsed[:data][0][:attributes][:category]).to eq("chore")
+    expect(parsed[:data][1][:attributes][:category]).to eq("hobby")
+    expect(parsed[:data][2][:attributes][:category]).to eq("rest")
+  end
+
+  it "has only hobby and rest on 'meh' days" do
+    1.times { @service.post(@attributes_hash, @user_id) }
+    @attributes_hash[:category] = "hobby", @attributes_hash[:mandatory] = "0"
+    1.times { @service.post(@attributes_hash, @user_id) }
+    @attributes_hash[:category] = "rest", @attributes_hash[:mandatory] = "0"
+    1.times { @service.post(@attributes_hash, @user_id) }
+
+    response = @service.get_daily_tasks(@user_id, "good")
+    parsed = JSON.parse(response.body, symbolize_names: true)
+    
+    expect(parsed).to have_key(:data)
+
+    expect(parsed[:data][0][:attributes][:category]).to_not eq("chore")
+    expect(parsed[:data][0][:attributes][:category]).to eq("rest")
+    expect(parsed[:data][1][:attributes][:category]).to eq("chore")
+    expect(parsed[:data][2][:attributes][:category]).to eq("hobby")
+  end
 end

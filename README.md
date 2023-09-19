@@ -12,9 +12,9 @@
 This is an SOA app and needs both this repo (front end) AND [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white) ](https://github.com/ontrack-2305/ontrack_be) (back end) in order to be fully functioning.
 
 ### Mod 3 Group Consultancy Project
-OnTrack is a .... Designed for ...... OnTrack has the ability for registered users to ..... 
+OnTrack is an innovative web app designed for those that need assistance with managing daily tasks without becoming overwhelmed. OnTrack has the ability for registered users to schedule their day based on their mood: 'good', 'meh', and 'bad' moods are taken into account to populate their dashboard with tasks that they've assigned for themselves. Each task falls into a category: 'chore', 'rest', and 'hobby', which are chosen one by one, using an algorithm based on current mood setting and mandatory status.
                                                   <br><br>
-                    <img src="app/assets/images/791227AB-0F84-42C9-9EE3-0BA462397545.png" width="300" height="300">
+                    <img src="app/assets/images/logo_rounded.png" width="300" height="300">
                     
 
 ## Built With
@@ -25,7 +25,7 @@ OnTrack is a .... Designed for ...... OnTrack has the ability for registered use
 * ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
 * ![Postman Badge](https://img.shields.io/badge/Postman-FF6C37?logo=postman&logoColor=fff&style=for-the-badge)
 
-WHAT ELSE??
+
 
 ## Running On
   - Rails 7.0.6
@@ -40,7 +40,7 @@ To get a local copy, follow these simple instructions
 1. Fork the Project
 2. Clone the repo 
 ``` 
-git clone git@github.com:ontrack-2305/ontrack_be.git
+git clone git@github.com:ontrack-2305/ontrack_fe.git
 ```
 3. Install the gems
 ```
@@ -59,9 +59,12 @@ Add your API key to the credentials file, formatted something like this:
     GOOGLE_CLIENT_SECRET: 934786012394687
 
 You can then call on this API key anytime like this!:
-Rails.application.credentials[:google_client_id]
+Rails.application.credentials[:GOOGLE_CLIENT_ID]
+Rails.application.credentials[:GOOGLE_CLIENT_SECRET]
 ```
-6. Get your API key at: https://code.google.com/apis/console/ Note the Client ID and the Client Secret.
+6. Get your API key at: [![Google](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)](https://code.google.com/apis/console/)
+
+    Note the Client ID and the Client Secret.
 ```
 - For more details, read the Google docs: https://developers.google.com/accounts/docs/OAuth2
     - Put your Client ID after `GOOGLE_CLIENT_ID:`
@@ -69,38 +72,32 @@ Rails.application.credentials[:google_client_id]
 ```
 7. Run Tests in the terminal to verify everything was set up correctly
 ```
-#terminal
-bundle exec rspec
+$ bundle exec rspec
 ```
 - All tests should be passing
 8. Run Rails Server from the terminal to verify page is loading
 ```
-#terminal
-rails s
+$ rails s
 ```
 - Open a web browser and navigate to `http://localhost:5000`
 - The welcome page should display
 - Note: To be able to have full functionality of the site you will also need to setup the backend repo, setup instructions can be found here: [OnTrack Back end repo](https://github.com/ontrack-2305/ontrack_be)
-```
 
 ### <b>Contribute your own code</b>
-1. Create your Feature Branch 
+1. Create your Feature Branch
 ```
-#terminal
-git checkout -b feature/AmazingFeature
+$ git checkout -b feature/AmazingFeature
 ```
-2. Commit your Changes 
+2. Commit your Changes
 ```
-#terminal
-git commit -m 'Add some AmazingFeature' 
+$ git commit -m 'Add some AmazingFeature'
 ```
-3. Push to the Branch 
+3. Push to the Branch
 ```
-#terminal
-git push origin feature/AmazingFeature
+$ git push origin feature/AmazingFeature
 ```
+
 4. Open a Pull Request
-```
 
 ## How To Use OnTrack
  Login with the Login Button and Sign in with Google
@@ -114,7 +111,6 @@ git push origin feature/AmazingFeature
 
 
 ## Schema
-```
     t.string "email"
     t.string "token"
     t.string "google_id"
@@ -123,9 +119,8 @@ git push origin feature/AmazingFeature
     t.string "refresh_token"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-```
 
-## Contributing  [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/ontrack-2305/ontrack_fe/issues)
+## Contributing [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/ontrack-2305/ontrack_fe/issues)
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 ## Thoughts for future contributions:
@@ -133,15 +128,18 @@ Contributions are what make the open source community such an amazing place to l
 - Screen reader friendly
 - Choose which holidays a user can be reminded about
 - Choose different country holidays
-- Link holidays and events to people: "Mother's Day, send Mom something
+- Link holidays and events to people: "Mother's Day, send Mom something"
 - Language translation
 - Attach photos such as grocery lists
 - Standalone app
 - Task templates
+- "I'm bored" feature that can suggest new hobbies or activities based on previous user input
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
 
+
+EQUITY ANALYSIS 
 ## Authors
 - Artemy Gibson [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white) ](https://github.com/algibson1) [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white) ](https://www.linkedin.com/in/artemy-gibson/)
 - Anna Wiley [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white) ](https://github.com/awiley33) [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white) ](https://www.linkedin.com/in/annawiley/)

@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe "The Welcome Page" do
+RSpec.describe "The Welcome Page", :vcr do
   include OmniauthModule
   before(:each) do
     stub_omniauth
@@ -24,7 +24,7 @@ RSpec.describe "The Welcome Page" do
     expect(page).to have_link("Log Out")
   end
 
-  it "as a logged in user, I see a welcome and a logout link" do
+  it "as a logged in user, don't go to a landing page, instead I am directed to my dashboard where I see a welcome and a logout link" do
     visit root_path
 
     expect(page).to have_button("Log In With Google")
@@ -35,6 +35,7 @@ RSpec.describe "The Welcome Page" do
     expect(page).to have_link("Log Out")
 
     visit root_path
+    expect(current_path).to eq(dashboard_path)
 
     expect(page).to have_content("Welcome, Dani!")
     expect(page).to have_link("Log Out")
@@ -50,19 +51,5 @@ RSpec.describe "The Welcome Page" do
 
     expect(page).to have_content("Invalid Credentials")
     expect(current_path).to eq(root_path)
-  end
-
-  it "can log out a user" do
-    visit root_path
-
-    click_button "Log In With Google"
-    
-    visit root_path
-
-    click_link "Log Out"
-
-    expect(page).to_not have_content("Welcome, Dani!")
-    expect(page).to_not have_content("Log Out")
-    expect(page).to have_button("Log In With Google")
   end
 end

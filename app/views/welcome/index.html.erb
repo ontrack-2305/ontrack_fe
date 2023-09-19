@@ -1,6 +1,5 @@
 <h3>OnTrack</h3>
 <% if current_user  %>
-  <h3> Welcome, <%= "#{current_user.first_name}!" %></h3>
 <% else %>
   <%= button_to "Log In With Google", "/auth/google_oauth2", data: {turbo: false} %>
 <% end %>
