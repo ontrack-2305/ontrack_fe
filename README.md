@@ -3,16 +3,30 @@
 [![GitHub Repo stars](https://img.shields.io/github/stars/ontrack-2305/ontrack_fe)](https://github.com/ontrack-2305/ontrack_fe/stargazers)
 [![GitHub issues](https://img.shields.io/github/issues/ontrack-2305/ontrack_fe)](https://github.com/ontrack-2305/ontrack_fe/issues)
 
-# OnTrack (Front end Repo)
-
+# OnTrack (Front End Repo)
 
 
 ## About This Project
 ### Important to Note
 This is an SOA app and needs both this repo (front end) AND [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white) ](https://github.com/ontrack-2305/ontrack_be) (back end) in order to be fully functioning.
 
-### Mod 3 Group Consultancy Project
-OnTrack is a .... Designed for ...... OnTrack has the ability for registered users to ..... 
+### Overview
+This project is built to satisfy the requirements of the Turing School of Software and Design's [Consultancy Project](https://backend.turing.edu/module3/projects/consultancy/). Students come up with their own idea for an application and build it as a group project.
+
+OnTrack is a web application to help users improve productivity as well as mental health.
+
+The application is designed for users who have executive dysfunction or related disorders which often have symptoms such as:
+- Easily overwhelmed
+- Forgetfulness 
+- Difficulty making decisions
+
+Such symptoms also often lead to low self esteem and depression, due to difficulty maintaining relationships and a healthy lifestyle.
+
+Registered users have the ability to input items on their to-do list. In addition to standard chores, users can put in restful "tasks" and tasks related to personal hobbies.
+
+Users are prompted to complete one task at a time. This helps avoid decision paralysis by letting the app tell the user what to do next, and reduces overwhelming feelings caused by seeing a long list.
+
+[See feature documentation for more info](./app/doc/development.md) 
                                                   <br><br>
                     <img src="app/assets/images/791227AB-0F84-42C9-9EE3-0BA462397545.png" width="300" height="300">
                     
@@ -81,7 +95,6 @@ rails s
 - Open a web browser and navigate to `http://localhost:5000`
 - The welcome page should display
 - Note: To be able to have full functionality of the site you will also need to setup the backend repo, setup instructions can be found here: [OnTrack Back end repo](https://github.com/ontrack-2305/ontrack_be)
-```
 
 ### <b>Contribute your own code</b>
 1. Create your Feature Branch 
@@ -100,7 +113,7 @@ git commit -m 'Add some AmazingFeature'
 git push origin feature/AmazingFeature
 ```
 4. Open a Pull Request
-```
+
 
 ## How To Use OnTrack
  Login with the Login Button and Sign in with Google
@@ -129,6 +142,7 @@ git push origin feature/AmazingFeature
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 ## Thoughts for future contributions:
+- Users can register/log in without using a google account
 - Upcoming birthday notifications
 - Screen reader friendly
 - Choose which holidays a user can be reminded about
