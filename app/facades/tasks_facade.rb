@@ -37,8 +37,12 @@ class TasksFacade
   def task_by_mood(user_id, mood)
     response = service.get_daily_tasks(user_id, mood)
     task_hashes = JSON.parse(response.body, symbolize_names: true)[:data]
-    task_hashes.map do |task_hash|
-      Task.new(task_hash[:attributes], task_hash[:id])
+    
+    if task_hashes.present?
+      task = task_hashes.first
+      Task.new(task[:attributes], task[:id])
+    else
+      nil
     end
   end
 
