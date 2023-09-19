@@ -1,5 +1,5 @@
 <h3>OnTrack</h3>
-<% if current_user %>
+<% if current_user  %>
 <% else %>
   <%= button_to "Log In With Google", "/auth/google_oauth2", data: {turbo: false} %>
 <% end %>

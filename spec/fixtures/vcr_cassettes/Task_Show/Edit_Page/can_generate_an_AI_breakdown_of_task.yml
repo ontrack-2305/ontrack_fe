@@ -493,6 +493,8 @@ http_interactions:
     status:
       code: 200
       message: OK
+      code: 404
+      message: Not Found
     headers:
       X-Frame-Options:
       - SAMEORIGIN
@@ -524,6 +526,6 @@ http_interactions:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[]}'
-  recorded_at: Tue, 19 Sep 2023 00:01:12 GMT
+      string: '{"errors":[{"detail":"Couldn''t find Task with ''id''=137"}]}'
+  recorded_at: Tue, 19 Sep 2023 02:07:19 GMT
 recorded_with: VCR 6.2.0

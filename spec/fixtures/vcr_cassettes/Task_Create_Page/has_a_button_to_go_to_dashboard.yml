@@ -109,14 +109,16 @@ http_interactions:
     headers:
       User-Agent:
       - Faraday v2.7.11
+      Content-Length:
+      - '0'
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 400
+      message: Bad Request
     headers:
       X-Frame-Options:
       - SAMEORIGIN
@@ -144,10 +146,15 @@ http_interactions:
       - '0.008759'
       Server-Timing:
       - start_processing.action_controller;dur=0.06, sql.active_record;dur=2.38, process_action.action_controller;dur=3.80
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - cccd77b3-2458-47c0-82eb-5a59665f2431
+      X-Runtime:
+      - '0.160021'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Tue, 19 Sep 2023 00:01:08 GMT
 recorded_with: VCR 6.2.0
