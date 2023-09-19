@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/61/daily_tasks/?mood
+    uri: http://localhost:3000/api/v1/users/123/daily_tasks/?mood
     body:
       encoding: US-ASCII
       string: ''
@@ -39,20 +39,180 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7becba6c-76ea-4053-8399-eabcc872ed17
+      - ba4170ac-078d-40a3-8ade-372e43042e16
       X-Runtime:
-      - '0.008700'
+      - '0.009351'
       Server-Timing:
-      - start_processing.action_controller;dur=0.06, sql.active_record;dur=2.60, process_action.action_controller;dur=3.81
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=1.93, instantiation.active_record;dur=0.15,
+        process_action.action_controller;dur=3.43
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Tue, 19 Sep 2023 17:26:17 GMT
+  recorded_at: Tue, 19 Sep 2023 22:36:01 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/123/tasks?category=chore&event_date=&frequency=daily&mandatory=1&name=Take%20Vitamins&notes=flintstone%20gummies%20all%20dayeee&time_needed=5
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"dc487b8089b13547f16357043cceb0a1"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e55c45de-d340-44e6-bb93-bfc0f0f61744
+      X-Runtime:
+      - '0.015564'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.09, sql.active_record;dur=4.91, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=7.32
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"''Take Vitamins'' added!"}'
+  recorded_at: Tue, 19 Sep 2023 22:36:05 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/123/tasks?category=chore&event_date=&frequency=weekly&mandatory=0&name=Brush%20Apollo&notes=he%20shed&time_needed=5
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"4e9b9e1d4455e3954003503c8ce338cf"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - efc6eee6-1cec-4056-afa7-2541382f6960
+      X-Runtime:
+      - '0.010793'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=2.45, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=3.28
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"''Brush Apollo'' added!"}'
+  recorded_at: Tue, 19 Sep 2023 22:36:05 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/123/tasks?category=chore&event_date=&frequency=daily&mandatory=1&name=Shower&notes=&time_needed=15
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"868bfd0aaa08e844b8526bb98d1d6127"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4a118151-ccf3-4d19-837b-0ed02d65a43c
+      X-Runtime:
+      - '0.008237'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=2.40, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=3.49
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"''Shower'' added!"}'
+  recorded_at: Tue, 19 Sep 2023 22:36:05 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/61/daily_tasks/?mood
+    uri: http://localhost:3000/api/v1/users/123/tasks
     body:
       encoding: US-ASCII
       string: ''
@@ -85,24 +245,29 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      - W/"d7adf806f40e0a4c0cf9ad1322f1c0c4"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 184e3f72-1502-479b-876f-e6cb72a48d7c
+      - 35001118-50f8-4053-b452-c2e0c57eee1e
       X-Runtime:
-      - '0.010899'
+      - '0.005406'
       Server-Timing:
-      - start_processing.action_controller;dur=0.06, sql.active_record;dur=4.39, process_action.action_controller;dur=6.34
+      - start_processing.action_controller;dur=0.03, sql.active_record;dur=0.36, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=0.93
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[]}'
-  recorded_at: Tue, 19 Sep 2023 17:26:18 GMT
+      string: '{"data":[{"id":"37","type":"task","attributes":{"name":"Brush Apollo","category":"chore","mandatory":false,"event_date":"","frequency":"weekly","time_needed":5,"user_id":123,"notes":"he
+        shed"}},{"id":"43","type":"task","attributes":{"name":"Take Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":5,"user_id":123,"notes":"flintstone
+        gummies all dayeee"}},{"id":"44","type":"task","attributes":{"name":"Brush
+        Apollo","category":"chore","mandatory":false,"event_date":"","frequency":"weekly","time_needed":5,"user_id":123,"notes":"he
+        shed"}},{"id":"45","type":"task","attributes":{"name":"Shower","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":15,"user_id":123,"notes":""}}]}'
+  recorded_at: Tue, 19 Sep 2023 22:36:05 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/64/daily_tasks/?mood
+    uri: http://localhost:3000/api/v1/users/123/tasks
     body:
       encoding: US-ASCII
       string: ''
@@ -135,24 +300,29 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      - W/"d7adf806f40e0a4c0cf9ad1322f1c0c4"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2ed8ef49-7f4d-4ffb-89d4-9d2884903a74
+      - 1505307d-a926-44b0-b379-e77cd165e642
       X-Runtime:
-      - '0.007805'
+      - '0.004843'
       Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=2.52, process_action.action_controller;dur=3.59
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.40, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=0.86
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[]}'
-  recorded_at: Tue, 19 Sep 2023 17:27:24 GMT
+      string: '{"data":[{"id":"37","type":"task","attributes":{"name":"Brush Apollo","category":"chore","mandatory":false,"event_date":"","frequency":"weekly","time_needed":5,"user_id":123,"notes":"he
+        shed"}},{"id":"43","type":"task","attributes":{"name":"Take Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":5,"user_id":123,"notes":"flintstone
+        gummies all dayeee"}},{"id":"44","type":"task","attributes":{"name":"Brush
+        Apollo","category":"chore","mandatory":false,"event_date":"","frequency":"weekly","time_needed":5,"user_id":123,"notes":"he
+        shed"}},{"id":"45","type":"task","attributes":{"name":"Shower","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":15,"user_id":123,"notes":""}}]}'
+  recorded_at: Tue, 19 Sep 2023 22:36:05 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/64/daily_tasks/?mood
+    uri: http://localhost:3000/api/v1/users/123/tasks
     body:
       encoding: US-ASCII
       string: ''
@@ -185,24 +355,29 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      - W/"d7adf806f40e0a4c0cf9ad1322f1c0c4"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b6af5078-02b0-40f9-9606-17af9acc6c9e
+      - e506d099-95ae-4b62-9130-43e4a97b293c
       X-Runtime:
-      - '0.008332'
+      - '0.004764'
       Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=2.27, process_action.action_controller;dur=3.41
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.47, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=0.96
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[]}'
-  recorded_at: Tue, 19 Sep 2023 17:27:24 GMT
+      string: '{"data":[{"id":"37","type":"task","attributes":{"name":"Brush Apollo","category":"chore","mandatory":false,"event_date":"","frequency":"weekly","time_needed":5,"user_id":123,"notes":"he
+        shed"}},{"id":"43","type":"task","attributes":{"name":"Take Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":5,"user_id":123,"notes":"flintstone
+        gummies all dayeee"}},{"id":"44","type":"task","attributes":{"name":"Brush
+        Apollo","category":"chore","mandatory":false,"event_date":"","frequency":"weekly","time_needed":5,"user_id":123,"notes":"he
+        shed"}},{"id":"45","type":"task","attributes":{"name":"Shower","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":15,"user_id":123,"notes":""}}]}'
+  recorded_at: Tue, 19 Sep 2023 22:36:05 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/2/daily_tasks/?mood
+    uri: http://localhost:3000/api/v1/users/123/daily_tasks/?mood=good
     body:
       encoding: US-ASCII
       string: ''
@@ -235,24 +410,29 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      - W/"74d8b51a40d3ddefa05ab747bac2abd2"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - bbf49383-576f-4bac-9439-d42613e114c1
+      - dd2618b5-3afe-4e86-aa0b-6f40f3571502
       X-Runtime:
-      - '0.007806'
+      - '0.006822'
       Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.94, process_action.action_controller;dur=3.02
+      - start_processing.action_controller;dur=0.03, sql.active_record;dur=1.79, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=3.04
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[]}'
-  recorded_at: Tue, 19 Sep 2023 22:16:11 GMT
+      string: '{"data":[{"id":"43","type":"task","attributes":{"name":"Take Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":5,"user_id":123,"notes":"flintstone
+        gummies all dayeee"}},{"id":"45","type":"task","attributes":{"name":"Shower","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":15,"user_id":123,"notes":""}},{"id":"37","type":"task","attributes":{"name":"Brush
+        Apollo","category":"chore","mandatory":false,"event_date":"","frequency":"weekly","time_needed":5,"user_id":123,"notes":"he
+        shed"}},{"id":"44","type":"task","attributes":{"name":"Brush Apollo","category":"chore","mandatory":false,"event_date":"","frequency":"weekly","time_needed":5,"user_id":123,"notes":"he
+        shed"}}]}'
+  recorded_at: Tue, 19 Sep 2023 22:36:05 GMT
 - request:
-    method: get
-    uri: http://localhost:3000/api/v1/users/2/daily_tasks/?mood
+    method: delete
+    uri: http://localhost:3000/api/v1/users/123/tasks/37
     body:
       encoding: US-ASCII
       string: ''
@@ -285,24 +465,25 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      - W/"4851d0caff86c665f1a5515cf3e8732a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8cd21982-c6a6-4c89-ada1-7d48ef0fd36f
+      - 7935daad-cc3c-4262-b3c9-24c501b3d208
       X-Runtime:
-      - '0.007269'
+      - '0.011255'
       Server-Timing:
-      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.99, process_action.action_controller;dur=3.08
+      - start_processing.action_controller;dur=0.08, sql.active_record;dur=2.46, instantiation.active_record;dur=0.06,
+        process_action.action_controller;dur=3.42
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[]}'
-  recorded_at: Tue, 19 Sep 2023 22:16:11 GMT
+      string: '{"message":"''Brush Apollo'' deleted."}'
+  recorded_at: Tue, 19 Sep 2023 22:37:27 GMT
 - request:
-    method: get
-    uri: http://localhost:3000/api/v1/users/5/daily_tasks/?mood
+    method: delete
+    uri: http://localhost:3000/api/v1/users/123/tasks/43
     body:
       encoding: US-ASCII
       string: ''
@@ -335,24 +516,25 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      - W/"3c34faca09aa8671bd5933e01c04e61a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 638d8d08-ca62-47ac-a73e-4fb68c9300a1
+      - 3ef92f54-59fc-42d4-ab8b-2be1ed9ecbf1
       X-Runtime:
-      - '0.008279'
+      - '0.007767'
       Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.65, process_action.action_controller;dur=3.33
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=2.03, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=2.57
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[]}'
-  recorded_at: Tue, 19 Sep 2023 22:16:46 GMT
+      string: '{"message":"''Take Vitamins'' deleted."}'
+  recorded_at: Tue, 19 Sep 2023 22:37:27 GMT
 - request:
-    method: get
-    uri: http://localhost:3000/api/v1/users/5/daily_tasks/?mood
+    method: delete
+    uri: http://localhost:3000/api/v1/users/123/tasks/45
     body:
       encoding: US-ASCII
       string: ''
@@ -385,219 +567,20 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      - W/"735582631ea4c2589e30213f0175e414"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f2b9b276-4cc9-4018-b797-08d39a2ace53
+      - e42a0c7f-8dc2-49fd-9fa6-630be17acbc5
       X-Runtime:
-      - '0.007425'
+      - '0.007332'
       Server-Timing:
-      - start_processing.action_controller;dur=0.04, sql.active_record;dur=2.15, process_action.action_controller;dur=3.05
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=2.70, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=3.13
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[]}'
-  recorded_at: Tue, 19 Sep 2023 22:16:46 GMT
-- request:
-    method: get
-    uri: http://localhost:3000/api/v1/users/8/daily_tasks/?mood
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"8fe32e407a1038ee38753b70e5374b3a"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 21205d18-52de-4ded-a86a-f65309293c35
-      X-Runtime:
-      - '0.006951'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.59, process_action.action_controller;dur=2.82
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":[]}'
-  recorded_at: Tue, 19 Sep 2023 22:17:28 GMT
-- request:
-    method: get
-    uri: http://localhost:3000/api/v1/users/8/daily_tasks/?mood
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"8fe32e407a1038ee38753b70e5374b3a"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - c4c47718-c87e-434c-a724-8301409af375
-      X-Runtime:
-      - '0.006871'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.86, process_action.action_controller;dur=2.83
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":[]}'
-  recorded_at: Tue, 19 Sep 2023 22:17:29 GMT
-- request:
-    method: get
-    uri: http://localhost:3000/api/v1/users/11/daily_tasks/?mood
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"8fe32e407a1038ee38753b70e5374b3a"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 7ae93aa9-f14e-48bf-b2cd-f368e61abfc6
-      X-Runtime:
-      - '0.007707'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=2.30, process_action.action_controller;dur=3.43
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":[]}'
-  recorded_at: Tue, 19 Sep 2023 22:18:18 GMT
-- request:
-    method: get
-    uri: http://localhost:3000/api/v1/users/11/daily_tasks/?mood
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"8fe32e407a1038ee38753b70e5374b3a"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 13b7f314-0d8d-421c-b799-696a1eec15a3
-      X-Runtime:
-      - '0.008272'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.04, sql.active_record;dur=2.01, process_action.action_controller;dur=4.33
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":[]}'
-  recorded_at: Tue, 19 Sep 2023 22:18:18 GMT
+      string: '{"message":"''Shower'' deleted."}'
+  recorded_at: Tue, 19 Sep 2023 22:37:27 GMT
 recorded_with: VCR 6.2.0
