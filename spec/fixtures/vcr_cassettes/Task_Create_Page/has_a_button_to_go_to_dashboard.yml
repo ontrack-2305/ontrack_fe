@@ -50,4 +50,53 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":[]}'
   recorded_at: Sun, 17 Sep 2023 18:32:46 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/123/tasks?category=&event_date=&frequency=once&mandatory=0&name=&notes=
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - cccd77b3-2458-47c0-82eb-5a59665f2431
+      X-Runtime:
+      - '0.160021'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"errors":[{"detail":"Validation failed: Name can''t be blank, Category
+        can''t be blank, Time needed can''t be blank"}]}'
+  recorded_at: Tue, 19 Sep 2023 02:06:05 GMT
 recorded_with: VCR 6.2.0

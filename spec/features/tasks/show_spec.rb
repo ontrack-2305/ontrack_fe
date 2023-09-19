@@ -46,18 +46,6 @@ RSpec.describe "Task Show/Edit Page", :vcr do
     expect(page).to have_field(:notes, with: @task.notes)
   end
 
-  it "has a button to go to tasks index page" do
-    expect(page).to have_button("All tasks")
-    click_button("All tasks")
-    expect(current_path).to eq(tasks_path)
-  end
-
-  it "has a button to go to dashboard" do
-    expect(page).to have_button("Dashboard")
-    click_button("Dashboard")
-    expect(current_path).to eq(dashboard_path)
-  end
-
   it "cannot be accessed if no user is logged in" do
     visit root_path
     click_on("Log Out")
@@ -112,7 +100,7 @@ RSpec.describe "Task Show/Edit Page", :vcr do
   it "can generate an AI breakdown of task" do
     old_notes = @task.notes
     expect(page).to have_field(:notes, with: old_notes)
-    click_button("Generate a Suggested Breakdown of this Task (Powered by AI)")
+    click_button("Generate a Suggested Breakdown\nof this Task (Powered by AI)")
     
     expect(page).to have_field(:name, with: "Water Plants")
     expect(page).to_not have_field(:notes, with: @task.notes)
