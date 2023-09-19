@@ -76,4 +76,10 @@ RSpec.describe "the user dashboard page", :vcr do
 
       expect()
     end
-  end
+    
+    it "displays a list of upcoming holidays" do
+      expect(page).to have_content("Upcoming Holidays")
+      expect(page).to have_content("Columbus Day")
+      expect(page).to have_content("Halloween")
+    end
+end
