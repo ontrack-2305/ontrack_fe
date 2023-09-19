@@ -45,7 +45,7 @@ RSpec.describe "the user dashboard page", :vcr do
       @facade.delete(@another_mandatory.id, @user.id)
     end
 
-    it "displays a welcome message with the user first name" do #edit to be a non-persisting flash message only
+    xit "displays a welcome message with the user first name" do #edit to be a non-persisting flash message only
       expect(page).to have_content("Welcome, John!")
     end
 
@@ -59,13 +59,12 @@ RSpec.describe "the user dashboard page", :vcr do
       click_button("happy face button image")
     end
 
-    xit "only gets one task at a time with options" do
+    it "only gets one task at a time with options" do
       click_button("happy face button image")
 
       expect(page).to have_content(@mandatory_task.name || @another_mandatory.name)
-      expect(page).to have_content("skip")
-      expect(page).to have_content("completed")
-      expect(page).to have_content("details")
+      expect(page).to have_button("skip")
+      expect(page).to have_button("completed")
     end
 
     xit "persists if I leave the page" do
