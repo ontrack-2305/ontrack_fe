@@ -6,7 +6,7 @@ class HolidayService
 
 
   def self.conn
-    Faraday.new("http://localhost:3000")
+    Faraday.new("http://localhost:3000") ## change to heroku link later
   end
 
   private
