@@ -258,4 +258,54 @@ http_interactions:
       encoding: UTF-8
       string: '{"message":"''Water Plants'' deleted."}'
   recorded_at: Sun, 17 Sep 2023 18:32:46 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/123/daily_tasks/?mood
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 66fa1469-d88a-4a3c-9b78-e50c1cad483e
+      X-Runtime:
+      - '0.009211'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.48, sql.active_record;dur=2.72, process_action.action_controller;dur=4.21
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Tue, 19 Sep 2023 00:01:09 GMT
 recorded_with: VCR 6.2.0

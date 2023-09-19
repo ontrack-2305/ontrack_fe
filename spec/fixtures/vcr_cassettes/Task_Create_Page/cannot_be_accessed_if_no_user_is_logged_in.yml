@@ -50,4 +50,104 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":[]}'
   recorded_at: Sun, 17 Sep 2023 18:32:46 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/123/daily_tasks/?mood
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e5ea7292-aace-4cec-8977-b54843772f59
+      X-Runtime:
+      - '0.009167'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.07, sql.active_record;dur=2.76, process_action.action_controller;dur=4.31
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Tue, 19 Sep 2023 00:01:08 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/123/daily_tasks/?mood
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b1e9febd-2f3e-4893-88ce-eb0a31f8cdc6
+      X-Runtime:
+      - '0.009047'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.07, sql.active_record;dur=2.68, process_action.action_controller;dur=4.22
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Tue, 19 Sep 2023 00:01:08 GMT
 recorded_with: VCR 6.2.0

@@ -34,7 +34,7 @@ class TasksFacade
     end
   end
 
-  def tasks_by_mood(user_id, mood)
+  def task_by_mood(user_id, mood)
     response = service.get_daily_tasks(user_id, mood)
     task_hashes = JSON.parse(response.body, symbolize_names: true)[:data]
     task_hashes.map do |task_hash|

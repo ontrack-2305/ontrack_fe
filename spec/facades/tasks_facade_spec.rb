@@ -153,7 +153,7 @@ RSpec.describe TasksFacade, :vcr do
     expect(sad_response[:notes]).to eq("No task provided to breakdown")
   end
 
-  it "can fetch tasks by mood" do
+  it "can fetch a task by mood" do
     facade = TasksFacade.new
     facade.post({"name"=>"Water Plants",
       "category"=>"chore",
@@ -180,8 +180,8 @@ RSpec.describe TasksFacade, :vcr do
       "notes"=>"Light a candle and have some music and relax!",
       "time_needed"=>60}, @user_id)
 
-    by_mood = facade.tasks_by_mood(@user_id, "good")
-
-    expect(by_mood).to be_an(Array)
+    by_mood = facade.task_by_mood(@user_id, "good").first
+    expect(by_mood).to be_a Task
+    expect(by_mood.name).to eq("Water Plants")
   end
 end
