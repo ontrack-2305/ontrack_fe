@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Holiday do
-  it 'exists and has attributes', :vcr do
+  it 'exists and has attributes' do
     params = {
       "date": "2023-10-09",
       "name": "Columbus Day"
