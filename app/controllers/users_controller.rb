@@ -2,8 +2,8 @@ class UsersController < ApplicationController
   before_action :validate_session
   
   def show
-    mood = params[:mood]
     @user = current_user
-    @task = TasksFacade.new.task_by_mood(@user.id, mood)
+    @mood = params[:mood] || cookies[:mood]
+    @task = TasksFacade.new.task_by_mood(@user.id, @mood) if @mood.present?
   end
 end
