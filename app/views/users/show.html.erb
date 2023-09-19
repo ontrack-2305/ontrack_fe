@@ -1,6 +1,16 @@
 
-<h2>Welcome, <%= @user.first_name %>!</h2>
 
-<%= image_tag("postit_light.png", class: "mx-auto d-block img-fluid") %>
-
-<%= link_to "Log Out", logout_path %>
+<div id="postit"  class="container">
+  <div class="row">
+    <div class="position-relative">
+      <% if dark_mode_enabled? %>
+        <%= image_tag("postit_dark.png", class: "mx-auto d-block img-fluid") %>
+      <% else %>
+        <%= image_tag("postit_light.png", class: "mx-auto d-block img-fluid") %>
+      <% end %>
+      <div class="text-overlay position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
+        <p>Your task goes here</p>
+      </div>
+    </div>
+  </div>
+</div>
