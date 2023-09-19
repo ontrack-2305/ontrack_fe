@@ -39,11 +39,11 @@
 
     <% if dark_mode_enabled? %>
       <%= form_with url: set_theme_path, method: :get do |form| %>
-        <button class="btn" type="submit" name="theme" value="light" title="Light Mode">&#127773;</button>
+        <button id="theme_toggle" class="btn" type="submit" name="theme" value="light" title="Light Mode">&#127773;</button>
       <% end %>
     <% else %>
       <%= form_with url: set_theme_path, method: :get do |form| %>
-        <button class="btn" type="submit" name="theme" value="dark" title="Dark Mode">&#127770;</button>
+        <button id="theme_toggle" class="btn" type="submit" name="theme" value="dark" title="Dark Mode">&#127770;</button>
       <% end %>
     <% end %>
 
