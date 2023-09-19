@@ -1,4 +1,4 @@
-<h2>Welcome, <%= @user.first_name %>!</h2>
+<h2>Welcome, <%= current_user.first_name %>!</h2>
 
 <div style = "display: flex; justify-content: space-evenly;">
   <%= form_tag(dashboard_path, method: :get) do %>
