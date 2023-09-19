@@ -30,7 +30,11 @@
         <%= image_tag("postit_light.png", class: "mx-auto d-block img-fluid") %>
       <% end %>
       <div class="text-overlay position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
-        <p>Your task goes here</p>
+      <% if params[:mood] %>
+        <p> <%= @task.name %> </p>
+      <% else %>
+        <p> Please add a task! </p>
+      <% end %>
       </div>
     </div>
   </div>
