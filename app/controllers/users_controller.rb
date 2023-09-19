@@ -5,5 +5,6 @@ class UsersController < ApplicationController
     mood = params[:mood]
     @user = current_user
     @task = TasksFacade.new.task_by_mood(@user.id, mood)
+    @holidays = HolidayFacade.upcoming_holidays
   end
 end
