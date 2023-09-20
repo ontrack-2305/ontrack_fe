@@ -1,4 +1,11 @@
-
+<ol id='calendar_events'>
+  <% if @calendar_events != nil %>
+    <p>Upcoming Events</p>
+    <% @calendar_events.each do |event| %>
+      <li><%= event.name %>, <%= event.start_date %>, <%= event.description %></li>
+    <% end %>
+  <% end %>
+</ol>
 <br>
 <%= link_to "Integrate Google Calendar", "/dashboard?calendar=true" %>
 <br>
@@ -8,7 +15,7 @@
     <li><%= holiday.name %>, <%= holiday.date %></li>
   <% end %>
 </ol>
-
+<br>
 <div style = "display: flex; justify-content: space-evenly;">
   <%= form_tag(dashboard_path, method: :get) do %>
     <%= hidden_field_tag :mood, 'good' %>
