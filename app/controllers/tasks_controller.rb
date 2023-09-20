@@ -38,8 +38,11 @@ class TasksController < ApplicationController
   end
 
   def update 
-    require 'pry'; binding.pry
-    response = facade.patch()
+    #define the task
+    if params[:skipped] == "true"
+      require 'pry'; binding.pry
+      #update the task
+    end
     # skipped tasks will come here
     # completed tasks will come here first, check if "once"
     # if frequency == "once", route to destroy
