@@ -32,7 +32,12 @@
         <%= image_tag("postit_light.png", class: "mx-auto d-block img-fluid") %>
       <% end %>
       <div class="text-overlay position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
-        <p>Your task goes here</p>
+      <% if cookies[:mood] && @task.present? %>
+        <p> <%= @task.name %> </p>
+        <%= button_to "skip", task_path(@task.id), method: :patch %><%= button_to "completed", task_path(@task.id), method: :patch %>
+      <% else %>
+        <p> Please add a task! </p>
+      <% end %>
       </div>
     </div>
   </div>
