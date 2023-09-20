@@ -23,7 +23,7 @@ RSpec.describe "The Welcome Page", :vcr do
     expect(page).to have_link("Log Out")
   end
 
-  it "as a logged in user, don't go to a landing page, instead I am directed to my dashboard where I see a welcome and a logout link" do
+  it "as a logged in user, don't go to a landing page, instead I am directed to my dashboard where I see a logout link" do
     visit root_path
 
     expect(page).to have_button("Log In With Google")

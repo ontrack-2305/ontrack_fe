@@ -92,7 +92,7 @@
 
   <div class="mb-3">
     <%= form.label "Notes", class: "form-label" %>
-    <%= form.text_area :notes, size: "100", value: @task&.notes, class: "form-label", class: "form-control rounded-pill border-dark" %><br>
+    <%= form.text_area :notes, size: "100", value: @task&.notes, class: "form-label form-control rounded-pill border-dark" %><br>
     <%= form.submit "Generate a Suggested Breakdown\nof this Task (Powered by AI)", name: "get_ai", class: "btn btn-secondary rounded-pill" %><br>
   </div>
 
