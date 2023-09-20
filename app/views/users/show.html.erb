@@ -32,7 +32,7 @@
       <div class="text-overlay position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
       <% if cookies[:mood] && @task.present? %>
         <p> <%= @task.name %> </p>
-        <%= button_to "skip" %><%= button_to "completed" %>
+        <%= button_to "skip", method: :patch %><%= button_to "complete" %>
       <% else %>
         <p> Please add a task! </p>
       <% end %>
