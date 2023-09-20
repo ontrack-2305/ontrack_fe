@@ -3,7 +3,10 @@ class UsersController < ApplicationController
   
   def show
     @user = current_user
-    @mood = params[:mood] || cookies[:mood]
-    @task = TasksFacade.new.task_by_mood(@user.id, @mood) if @mood.present?
+    @mood = params[:mood]
+    @task = TasksFacade.new.task_by_mood(@user.id, @mood) 
+    if @mood.present?
+      cookies[:mood] = { value: @mood, expires: 1.year.from_now }
+    end
   end
 end
