@@ -1,4 +1,11 @@
 class DatabaseService
+
+  def get_holidays
+    response = connection.get("/api/v1/holidays")
+    JSON.parse(response.body, symbolize_names: true)
+  end
+  
+
   def post(attributes_hash, user_id)
     connection.post("api/v1/users/#{user_id}/tasks") do |faraday|
       attributes_hash.each do |key, value|
