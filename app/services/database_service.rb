@@ -1,8 +1,15 @@
 class DatabaseService
-  def get_events(user_id)
-    response = connection.get("/api/v1/users/#{user_id}/calendar_events")
-    require 'pry'; binding.pry
-    JSON.parse(response.body, symbolize_names: true)
+  def get_calendar_events(user)
+    response = connection.get do |req|
+      req.url "api/v1/users/#{user.id}/calendar_events"  
+      req.headers['Content-Type'] = 'application/json'
+      req.body = { 
+        access_token: user.token, 
+        user_id: user.id, 
+        google_id: user.google_id,
+        email: user.email
+      }.to_json
+    end
   end
 
   def get_holidays
