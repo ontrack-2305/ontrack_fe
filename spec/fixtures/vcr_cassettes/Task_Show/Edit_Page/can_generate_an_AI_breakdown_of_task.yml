@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/123/daily_tasks/?mood
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/daily_tasks/?mood
     body:
       encoding: US-ASCII
       string: ''
@@ -18,6 +18,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 04:48:12 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -39,20 +45,20 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c398fbfc-9fd1-4325-9109-ec8c96773228
+      - 06b0e8df-749d-4a00-badc-b462773932d6
       X-Runtime:
-      - '0.027008'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.08, sql.active_record;dur=9.28, process_action.action_controller;dur=21.72
+      - '0.008585'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Wed, 20 Sep 2023 04:36:38 GMT
+  recorded_at: Wed, 20 Sep 2023 04:48:13 GMT
 - request:
     method: post
-    uri: http://localhost:3000/api/v1/users/123/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20
     body:
       encoding: UTF-8
       string: ''
@@ -70,6 +76,12 @@ http_interactions:
       code: 201
       message: Created
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 04:48:14 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -91,21 +103,20 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 35ead11a-1088-46c4-b7a9-871b381ccb3c
+      - 8f9a795c-44f7-41f5-9cb5-1011229be2d7
       X-Runtime:
-      - '0.007588'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=3.36, instantiation.active_record;dur=0.05,
-        process_action.action_controller;dur=5.10
+      - '0.008632'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"message":"''Water Plants'' added!"}'
-  recorded_at: Wed, 20 Sep 2023 04:36:38 GMT
+  recorded_at: Wed, 20 Sep 2023 04:48:14 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/123/tasks
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks
     body:
       encoding: US-ASCII
       string: ''
@@ -121,6 +132,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 04:48:14 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -138,26 +155,25 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"2e25db9e0ecb22c126851ffb4157a964"
+      - W/"bf09950dd57b5704bba5a91d43a35c0f"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 52dcdbf9-bf03-49a1-8f33-21451ffdb84b
+      - fae1ab01-22c0-4f7f-a326-8a20151cef4e
       X-Runtime:
-      - '0.003169'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.03, sql.active_record;dur=0.47, instantiation.active_record;dur=0.01,
-        process_action.action_controller;dur=1.07
+      - '0.003821'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"6","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"Remember
+      string: '{"data":[{"id":"168","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"Remember
         plants in bedroom, living room, and balcony","skipped":false}}]}'
-  recorded_at: Wed, 20 Sep 2023 04:36:38 GMT
+  recorded_at: Wed, 20 Sep 2023 04:48:15 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/123/tasks/6
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks/168
     body:
       encoding: US-ASCII
       string: ''
@@ -173,6 +189,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 04:48:14 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -190,26 +212,25 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"5e7858f66117fb65eba315f7e645ded7"
+      - W/"52e80989746164afe67eba96fa02a464"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e99311e3-894f-46d0-aac7-f216a16d8c86
+      - c365677c-2dbd-4174-8a0d-e129db6a3649
       X-Runtime:
-      - '0.002983'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.03, sql.active_record;dur=0.37, instantiation.active_record;dur=0.01,
-        process_action.action_controller;dur=0.91
+      - '0.003622'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"6","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"Remember
+      string: '{"data":{"id":"168","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"Remember
         plants in bedroom, living room, and balcony","skipped":false}}}'
-  recorded_at: Wed, 20 Sep 2023 04:36:38 GMT
+  recorded_at: Wed, 20 Sep 2023 04:48:15 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/123/tasks/6
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks/168
     body:
       encoding: US-ASCII
       string: ''
@@ -225,6 +246,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 04:48:16 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -242,26 +269,25 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"5e7858f66117fb65eba315f7e645ded7"
+      - W/"52e80989746164afe67eba96fa02a464"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0cfee366-a170-4f8c-a288-0c2e765ada2e
+      - e17e1ea4-a687-4e08-a9d4-4512de7c1cb5
       X-Runtime:
-      - '0.002962'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.36, instantiation.active_record;dur=0.01,
-        process_action.action_controller;dur=0.69
+      - '0.003885'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"6","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"Remember
+      string: '{"data":{"id":"168","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"Remember
         plants in bedroom, living room, and balcony","skipped":false}}}'
-  recorded_at: Wed, 20 Sep 2023 04:36:38 GMT
+  recorded_at: Wed, 20 Sep 2023 04:48:16 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/chat_service?task=water%20plants
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/chat_service?task=water%20plants
     body:
       encoding: US-ASCII
       string: ''
@@ -277,6 +303,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 04:48:18 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -294,27 +326,27 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"6e302068fb61b3f23f5688b16f21ea9d"
+      - W/"7383d79cf96de28b47441f6916febaba"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c2b06252-ad58-44f9-abe0-be32871adf70
+      - 20f37b5f-a93e-4a1c-ba6b-d5dfe4d23742
       X-Runtime:
-      - '2.570732'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.04, process_action.action_controller;dur=2563.06
+      - '2.447877'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"response":[{"text":"1. Gather watering can and necessary tools. 2.
-        Check each plant to determine individual watering needs. 3. Water plants accordingly,
-        adjusting amount for each plant. 4. Allow excess water to drain. 5. Clean
-        tools and put them away."}]}'
-  recorded_at: Wed, 20 Sep 2023 04:36:41 GMT
+      string: '{"response":[{"text":"1. Gather necessary watering supplies 2. Check
+        the moisture levels of the soil 3. Water the plants evenly, making sure to
+        avoid overwatering 4. Allow excess water to drain out from the pots 5. Clean
+        up any spills or mess"}]}'
+  recorded_at: Wed, 20 Sep 2023 04:48:19 GMT
 - request:
     method: patch
-    uri: http://localhost:3000/api/v1/users/123/tasks/6?category=chore&event_date=&frequency=weekly&id=6&mandatory=1&name=Water%20Plants&notes=1.%20Gather%20watering%20can%20and%20necessary%20tools.%202.%20Check%20each%20plant%20to%20determine%20individual%20watering%20needs.%203.%20Water%20plants%20accordingly,%20adjusting%20amount%20for%20each%20plant.%204.%20Allow%20excess%20water%20to%20drain.%205.%20Clean%20tools%20and%20put%20them%20away.&time_needed=20
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks/168?category=chore&event_date=&frequency=weekly&id=168&mandatory=1&name=Water%20Plants&notes=1.%20Gather%20necessary%20watering%20supplies%202.%20Check%20the%20moisture%20levels%20of%20the%20soil%203.%20Water%20the%20plants%20evenly,%20making%20sure%20to%20avoid%20overwatering%204.%20Allow%20excess%20water%20to%20drain%20out%20from%20the%20pots%205.%20Clean%20up%20any%20spills%20or%20mess&time_needed=20
     body:
       encoding: UTF-8
       string: ''
@@ -332,6 +364,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 04:48:19 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -353,21 +391,20 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0d83ff72-8122-48b1-82d3-57c8080e2b8b
+      - aeb003cd-b2f5-4a0f-9e0d-fba886ca50e5
       X-Runtime:
-      - '0.008606'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.07, sql.active_record;dur=2.54, instantiation.active_record;dur=0.02,
-        unpermitted_parameters.action_controller;dur=0.07, process_action.action_controller;dur=4.36
+      - '0.008724'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"message":"Changes saved!"}'
-  recorded_at: Wed, 20 Sep 2023 04:36:41 GMT
+  recorded_at: Wed, 20 Sep 2023 04:48:19 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/123/tasks/6
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks/168
     body:
       encoding: US-ASCII
       string: ''
@@ -383,6 +420,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 04:48:19 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -400,28 +443,27 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"e4929687c96b75eb3ede4d7a7c2473f3"
+      - W/"b2594ba42ffa6b7a9287555a5265a122"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2d81e851-1bfe-4929-9bf1-08650738692f
+      - a323a460-be6b-4823-ac9a-b9c04fad666c
       X-Runtime:
-      - '0.003711'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.42, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=0.81
+      - '0.003565'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"6","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"1.
-        Gather watering can and necessary tools. 2. Check each plant to determine
-        individual watering needs. 3. Water plants accordingly, adjusting amount for
-        each plant. 4. Allow excess water to drain. 5. Clean tools and put them away.","skipped":false}}}'
-  recorded_at: Wed, 20 Sep 2023 04:36:41 GMT
+      string: '{"data":{"id":"168","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"1.
+        Gather necessary watering supplies 2. Check the moisture levels of the soil
+        3. Water the plants evenly, making sure to avoid overwatering 4. Allow excess
+        water to drain out from the pots 5. Clean up any spills or mess","skipped":false}}}'
+  recorded_at: Wed, 20 Sep 2023 04:48:19 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/123/tasks/6
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks/168
     body:
       encoding: US-ASCII
       string: ''
@@ -437,6 +479,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 04:48:19 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -454,28 +502,27 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"e4929687c96b75eb3ede4d7a7c2473f3"
+      - W/"b2594ba42ffa6b7a9287555a5265a122"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7784098e-51bb-4e0f-b569-955c12aa5dc3
+      - f56019f8-1fd3-4895-8267-f46f4441cb0a
       X-Runtime:
-      - '0.003276'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.39, instantiation.active_record;dur=0.01,
-        process_action.action_controller;dur=0.75
+      - '0.003789'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"6","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"1.
-        Gather watering can and necessary tools. 2. Check each plant to determine
-        individual watering needs. 3. Water plants accordingly, adjusting amount for
-        each plant. 4. Allow excess water to drain. 5. Clean tools and put them away.","skipped":false}}}'
-  recorded_at: Wed, 20 Sep 2023 04:36:41 GMT
+      string: '{"data":{"id":"168","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"1.
+        Gather necessary watering supplies 2. Check the moisture levels of the soil
+        3. Water the plants evenly, making sure to avoid overwatering 4. Allow excess
+        water to drain out from the pots 5. Clean up any spills or mess","skipped":false}}}'
+  recorded_at: Wed, 20 Sep 2023 04:48:20 GMT
 - request:
     method: delete
-    uri: http://localhost:3000/api/v1/users/123/tasks/6
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks/168
     body:
       encoding: US-ASCII
       string: ''
@@ -491,6 +538,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 04:48:20 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -512,16 +565,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3607a388-3cee-4b8d-bba2-73e3ede10dc2
+      - 32ac04f3-b863-4620-92a0-22820f746356
       X-Runtime:
-      - '0.005654'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.03, sql.active_record;dur=1.44, instantiation.active_record;dur=0.01,
-        process_action.action_controller;dur=1.85
+      - '0.007252'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"message":"''Water Plants'' deleted."}'
-  recorded_at: Wed, 20 Sep 2023 04:36:41 GMT
+  recorded_at: Wed, 20 Sep 2023 04:48:20 GMT
 recorded_with: VCR 6.2.0

@@ -15,9 +15,9 @@ class TasksController < ApplicationController
   end
 
   def new
+    @task = Task.new(task_params)
     if params[:add_notes]
       response = facade.get_ai_breakdown(params[:name])
-      @task = Task.new(task_params)
       @task.notes = response[:notes] if response[:status] == 200
       flash[:alert] = response[:notes] if response[:status] == 400
     end
@@ -32,7 +32,7 @@ class TasksController < ApplicationController
       redirect_to dashboard_path if params[:commit]
       flash[:notice] = JSON.parse(response.body)["message"]
     else
-      redirect_to new_task_path 
+      redirect_to new_task_path(params: task_params)
       flash[:notice] = JSON.parse(response.body)["errors"][0]["detail"]
     end
   end
@@ -55,7 +55,7 @@ class TasksController < ApplicationController
   private 
 
   def task_params
-    hash = params.permit(:name, :category, :mandatory, :event_date, :frequency, :notes, :estimated_time, :id).to_h.symbolize_keys
+    hash = params.permit(:name, :category, :mandatory, :event_date, :frequency, :notes, :estimated_time, :id, :time_needed).to_h.symbolize_keys
     hash[:time_needed] = time_needed unless time_needed == 0
     hash
   end

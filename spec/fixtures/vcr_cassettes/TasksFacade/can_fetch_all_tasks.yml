@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:3000/api/v1/users/20/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/20/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20
     body:
       encoding: UTF-8
       string: ''
@@ -20,6 +20,12 @@ http_interactions:
       code: 201
       message: Created
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 04:46:17 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -41,21 +47,20 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b0276ab2-4b40-4197-aaa4-4bd74ab300ab
+      - 997e44c4-3d51-4282-a058-60fcf15592d0
       X-Runtime:
-      - '0.009487'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.09, sql.active_record;dur=2.47, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=4.28
+      - '0.008618'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"message":"''Water Plants'' added!"}'
-  recorded_at: Tue, 19 Sep 2023 00:05:20 GMT
+  recorded_at: Wed, 20 Sep 2023 04:46:18 GMT
 - request:
     method: post
-    uri: http://localhost:3000/api/v1/users/20/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Prune%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/20/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Prune%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20
     body:
       encoding: UTF-8
       string: ''
@@ -73,6 +78,12 @@ http_interactions:
       code: 201
       message: Created
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 04:46:18 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -94,21 +105,20 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0a56fb1e-fc36-4516-930c-acfff8f21430
+      - ac15f3aa-c139-4e86-87e5-144f102eba12
       X-Runtime:
-      - '0.009535'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.07, sql.active_record;dur=2.38, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=3.90
+      - '0.009952'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"message":"''Prune Plants'' added!"}'
-  recorded_at: Tue, 19 Sep 2023 00:05:20 GMT
+  recorded_at: Wed, 20 Sep 2023 04:46:18 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/20/tasks
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/20/tasks
     body:
       encoding: US-ASCII
       string: ''
@@ -124,6 +134,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 04:46:18 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -141,28 +157,27 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"2aa18f032364efa46d09adc32154b7c9"
+      - W/"633e26ab3fba36d7b0ef4745dbbadd85"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ba89a73a-0476-45bf-9343-f680a43477e6
+      - ea77a2cf-764b-4402-b468-6e8a5e33b944
       X-Runtime:
-      - '0.007179'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.08, sql.active_record;dur=0.79, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=1.97
+      - '0.003942'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"30","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":20,"notes":"Remember
-        plants in bedroom, living room, and balcony"}},{"id":"31","type":"task","attributes":{"name":"Prune
+      string: '{"data":[{"id":"105","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":20,"notes":"Remember
+        plants in bedroom, living room, and balcony","skipped":false}},{"id":"106","type":"task","attributes":{"name":"Prune
         Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":20,"notes":"Remember
-        plants in bedroom, living room, and balcony"}}]}'
-  recorded_at: Tue, 19 Sep 2023 00:05:20 GMT
+        plants in bedroom, living room, and balcony","skipped":false}}]}'
+  recorded_at: Wed, 20 Sep 2023 04:46:19 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/20/tasks
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/20/tasks
     body:
       encoding: US-ASCII
       string: ''
@@ -178,6 +193,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 04:46:18 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -195,28 +216,27 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"2aa18f032364efa46d09adc32154b7c9"
+      - W/"633e26ab3fba36d7b0ef4745dbbadd85"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 237174f0-b850-47be-9e05-1e5b43c6f335
+      - f73ea547-4643-4ae4-aaf7-2ebfc30054a8
       X-Runtime:
-      - '0.006248'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.06, sql.active_record;dur=0.57, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=1.39
+      - '0.003880'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"30","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":20,"notes":"Remember
-        plants in bedroom, living room, and balcony"}},{"id":"31","type":"task","attributes":{"name":"Prune
+      string: '{"data":[{"id":"105","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":20,"notes":"Remember
+        plants in bedroom, living room, and balcony","skipped":false}},{"id":"106","type":"task","attributes":{"name":"Prune
         Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":20,"notes":"Remember
-        plants in bedroom, living room, and balcony"}}]}'
-  recorded_at: Tue, 19 Sep 2023 00:05:20 GMT
+        plants in bedroom, living room, and balcony","skipped":false}}]}'
+  recorded_at: Wed, 20 Sep 2023 04:46:19 GMT
 - request:
     method: delete
-    uri: http://localhost:3000/api/v1/users/20/tasks/30
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/20/tasks/105
     body:
       encoding: US-ASCII
       string: ''
@@ -232,6 +252,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 04:46:19 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -253,21 +279,20 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a63c56ec-2ed4-4f0e-87fd-b4564567a922
+      - 55652d54-5649-4907-9a0e-2f58bab69ec4
       X-Runtime:
-      - '0.008054'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=2.01, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=2.83
+      - '0.007850'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"message":"''Water Plants'' deleted."}'
-  recorded_at: Tue, 19 Sep 2023 00:05:20 GMT
+  recorded_at: Wed, 20 Sep 2023 04:46:19 GMT
 - request:
     method: delete
-    uri: http://localhost:3000/api/v1/users/20/tasks/31
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/20/tasks/106
     body:
       encoding: US-ASCII
       string: ''
@@ -283,6 +308,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 04:46:19 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -304,16 +335,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7c607852-8b92-4c8b-9f5c-f442758543a3
+      - c8103eea-01fe-420e-a0ec-4a9da367173c
       X-Runtime:
-      - '0.009327'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.07, sql.active_record;dur=2.11, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=2.90
+      - '0.007074'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"message":"''Prune Plants'' deleted."}'
-  recorded_at: Tue, 19 Sep 2023 00:05:20 GMT
+  recorded_at: Wed, 20 Sep 2023 04:46:20 GMT
 recorded_with: VCR 6.2.0
