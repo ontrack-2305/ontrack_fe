@@ -16,22 +16,22 @@ RSpec.describe "The Welcome Page", :vcr do
 
   it "allows a user to register/log in to the app with Google" do
     visit root_path
+    stub_user
 
     expect(page).to have_button("Log In With Google")
     click_button "Log In With Google"
     expect(current_path).to eq(dashboard_path)
-    # expect(page).to have_content("Welcome, Dani!")
     expect(page).to have_link("Log Out")
   end
 
-  it "as a logged in user, don't go to a landing page, instead I am directed to my dashboard where I see a logout link" do
+  it "as a logged in user, don't go to a landing page, instead I am directed to my dashboard where I see a welcome and a logout link" do
     visit root_path
+    stub_user
 
     expect(page).to have_button("Log In With Google")
     click_button "Log In With Google"
 
     expect(current_path).to eq(dashboard_path)
-    # expect(page).to have_content("Welcome, Dani!")
     expect(page).to have_link("Log Out")
 
     visit root_path
