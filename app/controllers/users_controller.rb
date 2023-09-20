@@ -2,11 +2,11 @@ class UsersController < ApplicationController
   before_action :validate_session
   
   def show
-    require 'pry'; binding.pry
-    if params[:calendar] == "true"
-      service = DatabaseService.new
-      response = service.get_calendar_events(current_user)
-      parsed_response = JSON.parse(response.body)
+    # if params[:calendar] == "true"
+      # service = DatabaseService.new
+      # response = service.get_calendar_events(current_user)
+      # parsed_response = JSON.parse(response.body)
+      @calendar_events = CalendarEventFacade.new.calendar_events
     end
       mood = params[:mood]
       @user = current_user
