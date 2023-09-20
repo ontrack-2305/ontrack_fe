@@ -34,19 +34,45 @@ RSpec.describe "the user dashboard page", :vcr do
       "notes"=>"smut",
       "time_needed"=>45}, @user.id)
 
-      @mandatory_chore_task = @facade.get_tasks(@user.id).first
-      @non_mandatory_hobby = @facade.get_tasks(@user.id).second
-      @non_mandatory_rest = @facade.get_tasks(@user.id).third
+      @facade.post({"name"=>"go on a walk",
+      "category"=>"rest",
+      "mandatory"=>"1",
+      "event_date"=>"",
+      "frequency"=>"daily",
+      "notes"=>"",
+      "time_needed"=>30}, @user.id)
+
+      @facade.post({"name"=>"practice juggling",
+      "category"=>"hobby",
+      "mandatory"=>"0",
+      "event_date"=>"",
+      "frequency"=>"monthly",
+      "notes"=>"bowling balls, bowling pins",
+      "time_needed"=>15}, @user.id)
+
+      @facade.post({"name"=>"do the dishes",
+      "category"=>"chore",
+      "mandatory"=>"0",
+      "event_date"=>"",
+      "frequency"=>"daily",
+      "notes"=>"",
+      "time_needed"=>15}, @user.id)
+
+      @reading = @facade.get_tasks(@user.id).first
+      @walk = @facade.get_tasks(@user.id).second
+      @juggling = @facade.get_tasks(@user.id).third
+      @vitamins = @facade.get_tasks(@user.id).fourth
+      @crochet = @facade.get_tasks(@user.id).fifth
+      @dishes = @facade.get_tasks(@user.id).last
     end
 
     after(:each) do
-      @facade.delete(@mandatory_chore_task.id, @user.id)
-      @facade.delete(@non_mandatory_hobby.id, @user.id)
-      @facade.delete(@non_mandatory_rest.id, @user.id)
-    end
-
-    xit "displays a welcome message with the user first name" do #edit to be a non-persisting flash message only
-      expect(page).to have_content("Welcome, John!")
+      @facade.delete(@vitamins.id, @user.id)
+      @facade.delete(@crochet.id, @user.id)
+      @facade.delete(@reading.id, @user.id)
+      @facade.delete(@walk.id, @user.id)
+      @facade.delete(@juggling.id, @user.id)
+      @facade.delete(@dishes.id, @user.id)
     end
 
     it "displays a mood button for 'meh', 'good', and 'bad' days" do
@@ -55,14 +81,10 @@ RSpec.describe "the user dashboard page", :vcr do
       page.has_css?("bad_button")
     end
 
-    xit "when I click on a button, that button stays highlighted" do #can Anna help w/this?
-      click_button("happy face button image")
-    end
-
     it "only gets one task at a time with options" do
       click_button("happy face button image")
 
-      expect(page).to have_content(@mandatory_chore_task.name)
+      expect(page).to have_content(@walk.name)
       expect(page).to have_button("skip")
       expect(page).to have_button("completed")
     end
@@ -70,19 +92,22 @@ RSpec.describe "the user dashboard page", :vcr do
     it "the mood and task persist if I leave the page" do
       click_button("happy face button image")
 
-      expect(page).to have_content(@mandatory_chore_task.name)
+      expect(page).to have_content(@walk.name)
 
       visit new_task_path
 
       visit dashboard_path
       
-      expect(page).to have_content(@mandatory_chore_task.name)
+      expect(page).to have_content(@walk.name)
       expect(page).to_not have_content("Please add a task!")
     end
 
-    it "it will fetch only mandatory tasks if a bad day" do
-      click_button("sad face button image")
+    it "can display a warning flash message if skipping a mandatory task" do
+      click_button("happy face button image")
 
-      expect(page).to have_content(@mandatory_chore_task.name)
+      expect(page).to have_content(@walk.name)
+      expect(page).to have_button("skip")
+      click_button("skip")
+      expect(page).to have_content("Are you sure you'd like to skip a mandatory task?")
     end
   end
