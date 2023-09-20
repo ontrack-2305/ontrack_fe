@@ -2,6 +2,64 @@
 http_interactions:
 - request:
     method: get
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/holidays
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 23:05:23 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"129959a1fdf972341273461aaa7e5be4"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f9ddacfb-9ed8-4bed-96ec-529d8f761ec2
+      X-Runtime:
+      - '0.024378'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"type":"holiday","attributes":{"name":"Columbus Day","date":"2023-10-09"}},{"type":"holiday","attributes":{"name":"Veterans
+        Day","date":"2023-11-10"}},{"type":"holiday","attributes":{"name":"Thanksgiving
+        Day","date":"2023-11-23"}}]}'
+  recorded_at: Wed, 20 Sep 2023 23:05:23 GMT
+- request:
+    method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/daily_tasks/?mood
     body:
       encoding: US-ASCII
@@ -21,7 +79,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 04:46:55 GMT
+      - Wed, 20 Sep 2023 23:05:23 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -45,9 +103,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1d3caf6e-175a-46a2-b18a-c0882087c2dd
+      - dd082f4f-b8ec-4952-9f32-7e5e33980463
       X-Runtime:
-      - '0.008337'
+      - '0.010031'
       Transfer-Encoding:
       - chunked
       Via:
@@ -55,7 +113,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Wed, 20 Sep 2023 04:46:55 GMT
+  recorded_at: Wed, 20 Sep 2023 23:05:24 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks
@@ -77,7 +135,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 04:46:55 GMT
+      - Wed, 20 Sep 2023 23:05:23 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -101,9 +159,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9711c335-a595-4c44-9ab4-eac4d06cc489
+      - 373814ff-f40c-4836-8c54-4f967b9e5463
       X-Runtime:
-      - '0.003773'
+      - '0.004318'
       Transfer-Encoding:
       - chunked
       Via:
@@ -111,7 +169,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Wed, 20 Sep 2023 04:46:55 GMT
+  recorded_at: Wed, 20 Sep 2023 23:05:24 GMT
 - request:
     method: post
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20
@@ -135,7 +193,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 04:46:55 GMT
+      - Wed, 20 Sep 2023 23:05:24 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -159,9 +217,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ad84e99d-8de9-431a-8215-fc08460ca45d
+      - 365ef705-cf90-4c77-ae6e-1ad772d36acb
       X-Runtime:
-      - '0.008525'
+      - '0.012044'
       Transfer-Encoding:
       - chunked
       Via:
@@ -169,7 +227,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''Water Plants'' added!"}'
-  recorded_at: Wed, 20 Sep 2023 04:46:56 GMT
+  recorded_at: Wed, 20 Sep 2023 23:05:24 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks
@@ -191,7 +249,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 04:46:55 GMT
+      - Wed, 20 Sep 2023 23:05:24 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -211,22 +269,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"813b87ee9950df4a2eaa4328b603c07d"
+      - W/"9c5991676a29158174fef24ff51122f7"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ca80c091-dde1-4614-8882-9d803be26af4
+      - e86c2578-1478-4287-a6de-760b2a8deb74
       X-Runtime:
-      - '0.003865'
+      - '0.004449'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"124","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"Remember
+      string: '{"data":[{"id":"579","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"Remember
         plants in bedroom, living room, and balcony","skipped":false}}]}'
-  recorded_at: Wed, 20 Sep 2023 04:46:56 GMT
+  recorded_at: Wed, 20 Sep 2023 23:05:25 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks
@@ -248,7 +306,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 04:46:56 GMT
+      - Wed, 20 Sep 2023 23:05:24 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -268,25 +326,25 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"813b87ee9950df4a2eaa4328b603c07d"
+      - W/"9c5991676a29158174fef24ff51122f7"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1f1b2e99-382c-4cb2-8db5-d64b29b48542
+      - 91e7ed34-4f10-4cb7-849a-7a3c6688fb9b
       X-Runtime:
-      - '0.005760'
+      - '0.004886'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"124","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"Remember
+      string: '{"data":[{"id":"579","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"Remember
         plants in bedroom, living room, and balcony","skipped":false}}]}'
-  recorded_at: Wed, 20 Sep 2023 04:46:56 GMT
+  recorded_at: Wed, 20 Sep 2023 23:05:25 GMT
 - request:
     method: delete
-    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks/124
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks/579
     body:
       encoding: US-ASCII
       string: ''
@@ -305,7 +363,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 04:46:56 GMT
+      - Wed, 20 Sep 2023 23:05:25 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -329,9 +387,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 37e8a103-3ff9-4e02-8480-044537cdcbd7
+      - 830be1ea-823b-4e99-b98b-bb8e40fdc550
       X-Runtime:
-      - '0.007519'
+      - '0.016805'
       Transfer-Encoding:
       - chunked
       Via:
@@ -339,111 +397,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''Water Plants'' deleted."}'
-<<<<<<< HEAD
-  recorded_at: Sun, 17 Sep 2023 18:32:46 GMT
-- request:
-    method: get
-    uri: http://localhost:3000/api/v1/users/123/daily_tasks/?mood
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"8fe32e407a1038ee38753b70e5374b3a"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 66fa1469-d88a-4a3c-9b78-e50c1cad483e
-      X-Runtime:
-      - '0.009211'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.48, sql.active_record;dur=2.72, process_action.action_controller;dur=4.21
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":[]}'
-  recorded_at: Tue, 19 Sep 2023 00:01:09 GMT
-- request:
-    method: get
-    uri: http://localhost:3000/api/v1/holidays
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"129959a1fdf972341273461aaa7e5be4"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 4d20ef5e-ec07-4a57-aed8-d9cfcda8ddac
-      X-Runtime:
-      - '0.092188'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.05, process_action.action_controller;dur=87.33
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":[{"type":"holiday","attributes":{"name":"Columbus Day","date":"2023-10-09"}},{"type":"holiday","attributes":{"name":"Veterans
-        Day","date":"2023-11-10"}},{"type":"holiday","attributes":{"name":"Thanksgiving
-        Day","date":"2023-11-23"}}]}'
-  recorded_at: Tue, 19 Sep 2023 23:59:22 GMT
-=======
-  recorded_at: Wed, 20 Sep 2023 04:46:57 GMT
->>>>>>> main
+  recorded_at: Wed, 20 Sep 2023 23:05:26 GMT
 recorded_with: VCR 6.2.0

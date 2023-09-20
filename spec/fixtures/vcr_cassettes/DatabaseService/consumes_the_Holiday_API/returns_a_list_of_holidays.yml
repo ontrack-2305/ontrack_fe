@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/holidays
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/holidays
     body:
       encoding: US-ASCII
       string: ''
@@ -18,6 +18,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 23:07:23 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -39,22 +45,22 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4ab7080d-b71f-49af-9330-8218dfd9b3a2
+      - bac95be0-8940-4491-b6ec-fc1486005ab2
       X-Runtime:
-      - '0.397418'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.11, process_action.action_controller;dur=376.46
+      - '0.020565'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":[{"type":"holiday","attributes":{"name":"Columbus Day","date":"2023-10-09"}},{"type":"holiday","attributes":{"name":"Veterans
         Day","date":"2023-11-10"}},{"type":"holiday","attributes":{"name":"Thanksgiving
         Day","date":"2023-11-23"}}]}'
-  recorded_at: Wed, 20 Sep 2023 01:56:40 GMT
+  recorded_at: Wed, 20 Sep 2023 23:07:24 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/24/tasks
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/24/tasks
     body:
       encoding: US-ASCII
       string: ''
@@ -70,6 +76,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 23:07:24 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -91,16 +103,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 984619b4-5f67-4b17-927d-f15f47c16f14
+      - ff88d780-2965-4e78-ab66-1ca1750adae1
       X-Runtime:
-      - '0.042976'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.10, sql.active_record;dur=11.01,
-        process_action.action_controller;dur=35.26
+      - '0.003985'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Wed, 20 Sep 2023 01:56:41 GMT
+  recorded_at: Wed, 20 Sep 2023 23:07:24 GMT
 recorded_with: VCR 6.2.0
