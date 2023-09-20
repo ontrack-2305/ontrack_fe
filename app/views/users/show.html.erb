@@ -34,7 +34,11 @@
       <div class="text-overlay position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
       <% if cookies[:mood] && @task.present? %>
         <p> <%= @task.name %> </p>
-        <%= button_to "skip", task_path(@task.id), method: :patch %><%= button_to "completed", task_path(@task.id), method: :patch %>
+        <%= form_tag(task_path(@task.id), method: :patch) do %>
+          <%= hidden_field_tag 'skipped', true %>
+          <%= submit_tag "skip", class: "btn btn-primary" %>
+        <% end %>
+        <%= button_to "completed", task_path(@task.id), method: :patch %>
       <% else %>
         <p> Please add a task or select a mood ~! </p>
       <% end %>
