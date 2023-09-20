@@ -38,6 +38,10 @@ class TasksController < ApplicationController
   end
 
   def update 
+    # skipped tasks will come here
+    # completed tasks will come here first, check if "once"
+    # if frequency == "once", route to destroy
+    # task.update(skipped = "true")
     return redirect_to task_path(id: params[:id], add_notes: true) if params[:get_ai].present?
 
     response = facade.patch(task_params, session[:user_id])
