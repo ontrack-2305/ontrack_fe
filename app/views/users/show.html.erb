@@ -36,7 +36,7 @@
         <p> <%= @task.name %> </p>
         <%= button_to "skip", task_path(@task.id), method: :patch %><%= button_to "completed", task_path(@task.id), method: :patch %>
       <% else %>
-        <p> Please add a task! </p>
+        <p> Please add a task or select a mood ~! </p>
       <% end %>
       </div>
     </div>
