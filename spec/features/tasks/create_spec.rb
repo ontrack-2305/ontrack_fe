@@ -108,6 +108,25 @@ RSpec.describe "Task Create Page", :vcr do
     expect(page).to have_content("Validation failed: Name can't be blank, Category can't be blank, Time needed can't be blank")
   end
 
+  it "keeps user's progress even if there is an error when creating a task" do
+    fill_in(:name, with: "do taxes")
+    fill_in(:event_date, with: "2024-04-04")
+    select(:annual, from: :frequency)
+    check(:mandatory)
+    fill_in(:hours, with: 1)
+    fill_in(:notes, with: "Some random notes")
+    click_button("Save and Back to Dashboard")
+
+    expect(current_path).to eq(new_task_path)
+    expect(page).to have_content("Validation failed: Category can't be blank")
+    expect(page).to have_field(:name, with: "do taxes")
+    expect(page).to have_field(:event_date, with: "2024-04-04")
+    expect(page).to have_select(:frequency, selected: "annual")
+    expect(page).to have_checked_field(:mandatory)
+    expect(page).to have_field(:hours, with: 1)
+    expect(page).to have_field(:notes, with: "Some random notes")
+  end
+
   it "can create a task if optional fields are missing" do
     fill_in(:name, with: "Water Plants")
     select(:chore, from: :category)

@@ -57,7 +57,6 @@ RSpec.describe TasksFacade, :vcr do
   end
 
   it "can filter all tasks by criteria" do
-    pending "need to update to backend search syntax"
     facade = TasksFacade.new
     facade.post({"name"=>"Water Plants",
       "category"=>"chore",

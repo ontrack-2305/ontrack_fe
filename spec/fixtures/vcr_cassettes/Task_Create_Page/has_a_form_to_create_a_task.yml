@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/123/tasks
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/daily_tasks/?mood
     body:
       encoding: US-ASCII
       string: ''
@@ -18,6 +18,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 04:46:48 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -39,20 +45,20 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4727901d-1bc1-495c-8624-c6e1f4be7f20
+      - 1d51b4ba-45e7-4418-9617-ea9c2f7d5fe7
       X-Runtime:
-      - '0.039411'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.06, sql.active_record;dur=0.75, process_action.action_controller;dur=32.02
+      - '0.010170'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Sun, 17 Sep 2023 18:32:45 GMT
+  recorded_at: Wed, 20 Sep 2023 04:46:49 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/123/daily_tasks/?mood
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks
     body:
       encoding: US-ASCII
       string: ''
@@ -68,6 +74,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 04:46:49 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -89,15 +101,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 30f34f5c-172e-4819-a18c-922de65a810a
+      - 83a35527-6bfa-4a6c-a852-10676266c7ad
       X-Runtime:
-      - '0.011786'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.07, sql.active_record;dur=3.24, process_action.action_controller;dur=4.77
+      - '0.003745'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Tue, 19 Sep 2023 00:01:08 GMT
+  recorded_at: Wed, 20 Sep 2023 04:46:50 GMT
 recorded_with: VCR 6.2.0

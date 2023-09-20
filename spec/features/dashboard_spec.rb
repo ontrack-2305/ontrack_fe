@@ -58,12 +58,14 @@ RSpec.describe "the user dashboard page", :vcr do
       "notes"=>"",
       "time_needed"=>15}, @user.id)
 
-      @reading = @facade.get_tasks(@user.id).first
-      @walk = @facade.get_tasks(@user.id).second
-      @juggling = @facade.get_tasks(@user.id).third
-      @vitamins = @facade.get_tasks(@user.id).fourth
-      @crochet = @facade.get_tasks(@user.id).fifth
-      @dishes = @facade.get_tasks(@user.id).last
+      tasks = @facade.get_tasks(@user.id)
+
+      @reading = tasks.first
+      @walk = tasks.second
+      @juggling = tasks.third
+      @vitamins = tasks.fourth
+      @crochet = tasks.fifth
+      @dishes = tasks.last
     end
 
     after(:each) do
