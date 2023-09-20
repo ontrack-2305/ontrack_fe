@@ -102,13 +102,14 @@
   </div>
 
     <%= form.submit button_text %>
-  <% if @task && @task.id %>
-    <%= button_to "Delete", task_path(@task.id), method: :delete, form: { data: {turbo_confirm: "Are you sure?"}}, class: "btn btn-secondary rounded-pill" %>
-  <% else %>
+  <% if !@task || @task.id.nil? %>
     <%= form.submit "Save and Create Another Task", name: "create_another", class: "btn btn-secondary rounded-pill" %>
   <% end %>
 <% end %>
 
+  <% if @task && @task.id %>
+    <%= button_to "Delete", task_path(@task.id), method: :delete, form: { data: {turbo_confirm: "Are you sure?"}}, class: "btn btn-secondary rounded-pill" %>
+  <% end %>
 
 <p>Mandatory fields marked with a *</p>
   </div>

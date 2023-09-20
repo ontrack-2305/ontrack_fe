@@ -55,7 +55,7 @@ class TasksController < ApplicationController
   private 
 
   def task_params
-    hash = params.permit(:name, :category, :mandatory, :event_date, :frequency, :notes, :estimated_time, :id).to_h.symbolize_keys
+    hash = params.permit(:name, :category, :mandatory, :event_date, :frequency, :notes, :estimated_time, :id, :image).to_h.symbolize_keys
     hash[:time_needed] = time_needed unless time_needed == 0
     hash
   end
