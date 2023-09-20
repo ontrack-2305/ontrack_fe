@@ -1,8 +1,64 @@
 ---
 http_interactions:
 - request:
+    method: get
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/daily_tasks/?mood
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 04:46:59 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ff1a6e33-9844-4fd7-9e7a-47b14a25d7a8
+      X-Runtime:
+      - '0.008584'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Wed, 20 Sep 2023 04:47:00 GMT
+- request:
     method: post
-    uri: http://localhost:3000/api/v1/users/123/tasks?category=chore&event_date=&frequency=weekly&mandatory=0&name=Water%20Plants&notes=&time_needed=20
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks?category=chore&event_date=&frequency=weekly&mandatory=0&name=Water%20Plants&notes=&time_needed=20
     body:
       encoding: UTF-8
       string: ''
@@ -20,6 +76,12 @@ http_interactions:
       code: 201
       message: Created
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 04:47:00 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -41,21 +103,20 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2c61d5ca-7f08-4c9d-abdf-85b3535c5d36
+      - ac214735-bad8-49c6-8c7b-645c8b78ac65
       X-Runtime:
-      - '0.007165'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.54, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=2.52
+      - '0.008330'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"message":"''Water Plants'' added!"}'
-  recorded_at: Sun, 17 Sep 2023 18:32:46 GMT
+  recorded_at: Wed, 20 Sep 2023 04:47:00 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/123/tasks
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/daily_tasks/?mood
     body:
       encoding: US-ASCII
       string: ''
@@ -71,6 +132,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 04:47:00 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -88,25 +155,24 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"7fef8e67ccdf9d9b61b7cae17531ec07"
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 367705c5-1cd7-4893-8212-7fd02c99498a
+      - a7bdef97-d40e-4184-b9fc-c3c1e1b1d955
       X-Runtime:
-      - '0.006136'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.22, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=1.86
+      - '0.009600'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"92","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":false,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":""}}]}'
-  recorded_at: Sun, 17 Sep 2023 18:32:46 GMT
+      string: '{"data":[]}'
+  recorded_at: Wed, 20 Sep 2023 04:47:01 GMT
 - request:
-    method: delete
-    uri: http://localhost:3000/api/v1/users/123/tasks/92
+    method: get
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks
     body:
       encoding: US-ASCII
       string: ''
@@ -122,6 +188,68 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 04:47:01 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"5aa7cffca3bc7d0e894ff1fbe5e9ca2e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - acf33398-3b5b-48d3-9aed-197afbbf9c59
+      X-Runtime:
+      - '0.004051'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"125","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":false,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"","skipped":false}}]}'
+  recorded_at: Wed, 20 Sep 2023 04:47:01 GMT
+- request:
+    method: delete
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks/125
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 04:47:01 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -143,17 +271,17 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ec3bfd62-945b-4a1e-8403-0d8aa046ed4b
+      - ee2d773e-89ac-4d4e-93b9-2da0d9562c89
       X-Runtime:
-      - '0.006892'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.65, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=2.55
+      - '0.007367'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"message":"''Water Plants'' deleted."}'
+<<<<<<< HEAD
   recorded_at: Sun, 17 Sep 2023 18:32:46 GMT
 - request:
     method: get
@@ -359,4 +487,7 @@ http_interactions:
         Day","date":"2023-11-10"}},{"type":"holiday","attributes":{"name":"Thanksgiving
         Day","date":"2023-11-23"}}]}'
   recorded_at: Tue, 19 Sep 2023 23:59:23 GMT
+=======
+  recorded_at: Wed, 20 Sep 2023 04:47:02 GMT
+>>>>>>> main
 recorded_with: VCR 6.2.0

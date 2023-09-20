@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/chat_service?task=water%20plants
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/daily_tasks/?mood
     body:
       encoding: US-ASCII
       string: ''
@@ -18,59 +18,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"334678075d6718a6da68206aff4be3bd"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 43beb832-7fbd-4769-959d-f8257b812a0d
-      X-Runtime:
-      - '3.855750'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.06, process_action.action_controller;dur=3851.35
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"response":[{"text":"1. Gather necessary materials: watering can,
-        plants, and water source. 2. Check soil moisture level for each plant. 3.
-        Fill the watering can with water. 4. Water each plant according to its specific
-        needs. 5. Clean up any spills or excess water."}]}'
-  recorded_at: Sun, 17 Sep 2023 18:32:50 GMT
-- request:
-    method: get
-    uri: http://localhost:3000/api/v1/users/123/tasks
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 04:47:02 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -92,20 +45,20 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 87ac9bc4-7ed9-42ed-9bc7-f5a90975991f
+      - 92822e43-e8dc-4cca-9897-981ba336153d
       X-Runtime:
-      - '0.016197'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.13, sql.active_record;dur=3.36, process_action.action_controller;dur=7.13
+      - '0.008771'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Sun, 17 Sep 2023 18:32:50 GMT
+  recorded_at: Wed, 20 Sep 2023 04:47:02 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/123/daily_tasks/?mood
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/chat_service?task=water%20plants
     body:
       encoding: US-ASCII
       string: ''
@@ -121,6 +74,71 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 04:47:06 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"aece6d23882673d363a4ec1a2b552186"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 593492af-3cbb-4598-941e-c1df07f5f481
+      X-Runtime:
+      - '3.052201'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"response":[{"text":"1. Gather necessary tools: watering can, hose,
+        or bucket. 2. Identify plants in need of watering. 3. Fill watering can or
+        bucket with water. 4. Water plants by pouring water at the base of each plant.
+        5. Repeat steps 3 and 4 as necessary until all plants are hydrated."}]}'
+  recorded_at: Wed, 20 Sep 2023 04:47:06 GMT
+- request:
+    method: get
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 04:47:06 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -142,16 +160,17 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 79ea38b6-654c-4823-8414-3bf3b36f4abb
+      - 02661eb6-2c33-44e7-adbc-224bba1a8970
       X-Runtime:
-      - '0.008651'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.06, sql.active_record;dur=2.31, process_action.action_controller;dur=3.96
+      - '0.004143'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":[]}'
+<<<<<<< HEAD
   recorded_at: Tue, 19 Sep 2023 00:01:09 GMT
 - request:
     method: get
@@ -205,4 +224,7 @@ http_interactions:
         Day","date":"2023-11-10"}},{"type":"holiday","attributes":{"name":"Thanksgiving
         Day","date":"2023-11-23"}}]}'
   recorded_at: Tue, 19 Sep 2023 23:59:23 GMT
+=======
+  recorded_at: Wed, 20 Sep 2023 04:47:06 GMT
+>>>>>>> main
 recorded_with: VCR 6.2.0

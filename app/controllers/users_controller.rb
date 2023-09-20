@@ -2,13 +2,15 @@ class UsersController < ApplicationController
   before_action :validate_session
   
   def show
-    mood = params[:mood]
     @user = current_user
-    require 'pry'; binding.pry
-    @task = TasksFacade.new.task_by_mood(@user.id, mood)
     @holidays = HolidayFacade.upcoming_holidays
+    @mood = params[:mood]
     if params[:calendar] == "true"
       @calendar_events = CalendarEventFacade.new.calendar_events(current_user)
     end
+    if @mood.present?
+      cookies[:mood] = { value: @mood, expires: 1.year.from_now }
+    end
+    @task = TasksFacade.new.task_by_mood(@user.id, cookies[:mood]) 
   end
 end

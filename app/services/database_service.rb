@@ -44,9 +44,7 @@ class DatabaseService
 
   def get_tasks(user_id, filters = {})
     connection.get("api/v1/users/#{user_id}/tasks") do |faraday|
-      filters.each do |key, value|
-        faraday.params[key] = value
-      end
+      faraday.params[:search_params] = filters
     end
   end
 
@@ -61,6 +59,6 @@ class DatabaseService
   end
 
   def connection
-    Faraday.new("http://localhost:3000") # change to heroku link later
+    Faraday.new("https://ontrack-be-a58c9e421d34.herokuapp.com/")
   end
 end

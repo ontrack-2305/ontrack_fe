@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/123/tasks
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/daily_tasks/?mood
     body:
       encoding: US-ASCII
       string: ''
@@ -18,6 +18,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 04:46:50 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -39,20 +45,20 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4e8f9d36-ffd8-4cf2-8032-6b1d02da7564
+      - cf729b8b-1064-4708-b540-ceaf97b73570
       X-Runtime:
-      - '0.014809'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=4.40, process_action.action_controller;dur=9.91
+      - '0.008642'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Sun, 17 Sep 2023 18:32:46 GMT
+  recorded_at: Wed, 20 Sep 2023 04:46:50 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/123/daily_tasks/?mood
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/daily_tasks/?mood
     body:
       encoding: US-ASCII
       string: ''
@@ -68,6 +74,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 04:46:50 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -89,20 +101,20 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e5ea7292-aace-4cec-8977-b54843772f59
+      - e6a98817-e50c-44fa-9ef2-638f134f8bb9
       X-Runtime:
-      - '0.009167'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.07, sql.active_record;dur=2.76, process_action.action_controller;dur=4.31
+      - '0.008455'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Tue, 19 Sep 2023 00:01:08 GMT
+  recorded_at: Wed, 20 Sep 2023 04:46:51 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/123/daily_tasks/?mood
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks
     body:
       encoding: US-ASCII
       string: ''
@@ -118,6 +130,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 04:46:50 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -139,16 +157,17 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b1e9febd-2f3e-4893-88ce-eb0a31f8cdc6
+      - 1974b5e4-356c-402d-a64e-3f620e4a0c50
       X-Runtime:
-      - '0.009047'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.07, sql.active_record;dur=2.68, process_action.action_controller;dur=4.22
+      - '0.003583'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":[]}'
+<<<<<<< HEAD
   recorded_at: Tue, 19 Sep 2023 00:01:08 GMT
 - request:
     method: get
@@ -254,4 +273,7 @@ http_interactions:
         Day","date":"2023-11-10"}},{"type":"holiday","attributes":{"name":"Thanksgiving
         Day","date":"2023-11-23"}}]}'
   recorded_at: Tue, 19 Sep 2023 23:59:22 GMT
+=======
+  recorded_at: Wed, 20 Sep 2023 04:46:51 GMT
+>>>>>>> main
 recorded_with: VCR 6.2.0

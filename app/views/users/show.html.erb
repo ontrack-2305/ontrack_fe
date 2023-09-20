@@ -17,27 +17,31 @@
 </ol>
 <br>
 <div style = "display: flex; justify-content: space-evenly;">
+
+<div id="mood_buttons" class="container">
+
   <%= form_tag(dashboard_path, method: :get) do %>
     <%= hidden_field_tag :mood, 'good' %>
-    <button class="good_button" type="submit">
+    <button title="Good Mood" class="face-buttons btn" type="submit">
       <img src="<%= asset_path('legit_happy.png') %>" alt="happy face button image">
     </button>
   <% end %>
 
   <%= form_tag(dashboard_path, method: :get) do %>
     <%= hidden_field_tag :mood, 'meh' %>
-    <button class="meh_button" type="submit">
+    <button title="Meh Mood" class="face-buttons btn" type="submit">
       <img src="<%= asset_path('legit_meh.png') %>" alt="meh face button image">
     </button>
   <% end %>
 
   <%= form_tag(dashboard_path, method: :get) do %>
     <%= hidden_field_tag :mood, 'bad' %>
-    <button class="bad_button" type="submit">
+    <button title="Bad Mood" class="face-buttons btn" type="submit">
       <img src="<%= asset_path('legit_sad.png') %>" alt="sad face button image">
     </button>
   <% end %>
 </div>
+
 
 <div id="postit"  class="container">
   <div class="row">
@@ -48,7 +52,12 @@
         <%= image_tag("postit_light.png", class: "mx-auto d-block img-fluid") %>
       <% end %>
       <div class="text-overlay position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
-        <p>Your task goes here</p>
+      <% if cookies[:mood] && @task.present? %>
+        <p> <%= @task.name %> </p>
+        <%= button_to "skip", task_path(@task.id), method: :patch %><%= button_to "completed", task_path(@task.id), method: :patch %>
+      <% else %>
+        <p> Please add a task! </p>
+      <% end %>
       </div>
     </div>
   </div>

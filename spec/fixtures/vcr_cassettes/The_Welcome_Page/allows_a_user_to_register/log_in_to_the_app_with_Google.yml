@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/60/daily_tasks/?mood
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/daily_tasks/?mood
     body:
       encoding: US-ASCII
       string: ''
@@ -18,6 +18,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 04:58:16 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -39,16 +45,17 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2150aff0-284e-4e54-9067-c889ab7612ba
+      - dea01bf3-ac52-4eb0-97fd-7ed942b35eed
       X-Runtime:
-      - '0.013955'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.08, sql.active_record;dur=3.40, process_action.action_controller;dur=6.55
+      - '0.008599'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":[]}'
+<<<<<<< HEAD
   recorded_at: Tue, 19 Sep 2023 17:26:17 GMT
 - request:
     method: get
@@ -757,4 +764,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":[]}'
   recorded_at: Wed, 20 Sep 2023 02:08:15 GMT
+=======
+  recorded_at: Wed, 20 Sep 2023 04:58:17 GMT
+>>>>>>> main
 recorded_with: VCR 6.2.0
