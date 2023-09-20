@@ -35,23 +35,23 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"9ba96a542d57f4e176777cd20afb383d"
+      - W/"9b841effcbcf1f1d3c6365a144893299"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 79a6501e-1554-4f1a-934b-a3dccd186234
+      - 116c9fef-7d29-44d9-ba9c-2dd38dec47a0
       X-Runtime:
-      - '1.990210'
+      - '1.917864'
       Server-Timing:
-      - start_processing.action_controller;dur=0.07, process_action.action_controller;dur=1973.97
+      - start_processing.action_controller;dur=0.08, process_action.action_controller;dur=1902.98
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"response":[{"text":"1. Gather watering can and tools. 2. Check moisture
-        level of soil. 3. Fill watering can with water. 4. Water plants until soil
-        is moist. 5. Clean up and put away tools."}]}'
-  recorded_at: Sun, 17 Sep 2023 18:32:45 GMT
+      string: '{"response":[{"text":"1. Gather watering can and plants 2. Check soil
+        moisture levels 3. Water plants with appropriate amount  4. Allow excess water
+        to drain 5. Clean up and put away watering can"}]}'
+  recorded_at: Tue, 19 Sep 2023 00:05:22 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/chat_service?task=
@@ -89,17 +89,17 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - a13789cf-544e-4262-9bb7-2ef4f5debc50
+      - decbf85a-d31c-4475-bb4c-fb063cd9d794
       X-Runtime:
-      - '0.007936'
+      - '0.010067'
       Server-Timing:
-      - start_processing.action_controller;dur=0.07, process_action.action_controller;dur=0.26
+      - start_processing.action_controller;dur=0.08, process_action.action_controller;dur=2.65
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"errors":[{"detail":"No task provided to breakdown"}]}'
-  recorded_at: Sun, 17 Sep 2023 18:32:45 GMT
+  recorded_at: Tue, 19 Sep 2023 00:05:23 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/users/20/tasks
@@ -139,15 +139,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 477ad415-0922-40c1-957a-8b8ad710425e
+      - 8f7848c4-024a-4d33-864a-e595d00f0f96
       X-Runtime:
-      - '0.006967'
+      - '0.008033'
       Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.70, process_action.action_controller;dur=1.63
+      - start_processing.action_controller;dur=0.10, sql.active_record;dur=0.54, process_action.action_controller;dur=1.31
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Sun, 17 Sep 2023 18:32:45 GMT
+  recorded_at: Tue, 19 Sep 2023 00:05:23 GMT
 recorded_with: VCR 6.2.0

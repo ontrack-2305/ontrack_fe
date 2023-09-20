@@ -10,21 +10,7 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
   <body class="<%= cookies[:theme] %>">
-    <%= cookies[:theme] %>
-
-    <%= form_with url: set_theme_path, method: :get do |form| %>
-      <button type="submit" name="theme" value="light">Light Mode</button>
-    <% end %>
-
-    <%= form_with url: set_theme_path, method: :get do |form| %>
-      <button type="submit" name="theme" value="dark">Dark Mode</button>
-    <% end %>
-    
-    <%= form_with url: set_theme_path, method: :get do |form| %>
-      <button type="submit" name="theme" value="">System Default</button>
-    <% end %>
 
     <% flash.each do |type, message| %>
     <div class="alert alert-warning">
@@ -35,32 +21,39 @@
     <% end %>
 
     <% if current_user %>
-      <div class="btn-group">
-        <button type="button" class="btn" title="dashboard" href="<%=dashboard_path%>">&#127968;</button>
-        <div class="btn-group">
-          <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" title="light/dark mode">&#128161;</button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" title="light mode" href="#">&#127773;</a>
-            <a class="dropdown-item" title="dark mode" href="#">&#127770;</a>
-            <a class="dropdown-item" title="default" href="#">default</a>
-          </div>
-        </div>
-        <button type="button" class="btn" title="add new task" href="<%=new_task_path(current_user)%>">&#10133;</button>
-        <div class="btn-group">
-        <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" title="change mood" href="input mood toggle path here">&#128578;</button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" title="happy" href="#">&#128578;</a>
-            <a class="dropdown-item" title="sad" href="#">&#128528;</a>
-            <a class="dropdown-item" title="meh" href="#">&#128577;</a>
-          </div>
-        </div>
-        <button type="button" class="btn" title="view all tasks" href="<%=tasks_path(current_user)%>">&#128466;</button>
-        <button type="button" class="btn" title="log out" href="<%=logout_path%>">&#128682;</button>
-      </div>
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link" title="Dashboard" href="<%=dashboard_path%>">&#127968;</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" title="Add New Task" href="<%=new_task_path(current_user)%>">&#10133;</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" title="View All Tasks" href="<%=tasks_path(current_user)%>">&#128466;</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" title="Log Out" href="<%=logout_path%>">&#128682;</a>
+        </li>
+      </ul>
     <% end %>
 
-
+    <% if dark_mode_enabled? %>
+      <%= form_with url: set_theme_path, method: :get do |form| %>
+        <button id="theme_toggle" class="btn" type="submit" name="theme" value="light" title="Light Mode">&#127773;</button>
+      <% end %>
+    <% else %>
+      <%= form_with url: set_theme_path, method: :get do |form| %>
+        <button id="theme_toggle" class="btn" type="submit" name="theme" value="dark" title="Dark Mode">&#127770;</button>
+      <% end %>
+    <% end %>
 
     <%= yield %>
+
+    <% if dark_mode_enabled? %>
+      <%= image_tag("purple_tracks.png", class: "img-fluid w-100") %>
+    <% else %>
+      <%= image_tag("grey_tracks.png", class: "img-fluid w-100") %>
+    <% end %>
+
   </body>
 </html>
