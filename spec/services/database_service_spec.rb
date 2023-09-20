@@ -184,4 +184,12 @@ RSpec.describe DatabaseService, :vcr do
       end
     end
   end
+
+  describe "consumes the calendar API" do
+    it "returns a list of calendar events", :vcr do
+      events = DatabaseService.new.get_events(@user_id)
+# require 'pry'; binding.pry
+      expect(events).to be_a(Hash)
+    end
+  end
 end
