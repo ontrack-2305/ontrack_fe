@@ -9,4 +9,7 @@ class UsersController < ApplicationController
       cookies[:mood] = { value: @mood, expires: 1.year.from_now }
     end
   end
+
+  def update
+  end
 end
