@@ -2,7 +2,63 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/chat_service?task=
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/daily_tasks/?mood
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 04:47:07 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ea2d260e-5f16-4c33-8b36-2a3e054c2204
+      X-Runtime:
+      - '0.010421'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Wed, 20 Sep 2023 04:47:07 GMT
+- request:
+    method: get
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/chat_service?task=
     body:
       encoding: US-ASCII
       string: ''
@@ -18,6 +74,12 @@ http_interactions:
       code: 400
       message: Bad Request
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 04:47:06 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -37,20 +99,20 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - bfb114ba-ca59-4441-bccb-0a0489e9e37a
+      - 96dc5e3f-d6ed-46a3-bd69-283f69c47cd8
       X-Runtime:
-      - '0.010083'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.08, process_action.action_controller;dur=0.55
+      - '0.001232'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"errors":[{"detail":"No task provided to breakdown"}]}'
-  recorded_at: Sun, 17 Sep 2023 18:32:50 GMT
+  recorded_at: Wed, 20 Sep 2023 04:47:07 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/123/tasks
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks
     body:
       encoding: US-ASCII
       string: ''
@@ -66,6 +128,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 04:47:08 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -87,65 +155,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8435482b-5e07-44a7-a61f-96ce8b70302e
+      - 2c0ad593-604a-4b11-a810-489e5ff54821
       X-Runtime:
-      - '0.006441'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.06, sql.active_record;dur=0.45, process_action.action_controller;dur=1.31
+      - '0.003879'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Sun, 17 Sep 2023 18:32:50 GMT
-- request:
-    method: get
-    uri: http://localhost:3000/api/v1/users/123/daily_tasks/?mood
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"8fe32e407a1038ee38753b70e5374b3a"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - d5900748-6e24-4669-b377-799dd9d698db
-      X-Runtime:
-      - '0.010798'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.06, sql.active_record;dur=4.04, process_action.action_controller;dur=5.51
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":[]}'
-  recorded_at: Tue, 19 Sep 2023 00:01:09 GMT
+  recorded_at: Wed, 20 Sep 2023 04:47:08 GMT
 recorded_with: VCR 6.2.0

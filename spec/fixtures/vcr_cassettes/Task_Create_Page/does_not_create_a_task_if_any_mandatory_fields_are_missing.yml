@@ -1,8 +1,64 @@
 ---
 http_interactions:
 - request:
+    method: get
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/daily_tasks/?mood
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 04:46:57 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c137eed4-09e5-4e62-ba0d-fc6faf7979da
+      X-Runtime:
+      - '0.008851'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Wed, 20 Sep 2023 04:46:57 GMT
+- request:
     method: post
-    uri: http://localhost:3000/api/v1/users/123/tasks?category=&event_date=&frequency=weekly&mandatory=0&name=&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks?category=&event_date=&frequency=weekly&mandatory=0&name=&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony
     body:
       encoding: UTF-8
       string: ''
@@ -20,6 +76,12 @@ http_interactions:
       code: 400
       message: Bad Request
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 04:46:57 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -39,21 +101,21 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - d0ecfbf6-4efe-42df-b83f-572a5c5864f8
+      - dc9e0177-02b3-486d-ade3-a5c7c225e223
       X-Runtime:
-      - '0.005743'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.05, process_action.action_controller;dur=1.08
+      - '0.004174'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"errors":[{"detail":"Validation failed: Name can''t be blank, Category
         can''t be blank, Time needed can''t be blank"}]}'
-  recorded_at: Sun, 17 Sep 2023 18:32:46 GMT
+  recorded_at: Wed, 20 Sep 2023 04:46:58 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/123/tasks
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks
     body:
       encoding: US-ASCII
       string: ''
@@ -69,6 +131,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 04:46:58 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -90,65 +158,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 325de660-45f1-47e6-816b-ba8e7a4f12ab
+      - 553c2d44-777c-44cf-9aac-bc068468c19c
       X-Runtime:
-      - '0.006062'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.67, process_action.action_controller;dur=1.57
+      - '0.003902'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Sun, 17 Sep 2023 18:32:46 GMT
-- request:
-    method: get
-    uri: http://localhost:3000/api/v1/users/123/daily_tasks/?mood
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"8fe32e407a1038ee38753b70e5374b3a"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - aca5eb5f-66fb-4ace-ad94-37e317484683
-      X-Runtime:
-      - '0.009821'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.06, sql.active_record;dur=3.17, process_action.action_controller;dur=5.21
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":[]}'
-  recorded_at: Tue, 19 Sep 2023 00:01:09 GMT
+  recorded_at: Wed, 20 Sep 2023 04:46:58 GMT
 recorded_with: VCR 6.2.0

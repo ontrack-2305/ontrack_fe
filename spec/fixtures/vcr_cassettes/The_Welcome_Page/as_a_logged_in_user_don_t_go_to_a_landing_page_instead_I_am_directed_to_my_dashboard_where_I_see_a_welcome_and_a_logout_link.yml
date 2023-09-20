@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/61/daily_tasks/?mood
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/17/daily_tasks/?mood
     body:
       encoding: US-ASCII
       string: ''
@@ -18,6 +18,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 04:48:21 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -39,165 +45,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7becba6c-76ea-4053-8399-eabcc872ed17
+      - 2799995a-2fd0-485c-a309-b362043ca58d
       X-Runtime:
-      - '0.008700'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.06, sql.active_record;dur=2.60, process_action.action_controller;dur=3.81
+      - '0.008486'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Tue, 19 Sep 2023 17:26:17 GMT
-- request:
-    method: get
-    uri: http://localhost:3000/api/v1/users/61/daily_tasks/?mood
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"8fe32e407a1038ee38753b70e5374b3a"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 184e3f72-1502-479b-876f-e6cb72a48d7c
-      X-Runtime:
-      - '0.010899'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.06, sql.active_record;dur=4.39, process_action.action_controller;dur=6.34
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":[]}'
-  recorded_at: Tue, 19 Sep 2023 17:26:18 GMT
-- request:
-    method: get
-    uri: http://localhost:3000/api/v1/users/64/daily_tasks/?mood
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"8fe32e407a1038ee38753b70e5374b3a"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 2ed8ef49-7f4d-4ffb-89d4-9d2884903a74
-      X-Runtime:
-      - '0.007805'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=2.52, process_action.action_controller;dur=3.59
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":[]}'
-  recorded_at: Tue, 19 Sep 2023 17:27:24 GMT
-- request:
-    method: get
-    uri: http://localhost:3000/api/v1/users/64/daily_tasks/?mood
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"8fe32e407a1038ee38753b70e5374b3a"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - b6af5078-02b0-40f9-9606-17af9acc6c9e
-      X-Runtime:
-      - '0.008332'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=2.27, process_action.action_controller;dur=3.41
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":[]}'
-  recorded_at: Tue, 19 Sep 2023 17:27:24 GMT
+  recorded_at: Wed, 20 Sep 2023 04:48:21 GMT
 recorded_with: VCR 6.2.0
