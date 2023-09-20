@@ -71,7 +71,6 @@ RSpec.describe "Tasks Index Page", :vcr do
   end
 
   it "can filter by all categories at once" do
-    pending "BE updates endpoint to take multiple params"
     select(:daily, from: :frequency)
     select(:rest, from: :category)
     select(:optional, from: :mandatory)
