@@ -35,24 +35,23 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"5574bd6bfa65941132a547637034d9b6"
+      - W/"48ca22323293f866f2bc432f9bed1f09"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e1f6a186-ddbe-409b-91a2-c78a85861450
+      - 2d905443-4f01-4bca-8bab-d41d79f91957
       X-Runtime:
-      - '0.008033'
+      - '0.007359'
       Server-Timing:
-      - start_processing.action_controller;dur=0.06, sql.active_record;dur=1.61, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=2.90
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.88, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=3.27
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"12","type":"task","attributes":{"name":"Take Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":5,"user_id":123,"notes":"flintstone
-        gummies all dayeee"}},{"id":"14","type":"task","attributes":{"name":"read
-        a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":123,"notes":"smut"}}]}'
-  recorded_at: Tue, 19 Sep 2023 23:55:16 GMT
+      string: '{"data":[{"id":"54","type":"task","attributes":{"name":"go on a walk","category":"rest","mandatory":true,"event_date":"","frequency":"daily","time_needed":30,"user_id":123,"notes":"","skipped":false}},{"id":"53","type":"task","attributes":{"name":"read
+        a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":123,"notes":"smut","skipped":false}}]}'
+  recorded_at: Wed, 20 Sep 2023 03:21:25 GMT
 - request:
     method: post
     uri: http://localhost:3000/api/v1/users/123/tasks?category=chore&event_date=&frequency=daily&mandatory=1&name=Take%20Vitamins&notes=flintstone%20gummies%20all%20dayeee&time_needed=5
@@ -94,18 +93,18 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 600417e5-b686-41d8-801f-86553903b05c
+      - a035301a-0700-42aa-b5aa-0e42820b04b1
       X-Runtime:
-      - '0.016640'
+      - '0.006941'
       Server-Timing:
-      - start_processing.action_controller;dur=0.18, sql.active_record;dur=7.51, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=10.09
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.84, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=2.79
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"message":"''Take Vitamins'' added!"}'
-  recorded_at: Tue, 19 Sep 2023 23:55:16 GMT
+  recorded_at: Wed, 20 Sep 2023 03:21:25 GMT
 - request:
     method: post
     uri: http://localhost:3000/api/v1/users/123/tasks?category=hobby&event_date=&frequency=weekly&mandatory=0&name=crochet&notes=granny%20squares&time_needed=60
@@ -147,18 +146,18 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e897a247-f3be-4ec8-9599-04bd71eb35e0
+      - 440ddf70-4288-4470-949a-74e66670dd47
       X-Runtime:
-      - '0.016408'
+      - '0.006977'
       Server-Timing:
-      - start_processing.action_controller;dur=2.74, sql.active_record;dur=7.52, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=8.83
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.65, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=2.54
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"message":"''crochet'' added!"}'
-  recorded_at: Tue, 19 Sep 2023 23:55:16 GMT
+  recorded_at: Wed, 20 Sep 2023 03:21:25 GMT
 - request:
     method: post
     uri: http://localhost:3000/api/v1/users/123/tasks?category=rest&event_date=&frequency=daily&mandatory=0&name=read%20a%20book&notes=smut&time_needed=45
@@ -200,18 +199,177 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 531dacc1-acb5-428e-adc7-2b3124f06c10
+      - 05ee5231-0ad5-4b92-a8f0-8424114fcb78
       X-Runtime:
-      - '0.008426'
+      - '0.007808'
       Server-Timing:
-      - start_processing.action_controller;dur=0.07, sql.active_record;dur=1.56, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=2.93
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.66, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=2.91
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"message":"''read a book'' added!"}'
-  recorded_at: Tue, 19 Sep 2023 23:55:16 GMT
+  recorded_at: Wed, 20 Sep 2023 03:21:25 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/123/tasks?category=rest&event_date=&frequency=daily&mandatory=1&name=go%20on%20a%20walk&notes=&time_needed=30
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"2638df9cff5a8b50bedc0f0229219734"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f339f6f0-ded4-401d-804c-03e6c7976e02
+      X-Runtime:
+      - '0.006564'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.80, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=2.55
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"''go on a walk'' added!"}'
+  recorded_at: Wed, 20 Sep 2023 03:21:25 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/123/tasks?category=hobby&event_date=&frequency=monthly&mandatory=0&name=practice%20juggling&notes=bowling%20balls,%20bowling%20pins&time_needed=15
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"0a807baebb00584bac10fa68a35503de"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8bdd0893-4c4c-403f-b3a7-da7b197de0aa
+      X-Runtime:
+      - '0.007344'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=2.07, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=2.87
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"''practice juggling'' added!"}'
+  recorded_at: Wed, 20 Sep 2023 03:21:25 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/123/tasks?category=chore&event_date=&frequency=daily&mandatory=0&name=do%20the%20dishes&notes=&time_needed=15
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"537dad09722064138afb1afff244bdad"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 85d28318-82c6-4cce-9005-4e3fd0a00d1f
+      X-Runtime:
+      - '0.006214'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.43, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=2.27
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"''do the dishes'' added!"}'
+  recorded_at: Wed, 20 Sep 2023 03:21:25 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/users/123/tasks
@@ -247,27 +405,33 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"60239af2e3d265c6ef9cb9c63d519411"
+      - W/"46e4dbdd3faa7fad20d2ccee798e19da"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - afd3d4bf-0c4e-4045-b25c-4504920d3455
+      - a2ec26d1-6110-40a6-8d97-26ba670193d4
       X-Runtime:
-      - '0.006058'
+      - '0.004944'
       Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.41, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=1.22
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.37, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.16
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"12","type":"task","attributes":{"name":"Take Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":5,"user_id":123,"notes":"flintstone
-        gummies all dayeee"}},{"id":"13","type":"task","attributes":{"name":"crochet","category":"hobby","mandatory":false,"event_date":"","frequency":"weekly","time_needed":60,"user_id":123,"notes":"granny
-        squares"}},{"id":"14","type":"task","attributes":{"name":"read a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":123,"notes":"smut"}},{"id":"15","type":"task","attributes":{"name":"Take
+      string: '{"data":[{"id":"53","type":"task","attributes":{"name":"read a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":123,"notes":"smut","skipped":false}},{"id":"54","type":"task","attributes":{"name":"go
+        on a walk","category":"rest","mandatory":true,"event_date":"","frequency":"daily","time_needed":30,"user_id":123,"notes":"","skipped":false}},{"id":"55","type":"task","attributes":{"name":"practice
+        juggling","category":"hobby","mandatory":false,"event_date":"","frequency":"monthly","time_needed":15,"user_id":123,"notes":"bowling
+        balls, bowling pins","skipped":false}},{"id":"57","type":"task","attributes":{"name":"Take
         Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":5,"user_id":123,"notes":"flintstone
-        gummies all dayeee"}},{"id":"16","type":"task","attributes":{"name":"crochet","category":"hobby","mandatory":false,"event_date":"","frequency":"weekly","time_needed":60,"user_id":123,"notes":"granny
-        squares"}},{"id":"17","type":"task","attributes":{"name":"read a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":123,"notes":"smut"}}]}'
-  recorded_at: Tue, 19 Sep 2023 23:55:16 GMT
+        gummies all dayeee","skipped":false}},{"id":"58","type":"task","attributes":{"name":"crochet","category":"hobby","mandatory":false,"event_date":"","frequency":"weekly","time_needed":60,"user_id":123,"notes":"granny
+        squares","skipped":false}},{"id":"59","type":"task","attributes":{"name":"read
+        a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":123,"notes":"smut","skipped":false}},{"id":"60","type":"task","attributes":{"name":"go
+        on a walk","category":"rest","mandatory":true,"event_date":"","frequency":"daily","time_needed":30,"user_id":123,"notes":"","skipped":false}},{"id":"61","type":"task","attributes":{"name":"practice
+        juggling","category":"hobby","mandatory":false,"event_date":"","frequency":"monthly","time_needed":15,"user_id":123,"notes":"bowling
+        balls, bowling pins","skipped":false}},{"id":"62","type":"task","attributes":{"name":"do
+        the dishes","category":"chore","mandatory":false,"event_date":"","frequency":"daily","time_needed":15,"user_id":123,"notes":"","skipped":false}}]}'
+  recorded_at: Wed, 20 Sep 2023 03:21:25 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/users/123/tasks
@@ -303,27 +467,33 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"60239af2e3d265c6ef9cb9c63d519411"
+      - W/"46e4dbdd3faa7fad20d2ccee798e19da"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 28a16621-b1f9-4fbb-a5e1-368bae6a90bc
+      - 2489584f-5798-419a-9ae1-8b008e4464b7
       X-Runtime:
-      - '0.005950'
+      - '0.005067'
       Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.37, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=1.19
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.43, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.28
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"12","type":"task","attributes":{"name":"Take Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":5,"user_id":123,"notes":"flintstone
-        gummies all dayeee"}},{"id":"13","type":"task","attributes":{"name":"crochet","category":"hobby","mandatory":false,"event_date":"","frequency":"weekly","time_needed":60,"user_id":123,"notes":"granny
-        squares"}},{"id":"14","type":"task","attributes":{"name":"read a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":123,"notes":"smut"}},{"id":"15","type":"task","attributes":{"name":"Take
+      string: '{"data":[{"id":"53","type":"task","attributes":{"name":"read a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":123,"notes":"smut","skipped":false}},{"id":"54","type":"task","attributes":{"name":"go
+        on a walk","category":"rest","mandatory":true,"event_date":"","frequency":"daily","time_needed":30,"user_id":123,"notes":"","skipped":false}},{"id":"55","type":"task","attributes":{"name":"practice
+        juggling","category":"hobby","mandatory":false,"event_date":"","frequency":"monthly","time_needed":15,"user_id":123,"notes":"bowling
+        balls, bowling pins","skipped":false}},{"id":"57","type":"task","attributes":{"name":"Take
         Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":5,"user_id":123,"notes":"flintstone
-        gummies all dayeee"}},{"id":"16","type":"task","attributes":{"name":"crochet","category":"hobby","mandatory":false,"event_date":"","frequency":"weekly","time_needed":60,"user_id":123,"notes":"granny
-        squares"}},{"id":"17","type":"task","attributes":{"name":"read a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":123,"notes":"smut"}}]}'
-  recorded_at: Tue, 19 Sep 2023 23:55:16 GMT
+        gummies all dayeee","skipped":false}},{"id":"58","type":"task","attributes":{"name":"crochet","category":"hobby","mandatory":false,"event_date":"","frequency":"weekly","time_needed":60,"user_id":123,"notes":"granny
+        squares","skipped":false}},{"id":"59","type":"task","attributes":{"name":"read
+        a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":123,"notes":"smut","skipped":false}},{"id":"60","type":"task","attributes":{"name":"go
+        on a walk","category":"rest","mandatory":true,"event_date":"","frequency":"daily","time_needed":30,"user_id":123,"notes":"","skipped":false}},{"id":"61","type":"task","attributes":{"name":"practice
+        juggling","category":"hobby","mandatory":false,"event_date":"","frequency":"monthly","time_needed":15,"user_id":123,"notes":"bowling
+        balls, bowling pins","skipped":false}},{"id":"62","type":"task","attributes":{"name":"do
+        the dishes","category":"chore","mandatory":false,"event_date":"","frequency":"daily","time_needed":15,"user_id":123,"notes":"","skipped":false}}]}'
+  recorded_at: Wed, 20 Sep 2023 03:21:25 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/users/123/tasks
@@ -359,27 +529,219 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"60239af2e3d265c6ef9cb9c63d519411"
+      - W/"46e4dbdd3faa7fad20d2ccee798e19da"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7892a9c4-cd66-4dee-a233-d7ce6d73b426
+      - 9ffe9f98-fea6-4338-ab81-a3065dba6ad3
       X-Runtime:
-      - '0.006533'
+      - '0.004911'
       Server-Timing:
-      - start_processing.action_controller;dur=0.06, sql.active_record;dur=0.37, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=1.23
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.43, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.16
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"12","type":"task","attributes":{"name":"Take Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":5,"user_id":123,"notes":"flintstone
-        gummies all dayeee"}},{"id":"13","type":"task","attributes":{"name":"crochet","category":"hobby","mandatory":false,"event_date":"","frequency":"weekly","time_needed":60,"user_id":123,"notes":"granny
-        squares"}},{"id":"14","type":"task","attributes":{"name":"read a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":123,"notes":"smut"}},{"id":"15","type":"task","attributes":{"name":"Take
+      string: '{"data":[{"id":"53","type":"task","attributes":{"name":"read a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":123,"notes":"smut","skipped":false}},{"id":"54","type":"task","attributes":{"name":"go
+        on a walk","category":"rest","mandatory":true,"event_date":"","frequency":"daily","time_needed":30,"user_id":123,"notes":"","skipped":false}},{"id":"55","type":"task","attributes":{"name":"practice
+        juggling","category":"hobby","mandatory":false,"event_date":"","frequency":"monthly","time_needed":15,"user_id":123,"notes":"bowling
+        balls, bowling pins","skipped":false}},{"id":"57","type":"task","attributes":{"name":"Take
         Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":5,"user_id":123,"notes":"flintstone
-        gummies all dayeee"}},{"id":"16","type":"task","attributes":{"name":"crochet","category":"hobby","mandatory":false,"event_date":"","frequency":"weekly","time_needed":60,"user_id":123,"notes":"granny
-        squares"}},{"id":"17","type":"task","attributes":{"name":"read a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":123,"notes":"smut"}}]}'
-  recorded_at: Tue, 19 Sep 2023 23:55:16 GMT
+        gummies all dayeee","skipped":false}},{"id":"58","type":"task","attributes":{"name":"crochet","category":"hobby","mandatory":false,"event_date":"","frequency":"weekly","time_needed":60,"user_id":123,"notes":"granny
+        squares","skipped":false}},{"id":"59","type":"task","attributes":{"name":"read
+        a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":123,"notes":"smut","skipped":false}},{"id":"60","type":"task","attributes":{"name":"go
+        on a walk","category":"rest","mandatory":true,"event_date":"","frequency":"daily","time_needed":30,"user_id":123,"notes":"","skipped":false}},{"id":"61","type":"task","attributes":{"name":"practice
+        juggling","category":"hobby","mandatory":false,"event_date":"","frequency":"monthly","time_needed":15,"user_id":123,"notes":"bowling
+        balls, bowling pins","skipped":false}},{"id":"62","type":"task","attributes":{"name":"do
+        the dishes","category":"chore","mandatory":false,"event_date":"","frequency":"daily","time_needed":15,"user_id":123,"notes":"","skipped":false}}]}'
+  recorded_at: Wed, 20 Sep 2023 03:21:25 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/123/tasks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"46e4dbdd3faa7fad20d2ccee798e19da"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ff420d31-bd11-4a0b-adf9-6b3b4e70702f
+      X-Runtime:
+      - '0.005090'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.39, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.08
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"53","type":"task","attributes":{"name":"read a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":123,"notes":"smut","skipped":false}},{"id":"54","type":"task","attributes":{"name":"go
+        on a walk","category":"rest","mandatory":true,"event_date":"","frequency":"daily","time_needed":30,"user_id":123,"notes":"","skipped":false}},{"id":"55","type":"task","attributes":{"name":"practice
+        juggling","category":"hobby","mandatory":false,"event_date":"","frequency":"monthly","time_needed":15,"user_id":123,"notes":"bowling
+        balls, bowling pins","skipped":false}},{"id":"57","type":"task","attributes":{"name":"Take
+        Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":5,"user_id":123,"notes":"flintstone
+        gummies all dayeee","skipped":false}},{"id":"58","type":"task","attributes":{"name":"crochet","category":"hobby","mandatory":false,"event_date":"","frequency":"weekly","time_needed":60,"user_id":123,"notes":"granny
+        squares","skipped":false}},{"id":"59","type":"task","attributes":{"name":"read
+        a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":123,"notes":"smut","skipped":false}},{"id":"60","type":"task","attributes":{"name":"go
+        on a walk","category":"rest","mandatory":true,"event_date":"","frequency":"daily","time_needed":30,"user_id":123,"notes":"","skipped":false}},{"id":"61","type":"task","attributes":{"name":"practice
+        juggling","category":"hobby","mandatory":false,"event_date":"","frequency":"monthly","time_needed":15,"user_id":123,"notes":"bowling
+        balls, bowling pins","skipped":false}},{"id":"62","type":"task","attributes":{"name":"do
+        the dishes","category":"chore","mandatory":false,"event_date":"","frequency":"daily","time_needed":15,"user_id":123,"notes":"","skipped":false}}]}'
+  recorded_at: Wed, 20 Sep 2023 03:21:25 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/123/tasks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"46e4dbdd3faa7fad20d2ccee798e19da"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3d8b6127-d5c2-49e6-a537-e59950a14006
+      X-Runtime:
+      - '0.005732'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.43, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.18
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"53","type":"task","attributes":{"name":"read a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":123,"notes":"smut","skipped":false}},{"id":"54","type":"task","attributes":{"name":"go
+        on a walk","category":"rest","mandatory":true,"event_date":"","frequency":"daily","time_needed":30,"user_id":123,"notes":"","skipped":false}},{"id":"55","type":"task","attributes":{"name":"practice
+        juggling","category":"hobby","mandatory":false,"event_date":"","frequency":"monthly","time_needed":15,"user_id":123,"notes":"bowling
+        balls, bowling pins","skipped":false}},{"id":"57","type":"task","attributes":{"name":"Take
+        Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":5,"user_id":123,"notes":"flintstone
+        gummies all dayeee","skipped":false}},{"id":"58","type":"task","attributes":{"name":"crochet","category":"hobby","mandatory":false,"event_date":"","frequency":"weekly","time_needed":60,"user_id":123,"notes":"granny
+        squares","skipped":false}},{"id":"59","type":"task","attributes":{"name":"read
+        a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":123,"notes":"smut","skipped":false}},{"id":"60","type":"task","attributes":{"name":"go
+        on a walk","category":"rest","mandatory":true,"event_date":"","frequency":"daily","time_needed":30,"user_id":123,"notes":"","skipped":false}},{"id":"61","type":"task","attributes":{"name":"practice
+        juggling","category":"hobby","mandatory":false,"event_date":"","frequency":"monthly","time_needed":15,"user_id":123,"notes":"bowling
+        balls, bowling pins","skipped":false}},{"id":"62","type":"task","attributes":{"name":"do
+        the dishes","category":"chore","mandatory":false,"event_date":"","frequency":"daily","time_needed":15,"user_id":123,"notes":"","skipped":false}}]}'
+  recorded_at: Wed, 20 Sep 2023 03:21:25 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/123/tasks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"46e4dbdd3faa7fad20d2ccee798e19da"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 865eea45-8127-4c2b-a0ad-dc53726000a2
+      X-Runtime:
+      - '0.005395'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.42, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.41
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"53","type":"task","attributes":{"name":"read a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":123,"notes":"smut","skipped":false}},{"id":"54","type":"task","attributes":{"name":"go
+        on a walk","category":"rest","mandatory":true,"event_date":"","frequency":"daily","time_needed":30,"user_id":123,"notes":"","skipped":false}},{"id":"55","type":"task","attributes":{"name":"practice
+        juggling","category":"hobby","mandatory":false,"event_date":"","frequency":"monthly","time_needed":15,"user_id":123,"notes":"bowling
+        balls, bowling pins","skipped":false}},{"id":"57","type":"task","attributes":{"name":"Take
+        Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":5,"user_id":123,"notes":"flintstone
+        gummies all dayeee","skipped":false}},{"id":"58","type":"task","attributes":{"name":"crochet","category":"hobby","mandatory":false,"event_date":"","frequency":"weekly","time_needed":60,"user_id":123,"notes":"granny
+        squares","skipped":false}},{"id":"59","type":"task","attributes":{"name":"read
+        a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":123,"notes":"smut","skipped":false}},{"id":"60","type":"task","attributes":{"name":"go
+        on a walk","category":"rest","mandatory":true,"event_date":"","frequency":"daily","time_needed":30,"user_id":123,"notes":"","skipped":false}},{"id":"61","type":"task","attributes":{"name":"practice
+        juggling","category":"hobby","mandatory":false,"event_date":"","frequency":"monthly","time_needed":15,"user_id":123,"notes":"bowling
+        balls, bowling pins","skipped":false}},{"id":"62","type":"task","attributes":{"name":"do
+        the dishes","category":"chore","mandatory":false,"event_date":"","frequency":"daily","time_needed":15,"user_id":123,"notes":"","skipped":false}}]}'
+  recorded_at: Wed, 20 Sep 2023 03:21:25 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/users/123/daily_tasks/?mood=good
@@ -415,30 +777,35 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"49d0086c22477718e1d0e894268c5d09"
+      - W/"33731d68f1a019c5bd45a014d750c723"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - cdf78909-c378-409c-8026-61555c4e892c
+      - 89ecbc90-a420-44b5-99f1-8da78badcf2c
       X-Runtime:
-      - '0.008010'
+      - '0.007628'
       Server-Timing:
-      - start_processing.action_controller;dur=0.06, sql.active_record;dur=1.67, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=3.26
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.99, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=3.55
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"12","type":"task","attributes":{"name":"Take Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":5,"user_id":123,"notes":"flintstone
-        gummies all dayeee"}},{"id":"15","type":"task","attributes":{"name":"Take
+      string: '{"data":[{"id":"54","type":"task","attributes":{"name":"go on a walk","category":"rest","mandatory":true,"event_date":"","frequency":"daily","time_needed":30,"user_id":123,"notes":"","skipped":false}},{"id":"57","type":"task","attributes":{"name":"Take
         Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":5,"user_id":123,"notes":"flintstone
-        gummies all dayeee"}},{"id":"13","type":"task","attributes":{"name":"crochet","category":"hobby","mandatory":false,"event_date":"","frequency":"weekly","time_needed":60,"user_id":123,"notes":"granny
-        squares"}},{"id":"14","type":"task","attributes":{"name":"read a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":123,"notes":"smut"}},{"id":"16","type":"task","attributes":{"name":"crochet","category":"hobby","mandatory":false,"event_date":"","frequency":"weekly","time_needed":60,"user_id":123,"notes":"granny
-        squares"}}]}'
-  recorded_at: Tue, 19 Sep 2023 23:55:16 GMT
+        gummies all dayeee","skipped":false}},{"id":"60","type":"task","attributes":{"name":"go
+        on a walk","category":"rest","mandatory":true,"event_date":"","frequency":"daily","time_needed":30,"user_id":123,"notes":"","skipped":false}},{"id":"62","type":"task","attributes":{"name":"do
+        the dishes","category":"chore","mandatory":false,"event_date":"","frequency":"daily","time_needed":15,"user_id":123,"notes":"","skipped":false}},{"id":"55","type":"task","attributes":{"name":"practice
+        juggling","category":"hobby","mandatory":false,"event_date":"","frequency":"monthly","time_needed":15,"user_id":123,"notes":"bowling
+        balls, bowling pins","skipped":false}},{"id":"53","type":"task","attributes":{"name":"read
+        a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":123,"notes":"smut","skipped":false}},{"id":"58","type":"task","attributes":{"name":"crochet","category":"hobby","mandatory":false,"event_date":"","frequency":"weekly","time_needed":60,"user_id":123,"notes":"granny
+        squares","skipped":false}},{"id":"61","type":"task","attributes":{"name":"practice
+        juggling","category":"hobby","mandatory":false,"event_date":"","frequency":"monthly","time_needed":15,"user_id":123,"notes":"bowling
+        balls, bowling pins","skipped":false}}]}'
+  recorded_at: Wed, 20 Sep 2023 03:21:26 GMT
 - request:
     method: delete
-    uri: http://localhost:3000/api/v1/users/123/tasks/14
+    uri: http://localhost:3000/api/v1/users/123/tasks/53
     body:
       encoding: US-ASCII
       string: ''
@@ -475,21 +842,123 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 73aef3cf-c8ef-4dea-931f-be4ccbc3c1f4
+      - b6798df9-399a-4bba-baf9-7f24714ee1a6
       X-Runtime:
-      - '0.019368'
+      - '0.006096'
       Server-Timing:
-      - start_processing.action_controller;dur=0.06, sql.active_record;dur=13.44,
-        instantiation.active_record;dur=0.03, process_action.action_controller;dur=14.65
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.48, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.98
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"message":"''read a book'' deleted."}'
-  recorded_at: Tue, 19 Sep 2023 23:55:16 GMT
+  recorded_at: Wed, 20 Sep 2023 03:21:26 GMT
 - request:
     method: delete
-    uri: http://localhost:3000/api/v1/users/123/tasks/12
+    uri: http://localhost:3000/api/v1/users/123/tasks/54
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"615f665c4fbcc5cce0eda03b15cc9a31"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 571593d4-ec4b-4256-8259-431ec70f07cf
+      X-Runtime:
+      - '0.005679'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.31, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=1.75
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"''go on a walk'' deleted."}'
+  recorded_at: Wed, 20 Sep 2023 03:21:26 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/api/v1/users/123/tasks/55
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"734d1bf72d97f0627dfdcf2820542cb3"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ba5ca462-1de3-40df-b0bb-e5de0d6064eb
+      X-Runtime:
+      - '0.005770'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.40, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=1.83
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"''practice juggling'' deleted."}'
+  recorded_at: Wed, 20 Sep 2023 03:21:26 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/api/v1/users/123/tasks/57
     body:
       encoding: US-ASCII
       string: ''
@@ -526,21 +995,21 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3ed23fc0-52ef-4991-a81d-331534cbb1bf
+      - 8ffe57fc-e293-476a-82c5-904e518347cb
       X-Runtime:
-      - '0.006184'
+      - '0.005787'
       Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.36, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.96
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.27, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.71
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"message":"''Take Vitamins'' deleted."}'
-  recorded_at: Tue, 19 Sep 2023 23:55:16 GMT
+  recorded_at: Wed, 20 Sep 2023 03:21:26 GMT
 - request:
     method: delete
-    uri: http://localhost:3000/api/v1/users/123/tasks/13
+    uri: http://localhost:3000/api/v1/users/123/tasks/58
     body:
       encoding: US-ASCII
       string: ''
@@ -577,18 +1046,69 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - de06be7c-5475-41f9-b399-0d83400a18e1
+      - 91b404d7-c8c8-4186-9487-85dc551aa892
       X-Runtime:
-      - '0.006621'
+      - '0.005910'
       Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.62, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=2.28
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.50, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.96
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"message":"''crochet'' deleted."}'
-  recorded_at: Tue, 19 Sep 2023 23:55:16 GMT
+  recorded_at: Wed, 20 Sep 2023 03:21:26 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/api/v1/users/123/tasks/62
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"7771ddc0649563e0bb44ef553d2dca2e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - eeea42ad-b22f-44c1-b9e7-1ff8391859df
+      X-Runtime:
+      - '0.006698'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.50, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.99
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"''do the dishes'' deleted."}'
+  recorded_at: Wed, 20 Sep 2023 03:21:26 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/users/123/daily_tasks/?mood
@@ -624,22 +1144,21 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"f24874b3038dd58f8c01f76fe16d9013"
+      - W/"73b9461579108cf3188102d505e1bce9"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f94370e8-d122-4d2a-85fe-0352dc446eee
+      - 7a016346-6dd5-41df-a187-d2dbb809b704
       X-Runtime:
-      - '0.022868'
+      - '0.008186'
       Server-Timing:
-      - start_processing.action_controller;dur=0.09, sql.active_record;dur=2.53, instantiation.active_record;dur=0.16,
-        process_action.action_controller;dur=7.55
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=2.36, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=3.84
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"15","type":"task","attributes":{"name":"Take Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":5,"user_id":123,"notes":"flintstone
-        gummies all dayeee"}},{"id":"17","type":"task","attributes":{"name":"read
-        a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":123,"notes":"smut"}}]}'
-  recorded_at: Tue, 19 Sep 2023 23:55:54 GMT
+      string: '{"data":[{"id":"66","type":"task","attributes":{"name":"go on a walk","category":"rest","mandatory":true,"event_date":"","frequency":"daily","time_needed":30,"user_id":123,"notes":"","skipped":false}},{"id":"65","type":"task","attributes":{"name":"read
+        a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":123,"notes":"smut","skipped":false}}]}'
+  recorded_at: Wed, 20 Sep 2023 03:24:02 GMT
 recorded_with: VCR 6.2.0
