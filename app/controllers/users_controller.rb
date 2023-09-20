@@ -11,5 +11,14 @@ class UsersController < ApplicationController
   end
 
   def update
+    # skipped tasks will come here
+    # completed tasks will come here first, check if "once"
+    # if frequency == "once", route to destroy
+    # task.update(skipped = "true")
+  end
+
+  def destroy
+    # if frequency == "once"
+    # task.destroy
   end
 end
