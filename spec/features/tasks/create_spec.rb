@@ -122,7 +122,6 @@ RSpec.describe "Task Create Page", :vcr do
     expect(page).to have_field(:name, with: "do taxes")
     expect(page).to have_field(:event_date, with: "2024-04-04")
     expect(page).to have_select(:frequency, selected: "annual")
-    save_and_open_page
     expect(page).to have_checked_field(:mandatory)
     expect(page).to have_field(:hours, with: 1)
     expect(page).to have_field(:notes, with: "Some random notes")
