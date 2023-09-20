@@ -12,5 +12,5 @@ Rails.application.routes.draw do
   resources :tasks, only: [:new, :index, :create]
   get '/set_theme', to: 'theme#update'
 
-  get "/user/:user_id/calendar", to: "calendarevents#index"
+  get "/user/:user_id/calendar", to: "calendar_events#index"
 end
