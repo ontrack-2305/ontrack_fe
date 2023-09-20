@@ -96,6 +96,11 @@
     <%= form.submit "Generate a Suggested Breakdown\nof this Task (Powered by AI)", name: "get_ai", class: "btn btn-secondary rounded-pill" %><br>
   </div>
 
+  <div class="mb-3">
+    <%= form.label "Images", class: "form-label" %>
+    <%= form.file_field :image, value: @task&.image, class: "form-select rounded-pill border-dark" %>
+  </div>
+
     <%= form.submit button_text %>
   <% if @task && @task.id %>
     <%= button_to "Delete", task_path(@task.id), method: :delete, form: { data: {turbo_confirm: "Are you sure?"}}, class: "btn btn-secondary rounded-pill" %>
