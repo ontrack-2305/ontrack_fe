@@ -25,7 +25,6 @@ RSpec.describe "The Welcome Page", :vcr do
   end
 
   it "as a logged in user, don't go to a landing page, instead I am directed to my dashboard where I see a welcome and a logout link" do
-    pending "flash message implemented"
     visit root_path
     stub_user
 
