@@ -1,4 +1,9 @@
 class DatabaseService
+  def get_events(user_id)
+    response = connection.get("/api/v1/users/#{user_id}/calendar_events")
+    require 'pry'; binding.pry
+    JSON.parse(response.body, symbolize_names: true)
+  end
 
   def get_holidays
     response = connection.get("/api/v1/holidays")
