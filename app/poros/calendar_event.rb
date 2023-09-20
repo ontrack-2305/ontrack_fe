@@ -4,8 +4,8 @@ class CalendarEvent
               :description
 
   def initialize(data)
-    @name = data["summary"]
-    @start_date = data["start"]["dateTime"]
+    @name = data["name"]
+    @start_date = data["start_date"]
     @description = data["description"]
   end
 end
