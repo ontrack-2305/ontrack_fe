@@ -18,31 +18,31 @@ RSpec.describe "the user dashboard page", :vcr do
       "notes"=>"flintstone gummies all dayeee",
       "time_needed"=>5}, @user.id)
     
-      @facade.post({"name"=>"Brush Apollo",
-      "category"=>"chore",
+      @facade.post({"name"=>"crochet",
+      "category"=>"hobby",
       "mandatory"=>"0",
       "event_date"=>"",
       "frequency"=>"weekly",
-      "notes"=>"he shed",
-      "time_needed"=>5}, @user.id)
+      "notes"=>"granny squares",
+      "time_needed"=>60}, @user.id)
 
-      @facade.post({"name"=>"Shower",
-      "category"=>"chore",
-      "mandatory"=>"1",
+      @facade.post({"name"=>"read a book",
+      "category"=>"rest",
+      "mandatory"=>"0",
       "event_date"=>"",
       "frequency"=>"daily",
-      "notes"=>"",
-      "time_needed"=>15}, @user.id)
+      "notes"=>"smut",
+      "time_needed"=>45}, @user.id)
 
-      @mandatory_task = @facade.get_tasks(@user.id).first
-      @non_mandatory_task = @facade.get_tasks(@user.id).second
-      @another_mandatory = @facade.get_tasks(@user.id).last
+      @mandatory_chore_task = @facade.get_tasks(@user.id).first
+      @non_mandatory_hobby = @facade.get_tasks(@user.id).second
+      @non_mandatory_rest = @facade.get_tasks(@user.id).third
     end
 
     after(:each) do
-      @facade.delete(@mandatory_task.id, @user.id)
-      @facade.delete(@non_mandatory_task.id, @user.id)
-      @facade.delete(@another_mandatory.id, @user.id)
+      @facade.delete(@mandatory_chore_task.id, @user.id)
+      @facade.delete(@non_mandatory_hobby.id, @user.id)
+      @facade.delete(@non_mandatory_rest.id, @user.id)
     end
 
     xit "displays a welcome message with the user first name" do #edit to be a non-persisting flash message only
@@ -62,21 +62,27 @@ RSpec.describe "the user dashboard page", :vcr do
     it "only gets one task at a time with options" do
       click_button("happy face button image")
 
-      expect(page).to have_content(@mandatory_task.name || @another_mandatory.name)
+      expect(page).to have_content(@mandatory_chore_task.name)
       expect(page).to have_button("skip")
       expect(page).to have_button("completed")
     end
 
-    xit "persists if I leave the page" do
+    it "the mood and task persist if I leave the page" do
       click_button("happy face button image")
 
-      expect(page).to have_content(@mandatory_task.name || @another_mandatory.name)
+      expect(page).to have_content(@mandatory_chore_task.name)
 
       visit new_task_path
 
       visit dashboard_path
-      expect(page).to have_content(@mandatory_task.name || @another_mandatory.name)
+      
+      expect(page).to have_content(@mandatory_chore_task.name)
+      expect(page).to_not have_content("Please add a task!")
+    end
 
-      expect()
+    it "it will fetch only mandatory tasks if a bad day" do
+      click_button("sad face button image")
+
+      expect(page).to have_content(@mandatory_chore_task.name)
     end
   end
