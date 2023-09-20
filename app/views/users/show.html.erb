@@ -1,9 +1,7 @@
-if @calendar_events != nil
-  @calendar_events.each do |event|
-    puts event.summary
-  end
-end
+
+<br>
 <%= link_to "Integrate Google Calendar", "/dashboard?calendar=true" %>
+<br>
 <ol id='holidays'>
   <p>Upcoming Holidays</p>
   <% @holidays.each do |holiday| %>
