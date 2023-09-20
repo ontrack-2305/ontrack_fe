@@ -16,7 +16,7 @@
 
   <%= form_tag(dashboard_path, method: :get) do %>
     <%= hidden_field_tag :mood, 'bad' %>
-    <button title="Good Mood" class="face-buttons btn" type="submit">
+    <button title="Bad Mood" class="face-buttons btn" type="submit">
       <img src="<%= asset_path('legit_sad.png') %>" alt="sad face button image">
     </button>
   <% end %>
