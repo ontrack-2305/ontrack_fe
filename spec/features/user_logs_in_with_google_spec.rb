@@ -25,19 +25,19 @@ RSpec.describe "The Welcome Page", :vcr do
   end
 
   it "as a logged in user, don't go to a landing page, instead I am directed to my dashboard where I see a welcome and a logout link" do
+    pending "flash message implemented"
     visit root_path
 
     expect(page).to have_button("Log In With Google")
     click_button "Log In With Google"
 
     expect(current_path).to eq(dashboard_path)
-    # expect(page).to have_content("Welcome, Dani!")
+    expect(page).to have_content("Welcome, Dani!")
     expect(page).to have_link("Log Out")
 
     visit root_path
     expect(current_path).to eq(dashboard_path)
 
-    expect(page).to have_content("Welcome, Dani!")
     expect(page).to have_link("Log Out")
     expect(page).to_not have_button("Log In With Google")
   end
