@@ -35,21 +35,24 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      - W/"f24874b3038dd58f8c01f76fe16d9013"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 05a570d0-0a3b-4c6b-8370-923dba573d62
+      - 6806bf8e-12ec-44a5-9dc4-7aa859a26b5b
       X-Runtime:
-      - '0.010777'
+      - '0.013426'
       Server-Timing:
-      - start_processing.action_controller;dur=0.11, sql.active_record;dur=2.86, process_action.action_controller;dur=5.66
+      - start_processing.action_controller;dur=0.08, sql.active_record;dur=2.82, instantiation.active_record;dur=0.12,
+        process_action.action_controller;dur=6.25
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[]}'
-  recorded_at: Tue, 19 Sep 2023 01:08:54 GMT
+      string: '{"data":[{"id":"15","type":"task","attributes":{"name":"Take Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":5,"user_id":123,"notes":"flintstone
+        gummies all dayeee"}},{"id":"17","type":"task","attributes":{"name":"read
+        a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":123,"notes":"smut"}}]}'
+  recorded_at: Wed, 20 Sep 2023 00:00:16 GMT
 - request:
     method: post
     uri: http://localhost:3000/api/v1/users/123/tasks?category=chore&event_date=&frequency=daily&mandatory=1&name=Take%20Vitamins&notes=flintstone%20gummies%20all%20dayeee&time_needed=5
@@ -91,21 +94,21 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3026a90b-99b4-4364-89d7-f8c5c794de0a
+      - 4d7f6eb1-06ba-4433-b8f7-e8ddb1a1592c
       X-Runtime:
-      - '0.009893'
+      - '0.008221'
       Server-Timing:
-      - start_processing.action_controller;dur=0.07, sql.active_record;dur=2.93, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=4.35
+      - start_processing.action_controller;dur=0.07, sql.active_record;dur=2.44, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=3.67
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"message":"''Take Vitamins'' added!"}'
-  recorded_at: Tue, 19 Sep 2023 01:08:54 GMT
+  recorded_at: Wed, 20 Sep 2023 00:00:16 GMT
 - request:
     method: post
-    uri: http://localhost:3000/api/v1/users/123/tasks?category=chore&event_date=&frequency=weekly&mandatory=0&name=Brush%20Apollo&notes=he%20shed&time_needed=5
+    uri: http://localhost:3000/api/v1/users/123/tasks?category=hobby&event_date=&frequency=weekly&mandatory=0&name=crochet&notes=granny%20squares&time_needed=60
     body:
       encoding: UTF-8
       string: ''
@@ -140,25 +143,25 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"4e9b9e1d4455e3954003503c8ce338cf"
+      - W/"fc5d1ed9e72efb216a0560d213c4832e"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f389a5d9-c095-4681-b7ff-37c3876b8ea2
+      - 2f91ce01-6b9c-4ba8-8fe5-cbd33cb45060
       X-Runtime:
-      - '0.008386'
+      - '0.008939'
       Server-Timing:
-      - start_processing.action_controller;dur=0.06, sql.active_record;dur=2.45, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=3.45
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.49, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=2.16
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"message":"''Brush Apollo'' added!"}'
-  recorded_at: Tue, 19 Sep 2023 01:08:54 GMT
+      string: '{"message":"''crochet'' added!"}'
+  recorded_at: Wed, 20 Sep 2023 00:00:16 GMT
 - request:
     method: post
-    uri: http://localhost:3000/api/v1/users/123/tasks?category=chore&event_date=&frequency=daily&mandatory=1&name=Shower&notes=&time_needed=15
+    uri: http://localhost:3000/api/v1/users/123/tasks?category=rest&event_date=&frequency=daily&mandatory=0&name=read%20a%20book&notes=smut&time_needed=45
     body:
       encoding: UTF-8
       string: ''
@@ -193,22 +196,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"868bfd0aaa08e844b8526bb98d1d6127"
+      - W/"ffd92c2936995dba96227e4d89905666"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b7f901d1-209f-40b4-b3c1-6647e96b9e7d
+      - 3fc44244-5236-4eb1-a65e-b6bb70933fa3
       X-Runtime:
-      - '0.008266'
+      - '0.006645'
       Server-Timing:
-      - start_processing.action_controller;dur=0.08, sql.active_record;dur=2.26, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=3.47
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=2.31, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=2.93
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"message":"''Shower'' added!"}'
-  recorded_at: Tue, 19 Sep 2023 01:08:54 GMT
+      string: '{"message":"''read a book'' added!"}'
+  recorded_at: Wed, 20 Sep 2023 00:00:16 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/users/123/tasks
@@ -244,25 +247,27 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"3c3140dc51f38e3c57e34764beac0e51"
+      - W/"adeef190d17e31a873346b12befe2b53"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2467bf1c-a52c-4e83-ab3b-1dd7a67826d8
+      - 86465c29-a835-4822-acc7-e915637408bc
       X-Runtime:
-      - '0.007000'
+      - '0.005097'
       Server-Timing:
-      - start_processing.action_controller;dur=0.06, sql.active_record;dur=0.79, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=1.65
+      - start_processing.action_controller;dur=0.03, sql.active_record;dur=0.36, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.53
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"55","type":"task","attributes":{"name":"Take Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":5,"user_id":123,"notes":"flintstone
-        gummies all dayeee"}},{"id":"56","type":"task","attributes":{"name":"Brush
-        Apollo","category":"chore","mandatory":false,"event_date":"","frequency":"weekly","time_needed":5,"user_id":123,"notes":"he
-        shed"}},{"id":"57","type":"task","attributes":{"name":"Shower","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":15,"user_id":123,"notes":""}}]}'
-  recorded_at: Tue, 19 Sep 2023 01:08:54 GMT
+      string: '{"data":[{"id":"15","type":"task","attributes":{"name":"Take Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":5,"user_id":123,"notes":"flintstone
+        gummies all dayeee"}},{"id":"16","type":"task","attributes":{"name":"crochet","category":"hobby","mandatory":false,"event_date":"","frequency":"weekly","time_needed":60,"user_id":123,"notes":"granny
+        squares"}},{"id":"17","type":"task","attributes":{"name":"read a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":123,"notes":"smut"}},{"id":"18","type":"task","attributes":{"name":"Take
+        Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":5,"user_id":123,"notes":"flintstone
+        gummies all dayeee"}},{"id":"19","type":"task","attributes":{"name":"crochet","category":"hobby","mandatory":false,"event_date":"","frequency":"weekly","time_needed":60,"user_id":123,"notes":"granny
+        squares"}},{"id":"20","type":"task","attributes":{"name":"read a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":123,"notes":"smut"}}]}'
+  recorded_at: Wed, 20 Sep 2023 00:00:16 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/users/123/tasks
@@ -298,25 +303,27 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"3c3140dc51f38e3c57e34764beac0e51"
+      - W/"adeef190d17e31a873346b12befe2b53"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 614be7dc-d75c-4b73-b5ef-915f0b33c3a0
+      - 1fa3efed-3924-4207-a460-f3f2dc750394
       X-Runtime:
-      - '0.005635'
+      - '0.004423'
       Server-Timing:
-      - start_processing.action_controller;dur=0.06, sql.active_record;dur=0.48, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.15
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.32, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=0.83
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"55","type":"task","attributes":{"name":"Take Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":5,"user_id":123,"notes":"flintstone
-        gummies all dayeee"}},{"id":"56","type":"task","attributes":{"name":"Brush
-        Apollo","category":"chore","mandatory":false,"event_date":"","frequency":"weekly","time_needed":5,"user_id":123,"notes":"he
-        shed"}},{"id":"57","type":"task","attributes":{"name":"Shower","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":15,"user_id":123,"notes":""}}]}'
-  recorded_at: Tue, 19 Sep 2023 01:08:54 GMT
+      string: '{"data":[{"id":"15","type":"task","attributes":{"name":"Take Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":5,"user_id":123,"notes":"flintstone
+        gummies all dayeee"}},{"id":"16","type":"task","attributes":{"name":"crochet","category":"hobby","mandatory":false,"event_date":"","frequency":"weekly","time_needed":60,"user_id":123,"notes":"granny
+        squares"}},{"id":"17","type":"task","attributes":{"name":"read a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":123,"notes":"smut"}},{"id":"18","type":"task","attributes":{"name":"Take
+        Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":5,"user_id":123,"notes":"flintstone
+        gummies all dayeee"}},{"id":"19","type":"task","attributes":{"name":"crochet","category":"hobby","mandatory":false,"event_date":"","frequency":"weekly","time_needed":60,"user_id":123,"notes":"granny
+        squares"}},{"id":"20","type":"task","attributes":{"name":"read a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":123,"notes":"smut"}}]}'
+  recorded_at: Wed, 20 Sep 2023 00:00:16 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/users/123/tasks
@@ -352,28 +359,30 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"3c3140dc51f38e3c57e34764beac0e51"
+      - W/"adeef190d17e31a873346b12befe2b53"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 986ab776-e954-4674-8fbe-7e0f886d952a
+      - 5e3ce47d-cd1e-4065-b6b0-1d924c1a4047
       X-Runtime:
-      - '0.006221'
+      - '0.004760'
       Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.54, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.19
+      - start_processing.action_controller;dur=0.03, sql.active_record;dur=0.33, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=0.82
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"55","type":"task","attributes":{"name":"Take Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":5,"user_id":123,"notes":"flintstone
-        gummies all dayeee"}},{"id":"56","type":"task","attributes":{"name":"Brush
-        Apollo","category":"chore","mandatory":false,"event_date":"","frequency":"weekly","time_needed":5,"user_id":123,"notes":"he
-        shed"}},{"id":"57","type":"task","attributes":{"name":"Shower","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":15,"user_id":123,"notes":""}}]}'
-  recorded_at: Tue, 19 Sep 2023 01:08:54 GMT
+      string: '{"data":[{"id":"15","type":"task","attributes":{"name":"Take Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":5,"user_id":123,"notes":"flintstone
+        gummies all dayeee"}},{"id":"16","type":"task","attributes":{"name":"crochet","category":"hobby","mandatory":false,"event_date":"","frequency":"weekly","time_needed":60,"user_id":123,"notes":"granny
+        squares"}},{"id":"17","type":"task","attributes":{"name":"read a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":123,"notes":"smut"}},{"id":"18","type":"task","attributes":{"name":"Take
+        Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":5,"user_id":123,"notes":"flintstone
+        gummies all dayeee"}},{"id":"19","type":"task","attributes":{"name":"crochet","category":"hobby","mandatory":false,"event_date":"","frequency":"weekly","time_needed":60,"user_id":123,"notes":"granny
+        squares"}},{"id":"20","type":"task","attributes":{"name":"read a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":123,"notes":"smut"}}]}'
+  recorded_at: Wed, 20 Sep 2023 00:00:16 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/123/daily_tasks/?mood=good
+    uri: http://localhost:3000/api/v1/users/123/daily_tasks/?mood=bad
     body:
       encoding: US-ASCII
       string: ''
@@ -406,28 +415,30 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"11cbd012e11178dea2bf498893fb426c"
+      - W/"ee9c8174a3abbf73b8c4c3023c91df3c"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e7c20904-0e71-4f13-ad1e-642812d7f374
+      - 82c68b76-ffcb-441a-b230-f46fa78e0fab
       X-Runtime:
-      - '0.009938'
+      - '0.006892'
       Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=3.07, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=4.58
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.95, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=2.92
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"55","type":"task","attributes":{"name":"Take Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":5,"user_id":123,"notes":"flintstone
-        gummies all dayeee"}},{"id":"57","type":"task","attributes":{"name":"Shower","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":15,"user_id":123,"notes":""}},{"id":"56","type":"task","attributes":{"name":"Brush
-        Apollo","category":"chore","mandatory":false,"event_date":"","frequency":"weekly","time_needed":5,"user_id":123,"notes":"he
-        shed"}}]}'
-  recorded_at: Tue, 19 Sep 2023 01:08:54 GMT
+      string: '{"data":[{"id":"15","type":"task","attributes":{"name":"Take Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":5,"user_id":123,"notes":"flintstone
+        gummies all dayeee"}},{"id":"18","type":"task","attributes":{"name":"Take
+        Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":5,"user_id":123,"notes":"flintstone
+        gummies all dayeee"}},{"id":"17","type":"task","attributes":{"name":"read
+        a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":123,"notes":"smut"}},{"id":"20","type":"task","attributes":{"name":"read
+        a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":123,"notes":"smut"}}]}'
+  recorded_at: Wed, 20 Sep 2023 00:00:16 GMT
 - request:
     method: delete
-    uri: http://localhost:3000/api/v1/users/123/tasks/55
+    uri: http://localhost:3000/api/v1/users/123/tasks/15
     body:
       encoding: US-ASCII
       string: ''
@@ -464,21 +475,21 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e7cf9fac-5e04-46d8-8da7-c4779823b850
+      - 81d0d308-321d-452f-9085-6e3391fda749
       X-Runtime:
-      - '0.007761'
+      - '0.006358'
       Server-Timing:
-      - start_processing.action_controller;dur=0.06, sql.active_record;dur=2.04, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=3.13
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=2.23, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=2.71
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"message":"''Take Vitamins'' deleted."}'
-  recorded_at: Tue, 19 Sep 2023 01:08:54 GMT
+  recorded_at: Wed, 20 Sep 2023 00:00:16 GMT
 - request:
     method: delete
-    uri: http://localhost:3000/api/v1/users/123/tasks/56
+    uri: http://localhost:3000/api/v1/users/123/tasks/16
     body:
       encoding: US-ASCII
       string: ''
@@ -511,25 +522,25 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"4851d0caff86c665f1a5515cf3e8732a"
+      - W/"bfde28d1188d18646fe880f2c8d198e1"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 88fe5551-3a4f-45b5-a867-225d605d4877
+      - d3b1fc2b-46bb-4b20-a21c-41f9d67ddf15
       X-Runtime:
-      - '0.007290'
+      - '0.005121'
       Server-Timing:
-      - start_processing.action_controller;dur=0.06, sql.active_record;dur=1.94, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=2.59
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.14, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=1.52
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"message":"''Brush Apollo'' deleted."}'
-  recorded_at: Tue, 19 Sep 2023 01:08:54 GMT
+      string: '{"message":"''crochet'' deleted."}'
+  recorded_at: Wed, 20 Sep 2023 00:00:16 GMT
 - request:
     method: delete
-    uri: http://localhost:3000/api/v1/users/123/tasks/57
+    uri: http://localhost:3000/api/v1/users/123/tasks/17
     body:
       encoding: US-ASCII
       string: ''
@@ -562,20 +573,20 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"735582631ea4c2589e30213f0175e414"
+      - W/"910c649a1baa747a7f1ddce8662a94be"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a665d425-b46a-4ea9-b148-272eac6c279e
+      - c8f78d06-db27-4c62-b139-25413adf9f84
       X-Runtime:
-      - '0.007213'
+      - '0.005849'
       Server-Timing:
-      - start_processing.action_controller;dur=0.06, sql.active_record;dur=1.77, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=2.44
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.21, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=1.58
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"message":"''Shower'' deleted."}'
-  recorded_at: Tue, 19 Sep 2023 01:08:54 GMT
+      string: '{"message":"''read a book'' deleted."}'
+  recorded_at: Wed, 20 Sep 2023 00:00:16 GMT
 recorded_with: VCR 6.2.0
