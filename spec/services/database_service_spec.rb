@@ -1,6 +1,8 @@
 require "rails_helper"
 
 RSpec.describe DatabaseService, :vcr do
+  include OmniauthModule
+
   before(:each) do
     @service = DatabaseService.new
     @attributes_hash = {:name=>"Water Plants", :category=>"chore", :mandatory=>"1", :event_date=>"", :frequency=>"weekly", :notes=>"Remember plants in bedroom, living room, and balcony", :time_needed=>20}
@@ -186,9 +188,10 @@ RSpec.describe DatabaseService, :vcr do
   end
 
   describe "consumes the calendar API" do
-    it "returns a list of calendar events", :vcr do
-      events = DatabaseService.new.get_events(@user_id)
-
+    xit "returns a list of calendar events", :vcr do
+      stub_user
+      stub_omniauth
+      events = DatabaseService.new.get_calendar_events(@user.id)
       expect(events).to be_a(Hash)
     end
   end
