@@ -16,6 +16,7 @@ RSpec.describe "The Welcome Page", :vcr do
 
   it "allows a user to register/log in to the app with Google" do
     visit root_path
+    stub_user
 
     expect(page).to have_button("Log In With Google")
     click_button "Log In With Google"
@@ -27,6 +28,7 @@ RSpec.describe "The Welcome Page", :vcr do
   it "as a logged in user, don't go to a landing page, instead I am directed to my dashboard where I see a welcome and a logout link" do
     pending "flash message implemented"
     visit root_path
+    stub_user
 
     expect(page).to have_button("Log In With Google")
     click_button "Log In With Google"
