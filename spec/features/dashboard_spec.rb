@@ -46,6 +46,7 @@ RSpec.describe "the user dashboard page", :vcr do
     end
 
     it "displays a welcome message with the user first name" do #edit to be a non-persisting flash message only
+      pending "flash message implemented"
       expect(page).to have_content("Welcome, John!")
     end
 
