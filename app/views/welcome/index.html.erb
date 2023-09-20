@@ -1,6 +1,7 @@
 <h3>OnTrack</h3>
 <% if current_user  %>
   <h3> Welcome, <%= "#{current_user.first_name}!" %></h3>
+  <%= button_to "Integrate Google Calendar", "/user/#{current_user.id}/calendar" %>
   <%= link_to "Log Out", logout_path %>
   <%= link_to "View My Dashboard", dashboard_path %>
 <% else %>

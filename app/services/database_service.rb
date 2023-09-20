@@ -35,9 +35,9 @@ class DatabaseService
     connection.get("api/v1/chat_service?task=#{task_name.downcase}")
   end
 
-  def authenticate(user)
-    response = connection.post do |req|
-      req.url '/api/v1/users/authenticate'  
+  def get_calendar_events(user)
+    response = connection.get do |req|
+      req.url "api/v1/users/#{user.id}/calendar_events"  
       req.headers['Content-Type'] = 'application/json'
       req.body = { 
         access_token: user.token, 
