@@ -85,4 +85,13 @@ RSpec.describe "the user dashboard page", :vcr do
         expect(page).to have_content("Thanksgiving Day")
       end
     end
+
+    it "displays a list of upcoming calendar events" do
+      click_link('Integrate Google Calendar')
+      within("#calendar") do
+        expect(page).to have_content("Upcoming Events")
+        expect(page).to have_content("TEST EVENT 1")
+        expect(page).to have_content("TEST EVENT 2")
+      end
+    end
 end

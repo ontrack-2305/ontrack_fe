@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   def show
     mood = params[:mood]
     @user = current_user
+    require 'pry'; binding.pry
     @task = TasksFacade.new.task_by_mood(@user.id, mood)
     @holidays = HolidayFacade.upcoming_holidays
     if params[:calendar] == "true"
