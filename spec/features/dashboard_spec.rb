@@ -34,9 +34,11 @@ RSpec.describe "the user dashboard page", :vcr do
       "notes"=>"",
       "time_needed"=>15}, @user.id)
 
-      @mandatory_task = @facade.get_tasks(@user.id).first
-      @non_mandatory_task = @facade.get_tasks(@user.id).second
-      @another_mandatory = @facade.get_tasks(@user.id).last
+      tasks = @facade.get_tasks(@user.id)
+
+      @mandatory_task = tasks.first
+      @non_mandatory_task = tasks.second
+      @another_mandatory = tasks.last
     end
 
     after(:each) do
