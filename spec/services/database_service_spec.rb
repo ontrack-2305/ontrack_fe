@@ -146,7 +146,7 @@ RSpec.describe DatabaseService, :vcr do
   end
 
   it "has only hobby and rest on 'meh' days" do
-    pending "fixed test"
+    pending "need to update test"
     1.times { @service.post(@attributes_hash, @user_id) }
     @attributes_hash[:category] = "hobby", @attributes_hash[:mandatory] = "0"
     1.times { @service.post(@attributes_hash, @user_id) }
