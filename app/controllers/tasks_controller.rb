@@ -23,6 +23,11 @@ class TasksController < ApplicationController
   def create
     return redirect_to new_task_path(add_notes: true, params: task_params) if params[:get_ai].present?
     
+    Aws.config.update(access_key_id: Rails.application.credentials.aws[:ACCESS_KEY], secret_access_key: Rails.application.credentials.aws[:SECRET_ACCESS_KEY])
+    bucket = Aws::S3::Resource.new.bucket(Rails.application.credentials.aws[:BUCKET_NAME])
+    file = bucket.object(params[:image].original_filename)
+    file.upload_file(params[:image], acl: 'public-read')
+
     response = facade.post(task_params, session[:user_id])
     if response.status == 201
       redirect_to new_task_path if params[:create_another]
