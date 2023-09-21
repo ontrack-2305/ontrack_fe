@@ -10,17 +10,14 @@ class TasksController < ApplicationController
   def show
     @task = facade.get_task(params[:id], session[:user_id])
     if params[:add_notes]
-      @task.notes = facade.get_ai_breakdown(@task.name)[:notes]
+      @task = Task.new(task_params, params[:id])
+      fetch_notes
     end
   end
 
   def new
     @task = Task.new(task_params)
-    if params[:add_notes]
-      response = facade.get_ai_breakdown(params[:name])
-      @task.notes = response[:notes] if response[:status] == 200
-      flash[:alert] = response[:notes] if response[:status] == 400
-    end
+    fetch_notes if params[:add_notes]
   end
 
   def create
@@ -44,7 +41,7 @@ class TasksController < ApplicationController
     end
     # completed tasks will come here first, check if "once"
     # if frequency == "once", route to destroy
-    return redirect_to task_path(id: params[:id], add_notes: true) if params[:get_ai].present?
+    return redirect_to task_path(add_notes: true, params: task_params) if params[:get_ai].present?
 
     response = facade.patch(task_params, session[:user_id])
     redirect_to task_path(params[:id])
@@ -72,6 +69,12 @@ class TasksController < ApplicationController
 
   def filter_params
     params.permit(:frequency, :mandatory, :category)
+  end
+
+  def fetch_notes
+    response = facade.get_ai_breakdown(params[:name])
+    @task.notes = response[:notes] if response[:status] == 200
+    flash.now[:alert] = response[:notes] if response[:status] == 400
   end
 
   def filter_hash
