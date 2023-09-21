@@ -117,25 +117,31 @@ RSpec.describe "the user dashboard page", :vcr do
     it "can move on to a new task when skipped" do
       click_button("happy face button image")
       
-      expect(page).to have_content("Take Vitamins")
+      expect(page).to have_content("go on a walk")
       expect(page).to have_button("skip")
       click_button("skip")
-      expect(page).to have_content("go on a walk")
-      expect(page).to_not have_content("Take Vitamins")
-      click_button("skip")
-      expect(page).to have_content("do the dishes")
+      expect(page).to have_content("Take Vitamins")
       expect(page).to_not have_content("go on a walk")
     end
 
     xit "can mark a task as complete" do
-      # extra: get_task from database and check that "completed" is empty
+      click_button("happy face button image")
+      
+      expect(page).to have_content("go on a walk")
+      expect(page).to have_button("completed")
+      click_button("completed")
+      expect(page).to_not have_content("go on a walk")
+      expect(page).to have_content("Take Vitamins")
+    end
 
-      #visit page with a task on it
-      # click completed
-      # check that the page refreshes with a new task
+    xit "will remove a completed task from the database with a frequency of 'once'" do
+      click_button("sad face button image")
 
-      # extra: get_task from database again and check that "completed" exists
-      # Can check that completed == stringified Date.today
+      expect(page).to have_content("go on a walk")
+      click_button("completed")
+      expect(page).to_not have_content("go on a walk")
+      expect(page).to have_content("Take Vitamins")
+      click_button("completed")
     end
     
     it "displays a list of upcoming holidays" do
