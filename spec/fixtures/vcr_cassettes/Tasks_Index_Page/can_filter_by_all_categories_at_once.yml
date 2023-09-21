@@ -2,6 +2,64 @@
 http_interactions:
 - request:
     method: get
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/holidays
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 23:06:05 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"129959a1fdf972341273461aaa7e5be4"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4f12a77d-5542-4341-a1e3-66831c226d06
+      X-Runtime:
+      - '0.023224'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"type":"holiday","attributes":{"name":"Columbus Day","date":"2023-10-09"}},{"type":"holiday","attributes":{"name":"Veterans
+        Day","date":"2023-11-10"}},{"type":"holiday","attributes":{"name":"Thanksgiving
+        Day","date":"2023-11-23"}}]}'
+  recorded_at: Wed, 20 Sep 2023 23:06:06 GMT
+- request:
+    method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/daily_tasks/?mood
     body:
       encoding: US-ASCII
@@ -21,7 +79,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 04:47:37 GMT
+      - Wed, 20 Sep 2023 23:06:05 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -45,9 +103,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 65c81dcf-8eb2-4fdf-8773-01c5ca8ed16f
+      - 8a951d2f-ffd2-4fad-9f29-97351e4e58a0
       X-Runtime:
-      - '0.008515'
+      - '0.013248'
       Transfer-Encoding:
       - chunked
       Via:
@@ -55,7 +113,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Wed, 20 Sep 2023 04:47:37 GMT
+  recorded_at: Wed, 20 Sep 2023 23:06:06 GMT
 - request:
     method: post
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20
@@ -79,7 +137,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 04:47:37 GMT
+      - Wed, 20 Sep 2023 23:06:06 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -103,9 +161,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b07bd739-3038-4d8f-afee-c54f68f56401
+      - f36716b4-bb8e-44bd-b9a2-8337a2c3d279
       X-Runtime:
-      - '0.009326'
+      - '0.011027'
       Transfer-Encoding:
       - chunked
       Via:
@@ -113,7 +171,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''Water Plants'' added!"}'
-  recorded_at: Wed, 20 Sep 2023 04:47:37 GMT
+  recorded_at: Wed, 20 Sep 2023 23:06:07 GMT
 - request:
     method: post
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Clean%20fish%20tank&notes=Vacuum%20the%20gravel,%20wipe%20algae%20off%20plants&time_needed=20
@@ -137,7 +195,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 04:47:37 GMT
+      - Wed, 20 Sep 2023 23:06:07 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -161,9 +219,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 46111570-fbb2-4d65-a732-ae851efc40a7
+      - 49804ff9-ee92-4c03-99c7-d1c717dabd61
       X-Runtime:
-      - '0.008420'
+      - '0.018457'
       Transfer-Encoding:
       - chunked
       Via:
@@ -171,7 +229,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''Clean fish tank'' added!"}'
-  recorded_at: Wed, 20 Sep 2023 04:47:38 GMT
+  recorded_at: Wed, 20 Sep 2023 23:06:07 GMT
 - request:
     method: post
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks?category=rest&event_date=&frequency=monthly&mandatory=0&name=Take%20nice%20bath&notes=Remember%20the%20fancy%20bathbombs%20under%20the%20cupboard,%20get%20a%20milkshake%20and%20light%20a%20candle&time_needed=60
@@ -195,7 +253,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 04:47:37 GMT
+      - Wed, 20 Sep 2023 23:06:06 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -219,9 +277,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - dc98f0ff-0e86-4f23-936b-d20ec00a2632
+      - c758b1ce-3959-4870-848a-77a7c861d0e8
       X-Runtime:
-      - '0.008808'
+      - '0.011447'
       Transfer-Encoding:
       - chunked
       Via:
@@ -229,7 +287,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''Take nice bath'' added!"}'
-  recorded_at: Wed, 20 Sep 2023 04:47:38 GMT
+  recorded_at: Wed, 20 Sep 2023 23:06:07 GMT
 - request:
     method: post
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks?category=rest&event_date=&frequency=daily&mandatory=0&name=Meditate&notes=&time_needed=30
@@ -253,7 +311,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 04:47:39 GMT
+      - Wed, 20 Sep 2023 23:06:07 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -277,9 +335,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1b5bb1ba-399f-470c-bb0d-68caed88dead
+      - 476584fe-dbea-42b6-86ed-70af9e9a8330
       X-Runtime:
-      - '0.008293'
+      - '0.011257'
       Transfer-Encoding:
       - chunked
       Via:
@@ -287,7 +345,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''Meditate'' added!"}'
-  recorded_at: Wed, 20 Sep 2023 04:47:39 GMT
+  recorded_at: Wed, 20 Sep 2023 23:06:08 GMT
 - request:
     method: post
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks?category=hobby&event_date=&frequency=daily&mandatory=0&name=Practice%20guitar&notes=Do%20scale%20exercises,%20work%20through%20the%20books%20I%20bought&time_needed=120
@@ -311,7 +369,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 04:47:39 GMT
+      - Wed, 20 Sep 2023 23:06:08 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -335,9 +393,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 66837457-332b-49bc-98d5-423f5a42f116
+      - 1e83c987-56ab-4a93-81c7-2342cc132b00
       X-Runtime:
-      - '0.008715'
+      - '0.010743'
       Transfer-Encoding:
       - chunked
       Via:
@@ -345,7 +403,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''Practice guitar'' added!"}'
-  recorded_at: Wed, 20 Sep 2023 04:47:39 GMT
+  recorded_at: Wed, 20 Sep 2023 23:06:08 GMT
 - request:
     method: post
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks?category=hobby&event_date=&frequency=daily&mandatory=0&name=Practice%20drawing&notes=Do%20some%20studies%20on%20hands%20and%20gestures&time_needed=60
@@ -369,7 +427,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 04:47:39 GMT
+      - Wed, 20 Sep 2023 23:06:09 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -393,9 +451,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6a4b5463-91c5-4c39-897e-051498d0998c
+      - e9377e81-409d-48e8-9b4f-3a324c4b23bf
       X-Runtime:
-      - '0.008321'
+      - '0.010749'
       Transfer-Encoding:
       - chunked
       Via:
@@ -403,7 +461,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''Practice drawing'' added!"}'
-  recorded_at: Wed, 20 Sep 2023 04:47:40 GMT
+  recorded_at: Wed, 20 Sep 2023 23:06:09 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks
@@ -425,7 +483,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 04:47:40 GMT
+      - Wed, 20 Sep 2023 23:06:08 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -445,30 +503,30 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"e1a947bd5bca29f184b93283acd82fac"
+      - W/"4a933a1d52a28653516bafa02988034b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 746cac15-bdfc-44b1-8132-6ebf3fe6c5d9
+      - 2b0edc57-1072-48de-a838-59bd11a4fec4
       X-Runtime:
-      - '0.004193'
+      - '0.005654'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"150","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"Remember
-        plants in bedroom, living room, and balcony","skipped":false}},{"id":"151","type":"task","attributes":{"name":"Clean
+      string: '{"data":[{"id":"605","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"Remember
+        plants in bedroom, living room, and balcony","skipped":false}},{"id":"606","type":"task","attributes":{"name":"Clean
         fish tank","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"Vacuum
-        the gravel, wipe algae off plants","skipped":false}},{"id":"152","type":"task","attributes":{"name":"Take
+        the gravel, wipe algae off plants","skipped":false}},{"id":"607","type":"task","attributes":{"name":"Take
         nice bath","category":"rest","mandatory":false,"event_date":"","frequency":"monthly","time_needed":60,"user_id":123,"notes":"Remember
-        the fancy bathbombs under the cupboard, get a milkshake and light a candle","skipped":false}},{"id":"153","type":"task","attributes":{"name":"Meditate","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":30,"user_id":123,"notes":"","skipped":false}},{"id":"154","type":"task","attributes":{"name":"Practice
+        the fancy bathbombs under the cupboard, get a milkshake and light a candle","skipped":false}},{"id":"608","type":"task","attributes":{"name":"Meditate","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":30,"user_id":123,"notes":"","skipped":false}},{"id":"609","type":"task","attributes":{"name":"Practice
         guitar","category":"hobby","mandatory":false,"event_date":"","frequency":"daily","time_needed":120,"user_id":123,"notes":"Do
-        scale exercises, work through the books I bought","skipped":false}},{"id":"155","type":"task","attributes":{"name":"Practice
+        scale exercises, work through the books I bought","skipped":false}},{"id":"610","type":"task","attributes":{"name":"Practice
         drawing","category":"hobby","mandatory":false,"event_date":"","frequency":"daily","time_needed":60,"user_id":123,"notes":"Do
         some studies on hands and gestures","skipped":false}}]}'
-  recorded_at: Wed, 20 Sep 2023 04:47:40 GMT
+  recorded_at: Wed, 20 Sep 2023 23:06:09 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks
@@ -490,7 +548,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 04:47:40 GMT
+      - Wed, 20 Sep 2023 23:06:09 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -510,30 +568,30 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"e1a947bd5bca29f184b93283acd82fac"
+      - W/"4a933a1d52a28653516bafa02988034b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a9eec1ce-cd51-447e-8100-23a21e77c17d
+      - 55b235f8-2bca-4d00-86b6-1a1d9130f716
       X-Runtime:
-      - '0.004339'
+      - '0.004805'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"150","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"Remember
-        plants in bedroom, living room, and balcony","skipped":false}},{"id":"151","type":"task","attributes":{"name":"Clean
+      string: '{"data":[{"id":"605","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"Remember
+        plants in bedroom, living room, and balcony","skipped":false}},{"id":"606","type":"task","attributes":{"name":"Clean
         fish tank","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"Vacuum
-        the gravel, wipe algae off plants","skipped":false}},{"id":"152","type":"task","attributes":{"name":"Take
+        the gravel, wipe algae off plants","skipped":false}},{"id":"607","type":"task","attributes":{"name":"Take
         nice bath","category":"rest","mandatory":false,"event_date":"","frequency":"monthly","time_needed":60,"user_id":123,"notes":"Remember
-        the fancy bathbombs under the cupboard, get a milkshake and light a candle","skipped":false}},{"id":"153","type":"task","attributes":{"name":"Meditate","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":30,"user_id":123,"notes":"","skipped":false}},{"id":"154","type":"task","attributes":{"name":"Practice
+        the fancy bathbombs under the cupboard, get a milkshake and light a candle","skipped":false}},{"id":"608","type":"task","attributes":{"name":"Meditate","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":30,"user_id":123,"notes":"","skipped":false}},{"id":"609","type":"task","attributes":{"name":"Practice
         guitar","category":"hobby","mandatory":false,"event_date":"","frequency":"daily","time_needed":120,"user_id":123,"notes":"Do
-        scale exercises, work through the books I bought","skipped":false}},{"id":"155","type":"task","attributes":{"name":"Practice
+        scale exercises, work through the books I bought","skipped":false}},{"id":"610","type":"task","attributes":{"name":"Practice
         drawing","category":"hobby","mandatory":false,"event_date":"","frequency":"daily","time_needed":60,"user_id":123,"notes":"Do
         some studies on hands and gestures","skipped":false}}]}'
-  recorded_at: Wed, 20 Sep 2023 04:47:41 GMT
+  recorded_at: Wed, 20 Sep 2023 23:06:09 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks?search_params%5Bcategory%5D=rest&search_params%5Bfrequency%5D=daily&search_params%5Bmandatory%5D=false
@@ -555,7 +613,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 04:47:41 GMT
+      - Wed, 20 Sep 2023 23:06:09 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -575,21 +633,21 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"5e95a525d9b46bf1f5a8bec12eb07ce0"
+      - W/"f562b6dfbd1d56004b7527447841cc88"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a7ee555a-9813-4532-8caf-12f77710fd55
+      - 3ef52ec9-5c2e-4aa8-92c8-d1af9a53585f
       X-Runtime:
-      - '0.005913'
+      - '0.005890'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"153","type":"task","attributes":{"name":"Meditate","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":30,"user_id":123,"notes":"","skipped":false}}]}'
-  recorded_at: Wed, 20 Sep 2023 04:47:41 GMT
+      string: '{"data":[{"id":"608","type":"task","attributes":{"name":"Meditate","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":30,"user_id":123,"notes":"","skipped":false}}]}'
+  recorded_at: Wed, 20 Sep 2023 23:06:10 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks
@@ -611,7 +669,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 04:47:42 GMT
+      - Wed, 20 Sep 2023 23:06:10 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -631,33 +689,33 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"e1a947bd5bca29f184b93283acd82fac"
+      - W/"4a933a1d52a28653516bafa02988034b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7a702499-f7be-4969-a287-52d2f4625752
+      - 6da8ec3a-5d62-4338-a287-9d3c65c74796
       X-Runtime:
-      - '0.005002'
+      - '0.005081'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"150","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"Remember
-        plants in bedroom, living room, and balcony","skipped":false}},{"id":"151","type":"task","attributes":{"name":"Clean
+      string: '{"data":[{"id":"605","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"Remember
+        plants in bedroom, living room, and balcony","skipped":false}},{"id":"606","type":"task","attributes":{"name":"Clean
         fish tank","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":123,"notes":"Vacuum
-        the gravel, wipe algae off plants","skipped":false}},{"id":"152","type":"task","attributes":{"name":"Take
+        the gravel, wipe algae off plants","skipped":false}},{"id":"607","type":"task","attributes":{"name":"Take
         nice bath","category":"rest","mandatory":false,"event_date":"","frequency":"monthly","time_needed":60,"user_id":123,"notes":"Remember
-        the fancy bathbombs under the cupboard, get a milkshake and light a candle","skipped":false}},{"id":"153","type":"task","attributes":{"name":"Meditate","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":30,"user_id":123,"notes":"","skipped":false}},{"id":"154","type":"task","attributes":{"name":"Practice
+        the fancy bathbombs under the cupboard, get a milkshake and light a candle","skipped":false}},{"id":"608","type":"task","attributes":{"name":"Meditate","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":30,"user_id":123,"notes":"","skipped":false}},{"id":"609","type":"task","attributes":{"name":"Practice
         guitar","category":"hobby","mandatory":false,"event_date":"","frequency":"daily","time_needed":120,"user_id":123,"notes":"Do
-        scale exercises, work through the books I bought","skipped":false}},{"id":"155","type":"task","attributes":{"name":"Practice
+        scale exercises, work through the books I bought","skipped":false}},{"id":"610","type":"task","attributes":{"name":"Practice
         drawing","category":"hobby","mandatory":false,"event_date":"","frequency":"daily","time_needed":60,"user_id":123,"notes":"Do
         some studies on hands and gestures","skipped":false}}]}'
-  recorded_at: Wed, 20 Sep 2023 04:47:42 GMT
+  recorded_at: Wed, 20 Sep 2023 23:06:10 GMT
 - request:
     method: delete
-    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks/150
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks/605
     body:
       encoding: US-ASCII
       string: ''
@@ -676,7 +734,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 04:47:41 GMT
+      - Wed, 20 Sep 2023 23:06:10 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -700,9 +758,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7ccd3176-26f4-4108-8351-2daf7570e497
+      - 45c49418-52fd-45d3-a1d1-b48e9abe9600
       X-Runtime:
-      - '0.008482'
+      - '0.010004'
       Transfer-Encoding:
       - chunked
       Via:
@@ -710,10 +768,10 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''Water Plants'' deleted."}'
-  recorded_at: Wed, 20 Sep 2023 04:47:42 GMT
+  recorded_at: Wed, 20 Sep 2023 23:06:10 GMT
 - request:
     method: delete
-    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks/151
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks/606
     body:
       encoding: US-ASCII
       string: ''
@@ -732,7 +790,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 04:47:43 GMT
+      - Wed, 20 Sep 2023 23:06:10 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -756,9 +814,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8af6054d-ff09-4f58-bc1c-28e82d0b0a52
+      - 169fa5a4-dbe6-416d-89f7-0afa2faec946
       X-Runtime:
-      - '0.007303'
+      - '0.007777'
       Transfer-Encoding:
       - chunked
       Via:
@@ -766,10 +824,10 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''Clean fish tank'' deleted."}'
-  recorded_at: Wed, 20 Sep 2023 04:47:43 GMT
+  recorded_at: Wed, 20 Sep 2023 23:06:11 GMT
 - request:
     method: delete
-    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks/152
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks/607
     body:
       encoding: US-ASCII
       string: ''
@@ -788,7 +846,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 04:47:43 GMT
+      - Wed, 20 Sep 2023 23:06:11 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -812,9 +870,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e0702e9e-3deb-46ea-9fa5-59806f01db34
+      - 97d652c7-f726-427d-b4f0-4850e1ca3d6c
       X-Runtime:
-      - '0.008249'
+      - '0.012108'
       Transfer-Encoding:
       - chunked
       Via:
@@ -822,10 +880,10 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''Take nice bath'' deleted."}'
-  recorded_at: Wed, 20 Sep 2023 04:47:43 GMT
+  recorded_at: Wed, 20 Sep 2023 23:06:11 GMT
 - request:
     method: delete
-    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks/153
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks/608
     body:
       encoding: US-ASCII
       string: ''
@@ -844,7 +902,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 04:47:43 GMT
+      - Wed, 20 Sep 2023 23:06:11 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -868,9 +926,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 326cf132-9faf-4cd1-afb4-5e268667b590
+      - 2e67e2cd-0757-4381-b208-fd711aa99cac
       X-Runtime:
-      - '0.007888'
+      - '0.010633'
       Transfer-Encoding:
       - chunked
       Via:
@@ -878,10 +936,10 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''Meditate'' deleted."}'
-  recorded_at: Wed, 20 Sep 2023 04:47:44 GMT
+  recorded_at: Wed, 20 Sep 2023 23:06:12 GMT
 - request:
     method: delete
-    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks/154
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks/609
     body:
       encoding: US-ASCII
       string: ''
@@ -900,7 +958,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 04:47:44 GMT
+      - Wed, 20 Sep 2023 23:06:11 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -924,9 +982,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8d36aa8d-67ef-452c-96c5-cf5a1cda9c2f
+      - 04db44cd-8835-4b86-80ce-eae742e05e21
       X-Runtime:
-      - '0.007346'
+      - '0.009403'
       Transfer-Encoding:
       - chunked
       Via:
@@ -934,10 +992,10 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''Practice guitar'' deleted."}'
-  recorded_at: Wed, 20 Sep 2023 04:47:44 GMT
+  recorded_at: Wed, 20 Sep 2023 23:06:12 GMT
 - request:
     method: delete
-    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks/155
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks/610
     body:
       encoding: US-ASCII
       string: ''
@@ -956,7 +1014,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 04:47:44 GMT
+      - Wed, 20 Sep 2023 23:06:12 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -980,9 +1038,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ed8ed0d3-1568-4bcf-93e7-cf238491610e
+      - 7d59f12f-779b-4532-af0b-55960f8bb077
       X-Runtime:
-      - '0.008017'
+      - '0.009246'
       Transfer-Encoding:
       - chunked
       Via:
@@ -990,5 +1048,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''Practice drawing'' deleted."}'
-  recorded_at: Wed, 20 Sep 2023 04:47:44 GMT
+  recorded_at: Wed, 20 Sep 2023 23:06:12 GMT
 recorded_with: VCR 6.2.0

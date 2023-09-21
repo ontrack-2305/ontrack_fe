@@ -1,6 +1,8 @@
 require "rails_helper"
 
 RSpec.describe DatabaseService, :vcr do
+  include OmniauthModule
+
   before(:each) do
     @service = DatabaseService.new
     @attributes_hash = {:name=>"Water Plants", :category=>"chore", :mandatory=>"1", :event_date=>"", :frequency=>"weekly", :notes=>"Remember plants in bedroom, living room, and balcony", :time_needed=>20}
@@ -212,6 +214,37 @@ RSpec.describe DatabaseService, :vcr do
       expect(parsed[:data][3][:attributes][:name]).to eq("practice juggling")
       expect(parsed[:data][3][:attributes][:category]).to eq("hobby")
       expect(parsed[:data][3][:attributes][:mandatory]).to eq(false)
+    end
+  end
+
+  describe "consumes the Holiday API" do
+    it "returns a list of holidays", :vcr do
+      holidays = DatabaseService.new.get_holidays
+
+      expect(holidays).to be_a(Hash)
+      expect(holidays).to have_key(:data)
+      expect(holidays[:data]).to be_an(Array)
+
+      holidays[:data].each do |holiday|
+        expect(holiday).to have_key(:type)
+        expect(holiday[:type]).to be_a(String)
+        expect(holiday).to have_key(:attributes)
+        expect(holiday[:attributes]).to be_a(Hash)
+
+        expect(holiday[:attributes]).to have_key(:name)
+        expect(holiday[:attributes][:name]).to be_a(String)
+        expect(holiday[:attributes]).to have_key(:date)
+        expect(holiday[:attributes][:date]).to be_a(String)
+      end
+    end
+  end
+
+  describe "consumes the calendar API" do
+    xit "returns a list of calendar events", :vcr do
+      stub_user
+      stub_omniauth
+      events = DatabaseService.new.get_calendar_events(@user.id)
+      expect(events).to be_a(Hash)
     end
   end
 end

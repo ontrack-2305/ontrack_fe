@@ -2,6 +2,64 @@
 http_interactions:
 - request:
     method: get
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/holidays
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 23:05:37 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"129959a1fdf972341273461aaa7e5be4"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - edb98509-1929-45a6-b7bb-7113ea33a251
+      X-Runtime:
+      - '0.022882'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"type":"holiday","attributes":{"name":"Columbus Day","date":"2023-10-09"}},{"type":"holiday","attributes":{"name":"Veterans
+        Day","date":"2023-11-10"}},{"type":"holiday","attributes":{"name":"Thanksgiving
+        Day","date":"2023-11-23"}}]}'
+  recorded_at: Wed, 20 Sep 2023 23:05:37 GMT
+- request:
+    method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/daily_tasks/?mood
     body:
       encoding: US-ASCII
@@ -21,7 +79,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 04:47:07 GMT
+      - Wed, 20 Sep 2023 23:05:37 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -45,9 +103,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ea2d260e-5f16-4c33-8b36-2a3e054c2204
+      - 419e63eb-0ece-465e-8ea1-0c5c8282dbfb
       X-Runtime:
-      - '0.010421'
+      - '0.010586'
       Transfer-Encoding:
       - chunked
       Via:
@@ -55,7 +113,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Wed, 20 Sep 2023 04:47:07 GMT
+  recorded_at: Wed, 20 Sep 2023 23:05:37 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/chat_service?task=
@@ -77,7 +135,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 04:47:06 GMT
+      - Wed, 20 Sep 2023 23:05:37 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -99,9 +157,9 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 96dc5e3f-d6ed-46a3-bd69-283f69c47cd8
+      - 8ee3920f-8a2e-40cc-aef0-08898a509238
       X-Runtime:
-      - '0.001232'
+      - '0.001305'
       Transfer-Encoding:
       - chunked
       Via:
@@ -109,7 +167,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"errors":[{"detail":"No task provided to breakdown"}]}'
-  recorded_at: Wed, 20 Sep 2023 04:47:07 GMT
+  recorded_at: Wed, 20 Sep 2023 23:05:38 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks
@@ -131,7 +189,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 04:47:08 GMT
+      - Wed, 20 Sep 2023 23:05:37 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -155,9 +213,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2c0ad593-604a-4b11-a810-489e5ff54821
+      - 0270b2be-1e18-4efe-bf56-4a35d01d8f6c
       X-Runtime:
-      - '0.003879'
+      - '0.005194'
       Transfer-Encoding:
       - chunked
       Via:
@@ -165,5 +223,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Wed, 20 Sep 2023 04:47:08 GMT
+  recorded_at: Wed, 20 Sep 2023 23:05:38 GMT
 recorded_with: VCR 6.2.0

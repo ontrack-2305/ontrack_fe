@@ -124,4 +124,22 @@ RSpec.describe "the user dashboard page", :vcr do
       # extra: get_task from database again and check that "completed" exists
       # Can check that completed == stringified Date.today
     end
-  end
+    
+    it "displays a list of upcoming holidays" do
+      within("#holidays") do
+        expect(page).to have_content("Upcoming Holidays")
+        expect(page).to have_content("Columbus Day")
+        expect(page).to have_content("Veterans Day")
+        expect(page).to have_content("Thanksgiving Day")
+      end
+    end
+
+    xit "displays a list of upcoming calendar events" do
+      click_link('Integrate Google Calendar')
+      within("#calendar") do
+        expect(page).to have_content("Upcoming Events")
+        expect(page).to have_content("TEST EVENT 1")
+        expect(page).to have_content("TEST EVENT 2")
+      end
+    end
+end
