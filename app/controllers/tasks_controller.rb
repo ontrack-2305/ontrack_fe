@@ -38,6 +38,7 @@ class TasksController < ApplicationController
   end
 
   def update 
+    # require 'pry'; binding.pry
     return redirect_to task_path(id: params[:id], add_notes: true) if params[:get_ai].present?
 
     response = facade.patch(task_params, session[:user_id])
@@ -87,3 +88,8 @@ class TasksController < ApplicationController
     @_facade ||= TasksFacade.new
   end
 end
+
+Aws.config.update(access_key_id: ENV['AWS_ACCESS_KEY'], secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'])
+      bucket = Aws::S3::Resource.new.bucket(ENV['BUCKET_NAME'])
+      file = bucket.object(params[:image].original_filename)
+      file.upload_file(params[:image], acl: 'public-read')
