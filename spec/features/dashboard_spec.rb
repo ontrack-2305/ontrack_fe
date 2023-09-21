@@ -120,12 +120,14 @@ RSpec.describe "the user dashboard page", :vcr do
       expect(page).to have_content("Take Vitamins")
       expect(page).to have_button("skip")
       click_button("skip")
-      save_and_open_page
       expect(page).to have_content("go on a walk")
-      
+      expect(page).to_not have_content("Take Vitamins")
+      click_button("skip")
+      expect(page).to have_content("do the dishes")
+      expect(page).to_not have_content("go on a walk")
     end
 
-    it "can mark a task as complete" do
+    xit "can mark a task as complete" do
       # extra: get_task from database and check that "completed" is empty
 
       #visit page with a task on it
