@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/chat_service?task=water%20plants
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/chat_service?task=water%20plants
     body:
       encoding: US-ASCII
       string: ''
@@ -18,6 +18,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 23:07:06 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -35,27 +41,26 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"35243b0254d1d35ee7d673a96d03ca87"
+      - W/"30923a95ed0ed6487cd8e8a31a837913"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9ec9cda1-e5e9-49e5-8258-f07412199065
+      - 5c82adf9-f9e4-48b9-8951-6e2d6fd12477
       X-Runtime:
-      - '2.079140'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.04, process_action.action_controller;dur=2074.57
+      - '2.003427'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"response":[{"text":"1. Gather watering can and necessary equipment.
-        2. Check soil moisture of plants. 3. Water plants based on their specific
-        needs. 4. Ensure even coverage of water across all plants. 5. Clean and store
-        equipment after use."}]}'
-  recorded_at: Sun, 17 Sep 2023 18:32:59 GMT
+      string: '{"response":[{"text":"1. Check which plants need watering. 2. Gather
+        necessary watering equipment. 3. Water plants thoroughly and evenly. 4. Drain
+        excess water from pots. 5. Clean up and put away watering equipment."}]}'
+  recorded_at: Wed, 20 Sep 2023 23:07:07 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/24/tasks
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/24/tasks
     body:
       encoding: US-ASCII
       string: ''
@@ -71,6 +76,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 23:07:07 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -92,15 +103,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f6a94e7e-2f4b-4b0c-9945-68373158361a
+      - 72985d8e-8867-4657-9ff8-136378e2f734
       X-Runtime:
-      - '0.009677'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.08, sql.active_record;dur=0.55, process_action.action_controller;dur=1.31
+      - '0.004518'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Sun, 17 Sep 2023 18:32:59 GMT
+  recorded_at: Wed, 20 Sep 2023 23:07:08 GMT
 recorded_with: VCR 6.2.0

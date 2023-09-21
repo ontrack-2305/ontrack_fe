@@ -1,4 +1,23 @@
 class DatabaseService
+  def get_calendar_events(user)
+    response = connection.get do |req|
+      req.url "api/v1/users/#{user.id}/calendar_events"  
+      req.headers['Content-Type'] = 'application/json'
+      req.body = { 
+        access_token: user.token, 
+        user_id: user.id, 
+        google_id: user.google_id,
+        email: user.email
+      }.to_json
+    end
+  end
+
+  def get_holidays
+    response = connection.get("/api/v1/holidays")
+    JSON.parse(response.body, symbolize_names: true)
+  end
+  
+
   def post(attributes_hash, user_id)
     connection.post("api/v1/users/#{user_id}/tasks") do |faraday|
       attributes_hash.each do |key, value|
@@ -25,9 +44,7 @@ class DatabaseService
 
   def get_tasks(user_id, filters = {})
     connection.get("api/v1/users/#{user_id}/tasks") do |faraday|
-      filters.each do |key, value|
-        faraday.params[key] = value
-      end
+      faraday.params[:search_params] = filters
     end
   end
 
@@ -42,6 +59,6 @@ class DatabaseService
   end
 
   def connection
-    Faraday.new("http://localhost:3000") # change to heroku link later
+    Faraday.new("https://ontrack-be-a58c9e421d34.herokuapp.com/")
   end
 end

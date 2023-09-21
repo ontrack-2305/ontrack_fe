@@ -10,17 +10,14 @@ class TasksController < ApplicationController
   def show
     @task = facade.get_task(params[:id], session[:user_id])
     if params[:add_notes]
-      @task.notes = facade.get_ai_breakdown(@task.name)[:notes]
+      @task = Task.new(task_params, params[:id])
+      fetch_notes
     end
   end
 
   def new
-    if params[:add_notes]
-      response = facade.get_ai_breakdown(params[:name])
-      @task = Task.new(task_params)
-      @task.notes = response[:notes] if response[:status] == 200
-      flash[:alert] = response[:notes] if response[:status] == 400
-    end
+    @task = Task.new(task_params)
+    fetch_notes if params[:add_notes]
   end
 
   def create
@@ -32,14 +29,19 @@ class TasksController < ApplicationController
       redirect_to dashboard_path if params[:commit]
       flash[:notice] = JSON.parse(response.body)["message"]
     else
-      redirect_to new_task_path 
+      redirect_to new_task_path(params: task_params)
       flash[:notice] = JSON.parse(response.body)["errors"][0]["detail"]
     end
   end
 
-  def update 
-    # require 'pry'; binding.pry
-    return redirect_to task_path(id: params[:id], add_notes: true) if params[:get_ai].present?
+  def update
+    if params[:skipped] == "true"
+      facade.patch(task_params, session[:user_id])
+      redirect_to dashboard_path and return 
+    end
+    # completed tasks will come here first, check if "once"
+    # if frequency == "once", route to destroy
+    return redirect_to task_path(add_notes: true, params: task_params) if params[:get_ai].present?
 
     response = facade.patch(task_params, session[:user_id])
     redirect_to task_path(params[:id])
@@ -56,7 +58,7 @@ class TasksController < ApplicationController
   private 
 
   def task_params
-    hash = params.permit(:name, :category, :mandatory, :event_date, :frequency, :notes, :estimated_time, :id, :image).to_h.symbolize_keys
+    hash = params.permit(:name, :category, :mandatory, :event_date, :frequency, :notes, :estimated_time, :id, :time_needed, :skipped, :completed, :image).to_h.symbolize_keys
     hash[:time_needed] = time_needed unless time_needed == 0
     hash
   end
@@ -67,6 +69,12 @@ class TasksController < ApplicationController
 
   def filter_params
     params.permit(:frequency, :mandatory, :category)
+  end
+
+  def fetch_notes
+    response = facade.get_ai_breakdown(params[:name])
+    @task.notes = response[:notes] if response[:status] == 200
+    flash.now[:alert] = response[:notes] if response[:status] == 400
   end
 
   def filter_hash

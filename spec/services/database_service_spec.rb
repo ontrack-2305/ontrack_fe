@@ -1,6 +1,8 @@
 require "rails_helper"
 
 RSpec.describe DatabaseService, :vcr do
+  include OmniauthModule
+
   before(:each) do
     @service = DatabaseService.new
     @attributes_hash = {:name=>"Water Plants", :category=>"chore", :mandatory=>"1", :event_date=>"", :frequency=>"weekly", :notes=>"Remember plants in bedroom, living room, and balcony", :time_needed=>20}
@@ -112,54 +114,137 @@ RSpec.describe DatabaseService, :vcr do
     expect(parsed[:response][0][:text]).to be_a(String)
   end
 
-  it "gets only mandatory tasks on bad days" do
-    1.times { @service.post(@attributes_hash, @user_id) }
-    3.times { @service.post(@attributes_hash, @user_id) }
-    @attributes_hash[:mandatory] = "0"
+  describe "mood button functionality" do
+    before(:each) do
+      @service = DatabaseService.new
+      @user_id = "24"
 
-    response = @service.get_daily_tasks(@user_id, "bad")
-    parsed = JSON.parse(response.body, symbolize_names: true)
+      @service.post({"name"=>"Take Vitamins",
+      "category"=>"chore",
+      "mandatory"=>"1",
+      "event_date"=>"",
+      "frequency"=>"daily",
+      "notes"=>"flintstone gummies all dayeee",
+      "time_needed"=>5}, @user_id)
+    
+      @service.post({"name"=>"crochet",
+      "category"=>"hobby",
+      "mandatory"=>"0",
+      "event_date"=>"",
+      "frequency"=>"weekly",
+      "notes"=>"granny squares",
+      "time_needed"=>60}, @user_id)
 
-    expect(parsed).to have_key(:data)
+      @service.post({"name"=>"read a book",
+      "category"=>"rest",
+      "mandatory"=>"0",
+      "event_date"=>"",
+      "frequency"=>"daily",
+      "notes"=>"smut",
+      "time_needed"=>45}, @user_id)
 
-    parsed[:data].each do |task|
-      expect(task).to have_key(:attributes)
-      expect(task[:attributes][:mandatory]).to eq(true)
-      expect(task[:attributes][:mandatory]).to_not eq(false)
+      @service.post({"name"=>"go on a walk",
+      "category"=>"rest",
+      "mandatory"=>"1",
+      "event_date"=>"",
+      "frequency"=>"daily",
+      "notes"=>"",
+      "time_needed"=>30}, @user_id)
+
+      @service.post({"name"=>"practice juggling",
+      "category"=>"hobby",
+      "mandatory"=>"0",
+      "event_date"=>"",
+      "frequency"=>"monthly",
+      "notes"=>"bowling balls, bowling pins",
+      "time_needed"=>15}, @user_id)
+
+      @service.post({"name"=>"do the dishes",
+      "category"=>"chore",
+      "mandatory"=>"0",
+      "event_date"=>"",
+      "frequency"=>"daily",
+      "notes"=>"",
+      "time_needed"=>15}, @user_id)
+    end
+    
+    it "gets only mandatory and rest tasks on bad days" do
+      response = @service.get_daily_tasks(@user_id, "bad")
+      parsed = JSON.parse(response.body, symbolize_names: true)
+      
+      expect(parsed).to have_key(:data)
+      expect(parsed[:data][0][:attributes][:name]).to eq("Take Vitamins")
+      expect(parsed[:data][0][:attributes][:mandatory]).to eq(true)
+      expect(parsed[:data][1][:attributes][:name]).to eq("go on a walk")
+      expect(parsed[:data][1][:attributes][:mandatory]).to eq(true)
+      expect(parsed[:data][2][:attributes][:name]).to eq("read a book")
+      expect(parsed[:data][2][:attributes][:category]).to eq("rest")
+      expect(parsed[:data][2][:attributes][:mandatory]).to eq(false)
+    end
+
+    it "gets a mixture on good days" do
+      response = @service.get_daily_tasks(@user_id, "good")
+      parsed = JSON.parse(response.body, symbolize_names: true)
+
+      expect(parsed).to have_key(:data)
+      expect(parsed[:data][0][:attributes][:category]).to eq("chore")
+      expect(parsed[:data][0][:attributes][:mandatory]).to eq(true)
+      expect(parsed[:data][1][:attributes][:category]).to eq("rest")
+      expect(parsed[:data][1][:attributes][:mandatory]).to eq(true)
+      expect(parsed[:data][2][:attributes][:category]).to eq("chore")
+      expect(parsed[:data][2][:attributes][:mandatory]).to eq(false)
+      expect(parsed[:data][3][:attributes][:category]).to eq("hobby")
+      expect(parsed[:data][2][:attributes][:mandatory]).to eq(false)
+    end
+
+    it "has only mandatory, hobby and rest on 'meh' days" do
+      response = @service.get_daily_tasks(@user_id, "meh")
+      parsed = JSON.parse(response.body, symbolize_names: true)
+
+      expect(parsed).to have_key(:data)
+      expect(parsed[:data][0][:attributes][:name]).to eq("Take Vitamins")
+      expect(parsed[:data][0][:attributes][:category]).to eq("chore")
+      expect(parsed[:data][0][:attributes][:mandatory]).to eq(true)
+      expect(parsed[:data][1][:attributes][:name]).to eq("go on a walk")
+      expect(parsed[:data][1][:attributes][:category]).to eq("rest")
+      expect(parsed[:data][1][:attributes][:mandatory]).to eq(true)
+      expect(parsed[:data][2][:attributes][:name]).to eq("crochet")
+      expect(parsed[:data][2][:attributes][:category]).to eq("hobby")
+      expect(parsed[:data][2][:attributes][:mandatory]).to eq(false)
+      expect(parsed[:data][3][:attributes][:name]).to eq("practice juggling")
+      expect(parsed[:data][3][:attributes][:category]).to eq("hobby")
+      expect(parsed[:data][3][:attributes][:mandatory]).to eq(false)
     end
   end
 
-  it "gets a mixture on good days" do
-    1.times { @service.post(@attributes_hash, @user_id) }
-    @attributes_hash[:category] = "hobby"
-    1.times { @service.post(@attributes_hash, @user_id) }
-    @attributes_hash[:category] = "rest"
-    2.times { @service.post(@attributes_hash, @user_id) }
+  describe "consumes the Holiday API" do
+    it "returns a list of holidays", :vcr do
+      holidays = DatabaseService.new.get_holidays
 
-    response = @service.get_daily_tasks(@user_id, "good")
-    parsed = JSON.parse(response.body, symbolize_names: true)
+      expect(holidays).to be_a(Hash)
+      expect(holidays).to have_key(:data)
+      expect(holidays[:data]).to be_an(Array)
 
-    expect(parsed).to have_key(:data)
-    expect(parsed[:data][0][:attributes][:category]).to eq("chore")
-    expect(parsed[:data][1][:attributes][:category]).to eq("hobby")
-    expect(parsed[:data][2][:attributes][:category]).to eq("rest")
+      holidays[:data].each do |holiday|
+        expect(holiday).to have_key(:type)
+        expect(holiday[:type]).to be_a(String)
+        expect(holiday).to have_key(:attributes)
+        expect(holiday[:attributes]).to be_a(Hash)
+
+        expect(holiday[:attributes]).to have_key(:name)
+        expect(holiday[:attributes][:name]).to be_a(String)
+        expect(holiday[:attributes]).to have_key(:date)
+        expect(holiday[:attributes][:date]).to be_a(String)
+      end
+    end
   end
 
-  it "has only hobby and rest on 'meh' days" do
-    1.times { @service.post(@attributes_hash, @user_id) }
-    @attributes_hash[:category] = "hobby", @attributes_hash[:mandatory] = "0"
-    1.times { @service.post(@attributes_hash, @user_id) }
-    @attributes_hash[:category] = "rest", @attributes_hash[:mandatory] = "0"
-    1.times { @service.post(@attributes_hash, @user_id) }
-
-    response = @service.get_daily_tasks(@user_id, "good")
-    parsed = JSON.parse(response.body, symbolize_names: true)
-    
-    expect(parsed).to have_key(:data)
-
-    expect(parsed[:data][0][:attributes][:category]).to_not eq("chore")
-    expect(parsed[:data][0][:attributes][:category]).to eq("rest")
-    expect(parsed[:data][1][:attributes][:category]).to eq("chore")
-    expect(parsed[:data][2][:attributes][:category]).to eq("hobby")
+  describe "consumes the calendar API" do
+    xit "returns a list of calendar events", :vcr do
+      stub_user
+      stub_omniauth
+      events = DatabaseService.new.get_calendar_events(@user.id)
+      expect(events).to be_a(Hash)
+    end
   end
 end
