@@ -36,19 +36,19 @@ RSpec.describe "the user dashboard page", :vcr do
 
       @facade.post({"name"=>"go on a walk",
       "category"=>"rest",
-      "mandatory"=>"1",
+      "mandatory"=>"0",
       "event_date"=>"",
       "frequency"=>"daily",
       "notes"=>"",
       "time_needed"=>30}, @user.id)
 
-      @facade.post({"name"=>"practice juggling",
+      @facade.post({"name"=>"try macrame",
       "category"=>"hobby",
       "mandatory"=>"0",
       "event_date"=>"",
-      "frequency"=>"monthly",
-      "notes"=>"bowling balls, bowling pins",
-      "time_needed"=>15}, @user.id)
+      "frequency"=>"once",
+      "notes"=>"",
+      "time_needed"=>40}, @user.id)
 
       @facade.post({"name"=>"do the dishes",
       "category"=>"chore",
@@ -64,17 +64,15 @@ RSpec.describe "the user dashboard page", :vcr do
       @crochet = tasks.second
       @reading = tasks.third
       @walk = tasks.fourth
-      @juggling = tasks.fifth
+      @macrame = tasks.fifth
       @dishes = tasks.last
     end
 
     after(:each) do
-      @facade.delete(@vitamins.id, @user.id)
-      @facade.delete(@crochet.id, @user.id)
-      @facade.delete(@reading.id, @user.id)
-      @facade.delete(@walk.id, @user.id)
-      @facade.delete(@juggling.id, @user.id)
-      @facade.delete(@dishes.id, @user.id)
+      tasks = @facade.get_tasks(@user.id)
+      tasks.each do |task|
+        @facade.delete(task.id, @user.id)
+      end
     end
 
     it "displays a mood button for 'meh', 'good', and 'bad' days" do
@@ -116,32 +114,36 @@ RSpec.describe "the user dashboard page", :vcr do
 
     it "can move on to a new task when skipped" do
       click_button("happy face button image")
-      
-      expect(page).to have_content("go on a walk")
+
+      expect(page).to have_content("Take Vitamins")
       expect(page).to have_button("skip")
       click_button("skip")
-      expect(page).to have_content("Take Vitamins")
-      expect(page).to_not have_content("go on a walk")
+      expect(page).to have_content("do the dishes")
+      expect(page).to_not have_content("Take Vitamins")
     end
 
-    xit "can mark a task as complete" do
+    it "can mark a task as complete" do
       click_button("happy face button image")
       
-      expect(page).to have_content("go on a walk")
+      expect(page).to have_content("Take Vitamins")
       expect(page).to have_button("completed")
       click_button("completed")
-      expect(page).to_not have_content("go on a walk")
-      expect(page).to have_content("Take Vitamins")
+      expect(page).to_not have_content("Take Vitamins")
+      expect(page).to have_content("do the dishes")
     end
 
-    xit "will remove a completed task from the database with a frequency of 'once'" do
-      click_button("sad face button image")
+    it "will remove a completed task from the database with a frequency of 'once'" do
+      click_button("meh face button image")
 
-      expect(page).to have_content("go on a walk")
-      click_button("completed")
-      expect(page).to_not have_content("go on a walk")
       expect(page).to have_content("Take Vitamins")
       click_button("completed")
+      expect(page).to_not have_content("Take Vitamins")
+      expect(page).to have_content("crochet")
+      click_button("completed")
+      expect(page).to have_content("macrame")
+      click_button("completed")
+      expect(page).to have_content("'try macrame' deleted.")
+      expect(page).to_not have_content(@macrame)
     end
     
     it "displays a list of upcoming holidays" do
