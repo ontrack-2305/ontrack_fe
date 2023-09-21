@@ -32,12 +32,8 @@ Possible edge case users:
  - Used as a project planner for work / way for people to timeblock their workday
 
 [See feature documentation for more info](./app/doc/development.md) 
-
-### Mod 3 Group Consultancy Project
-
                                                   <br><br>
                     <img src="app/assets/images/logo_rounded.png" width="300" height="300">
-                    
 
 ## Built With
 * ![Ruby](https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white)
@@ -154,20 +150,26 @@ Contributions are what make the open source community such an amazing place to l
 - Users can register/log in without using a google account
 - Upcoming birthday notifications
 - Screen reader friendly
+- Refactor to have all tables on the back end
 - Choose which holidays a user can be reminded about
 - Choose different country holidays
 - Link holidays and events to people: "Mother's Day, send Mom something"
 - Language translation
-- Attach photos such as grocery lists
 - Standalone app
 - Task templates
+- Allow users to customize text colors and backgrounds - Promotes inclusivity for color blindness
 - "I'm bored" feature that can suggest new hobbies or activities based on previous user input
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
 
 
-EQUITY ANALYSIS 
+## EQUITY ANALYSIS
+- The intended users of OnTrack are individuals with executive dysfunction or related disorders. Our design choices prioritize their unique needs and challenges.
+- While our primary user base includes individuals with executive dysfunction or related disorders, we recognize that these users may belong to diverse identity groups. We are dedicated to ensuring inclusivity for all.
+- We understand that factors such as internet connectivity and device compatibility can impact access. We are actively working to minimize these barriers to ensure a wider reach. By maintaining a web application users can use public access such as libraries to use our product.
+- Given more time, we plan to collaborate closely with our intended users through interviews, surveys, and usability testing to continually improve and tailor the application to their evolving requirements.
+- To prevent misuse of our product, we would like to implement reporting mechanisms and community guidelines. We are committed to maintaining a safe and welcoming environment for all users.
 ## Authors
 - Artemy Gibson [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white) ](https://github.com/algibson1) [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white) ](https://www.linkedin.com/in/artemy-gibson/)
 - Anna Wiley [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white) ](https://github.com/awiley33) [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white) ](https://www.linkedin.com/in/annawiley/)
