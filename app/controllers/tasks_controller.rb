@@ -22,13 +22,16 @@ class TasksController < ApplicationController
 
   def create
     return redirect_to new_task_path(add_notes: true, params: task_params) if params[:get_ai].present?
-    
-    Aws.config.update(access_key_id: Rails.application.credentials.aws[:ACCESS_KEY], secret_access_key: Rails.application.credentials.aws[:SECRET_ACCESS_KEY])
-    bucket = Aws::S3::Resource.new(region: "us-west-1", endpoint: "https://s3.us-west-1.amazonaws.com").bucket(Rails.application.credentials.aws[:BUCKET_NAME])
-    file = bucket.object(params[:image].original_filename)
-    file.upload_file(params[:image], acl: 'public-read')
+    access_key = ENV['AWS_ACCESS_KEY'] || Rails.application.credentials.aws[:ACCESS_KEY]
+    secret_access_key = ENV['AWS_SECRET_ACCESS_KEY'] || Rails.application.credentials.aws[:SECRET_ACCESS_KEY]
 
-    response = facade.post(task_params, session[:user_id])
+    Aws.config.update(access_key_id: access_key, secret_access_key: secret_access_key)
+    bucket = Aws::S3::Resource.new(region: "us-west-1", endpoint: "https://s3.us-west-1.amazonaws.com").bucket("ontrack2305")
+    file = bucket.object(params[:image].original_filename)
+    file.upload_file(params[:image])
+    file_url = file.public_url
+    updated_params = task_params.merge(image: file_url)
+    response = facade.post(updated_params, session[:user_id])
     if response.status == 201
       redirect_to new_task_path if params[:create_another]
       redirect_to dashboard_path if params[:commit]
@@ -63,7 +66,7 @@ class TasksController < ApplicationController
   private 
 
   def task_params
-    hash = params.permit(:name, :category, :mandatory, :event_date, :frequency, :notes, :estimated_time, :id, :time_needed, :skipped, :completed, :image).to_h.symbolize_keys
+    hash = params.permit(:name, :category, :mandatory, :event_date, :frequency, :notes, :estimated_time, :id, :time_needed, :skipped, :completed, :image_url).to_h.symbolize_keys
     hash[:time_needed] = time_needed unless time_needed == 0
     hash
   end

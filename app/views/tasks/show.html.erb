@@ -1,3 +1,8 @@
+
+
+  <img src=<%= @task.image %>>
+
+ 
 <%= render partial: 'form', locals: {
   url: task_path(@task.id),
   method: :patch, 
@@ -6,6 +11,4 @@
   %><br>
 <% # can't test whether confirm to delete shows up- test this when BE works and can spin up a server %>
 
-<% if !@task.image.nil? %>
-  <img src=<%= @task.image %>>
-<% end %>
+ 
