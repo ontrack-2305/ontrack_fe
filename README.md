@@ -31,7 +31,7 @@ Possible edge case users:
  - People applying to jobs who want a streamlined way to keep track
  - Used as a project planner for work / way for people to timeblock their workday
 
-[See feature documentation for more info](./app/doc/development.md) 
+[See feature documentation for more info](./app/doc/development.md)(Work in Progress) 
                                                   <br><br>
                     <img src="app/assets/images/logo_rounded.png" width="300" height="300">
 
