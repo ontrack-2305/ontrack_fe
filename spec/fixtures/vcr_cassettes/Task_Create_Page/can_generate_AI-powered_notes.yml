@@ -2,6 +2,64 @@
 http_interactions:
 - request:
     method: get
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/holidays
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Sep 2023 23:05:32 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"129959a1fdf972341273461aaa7e5be4"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 306e8d68-8e35-4ccb-87a3-62328f3e4db0
+      X-Runtime:
+      - '0.021122'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"type":"holiday","attributes":{"name":"Columbus Day","date":"2023-10-09"}},{"type":"holiday","attributes":{"name":"Veterans
+        Day","date":"2023-11-10"}},{"type":"holiday","attributes":{"name":"Thanksgiving
+        Day","date":"2023-11-23"}}]}'
+  recorded_at: Wed, 20 Sep 2023 23:05:32 GMT
+- request:
+    method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/daily_tasks/?mood
     body:
       encoding: US-ASCII
@@ -21,7 +79,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 04:47:02 GMT
+      - Wed, 20 Sep 2023 23:05:32 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -45,9 +103,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 92822e43-e8dc-4cca-9897-981ba336153d
+      - db59473a-071c-4ec2-a8ab-515f9316b31b
       X-Runtime:
-      - '0.008771'
+      - '0.009937'
       Transfer-Encoding:
       - chunked
       Via:
@@ -55,7 +113,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Wed, 20 Sep 2023 04:47:02 GMT
+  recorded_at: Wed, 20 Sep 2023 23:05:32 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/chat_service?task=water%20plants
@@ -77,7 +135,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 04:47:06 GMT
+      - Wed, 20 Sep 2023 23:05:35 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -97,24 +155,25 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"aece6d23882673d363a4ec1a2b552186"
+      - W/"75771a18f7369b306cc417bf78ac7e6a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 593492af-3cbb-4598-941e-c1df07f5f481
+      - 4a30799c-9068-43e4-b26d-278735ae4912
       X-Runtime:
-      - '3.052201'
+      - '3.452374'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"response":[{"text":"1. Gather necessary tools: watering can, hose,
-        or bucket. 2. Identify plants in need of watering. 3. Fill watering can or
-        bucket with water. 4. Water plants by pouring water at the base of each plant.
-        5. Repeat steps 3 and 4 as necessary until all plants are hydrated."}]}'
-  recorded_at: Wed, 20 Sep 2023 04:47:06 GMT
+      string: '{"response":[{"text":"1. Gather necessary materials: watering can,
+        plants, and water source. 2. Identify plants that need watering (based on
+        soil dryness or plant type). 3. Fill watering can with water from the source.
+        4. Water each plant thoroughly, making sure water reaches the roots. 5. Dispose
+        of any excess water, and return materials to their proper places."}]}'
+  recorded_at: Wed, 20 Sep 2023 23:05:36 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks
@@ -136,7 +195,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 04:47:06 GMT
+      - Wed, 20 Sep 2023 23:05:37 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -160,9 +219,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 02661eb6-2c33-44e7-adbc-224bba1a8970
+      - 20014629-2855-430a-841c-d7dc17203251
       X-Runtime:
-      - '0.004143'
+      - '0.003997'
       Transfer-Encoding:
       - chunked
       Via:
@@ -170,5 +229,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Wed, 20 Sep 2023 04:47:06 GMT
+  recorded_at: Wed, 20 Sep 2023 23:05:37 GMT
 recorded_with: VCR 6.2.0
