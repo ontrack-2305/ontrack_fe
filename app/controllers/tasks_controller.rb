@@ -37,16 +37,13 @@ class TasksController < ApplicationController
     end
   end
 
-  def update 
-    #define the task
+  def update
     if params[:skipped] == "true"
-      require 'pry'; binding.pry
-      #update the task
+      facade.patch(task_params, session[:user_id])
+      redirect_to dashboard_path and return 
     end
-    # skipped tasks will come here
     # completed tasks will come here first, check if "once"
     # if frequency == "once", route to destroy
-    # task.update(skipped = "true")
     return redirect_to task_path(id: params[:id], add_notes: true) if params[:get_ai].present?
 
     response = facade.patch(task_params, session[:user_id])
@@ -64,7 +61,7 @@ class TasksController < ApplicationController
   private 
 
   def task_params
-    hash = params.permit(:name, :category, :mandatory, :event_date, :frequency, :notes, :estimated_time, :id, :time_needed).to_h.symbolize_keys
+    hash = params.permit(:name, :category, :mandatory, :event_date, :frequency, :notes, :estimated_time, :id, :time_needed, :skipped, :completed).to_h.symbolize_keys
     hash[:time_needed] = time_needed unless time_needed == 0
     hash
   end
