@@ -27,8 +27,8 @@ class TasksController < ApplicationController
 
     Aws.config.update(access_key_id: access_key, secret_access_key: secret_access_key)
     bucket = Aws::S3::Resource.new(region: "us-west-1", endpoint: "https://s3.us-west-1.amazonaws.com").bucket("ontrack2305")
-    file = bucket.object(params[:image].original_filename)
-    file.upload_file(params[:image])
+    file = bucket.object(params[:image_url].original_filename)
+    file.upload_file(params[:image_url])
     file_url = file.public_url
     updated_params = task_params.merge(image: file_url)
     response = facade.post(updated_params, session[:user_id])
