@@ -102,16 +102,6 @@ RSpec.describe "the user dashboard page", :vcr do
       expect(page).to_not have_content("Please add a task!")
     end
 
-    it "can display a warning flash message if skipping a mandatory task" do
-      pending "warning flash message implemented, skip functionality implemented"
-      click_button("happy face button image")
-
-      expect(page).to have_content("Take Vitamins")
-      expect(page).to have_button("skip")
-      click_button("skip")
-      expect(page).to have_content("Are you sure you'd like to skip a mandatory task?")
-    end
-
     it "can move on to a new task when skipped" do
       click_button("happy face button image")
 
@@ -152,15 +142,6 @@ RSpec.describe "the user dashboard page", :vcr do
         expect(page).to have_content("Columbus Day")
         expect(page).to have_content("Veterans Day")
         expect(page).to have_content("Thanksgiving Day")
-      end
-    end
-
-    xit "displays a list of upcoming calendar events" do
-      click_link('Integrate Google Calendar')
-      within("#calendar") do
-        expect(page).to have_content("Upcoming Events")
-        expect(page).to have_content("TEST EVENT 1")
-        expect(page).to have_content("TEST EVENT 2")
       end
     end
 end

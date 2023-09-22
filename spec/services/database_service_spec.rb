@@ -238,13 +238,4 @@ RSpec.describe DatabaseService, :vcr do
       end
     end
   end
-
-  describe "consumes the calendar API" do
-    xit "returns a list of calendar events", :vcr do
-      stub_user
-      stub_omniauth
-      events = DatabaseService.new.get_calendar_events(@user.id)
-      expect(events).to be_a(Hash)
-    end
-  end
 end
