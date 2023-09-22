@@ -1,15 +1,18 @@
-
-
-<div class="align-items-start">
-
+<div class="align-items-center">
+  <div class="row">
     <%= render partial: 'form', locals: {
       url: task_path(@task.id),
       method: :patch, 
       button_text: "Save Changes"
       }
     %>
-    <br>
-        <% if !@task.image_url.nil? %>  
-          <img src="<%= @task.image_url %>" class="thumbnail">
-        <% end %>
-      </div>
+  </div>
+
+  <br>
+  
+  <div class="row">
+    <% if !@task.image_url.nil? %>  
+      <%= image_tag(@task.image_url, alt: "Uploaded Image", class: "rounded mx-auto d-block medium-image img-responsive") %>
+    <% end %>
+  </div>
+</div>
