@@ -27,11 +27,14 @@ class TasksController < ApplicationController
 
     Aws.config.update(access_key_id: access_key, secret_access_key: secret_access_key)
     bucket = Aws::S3::Resource.new(region: "us-west-1", endpoint: "https://s3.us-west-1.amazonaws.com").bucket("ontrack2305")
-    file = bucket.object(params[:image_url].original_filename)
-    file.upload_file(params[:image_url])
-    file_url = file.public_url
-    updated_params = task_params.merge(image: file_url)
-    response = facade.post(updated_params, session[:user_id])
+
+    if params[:image_url]
+      file = bucket.object(params[:image_url].original_filename)
+      file.upload_file(params[:image_url])
+      file_url = file.public_url
+    end
+
+    response = facade.post(task_params.merge(image: file_url), session[:user_id])
     if response.status == 201
       redirect_to new_task_path if params[:create_another]
       redirect_to dashboard_path if params[:commit]
