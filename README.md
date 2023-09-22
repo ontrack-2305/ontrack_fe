@@ -27,6 +27,10 @@ Registered users have the ability to input items on their to-do list. In additio
 
 Users are prompted to complete one task at a time. This helps avoid decision paralysis by letting the app tell the user what to do next, and reduces overwhelming feelings caused by seeing a long list.
 
+Possible edge case users: 
+ - People applying to jobs who want a streamlined way to keep track
+ - Used as a project planner for work / way for people to timeblock their workday
+
 [See feature documentation for more info](./app/doc/development.md) 
 
 ### Mod 3 Group Consultancy Project
@@ -118,13 +122,18 @@ $ git push origin feature/AmazingFeature
 4. Open a Pull Request
 
 ## How To Use OnTrack
- Login with the Login Button and Sign in with Google
- ![welcome screen](screenshot)
-  Description of what to do....
- ![welcome logged in](screenshot)
-  Description of what to do . . .
- OTHER SCREENSHOTS
-  Other descriptions of what to do . . . 
+ Login with the Login Button and Sign in with Google. Authorize the app for whatever permissions you deem appropriate. At any point light and dark mode can be toggled by clicking on the moon icon in the top left corner.
+
+Upon logging in, users will be redirected to their dashboard page. The dashboard page has four additional buttons in the top left corner, each with alt tags displaying functionality if the user hovers over them. The house brings user back to dashboard, the + allows a user to add a task, the notepad allows users to view their task index (where they can also edit their tasks), and the door allows users to logout.
+
+Users are then prompted to select a mood icon that represents their current mood, and the dashboard will populate with a task list tailored to that specific mood. If the user is happy, they will get more chores added to their list on top of their mandatory daily tasks. If a user is sad, they will only have to complete their mandatory tasks, then they will be prompted to do only restful tasks if they so choose. If they are in a mediocre mood, there will be a divvying of hobby and rest tasks after mandatory tasks are completed. At any point the user can change their mood and the task list will regenerate accordingly.
+ 
+Located on the dashboard as well are the next three national holidays coming up as well as an option for users to integrate their google calendar. If they choose to integrate their google calendar, upcoming calendar events for the next two weeks will be displayed on their dashboard.
+
+When the user navigates to the tasks/new page, there is a form to add a new task. The user has three options after they fill out a task. As a preliminary step, they can generate a suggested breakdown of the task (powered by AI) that will autopopulate the notes section. Otherwise, they can save the task and navigate back to the dashboard or they can save the task and continue to add more tasks.
+
+When the user navigates to the /tasks page, they see all their tasks listed as well as the ability to select from any combination of three filters, one each for frequency, priority, and category. Users can clear and reset those filters at any point. Also, each task is shown as a link to its show page. If the user clicks on a task, they have the option to edit, generate an AI breakdown of the task, or delete the task.
+ 
  
 
 

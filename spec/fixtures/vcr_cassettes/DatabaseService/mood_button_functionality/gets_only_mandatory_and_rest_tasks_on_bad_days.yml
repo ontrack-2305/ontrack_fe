@@ -2,742 +2,6 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:3000/api/v1/users/24/tasks?category=chore&event_date=&frequency=daily&mandatory=1&name=Take%20Vitamins&notes=flintstone%20gummies%20all%20dayeee&time_needed=5
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Content-Length:
-      - '0'
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 201
-      message: Created
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"dc487b8089b13547f16357043cceb0a1"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - e18d822f-7f6e-4c41-9518-b1dde42729f5
-      X-Runtime:
-      - '0.016208'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.11, sql.active_record;dur=4.44, instantiation.active_record;dur=0.07,
-        process_action.action_controller;dur=7.88
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"message":"''Take Vitamins'' added!"}'
-  recorded_at: Wed, 20 Sep 2023 02:43:02 GMT
-- request:
-    method: post
-    uri: http://localhost:3000/api/v1/users/24/tasks?category=hobby&event_date=&frequency=weekly&mandatory=0&name=crochet&notes=granny%20squares&time_needed=60
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Content-Length:
-      - '0'
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 201
-      message: Created
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"fc5d1ed9e72efb216a0560d213c4832e"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - f6eae694-d392-4ae8-9c0c-1cd6df0c710c
-      X-Runtime:
-      - '0.019956'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=13.00,
-        instantiation.active_record;dur=0.02, process_action.action_controller;dur=14.99
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"message":"''crochet'' added!"}'
-  recorded_at: Wed, 20 Sep 2023 02:43:02 GMT
-- request:
-    method: post
-    uri: http://localhost:3000/api/v1/users/24/tasks?category=rest&event_date=&frequency=daily&mandatory=0&name=read%20a%20book&notes=smut&time_needed=45
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Content-Length:
-      - '0'
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 201
-      message: Created
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"ffd92c2936995dba96227e4d89905666"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 2bc6c1c8-5837-4e0b-8752-7a28b350ced1
-      X-Runtime:
-      - '0.007550'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.06, sql.active_record;dur=2.04, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=3.12
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"message":"''read a book'' added!"}'
-  recorded_at: Wed, 20 Sep 2023 02:43:02 GMT
-- request:
-    method: post
-    uri: http://localhost:3000/api/v1/users/24/tasks?category=rest&event_date=&frequency=daily&mandatory=1&name=go%20on%20a%20walk&notes=&time_needed=30
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Content-Length:
-      - '0'
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 201
-      message: Created
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"2638df9cff5a8b50bedc0f0229219734"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 8d9649cf-16f1-4863-9123-caa23edf4590
-      X-Runtime:
-      - '0.006673'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.65, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=2.43
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"message":"''go on a walk'' added!"}'
-  recorded_at: Wed, 20 Sep 2023 02:43:02 GMT
-- request:
-    method: post
-    uri: http://localhost:3000/api/v1/users/24/tasks?category=hobby&event_date=&frequency=monthly&mandatory=0&name=practice%20juggling&notes=bowling%20balls,%20bowling%20pins&time_needed=15
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Content-Length:
-      - '0'
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 201
-      message: Created
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"0a807baebb00584bac10fa68a35503de"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 9af061a0-ec5f-4aba-961f-0a71476ae72f
-      X-Runtime:
-      - '0.006370'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.75, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=2.45
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"message":"''practice juggling'' added!"}'
-  recorded_at: Wed, 20 Sep 2023 02:43:02 GMT
-- request:
-    method: post
-    uri: http://localhost:3000/api/v1/users/24/tasks?category=chore&event_date=&frequency=daily&mandatory=0&name=do%20the%20dishes&notes=&time_needed=15
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Content-Length:
-      - '0'
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 201
-      message: Created
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"537dad09722064138afb1afff244bdad"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - c2369503-06ac-4300-b211-9ebf6b627886
-      X-Runtime:
-      - '0.006713'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.98, instantiation.active_record;dur=0.01,
-        process_action.action_controller;dur=2.65
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"message":"''do the dishes'' added!"}'
-  recorded_at: Wed, 20 Sep 2023 02:43:02 GMT
-- request:
-    method: get
-    uri: http://localhost:3000/api/v1/users/24/daily_tasks/?mood=bad
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"ff8561487e85844c80e38a2d986c2684"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - ce2ab00c-bc10-4663-9504-79bf578d4321
-      X-Runtime:
-      - '0.009180'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.04, sql.active_record;dur=2.42, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=3.64
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":[{"id":"91","type":"task","attributes":{"name":"Take Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":5,"user_id":24,"notes":"flintstone
-        gummies all dayeee","skipped":false}},{"id":"94","type":"task","attributes":{"name":"go
-        on a walk","category":"rest","mandatory":true,"event_date":"","frequency":"daily","time_needed":30,"user_id":24,"notes":"","skipped":false}},{"id":"93","type":"task","attributes":{"name":"read
-        a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":24,"notes":"smut","skipped":false}}]}'
-  recorded_at: Wed, 20 Sep 2023 02:43:02 GMT
-- request:
-    method: get
-    uri: http://localhost:3000/api/v1/users/24/tasks
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"b6615f1a443861fccaaa29e35943e250"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 02c8bef3-0b60-4500-9993-b878f4415b58
-      X-Runtime:
-      - '0.005155'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.45, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.09
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":[{"id":"91","type":"task","attributes":{"name":"Take Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":5,"user_id":24,"notes":"flintstone
-        gummies all dayeee","skipped":false}},{"id":"92","type":"task","attributes":{"name":"crochet","category":"hobby","mandatory":false,"event_date":"","frequency":"weekly","time_needed":60,"user_id":24,"notes":"granny
-        squares","skipped":false}},{"id":"93","type":"task","attributes":{"name":"read
-        a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":24,"notes":"smut","skipped":false}},{"id":"94","type":"task","attributes":{"name":"go
-        on a walk","category":"rest","mandatory":true,"event_date":"","frequency":"daily","time_needed":30,"user_id":24,"notes":"","skipped":false}},{"id":"95","type":"task","attributes":{"name":"practice
-        juggling","category":"hobby","mandatory":false,"event_date":"","frequency":"monthly","time_needed":15,"user_id":24,"notes":"bowling
-        balls, bowling pins","skipped":false}},{"id":"96","type":"task","attributes":{"name":"do
-        the dishes","category":"chore","mandatory":false,"event_date":"","frequency":"daily","time_needed":15,"user_id":24,"notes":"","skipped":false}}]}'
-  recorded_at: Wed, 20 Sep 2023 02:43:02 GMT
-- request:
-    method: delete
-    uri: http://localhost:3000/api/v1/users/24/tasks/91
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"3c34faca09aa8671bd5933e01c04e61a"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 204d1280-e300-4e45-a14f-0245cd7574a1
-      X-Runtime:
-      - '0.005825'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.49, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.99
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"message":"''Take Vitamins'' deleted."}'
-  recorded_at: Wed, 20 Sep 2023 02:43:02 GMT
-- request:
-    method: delete
-    uri: http://localhost:3000/api/v1/users/24/tasks/92
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"bfde28d1188d18646fe880f2c8d198e1"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 1394c1e0-2712-492d-bd4c-a7b0b1ee7847
-      X-Runtime:
-      - '0.005559'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.34, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.78
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"message":"''crochet'' deleted."}'
-  recorded_at: Wed, 20 Sep 2023 02:43:02 GMT
-- request:
-    method: delete
-    uri: http://localhost:3000/api/v1/users/24/tasks/93
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"910c649a1baa747a7f1ddce8662a94be"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 5b23ea4f-e593-45ef-997a-75942aebd4f7
-      X-Runtime:
-      - '0.005717'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.51, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.93
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"message":"''read a book'' deleted."}'
-  recorded_at: Wed, 20 Sep 2023 02:43:02 GMT
-- request:
-    method: delete
-    uri: http://localhost:3000/api/v1/users/24/tasks/94
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"615f665c4fbcc5cce0eda03b15cc9a31"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - a48a1ba2-d60d-478a-9916-8c9798be3ec9
-      X-Runtime:
-      - '0.017132'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.04, sql.active_record;dur=12.83,
-        instantiation.active_record;dur=0.02, process_action.action_controller;dur=13.35
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"message":"''go on a walk'' deleted."}'
-  recorded_at: Wed, 20 Sep 2023 02:43:02 GMT
-- request:
-    method: delete
-    uri: http://localhost:3000/api/v1/users/24/tasks/95
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"734d1bf72d97f0627dfdcf2820542cb3"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 6330f1fc-f299-44fa-91a1-b3c880675e89
-      X-Runtime:
-      - '0.005984'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.21, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.82
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"message":"''practice juggling'' deleted."}'
-  recorded_at: Wed, 20 Sep 2023 02:43:02 GMT
-- request:
-    method: delete
-    uri: http://localhost:3000/api/v1/users/24/tasks/96
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"7771ddc0649563e0bb44ef553d2dca2e"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 8aa3164f-33be-4405-9ac9-20ac319a9d4b
-      X-Runtime:
-      - '0.006051'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.43, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.89
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"message":"''do the dishes'' deleted."}'
-  recorded_at: Wed, 20 Sep 2023 02:43:02 GMT
-- request:
-    method: post
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/24/tasks?category=chore&event_date=&frequency=daily&mandatory=1&name=Take%20Vitamins&notes=flintstone%20gummies%20all%20dayeee&time_needed=5
     body:
       encoding: UTF-8
@@ -759,7 +23,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 17:02:38 GMT
+      - Wed, 20 Sep 2023 23:07:07 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -783,9 +47,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - da0f32c1-6cbd-4523-8720-cac97aab52d6
+      - 1ca463ee-5c74-4e4a-ac8f-41ee10662afd
       X-Runtime:
-      - '0.025849'
+      - '0.010585'
       Transfer-Encoding:
       - chunked
       Via:
@@ -793,7 +57,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''Take Vitamins'' added!"}'
-  recorded_at: Wed, 20 Sep 2023 17:02:39 GMT
+  recorded_at: Wed, 20 Sep 2023 23:07:08 GMT
 - request:
     method: post
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/24/tasks?category=hobby&event_date=&frequency=weekly&mandatory=0&name=crochet&notes=granny%20squares&time_needed=60
@@ -817,7 +81,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 17:02:39 GMT
+      - Wed, 20 Sep 2023 23:07:08 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -841,9 +105,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d2632c39-b474-41af-9f45-518bf389de10
+      - 90a130c5-b988-4f76-9bf6-e97cd68f3c11
       X-Runtime:
-      - '0.014831'
+      - '0.009495'
       Transfer-Encoding:
       - chunked
       Via:
@@ -851,7 +115,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''crochet'' added!"}'
-  recorded_at: Wed, 20 Sep 2023 17:02:39 GMT
+  recorded_at: Wed, 20 Sep 2023 23:07:08 GMT
 - request:
     method: post
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/24/tasks?category=rest&event_date=&frequency=daily&mandatory=0&name=read%20a%20book&notes=smut&time_needed=45
@@ -875,7 +139,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 17:02:39 GMT
+      - Wed, 20 Sep 2023 23:07:08 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -899,9 +163,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 958841d0-6e91-41b9-b96b-186e9f0ba83e
+      - d497d82d-1e9b-4d9f-9aa3-8a99efb2e597
       X-Runtime:
-      - '0.009768'
+      - '0.011280'
       Transfer-Encoding:
       - chunked
       Via:
@@ -909,7 +173,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''read a book'' added!"}'
-  recorded_at: Wed, 20 Sep 2023 17:02:40 GMT
+  recorded_at: Wed, 20 Sep 2023 23:07:09 GMT
 - request:
     method: post
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/24/tasks?category=rest&event_date=&frequency=daily&mandatory=1&name=go%20on%20a%20walk&notes=&time_needed=30
@@ -933,7 +197,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 17:02:40 GMT
+      - Wed, 20 Sep 2023 23:07:08 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -957,9 +221,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4582cec7-7490-481b-8fb3-4adea64973a2
+      - 37a4d712-b042-4f10-b7b5-f92e24961ee9
       X-Runtime:
-      - '0.010483'
+      - '0.011332'
       Transfer-Encoding:
       - chunked
       Via:
@@ -967,7 +231,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''go on a walk'' added!"}'
-  recorded_at: Wed, 20 Sep 2023 17:02:40 GMT
+  recorded_at: Wed, 20 Sep 2023 23:07:09 GMT
 - request:
     method: post
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/24/tasks?category=hobby&event_date=&frequency=monthly&mandatory=0&name=practice%20juggling&notes=bowling%20balls,%20bowling%20pins&time_needed=15
@@ -991,7 +255,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 17:02:40 GMT
+      - Wed, 20 Sep 2023 23:07:09 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -1015,9 +279,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 883e401f-0320-4431-b1e2-88cfa46fbe72
+      - 2940ff40-1bad-44b0-ba03-995081ec2caa
       X-Runtime:
-      - '0.010356'
+      - '0.010141'
       Transfer-Encoding:
       - chunked
       Via:
@@ -1025,7 +289,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''practice juggling'' added!"}'
-  recorded_at: Wed, 20 Sep 2023 17:02:41 GMT
+  recorded_at: Wed, 20 Sep 2023 23:07:10 GMT
 - request:
     method: post
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/24/tasks?category=chore&event_date=&frequency=daily&mandatory=0&name=do%20the%20dishes&notes=&time_needed=15
@@ -1049,7 +313,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 17:02:41 GMT
+      - Wed, 20 Sep 2023 23:07:09 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -1073,9 +337,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1ec743b0-c6e1-4d8a-b0fd-192a7c6a830c
+      - 45e0f6ea-b6f5-494d-92c0-f144dc478362
       X-Runtime:
-      - '0.010420'
+      - '0.011061'
       Transfer-Encoding:
       - chunked
       Via:
@@ -1083,7 +347,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''do the dishes'' added!"}'
-  recorded_at: Wed, 20 Sep 2023 17:02:41 GMT
+  recorded_at: Wed, 20 Sep 2023 23:07:10 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/24/daily_tasks/?mood=bad
@@ -1105,7 +369,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 17:02:41 GMT
+      - Wed, 20 Sep 2023 23:07:10 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -1125,24 +389,24 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"dada6eecb081de451a888dd3aae6cbb3"
+      - W/"43378fcf618f72e432416cc1a61c297d"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 5e926fd6-bfe5-4605-8d3e-bed29ad99030
+      - 20405805-48ce-46af-bf99-261f6fb82b4f
       X-Runtime:
-      - '0.011570'
+      - '0.014104'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"209","type":"task","attributes":{"name":"Take Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":5,"user_id":24,"notes":"flintstone
-        gummies all dayeee","skipped":false}},{"id":"212","type":"task","attributes":{"name":"go
-        on a walk","category":"rest","mandatory":true,"event_date":"","frequency":"daily","time_needed":30,"user_id":24,"notes":"","skipped":false}},{"id":"211","type":"task","attributes":{"name":"read
+      string: '{"data":[{"id":"636","type":"task","attributes":{"name":"Take Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":5,"user_id":24,"notes":"flintstone
+        gummies all dayeee","skipped":false}},{"id":"639","type":"task","attributes":{"name":"go
+        on a walk","category":"rest","mandatory":true,"event_date":"","frequency":"daily","time_needed":30,"user_id":24,"notes":"","skipped":false}},{"id":"638","type":"task","attributes":{"name":"read
         a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":24,"notes":"smut","skipped":false}}]}'
-  recorded_at: Wed, 20 Sep 2023 17:02:41 GMT
+  recorded_at: Wed, 20 Sep 2023 23:07:10 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/24/tasks
@@ -1164,7 +428,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 17:02:41 GMT
+      - Wed, 20 Sep 2023 23:07:11 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -1184,31 +448,31 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"3386aeb4e30284f0023ef38d5644ec99"
+      - W/"edcc706d9eddee827a9482939cce198b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0ac9f5b5-33fb-4004-8c52-e2dd5b719573
+      - a33884e2-7f0b-44c2-97e5-e1fa995c06d3
       X-Runtime:
-      - '0.005379'
+      - '0.005592'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"209","type":"task","attributes":{"name":"Take Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":5,"user_id":24,"notes":"flintstone
-        gummies all dayeee","skipped":false}},{"id":"210","type":"task","attributes":{"name":"crochet","category":"hobby","mandatory":false,"event_date":"","frequency":"weekly","time_needed":60,"user_id":24,"notes":"granny
-        squares","skipped":false}},{"id":"211","type":"task","attributes":{"name":"read
-        a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":24,"notes":"smut","skipped":false}},{"id":"212","type":"task","attributes":{"name":"go
-        on a walk","category":"rest","mandatory":true,"event_date":"","frequency":"daily","time_needed":30,"user_id":24,"notes":"","skipped":false}},{"id":"213","type":"task","attributes":{"name":"practice
+      string: '{"data":[{"id":"636","type":"task","attributes":{"name":"Take Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","time_needed":5,"user_id":24,"notes":"flintstone
+        gummies all dayeee","skipped":false}},{"id":"637","type":"task","attributes":{"name":"crochet","category":"hobby","mandatory":false,"event_date":"","frequency":"weekly","time_needed":60,"user_id":24,"notes":"granny
+        squares","skipped":false}},{"id":"638","type":"task","attributes":{"name":"read
+        a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","time_needed":45,"user_id":24,"notes":"smut","skipped":false}},{"id":"639","type":"task","attributes":{"name":"go
+        on a walk","category":"rest","mandatory":true,"event_date":"","frequency":"daily","time_needed":30,"user_id":24,"notes":"","skipped":false}},{"id":"640","type":"task","attributes":{"name":"practice
         juggling","category":"hobby","mandatory":false,"event_date":"","frequency":"monthly","time_needed":15,"user_id":24,"notes":"bowling
-        balls, bowling pins","skipped":false}},{"id":"214","type":"task","attributes":{"name":"do
+        balls, bowling pins","skipped":false}},{"id":"641","type":"task","attributes":{"name":"do
         the dishes","category":"chore","mandatory":false,"event_date":"","frequency":"daily","time_needed":15,"user_id":24,"notes":"","skipped":false}}]}'
-  recorded_at: Wed, 20 Sep 2023 17:02:42 GMT
+  recorded_at: Wed, 20 Sep 2023 23:07:11 GMT
 - request:
     method: delete
-    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/24/tasks/209
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/24/tasks/636
     body:
       encoding: US-ASCII
       string: ''
@@ -1227,7 +491,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 17:02:42 GMT
+      - Wed, 20 Sep 2023 23:07:10 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -1251,9 +515,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d76ca4aa-e6f8-4c79-a2c6-8c0cf418a823
+      - 5a967271-bffa-4c6a-b136-909c71c094af
       X-Runtime:
-      - '0.009073'
+      - '0.009969'
       Transfer-Encoding:
       - chunked
       Via:
@@ -1261,10 +525,10 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''Take Vitamins'' deleted."}'
-  recorded_at: Wed, 20 Sep 2023 17:02:42 GMT
+  recorded_at: Wed, 20 Sep 2023 23:07:11 GMT
 - request:
     method: delete
-    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/24/tasks/210
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/24/tasks/637
     body:
       encoding: US-ASCII
       string: ''
@@ -1283,7 +547,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 17:02:43 GMT
+      - Wed, 20 Sep 2023 23:07:11 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -1307,9 +571,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 40ebd8b2-48ca-4826-b1ab-0e31c8e36741
+      - bda1658b-a5ea-4df7-8390-2f55a9397c00
       X-Runtime:
-      - '0.009150'
+      - '0.012217'
       Transfer-Encoding:
       - chunked
       Via:
@@ -1317,10 +581,10 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''crochet'' deleted."}'
-  recorded_at: Wed, 20 Sep 2023 17:02:43 GMT
+  recorded_at: Wed, 20 Sep 2023 23:07:11 GMT
 - request:
     method: delete
-    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/24/tasks/211
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/24/tasks/638
     body:
       encoding: US-ASCII
       string: ''
@@ -1339,7 +603,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 17:02:43 GMT
+      - Wed, 20 Sep 2023 23:07:11 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -1363,9 +627,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7c6f5d1d-a0fc-4496-8a57-2cda85bf1fab
+      - 8234d316-76aa-48f4-9454-5e7b6a28b759
       X-Runtime:
-      - '0.007943'
+      - '0.015002'
       Transfer-Encoding:
       - chunked
       Via:
@@ -1373,10 +637,10 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''read a book'' deleted."}'
-  recorded_at: Wed, 20 Sep 2023 17:02:43 GMT
+  recorded_at: Wed, 20 Sep 2023 23:07:12 GMT
 - request:
     method: delete
-    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/24/tasks/212
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/24/tasks/639
     body:
       encoding: US-ASCII
       string: ''
@@ -1395,7 +659,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 17:02:43 GMT
+      - Wed, 20 Sep 2023 23:07:11 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -1419,9 +683,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6e3c32c3-03ae-499c-a0e3-d9263d746584
+      - aeab3388-a455-4185-90f8-b25cbf6f70a5
       X-Runtime:
-      - '0.008057'
+      - '0.011508'
       Transfer-Encoding:
       - chunked
       Via:
@@ -1429,10 +693,10 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''go on a walk'' deleted."}'
-  recorded_at: Wed, 20 Sep 2023 17:02:44 GMT
+  recorded_at: Wed, 20 Sep 2023 23:07:12 GMT
 - request:
     method: delete
-    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/24/tasks/213
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/24/tasks/640
     body:
       encoding: US-ASCII
       string: ''
@@ -1451,7 +715,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 17:02:44 GMT
+      - Wed, 20 Sep 2023 23:07:12 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -1475,9 +739,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3ab42ff8-10fa-41f8-9c18-6051ca0a6b92
+      - 6dd5bc3b-5138-467a-b390-52d1303a02ec
       X-Runtime:
-      - '0.008546'
+      - '0.011977'
       Transfer-Encoding:
       - chunked
       Via:
@@ -1485,10 +749,10 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''practice juggling'' deleted."}'
-  recorded_at: Wed, 20 Sep 2023 17:02:44 GMT
+  recorded_at: Wed, 20 Sep 2023 23:07:13 GMT
 - request:
     method: delete
-    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/24/tasks/214
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/24/tasks/641
     body:
       encoding: US-ASCII
       string: ''
@@ -1507,7 +771,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 17:02:44 GMT
+      - Wed, 20 Sep 2023 23:07:13 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -1531,9 +795,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8e87d518-7c92-4318-9705-ffa9acf6f8ad
+      - 381b5f1a-1e98-49bb-be6f-86772f68aacd
       X-Runtime:
-      - '0.007953'
+      - '0.008721'
       Transfer-Encoding:
       - chunked
       Via:
@@ -1541,5 +805,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''do the dishes'' deleted."}'
-  recorded_at: Wed, 20 Sep 2023 17:02:44 GMT
+  recorded_at: Wed, 20 Sep 2023 23:07:13 GMT
 recorded_with: VCR 6.2.0
