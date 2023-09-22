@@ -111,7 +111,7 @@
 
       <!-- Modal body -->
       <div class="modal-body">
-        <% if !@task.image_url.nil? %>  
+        <% if @task && @task.image_url %>  
       <%= image_tag(@task.image_url, alt: "Uploaded Image", class: "rounded mx-auto d-block image-small img-responsive") %>
     <% end %>
       </div>
