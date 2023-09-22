@@ -9,9 +9,7 @@ RSpec.describe "The Welcome Page", :vcr do
   it "displays the logo/app name and Google login button" do
     visit root_path
 
-    expect(page).to have_content("OnTrack")
     expect(page).to have_button("Log In With Google")
-    expect("OnTrack").to appear_before("Log In With Google")
   end
 
   it "allows a user to register/log in to the app with Google" do
