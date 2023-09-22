@@ -1,11 +1,4 @@
-<ol id='calendar_events'>
-  <% if @calendar_events != nil %>
-    <p>Upcoming Events</p>
-    <% @calendar_events.each do |event| %>
-      <li><%= event.name %>, <%= event.start_date %>, <%= event.description %></li>
-    <% end %>
-  <% end %>
-</ol>
+
 <br>
 <%= link_to "Integrate Google Calendar", "/dashboard?calendar=true" %>
 <br>
@@ -65,4 +58,15 @@
       </div>
     </div>
   </div>
+</div>
+
+<div class="container, ">
+  <ol id='calendar_events'>
+  <% if @calendar_events != nil %>
+    <p>Upcoming Events</p>
+    <% @calendar_events.each do |event| %>
+      <li><%= event.name %>, <%= event.start_date %>, <%= event.description %></li>
+    <% end %>
+  <% end %>
+</ol>
 </div>
