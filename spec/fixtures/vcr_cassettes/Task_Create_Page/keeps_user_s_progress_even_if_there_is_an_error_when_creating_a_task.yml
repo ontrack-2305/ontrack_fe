@@ -226,4 +226,60 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":[]}'
   recorded_at: Wed, 20 Sep 2023 23:05:29 GMT
+- request:
+    method: post
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks?category=&event_date=2024-04-04&frequency=annual&image&mandatory=1&name=do%20taxes&notes=Some%20random%20notes&time_needed=60
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 22 Sep 2023 13:52:36 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 67e07a39-de2d-4f4a-863c-b901d62131af
+      X-Runtime:
+      - '0.003131'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"errors":[{"detail":"Validation failed: Category can''t be blank"}]}'
+  recorded_at: Fri, 22 Sep 2023 13:52:36 GMT
 recorded_with: VCR 6.2.0
