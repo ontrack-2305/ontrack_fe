@@ -1,7 +1,7 @@
 
 
 <div class="align-items-start">
-  <div class="row">
+
     <%= render partial: 'form', locals: {
       url: task_path(@task.id),
       method: :patch, 
@@ -9,14 +9,7 @@
       }
     %>
     <br>
-    <% # can't test whether confirm to delete shows up- test this when BE works and can spin up a server %>
-  </div>
-
-  <div class="row">
-      <div id="uploaded-photo" class="col-md-6 thumbnail">
         <% if !@task.image_url.nil? %>  
           <img src="<%= @task.image_url %>" class="thumbnail">
         <% end %>
       </div>
-    </div>
-    </div>

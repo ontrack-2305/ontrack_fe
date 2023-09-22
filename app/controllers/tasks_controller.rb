@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
   before_action :validate_session
 
-  def index 
+  def index
     @filters = {}
     @filters = filter_params if params[:filter]
     @tasks = facade.get_tasks(session[:user_id], filter_hash)
