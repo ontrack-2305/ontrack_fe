@@ -15,24 +15,6 @@
 @import "bootstrap";
 
 
-
-// .btn_group {
-//   background-color: transparent;
-// }
-
-
-.nav-link {
-  font-size: 40px;
-}
-
-body {
-  background-color: #CBB0E5
-}
-
-.dropdown-menu {
-  color: #fff;  
-}
-
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #000;
@@ -43,6 +25,10 @@ body {
     background-color: #CBB0E5;
     color: #000;
   }
+
+  a {
+    color: #000;
+  }  
 }
 
 @media (prefers-color-scheme: light) {
@@ -55,19 +41,10 @@ body {
     background-color: #000;
     color: #fff;
   }
-}
 
-#postit {
-  padding: 60px 50px;
-}
-
-#form_partial {
-  padding: 20px 100px;
-}
-
-#theme_toggle {
-  font-size: 40px;
-  padding: 20px;
+  a {
+    color: #000;
+  }  
 }
 
 .face-buttons {
@@ -82,15 +59,35 @@ body {
   width: 100px; /* Adjust the width as needed */
 }
 
+.custom-icons {
+  padding-top: 25px;
+  height: auto;
+  width: auto;
+}
+
+.light-switch {
+  height: auto;
+  width: auto;
+}
+
 #mood_buttons {
   display: flex;
   justify-content: space-evenly;
   background-color: transparent;
   max-width: 50%;
   max-height: 50%;
+  padding-top: 30px;
 }
 
-.medium-image {
-  width: 900px;
-  height: auto;
+#postit {
+  padding: 60px 50px;
+}
+
+#form_partial {
+  padding: 20px 100px;
+}
+
+#icon-links {
+  height: 115px;
+  width: 115px;
 }
