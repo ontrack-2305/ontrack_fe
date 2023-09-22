@@ -1,14 +1,22 @@
 
 
- <img src="<%= @task.image_url %>">
+<div class="align-items-start">
+  <div class="row">
+    <%= render partial: 'form', locals: {
+      url: task_path(@task.id),
+      method: :patch, 
+      button_text: "Save Changes"
+      }
+    %>
+    <br>
+    <% # can't test whether confirm to delete shows up- test this when BE works and can spin up a server %>
+  </div>
 
- 
-<%= render partial: 'form', locals: {
-  url: task_path(@task.id),
-  method: :patch, 
-  button_text: "Save Changes"
-  }
-  %><br>
-<% # can't test whether confirm to delete shows up- test this when BE works and can spin up a server %>
-
- 
+  <div class="row">
+      <div id="uploaded-photo" class="col-md-6 thumbnail">
+        <% if !@task.image_url.nil? %>  
+          <img src="<%= @task.image_url %>" class="thumbnail">
+        <% end %>
+      </div>
+    </div>
+    </div>
