@@ -1,5 +1,7 @@
-<h3>OnTrack</h3>
+
 <% if current_user  %>
 <% else %>
-  <%= button_to "Log In With Google", "/auth/google_oauth2", data: {turbo: false} %>
+  <%= button_to "Log In With Google", "/auth/google_oauth2", data: {turbo: false}, class: "btn btn-secondary rounded-pill" %>
 <% end %>
+
+<%= image_tag("logo.png", class: "mx-auto d-block img-fluid logo") %>
