@@ -24,12 +24,12 @@
 
   <div class="container-fluid">
     <div class="row">
-    <div class="col align-self-start">
+    <div class="col-lg-10 align-self-start">
     <% if current_user %>
       <ul class="nav nav-pills">
 
         <li class="nav-item">
-          <a id="icon-links" class="nav-link" title="Dashboard" href="<%=dashboard_path%>"><%= image_tag("home_light.png", class: "img-fluid custom-icons") %></a>
+          <a id="icon-links" class="nav-link" title="Dashboard" href="<%=dashboard_path%>"><%= image_tag("home_light.png", class: "img-fluid custom-icons ") %></a>
         </li>
 
         <li class="nav-item">
@@ -56,11 +56,11 @@
     <div class="col align-self-end">
     <% if dark_mode_enabled? %>
       <%= form_with url: set_theme_path, method: :get do |form| %>
-        <button id="icon-links" class="btn pull-right" type="submit" name="theme" value="light" title="Light Mode"><%= image_tag("switch_down_dark.png", class: "img-fluid custom-icons") %></button>
+        <button id="icon-links" class="btn pull-right" type="submit" name="theme" value="light" title="Light Mode"><%= image_tag("switch_down_dark.png", class: "img-fluid light-switch") %></button>
       <% end %>
     <% else %>
       <%= form_with url: set_theme_path, method: :get do |form| %>
-        <button id="icon-links" class="btn pull-right" type="submit" name="theme" value="dark" title="Dark Mode"><%= image_tag("switch_up_light.png", class: "img-fluid custom-icons") %></button>
+        <button id="icon-links" class="btn pull-right" type="submit" name="theme" value="dark" title="Dark Mode"><%= image_tag("switch_up_light.png", class: "img-fluid light-switch") %></button>
       <% end %>
     <% end %>
 </div>

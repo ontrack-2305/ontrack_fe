@@ -51,7 +51,7 @@
     <%= form.submit "Generate a Suggested Breakdown\nof this Task (Powered by AI)", name: "get_ai", class: "btn btn-secondary rounded-pill" %><br>
   </div>
 
-  <%= form.submit button_text %>
+  <%= form.submit button_text, class: "btn btn-secondary rounded-pill"%><br><br>
   <% if !@task || @task.id.nil? %>
     <%= form.submit "Save and Create Another Task", name: "create_another", class: "btn btn-secondary rounded-pill" %>
   <% end %>
