@@ -43,24 +43,23 @@ class TasksController < ApplicationController
   end
 
   def update
-    if params[:skipped] == "true"
+    if params[:skipped] == "true" || params[:completed] == "true"
       facade.patch(task_params, session[:user_id])
       redirect_to dashboard_path and return 
+    else
+      return redirect_to task_path(add_notes: true, params: task_params) if params[:get_ai].present?
+  
+      response = facade.patch(task_params, session[:user_id])
+      redirect_to task_path(params[:id]) and return
+      flash[:notice] = JSON.parse(response.body)["message"]
+      flash[:notice] = JSON.parse(response.body)["errors"][0]["detail"] if response.status == 400
     end
-    # completed tasks will come here first, check if "once"
-    # if frequency == "once", route to destroy
-    return redirect_to task_path(add_notes: true, params: task_params) if params[:get_ai].present?
-
-    response = facade.patch(task_params, session[:user_id])
-    redirect_to task_path(params[:id])
-    flash[:notice] = JSON.parse(response.body)["message"]
-    flash[:notice] = JSON.parse(response.body)["errors"][0]["detail"] if response.status == 400
   end
 
   def destroy
     response = facade.delete(params[:id], session[:user_id])
-    redirect_to dashboard_path
     flash[:notice] = JSON.parse(response.body)["message"]
+    redirect_to dashboard_path
   end
 
   private 
