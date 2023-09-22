@@ -51,7 +51,19 @@
   </div>
 </div>
 
-<div class="container, ">
+
+
+
+
+
+<div class="offcanvas offcanvas-start" id="holidays_and_events">
+  <div class="offcanvas-header">
+    <h1 class="offcanvas-title">Heading</h1>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+
+<div class="container">
   <ol id='calendar_events'>
   <% if @calendar_events != nil %>
     <p>Upcoming Events</p>
@@ -61,6 +73,30 @@
   <% end %>
 </ol>
 </div>
+    <button class="btn btn-secondary" type="button">A Button</button>
+  </div>
+</div>
+
+<div class="container">
+  <ol id='calendar_events'>
+  <% if @calendar_events != nil %>
+    <p>Upcoming Events</p>
+    <% @calendar_events.each do |event| %>
+      <li><%= event.name %>, <%= event.start_date %>, <%= event.description %></li>
+    <% end %>
+  <% end %>
+</ol>
+</div>
+
+<div class="container-fluid mt-3">
+  <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#holidays_and_events">
+    See Upcoming<br>Holdays and Events
+  </button>
+</div>
+
+</body>
+</html>
+
 
 
 
