@@ -1,17 +1,21 @@
 <h1>All Tasks</h1>
 
-<%= form_with url: tasks_path, method: :get do |form| %>
-  <%= form.select :frequency, options_for_select(["Select Frequency", :once, :daily, :weekly, :monthly, :annual], (@filters[:frequency] || "Select Frequency")) %>
-  <%= form.select :mandatory, options_for_select(["Select Priority", :mandatory, :optional], (@filters[:mandatory] || "Select Priority")) %>
-  <%= form.select :category, options_for_select(["Select Category", :rest, :hobby, :chore], (@filters[:category] || "Select Category")) %>
-  <%= form.submit "Filter Tasks", name: :filter %>
-<% end %>
-  <%= button_to "Clear Filters", tasks_path, method: :get %>
+  <div class="row align-items-center">
+    <div class="col-4 justify-content-center">
+      <% @tasks.each do |task| %>
+        <div id="task-<%= task.id %>">
+          <%= link_to task.name, task_path(task.id) %>
+        </div><br>
+      <% end %>
+    </div>
 
-
-<% @tasks.each do |task| %>
-  <div id="task-<%= task.id %>">
-    <%= link_to task.name, task_path(task.id) %>
+    <div class="col-4 justify-content-center">
+      <%= form_with url: tasks_path, method: :get do |form| %>
+        <%= form.select :frequency, options_for_select(["Select Frequency", :once, :daily, :weekly, :monthly, :annual], (@filters[:frequency] || "Select Frequency")) %><br>
+        <%= form.select :mandatory, options_for_select(["Select Priority", :mandatory, :optional], (@filters[:mandatory] || "Select Priority")) %><br>
+        <%= form.select :category, options_for_select(["Select Category", :rest, :hobby, :chore], (@filters[:category] || "Select Category")) %><br><br>
+        <%= form.submit "Filter Tasks", name: :filter, class: "btn btn-secondary rounded-pill" %>
+      <% end %><br>
+      <%= button_to "Clear Filters", tasks_path, method: :get, class: "btn btn-secondary rounded-pill" %>
+    </div>
   </div>
-  <br>
-<% end %>

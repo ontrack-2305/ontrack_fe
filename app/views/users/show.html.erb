@@ -70,9 +70,10 @@
       <% else %>
         <%= image_tag("postit_light.png", class: "mx-auto d-block img-fluid") %>
       <% end %>
+
       <div class="text-overlay position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
       <% if cookies[:mood] && @task.present? %>
-        <p> <%= @task.name %> </p>
+        <p> <%= @task.name %> </p><br><br><br><br>
         <%= form_tag(task_path(@task.id), method: :patch, data: { turbo: false }) do %>
           <%= hidden_field_tag 'skipped', true %>
           <%= submit_tag "skip", class: "btn btn-secondary" %>

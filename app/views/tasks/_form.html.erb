@@ -1,67 +1,66 @@
 <div id="form_partial" class="container">
-<div class="row justify-content-center">
+  <div class="row justify-content-center">
+  <%= form_with url: url, method: method do |form| %>
+    <div class="mb-3">
+      <%= form.label "Task Name", class: "form-label" %>*
+      <%= form.text_field :name, value: @task&.name, class: "form-control rounded-pill border-dark smaller-text-box" %>
+    </div>
 
-<%= form_with url: url, method: method do |form| %>
-  <div class="mb-3">
-    <%= form.label "Task Name", class: "form-label" %>*
-    <%= form.text_field :name, value: @task&.name, class: "form-control rounded-pill border-dark smaller-text-box" %>
-  </div>
+    <div class="row">
+      <div class="col">
+        <div class="mb-3">
+          <%= form.label "Task category", class: "form-label" %>*
+          <%= form.select :category, options_for_select(["", :rest, :hobby, :chore], @task&.category), class: "form-select rounded-pill border-dark" %>
+        </div>
+      </div>
 
-  <div class="row">
-    <div class="col">
-      <div class="mb-3">
-        <%= form.label "Task category", class: "form-label" %>*
-        <%= form.select :category, options_for_select(["", :rest, :hobby, :chore], @task&.category), class: "form-select rounded-pill border-dark" %>
+      <div class="col">
+        <div class="mb-3">
+          <%= form.label "Mandatory?", class: "form-check-label" %>
+          <%= form.check_box :mandatory, checked: @task&.mandatory, class: "form-check-input" %>
+        </div>
       </div>
     </div>
 
-    <div class="col">
-      <div class="mb-3">
-        <%= form.label "Mandatory?", class: "form-check-label" %>
-        <%= form.check_box :mandatory, checked: @task&.mandatory, class: "form-check-input" %>
+    <div class="row">
+      <div class="col">
+        <div class="mb-3">
+          <%= form.label "Event date", class: "form-label" %>
+          <%= form.date_field :event_date, value: @task&.event_date, class: "form-control rounded-pill border-dark smallest-text-box" %>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="mb-3">
+          <%= form.label "Frequency", class: "form-label" %>
+          <%= form.select :frequency, options_for_select([:once, :daily, :weekly, :monthly, :annual], @task&.frequency), class: "form-select rounded-pill border-dark" %>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="row">
-    <div class="col">
-      <div class="mb-3">
-        <%= form.label "Event date", class: "form-label" %>
-        <%= form.date_field :event_date, value: @task&.event_date, class: "form-control rounded-pill border-dark smallest-text-box" %>
-      </div>
+    <div class="mb-3">
+      <%= form.label "Expected time needed", class: "form-label" %>*<br>
+        <%= form.number_field :hours, value: @task&.hours, class: " rounded-pill border-dark smallest-text-box" %> H  
+        <%= form.number_field :minutes, value: @task&.minutes, class: "rounded-pill border-dark smallest-text-box" %>M
     </div>
 
-    <div class="col">
-      <div class="mb-3">
-        <%= form.label "Frequency", class: "form-label" %>
-        <%= form.select :frequency, options_for_select([:once, :daily, :weekly, :monthly, :annual], @task&.frequency), class: "form-select rounded-pill border-dark" %>
-      </div>
+    <div class="mb-3">
+      <%= form.label "Notes", class: "form-label" %>
+      <%= form.text_area :notes, size: "100", value: @task&.notes, class: "form-label form-control rounded-pill border-dark" %><br>
+      <%= form.submit "Generate a Suggested Breakdown\nof this Task (Powered by AI)", name: "get_ai", class: "btn btn-secondary rounded-pill" %><br>
     </div>
-  </div>
 
-  <div class="mb-3">
-    <%= form.label "Expected time needed", class: "form-label" %>*<br>
-      <%= form.number_field :hours, value: @task&.hours, class: " rounded-pill border-dark smallest-text-box" %> H  
-      <%= form.number_field :minutes, value: @task&.minutes, class: "rounded-pill border-dark smallest-text-box" %>M
-  </div>
-
-  <div class="mb-3">
-    <%= form.label "Notes", class: "form-label" %>
-    <%= form.text_area :notes, size: "100", value: @task&.notes, class: "form-label form-control rounded-pill border-dark" %><br>
-    <%= form.submit "Generate a Suggested Breakdown\nof this Task (Powered by AI)", name: "get_ai", class: "btn btn-secondary rounded-pill" %><br>
-  </div>
-
-  <%= form.submit button_text, class: "btn btn-secondary rounded-pill"%><br><br>
-  <% if !@task || @task.id.nil? %>
-    <%= form.submit "Save and Create Another Task", name: "create_another", class: "btn btn-secondary rounded-pill" %>
+    <%= form.submit button_text, class: "btn btn-secondary rounded-pill"%><br><br>
+    <% if !@task || @task.id.nil? %>
+      <%= form.submit "Save and Create Another Task", name: "create_another", class: "btn btn-secondary rounded-pill" %>
+    <% end %>
   <% end %>
-<% end %>
 
-<% if @task && @task.id %>
-  <%= button_to "Delete", task_path(@task.id), method: :delete, form: { data: {turbo_confirm: "Are you sure?"}}, class: "btn btn-secondary rounded-pill" %>
-<% end %>
+  <% if @task && @task.id %>
+    <%= button_to "Delete", task_path(@task.id), method: :delete, form: { data: {turbo_confirm: "Are you sure?"}}, class: "btn btn-secondary rounded-pill" %>
+  <% end %>
 
 <p>Mandatory fields marked with a *</p>
   </div>
-  </div>
+</div>
   

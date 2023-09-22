@@ -15,69 +15,76 @@
   <body class="<%= cookies[:theme] %>">
 
     <% flash.each do |type, message| %>
-    <div class="alert alert-warning">
-      <section class=<%= type %>>
-        <strong><p><%= message %></p></strong>
-      </section>
+      <div class="alert alert-warning">
+        <section class=<%= type %>>
+          <strong><p><%= message %></p></strong>
+        </section>
       </div>
     <% end %>
 
-  <div class="container-fluid">
-    <div class="row">
-    <div class="col-lg-10 align-self-start">
-    <% if current_user %>
-      <ul class="nav nav-pills">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-10 align-self-start">
+        <% if current_user %>
+          <% if dark_mode_enabled? %>
+            <ul class="nav nav-pills">
+              <li class="nav-item">
+                <a id="icon-links" class="nav-link" title="Dashboard" href="<%=dashboard_path%>"><%= image_tag("home_dark.png", class: "img-fluid custom-icons ") %></a>
+              </li>
+              <li class="nav-item">
+                <a id="icon-links" class="nav-link" title="Add New Task" href="<%=new_task_path(current_user)%>"><%= image_tag("plus_dark.png", class: "img-fluid custom-icons") %></a>
+              </li>
+              <li class="nav-item">
+                <a id="icon-links" class="nav-link" title="View All Tasks" href="<%=tasks_path(current_user)%>"><%= image_tag("index_dark.png", class: "img-fluid custom-icons") %></a>
+              </li>
+              <li class="nav-item">
+                <a id="icon-links" class="nav-link icon-link" title="Log Out" href="<%=logout_path%>"><%= image_tag("door_dark.png", class: "img-fluid custom-icons") %></a>
+              </li>
+            </ul>
+          <% else %>
+            <ul class="nav nav-pills">
+              <li class="nav-item">
+                <a id="icon-links" class="nav-link" title="Dashboard" href="<%=dashboard_path%>"><%= image_tag("home_light.png", class: "img-fluid custom-icons ") %></a>
+              </li>
+              <li class="nav-item">
+                <a id="icon-links" class="nav-link" title="Add New Task" href="<%=new_task_path(current_user)%>"><%= image_tag("plus_light.png", class: "img-fluid custom-icons") %></a>
+              </li>
+              <li class="nav-item">
+                <a id="icon-links" class="nav-link" title="View All Tasks" href="<%=tasks_path(current_user)%>"><%= image_tag("index_light.png", class: "img-fluid custom-icons") %></a>
+              </li>
+              <li class="nav-item">
+                <a id="icon-links" class="nav-link icon-link" title="Log Out" href="<%=logout_path%>"><%= image_tag("door_light.png", class: "img-fluid custom-icons") %></a>
+              </li>
+            </ul>
+          <% end %>
+        <% end %>
+      </div>
 
-        <li class="nav-item">
-          <a id="icon-links" class="nav-link" title="Dashboard" href="<%=dashboard_path%>"><%= image_tag("home_light.png", class: "img-fluid custom-icons ") %></a>
-        </li>
+      <div class="col align-self-end">
+        <% if dark_mode_enabled? %>
+          <%= form_with url: set_theme_path, method: :get do |form| %>
+            <button id="icon-links" class="btn pull-right" type="submit" name="theme" value="light" title="Light Mode"><%= image_tag("switch_down_dark.png", class: "img-fluid light-switch") %></button>
+          <% end %>
+        <% else %>
+          <%= form_with url: set_theme_path, method: :get do |form| %>
+            <button id="icon-links" class="btn pull-right" type="submit" name="theme" value="dark" title="Dark Mode"><%= image_tag("switch_up_light.png", class: "img-fluid light-switch") %></button>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
-        <li class="nav-item">
-          <a id="icon-links" class="nav-link" title="Add New Task" href="<%=new_task_path(current_user)%>"><%= image_tag("plus_light.png", class: "img-fluid custom-icons") %></a>
-        </li>
+  <div class="row align-items-center">
+      <%= yield %>
+  </div>
 
-
-
-
-        <li class="nav-item">
-          <a id="icon-links" class="nav-link" title="View All Tasks" href="<%=tasks_path(current_user)%>"><%= image_tag("index_light.png", class: "img-fluid custom-icons") %></a>
-        </li>
-
-
-
-
-        <li class="nav-item">
-          <a id="icon-links" class="nav-link icon-link" title="Log Out" href="<%=logout_path%>"><%= image_tag("door_light.png", class: "img-fluid custom-icons") %></a>
-        </li>
-      </ul>
-    <% end %>
-</div>
-
-    <div class="col align-self-end">
-    <% if dark_mode_enabled? %>
-      <%= form_with url: set_theme_path, method: :get do |form| %>
-        <button id="icon-links" class="btn pull-right" type="submit" name="theme" value="light" title="Light Mode"><%= image_tag("switch_down_dark.png", class: "img-fluid light-switch") %></button>
-      <% end %>
-    <% else %>
-      <%= form_with url: set_theme_path, method: :get do |form| %>
-        <button id="icon-links" class="btn pull-right" type="submit" name="theme" value="dark" title="Dark Mode"><%= image_tag("switch_up_light.png", class: "img-fluid light-switch") %></button>
-      <% end %>
-    <% end %>
-</div>
-</div>
-</div>
-
-<div class="row align-items-center">
-    <%= yield %>
-</div>
-
-<div class="container-x-lg">
+  <div class="container-x-lg">
     <% if dark_mode_enabled? %>
       <%= image_tag("purple_tracks.png", class: "img-fluid w-100") %>
     <% else %>
       <%= image_tag("grey_tracks.png", class: "img-fluid w-100") %>
     <% end %>
-</div>
+  </div>
 
   </body>
 </html>
