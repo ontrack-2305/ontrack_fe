@@ -51,9 +51,10 @@ class TasksController < ApplicationController
       redirect_to dashboard_path and return 
     else
       return redirect_to task_path(add_notes: true, params: task_params) if params[:get_ai].present?
-  
+    
       response = facade.patch(task_params, session[:user_id])
-      redirect_to task_path(params[:id]) and return
+
+      redirect_to task_path(params[:id])
       flash[:notice] = JSON.parse(response.body)["message"]
       flash[:notice] = JSON.parse(response.body)["errors"][0]["detail"] if response.status == 400
     end
