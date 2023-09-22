@@ -1,47 +1,4 @@
-<%
-=begin%>
- <%= button_to "All tasks", tasks_path, method: :get %>
-<%= button_to "Dashboard", dashboard_path, method: :get %> 
-<%
-=end%>
 
-<%
-=begin%>
- <%= form_with url: url, method: method do |form| %>
-  <%= form.label "Task name" %>
-  <%= form.text_field :name, value: @task&.name %>*<br>
-
-  <%= form.label "Task category" %>
-  <%= form.select :category, options_for_select(["", :rest, :hobby, :chore], @task&.category) %>*<br>
-
-  <%= form.label "Mandatory?" %>
-  <%= form.check_box :mandatory, checked: @task&.mandatory %><br>
-
-  <%= form.label "Event date" %>
-  <%= form.date_field :event_date, value: @task&.event_date %>
-
-  <%= form.label "Frequency" %>
-  <%= form.select :frequency, options_for_select([:once, :daily, :weekly, :monthly, :annual], @task&.frequency) %><br>
-
-  <%= form.label "Expected time needed" %>
-  <%= form.number_field :hours, value: @task&.hours %>H
-  <%= form.number_field :minutes, value: @task&.minutes %>M *<br>
-
-  <%= form.label "Notes" %>
-  <%= form.text_field :notes, size: "100", value: @task&.notes %><br>
-  <%= form.submit "Generate a Suggested Breakdown of this Task (Powered by AI)", name: "get_ai" %><br>
-
-  <%= form.submit button_text %>
-  <% if @task && @task.id %>
-    <%= button_to "Delete", task_path(@task.id), method: :delete, form: { data: {turbo_confirm: "Are you sure?"}} %>
-  <% else %>
-    <%= form.submit "Save and Create Another Task", name: "create_another" %>
-  <% end %>
-<% end %>
-
-<p>Mandatory fields marked with a *</p> 
-<%
-=end%>
 
 <div id="form_partial" class="container">
 <div class="row justify-content-center">
@@ -96,7 +53,12 @@
     <%= form.submit "Generate a Suggested Breakdown\nof this Task (Powered by AI)", name: "get_ai", class: "btn btn-secondary rounded-pill" %><br>
   </div>
 
-  <%= form.submit button_text %>
+  <div class="mb-3">
+    <%= form.label "Images", class: "form-label" %>
+    <%= form.file_field :image_url, value: @task&.image_url, class: "form-select rounded-pill border-dark" %>
+  </div>
+
+    <%= form.submit button_text %>
   <% if !@task || @task.id.nil? %>
     <%= form.submit "Save and Create Another Task", name: "create_another", class: "btn btn-secondary rounded-pill" %>
   <% end %>

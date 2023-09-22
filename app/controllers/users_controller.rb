@@ -11,6 +11,6 @@ class UsersController < ApplicationController
     if @mood.present?
       cookies[:mood] = { value: @mood }
     end
-    @task = TasksFacade.new.task_by_mood(@user.id, cookies[:mood]) 
+    @task = TasksFacade.new.task_by_mood(@user.id, cookies[:mood])   
   end
 end

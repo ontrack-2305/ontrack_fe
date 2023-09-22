@@ -5,7 +5,8 @@ class Task
               :event_date,
               :time_needed,
               :frequency,
-              :user_id
+              :user_id,
+              :image_url
 
   attr_accessor :notes
 
@@ -19,6 +20,7 @@ class Task
     @time_needed = data[:time_needed].to_i
     @notes = data[:notes]
     @user_id = data[:user_id]
+    @image_url = data[:image_url]
   end
 
   def hours
