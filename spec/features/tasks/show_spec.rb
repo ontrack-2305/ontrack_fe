@@ -54,7 +54,7 @@ RSpec.describe "Task Show/Edit Page", :vcr do
     expect(page).to have_content("Please Log In")
   end
 
-  xit "can update attributes of task" do
+  it "can update attributes of task" do
     expect(page).to have_field(:notes, with: @task.notes)
     fill_in(:notes, with: "Different notes")
     click_button("Save Changes")
@@ -65,7 +65,7 @@ RSpec.describe "Task Show/Edit Page", :vcr do
     expect(page).to have_field(:notes, with: "Different notes")
   end
 
-  xit "has an error if any mandatory fields are deleted" do
+  it "has an error if any mandatory fields are deleted" do
     fill_in(:name, with: "")
     click_button("Save Changes")
     expect(page).to have_content("Validation failed: Name can't be blank")
@@ -79,22 +79,12 @@ RSpec.describe "Task Show/Edit Page", :vcr do
     visit task_path(@task.id)
     expect(page).to have_button("Delete")
     click_button("Delete")
-    # expect confirmation message?
-    # click "yes" on confirmation message
+
     expect(current_path).to eq(dashboard_path)
     expect(page).to have_content("'Water Plants' deleted.")
 
     visit tasks_path
     expect(page).to_not have_content("Water Plants")
-  end
-
-  it "won't delete task if user selects 'cancel' from confirmation" do
-    pending "confirmation message working"
-    expect(page).to have_button("Delete")
-    click_button("Delete")
-    # expect confirmation message?
-    # click "cancel" on confirmation message
-    expect(current_path).to eq(task_path(@task.id))
   end
 
   it "can generate an AI breakdown of task" do
