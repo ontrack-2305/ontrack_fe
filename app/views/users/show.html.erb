@@ -1,44 +1,80 @@
 
+<div class="row">
+    <div id="mood_buttons" class="container">
 
-<div id="mood_buttons" class="container">
+      <%= form_tag(dashboard_path, method: :get) do %>
+        <%= hidden_field_tag :mood, 'bad' %>
+        <button title="Bad Mood" class="btn" type="submit">
+          <img src="<%= asset_path('legit_sad.png') %>" alt="sad face button image" class="face-button img-responsive">
+        </button>
+      <% end %>
 
-  <%= form_tag(dashboard_path, method: :get) do %>
-    <%= hidden_field_tag :mood, 'good' %>
-    <button title="Good Mood" class="face-buttons btn" type="submit">
-      <img src="<%= asset_path('legit_happy.png') %>" alt="happy face button image" class="img-responsive">
-    </button>
-  <% end %>
 
-  <%= form_tag(dashboard_path, method: :get) do %>
-    <%= hidden_field_tag :mood, 'meh' %>
-    <button title="Meh Mood" class="face-buttons btn" type="submit">
-      <img src="<%= asset_path('legit_meh.png') %>" alt="meh face button image" class="img-responsive">
-    </button>
-  <% end %>
+      <%= form_tag(dashboard_path, method: :get) do %>
+        <%= hidden_field_tag :mood, 'meh' %>
+        <button title="Meh Mood" class="btn" type="submit">
+          <img src="<%= asset_path('legit_meh.png') %>" alt="meh face button image" class="face-button img-responsive">
+        </button>
+      <% end %>
 
-  <%= form_tag(dashboard_path, method: :get) do %>
-    <%= hidden_field_tag :mood, 'bad' %>
-    <button title="Bad Mood" class="face-buttons btn" type="submit">
-      <img src="<%= asset_path('legit_sad.png') %>" alt="sad face button image" class="img-responsive">
-    </button>
-  <% end %>
+
+      <%= form_tag(dashboard_path, method: :get) do %>
+        <%= hidden_field_tag :mood, 'good' %>
+        <button title="Good Mood" class="btn" type="submit">
+          <img src="<%= asset_path('legit_happy.png') %>" alt="happy face button image" class="face-button img-responsive">
+        </button>
+      <% end %>
+  </div>
 </div>
 
+<div class="row">
+  <div class="col align-self-center">
+    <div id="postit"  class="container">
+      <div class="row">
+        <div class="position-relative">
+          <% if dark_mode_enabled? %>
+            <%= image_tag("postit_dark_alt.png", class: "mx-auto d-block img-fluid") %>
+          <% else %>
+            <%= image_tag("postit_light.png", class: "mx-auto d-block img-fluid") %>
+          <% end %>
+
+          <div class="text-overlay position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
+            <% if cookies[:mood] && @task.present? %>
+              <p> <%= @task.name %> </p><br><br><br><br>
+              <%= form_tag(task_path(@task.id), method: :patch, data: { turbo: false }) do %>
+                <%= hidden_field_tag 'skipped', true %>
+                <%= submit_tag "skip", class: "btn btn-secondary rounded-pill" %>
+              <% end %>
+
+              <% if @task.frequency == "once" %>
+                <%= button_to "completed", task_path(@task.id), method: :delete, class: "btn btn-secondary rounded-pill" %>
+              <% else %>
+                <%= button_to "completed", task_path(@task.id), method: :patch, params: {completed: true}, class: "btn btn-secondary rounded-pill" %>
+              <% end %>
+            <% else %>
+              <p> Please add a task or select a mood ~! </p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="row">
 <div class="col-1 align-self-start">
 <div class="offcanvas offcanvas-start" id="holidays_and_events">
   <div class="offcanvas-header">
-    <h1 class="offcanvas-title">Heading</h1>
+    <h2 class="offcanvas-title">Upcoming Events</h2>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
   </div>
   <div class="offcanvas-body">
     <ol id='calendar_events'>
       <% if @calendar_events != nil %>
         <p>Upcoming Events</p>
-        <% @calendar_events.each do |event| %>
-        <li><%= event.name %>, <%= event.start_date %>, <%= event.description %></li>
-        <% end %>
+          <% @calendar_events.each do |event| %>
+            <li><%= event.name %>, <%= event.start_date %>, <%= event.description %></li>
+          <% end %>
       <% else %>
         <%= link_to "Integrate Google Calendar", "/dashboard?calendar=true" %>
       <% end %>
@@ -54,43 +90,13 @@
 </div>
 
 <div class="container-fluid mt-3">
-  <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#holidays_and_events">
-    See Upcoming<br>Holidays and Events
+  <button class="btn icon-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#holidays_and_events">
+    <%= image_tag("calendar_light.png", class: "img-fluid custom-icons") %>
   </button>
 </div>
 </div>
 
-<div class="col align-self-center">
-<div id="postit"  class="container">
-  <div class="row">
-    <div class="position-relative">
-      <% if dark_mode_enabled? %>
-        <%= image_tag("postit_dark_alt.png", class: "mx-auto d-block img-fluid") %>
-      <% else %>
-        <%= image_tag("postit_light.png", class: "mx-auto d-block img-fluid") %>
-      <% end %>
 
-      <div class="text-overlay position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
-      <% if cookies[:mood] && @task.present? %>
-        <p> <%= @task.name %> </p><br><br><br><br>
-        <%= form_tag(task_path(@task.id), method: :patch, data: { turbo: false }) do %>
-          <%= hidden_field_tag 'skipped', true %>
-          <%= submit_tag "skip", class: "btn btn-secondary rounded-pill" %>
-        <% end %>
-        <% if @task.frequency == "once" %>
-          <%= button_to "completed", task_path(@task.id), method: :delete, class: "btn btn-secondary rounded-pill" %>
-        <% else %>
-          <%= button_to "completed", task_path(@task.id), method: :patch, params: {completed: true}, class: "btn btn-secondary rounded-pill" %>
-        <% end %>
-      <% else %>
-        <p> Please add a task or select a mood ~! </p>
-      <% end %>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-<div class="row">
 <div class="d-flex">
 <div class="col align-self-center">
 <!-- Button to Open the Modal -->
@@ -127,4 +133,8 @@
 
 </div>
 </div>
+
+
 </div>
+
+
