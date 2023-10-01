@@ -59,7 +59,7 @@ class TasksController < ApplicationController
 
       return redirect_to task_path(add_notes: true, params: new_params) if params[:get_ai].present?
       response = facade.patch(new_params, session[:user_id])
-    
+
       redirect_to task_path(params: new_params)
       flash[:notice] = JSON.parse(response.body)["message"]
       flash[:notice] = JSON.parse(response.body)["errors"][0]["detail"] if response.status == 400
@@ -83,13 +83,7 @@ class TasksController < ApplicationController
   end
 
   def task_params
-    hash = params.permit(:name, :category, :mandatory, :event_date, :frequency, :notes, :estimated_time, :id, :time_needed, :skipped, :completed, :image_url).to_h.symbolize_keys
-    hash[:time_needed] = time_needed unless time_needed == 0
-    hash
-  end
-
-  def time_needed
-    params[:hours].to_i * 60 + params[:minutes].to_i
+    params.permit(:name, :category, :mandatory, :event_date, :frequency, :notes, :id, :skipped, :completed, :image_url)
   end
 
   def filter_params
