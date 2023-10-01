@@ -148,6 +148,10 @@ Contributions are what make the open source community such an amazing place to l
 
 ## Thoughts for future contributions:
 - Users can register/log in without using a google account
+- Use of time_needed attribute;
+  - Can calculate user's time spent on certain activities and report them after a certain point of time. Ex: "You've spent 80 hours learning guitar this year!"
+  - AND/OR, the back end algorithm that chooses daily tasks will max out at a certain limit. Ex: User is given tasks that will take two hours total on bad days.
+  - This attribute currently exists in the front end Task poro and the back end schema, but functionality to make use of it has not been integrated at this time
 - Upcoming birthday notifications
 - Screen reader friendly
 - Refactor to have all tables on the back end

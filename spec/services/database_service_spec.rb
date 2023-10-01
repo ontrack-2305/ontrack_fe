@@ -5,7 +5,7 @@ RSpec.describe DatabaseService, :vcr do
 
   before(:each) do
     @service = DatabaseService.new
-    @attributes_hash = {:name=>"Water Plants", :category=>"chore", :mandatory=>"1", :event_date=>"", :frequency=>"weekly", :notes=>"Remember plants in bedroom, living room, and balcony", :time_needed=>20}
+    @attributes_hash = {:name=>"Water Plants", :category=>"chore", :mandatory=>"1", :event_date=>"", :frequency=>"weekly", :notes=>"Remember plants in bedroom, living room, and balcony"}
     @user_id = "24"
   end
 
@@ -124,48 +124,42 @@ RSpec.describe DatabaseService, :vcr do
       "mandatory"=>"1",
       "event_date"=>"",
       "frequency"=>"daily",
-      "notes"=>"flintstone gummies all dayeee",
-      "time_needed"=>5}, @user_id)
+      "notes"=>"flintstone gummies all dayeee"}, @user_id)
     
       @service.post({"name"=>"crochet",
       "category"=>"hobby",
       "mandatory"=>"0",
       "event_date"=>"",
       "frequency"=>"weekly",
-      "notes"=>"granny squares",
-      "time_needed"=>60}, @user_id)
+      "notes"=>"granny squares"}, @user_id)
 
       @service.post({"name"=>"read a book",
       "category"=>"rest",
       "mandatory"=>"0",
       "event_date"=>"",
       "frequency"=>"daily",
-      "notes"=>"smut",
-      "time_needed"=>45}, @user_id)
+      "notes"=>"smut"}, @user_id)
 
       @service.post({"name"=>"go on a walk",
       "category"=>"rest",
       "mandatory"=>"1",
       "event_date"=>"",
       "frequency"=>"daily",
-      "notes"=>"",
-      "time_needed"=>30}, @user_id)
+      "notes"=>""}, @user_id)
 
       @service.post({"name"=>"practice juggling",
       "category"=>"hobby",
       "mandatory"=>"0",
       "event_date"=>"",
       "frequency"=>"monthly",
-      "notes"=>"bowling balls, bowling pins",
-      "time_needed"=>15}, @user_id)
+      "notes"=>"bowling balls, bowling pins"}, @user_id)
 
       @service.post({"name"=>"do the dishes",
       "category"=>"chore",
       "mandatory"=>"0",
       "event_date"=>"",
       "frequency"=>"daily",
-      "notes"=>"",
-      "time_needed"=>15}, @user_id)
+      "notes"=>""}, @user_id)
     end
     
     it "gets only mandatory and rest tasks on bad days" do

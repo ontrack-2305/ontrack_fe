@@ -25,8 +25,7 @@ RSpec.describe TasksFacade, :vcr do
       "mandatory"=>"1",
       "event_date"=>"",
       "frequency"=>"weekly",
-      "notes"=>"Remember plants in bedroom, living room, and balcony",
-      "time_needed"=>20}, @user_id)
+      "notes"=>"Remember plants in bedroom, living room, and balcony"}, @user_id)
 
     expect(facade.get_tasks(@user_id).count).to eq(1)
     parsed_response = JSON.parse(response.body, symbolize_names: true)
@@ -40,15 +39,13 @@ RSpec.describe TasksFacade, :vcr do
       "mandatory"=>"1",
       "event_date"=>"",
       "frequency"=>"weekly",
-      "notes"=>"Remember plants in bedroom, living room, and balcony",
-      "time_needed"=>20}, @user_id)
+      "notes"=>"Remember plants in bedroom, living room, and balcony"}, @user_id)
     facade.post({"name"=>"Prune Plants",
         "category"=>"chore",
         "mandatory"=>"1",
         "event_date"=>"",
         "frequency"=>"weekly",
-        "notes"=>"Remember plants in bedroom, living room, and balcony",
-        "time_needed"=>20}, @user_id)
+        "notes"=>"Remember plants in bedroom, living room, and balcony"}, @user_id)
 
     tasks = facade.get_tasks(@user_id)
     expect(tasks).to be_an(Array)
@@ -62,20 +59,17 @@ RSpec.describe TasksFacade, :vcr do
       "category"=>"chore",
       "mandatory"=>"1",
       "frequency"=>"weekly",
-      "notes"=>"Remember plants in bedroom, living room, and balcony",
-      "time_needed"=>20}, @user_id)
+      "notes"=>"Remember plants in bedroom, living room, and balcony"}, @user_id)
     facade.post({"name"=>"Prune Plants",
       "category"=>"chore",
       "mandatory"=>"1",
       "frequency"=>"monthly",
-      "notes"=>"Remember plants in bedroom, living room, and balcony",
-      "time_needed"=>20}, @user_id)
+      "notes"=>"Remember plants in bedroom, living room, and balcony"}, @user_id)
     facade.post({"name"=>"Take Bath",
       "category"=>"rest",
       "mandatory"=>"0",
       "frequency"=>"monthly",
-      "notes"=>"Light a candle and have some music and relax!",
-      "time_needed"=>60}, @user_id)
+      "notes"=>"Light a candle and have some music and relax!"}, @user_id)
 
     mandatory_tasks = facade.get_tasks(@user_id, {mandatory: true})
     expect(mandatory_tasks).to be_an(Array)
@@ -98,8 +92,7 @@ RSpec.describe TasksFacade, :vcr do
       "mandatory"=>"1",
       "event_date"=>"",
       "frequency"=>"weekly",
-      "notes"=>"Remember plants in bedroom, living room, and balcony",
-      "time_needed"=>20}, @user_id)
+      "notes"=>"Remember plants in bedroom, living room, and balcony"}, @user_id)
 
     task = facade.get_tasks(@user_id).last
 
@@ -116,8 +109,7 @@ RSpec.describe TasksFacade, :vcr do
       "mandatory"=>"1",
       "event_date"=>"",
       "frequency"=>"weekly",
-      "notes"=>"Remember plants in bedroom, living room, and balcony",
-      "time_needed"=>20}, @user_id)
+      "notes"=>"Remember plants in bedroom, living room, and balcony"}, @user_id)
     tasks = facade.get_tasks(@user_id)
 
     task = facade.get_task(tasks.last.id, @user_id)
@@ -132,8 +124,7 @@ RSpec.describe TasksFacade, :vcr do
       "mandatory"=>"1",
       "event_date"=>"",
       "frequency"=>"weekly",
-      "notes"=>"Remember plants in bedroom, living room, and balcony",
-      "time_needed"=>20}, @user_id)
+      "notes"=>"Remember plants in bedroom, living room, and balcony"}, @user_id)
     tasks = facade.get_tasks(@user_id)
     task = facade.get_task(tasks.first.id, @user_id)
     expect(facade.get_tasks(@user_id).count).to eq(1)
@@ -159,26 +150,22 @@ RSpec.describe TasksFacade, :vcr do
       "category"=>"chore",
       "mandatory"=>"1",
       "frequency"=>"weekly",
-      "notes"=>"Remember plants in bedroom, living room, and balcony",
-      "time_needed"=>20}, @user_id)
+      "notes"=>"Remember plants in bedroom, living room, and balcony"}, @user_id)
     facade.post({"name"=>"Prune Plants",
       "category"=>"chore",
       "mandatory"=>"1",
       "frequency"=>"monthly",
-      "notes"=>"Remember plants in bedroom, living room, and balcony",
-      "time_needed"=>20}, @user_id)
+      "notes"=>"Remember plants in bedroom, living room, and balcony"}, @user_id)
     facade.post({"name"=>"Take Bath",
       "category"=>"rest",
       "mandatory"=>"0",
       "frequency"=>"monthly",
-      "notes"=>"Light a candle and have some music and relax!",
-      "time_needed"=>60}, @user_id)
+      "notes"=>"Light a candle and have some music and relax!"}, @user_id)
     facade.post({"name"=>"Crochet",
       "category"=>"hobby",
       "mandatory"=>"0",
       "frequency"=>"monthly",
-      "notes"=>"Light a candle and have some music and relax!",
-      "time_needed"=>60}, @user_id)
+      "notes"=>"Light a candle and have some music and relax!"}, @user_id)
 
     by_mood = facade.task_by_mood(@user_id, "good")
     expect(by_mood).to be_a Task

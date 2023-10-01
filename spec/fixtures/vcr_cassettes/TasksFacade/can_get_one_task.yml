@@ -285,4 +285,62 @@ http_interactions:
       encoding: UTF-8
       string: '{"message":"''Repot Plants'' deleted."}'
   recorded_at: Wed, 20 Sep 2023 23:04:25 GMT
+- request:
+    method: post
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/20/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Repot%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sun, 01 Oct 2023 21:15:21 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"b0ac0dd06b5cd52efa10a017ab4954f2"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 03df1e5b-40ef-4a17-b53e-4ad222268025
+      X-Runtime:
+      - '0.008939'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"message":"''Repot Plants'' added!"}'
+  recorded_at: Sun, 01 Oct 2023 21:15:22 GMT
 recorded_with: VCR 6.2.0

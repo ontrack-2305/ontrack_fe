@@ -72,7 +72,7 @@ Each task name is a link to its edit page, which contains all other information 
 ## Task Create Page
 This page contains a form for the user to input information to create a new task. Submitting this form will send a post request to the BE.
 
-The mandatory fields on this form are name, category, and estimated time needed. Optional fields are a checkbox for whether or not it is a mandatory task, an event date field, and a notes field. The frequency field defaults to “once”. 
+The mandatory fields on this form are name and category. Optional fields are a checkbox for whether or not it is a mandatory task, an event date field, and a notes field. The frequency field defaults to “once”. 
 
 If any mandatory fields are not filled in and the user attempts to save the task, the page will refresh with an error message noting which fields still need to be filled in. It will keep all the user's current input information when refreshing, by passing it back through the params.
 ```ruby
@@ -93,7 +93,7 @@ The user has two submit buttons. One saves the task and redirects back to the da
 ## Task Edit Page
 This page is a form similar to the Task Create page. Fields are pre-filled with information relevant to the current task that is being edited.
 
-Similar to the task create page, mandatory fields are the task name, category, and estimated time needed. If the user deletes the pre-filled information in these fields and tries to save changes, they will receive an error that those fields cannot be blank.
+Similar to the task create page, mandatory fields are the task name and category. If the user deletes the pre-filled information in these fields and tries to save changes, they will receive an error that those fields cannot be blank.
 
 Also similar to the Task Create page, the user has a button to generate an AI-Powered breakdown of the task.
 

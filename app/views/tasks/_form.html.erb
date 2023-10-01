@@ -39,12 +39,6 @@
     </div>
 
     <div class="mb-3">
-      <%= form.label "Expected time needed", class: "form-label" %>*<br>
-        <%= form.number_field :hours, value: @task&.hours, class: " rounded-pill border-dark smallest-text-box" %> H  
-        <%= form.number_field :minutes, value: @task&.minutes, class: "rounded-pill border-dark smallest-text-box" %>M
-    </div>
-
-    <div class="mb-3">
       <%= form.label "Notes", class: "form-label" %>
       <%= form.text_area :notes, size: "100", value: @task&.notes, class: "form-label form-control rounded-pill border-dark" %><br>
       <%= form.submit "Generate a Suggested Breakdown\nof this Task (Powered by AI)", name: "get_ai", class: "btn btn-secondary rounded-pill" %><br>
