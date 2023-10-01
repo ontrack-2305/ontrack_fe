@@ -60,7 +60,17 @@
         <% end %>
       </div>
 
-      <div class="col align-self-end">
+      
+    </div>
+  </div>
+
+  <div class="row align-items-center">
+      <%= yield %>
+  </div>
+
+<div class="col">
+<div class="col float-right">
+<% if current_user %>
         <% if dark_mode_enabled? %>
           <%= form_with url: set_theme_path, method: :get do |form| %>
             <button id="icon-links" class="btn pull-right" type="submit" name="theme" value="light" title="Light Mode"><%= image_tag("switch_down_dark.png", class: "img-fluid light-switch") %></button>
@@ -70,19 +80,17 @@
             <button id="icon-links" class="btn pull-right" type="submit" name="theme" value="dark" title="Dark Mode"><%= image_tag("switch_up_light.png", class: "img-fluid light-switch") %></button>
           <% end %>
         <% end %>
+<% end %>
       </div>
-    </div>
-  </div>
+      </div>
 
-  <div class="row align-items-center">
-      <%= yield %>
-  </div>
+
 
   <div class="container-x-lg">
     <% if dark_mode_enabled? %>
-      <%= image_tag("purple_tracks.png", class: "img-fluid w-100") %>
+      <%= image_tag("tracks_dark.png", class: "img-fluid w-100") %>
     <% else %>
-      <%= image_tag("grey_tracks.png", class: "img-fluid w-100") %>
+      <%= image_tag("tracks_light.png", class: "img-fluid w-100") %>
     <% end %>
   </div>
 

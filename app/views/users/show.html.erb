@@ -5,7 +5,13 @@
       <%= form_tag(dashboard_path, method: :get) do %>
         <%= hidden_field_tag :mood, 'bad' %>
         <button title="Bad Mood" class="btn" type="submit">
+        <% if (cookies[:mood] == "bad") && dark_mode_enabled?%>
+          <img src="<%= asset_path('circle_sad_dark.png') %>" alt="sad face button image" class="face-button img-responsive">
+        <% elsif cookies[:mood] == "bad" %>
+          <img src="<%= asset_path('circle_sad_light.png') %>" alt="sad face button image" class="face-button img-responsive">
+        <% else %>
           <img src="<%= asset_path('legit_sad.png') %>" alt="sad face button image" class="face-button img-responsive">
+        <% end %>
         </button>
       <% end %>
 
@@ -13,7 +19,13 @@
       <%= form_tag(dashboard_path, method: :get) do %>
         <%= hidden_field_tag :mood, 'meh' %>
         <button title="Meh Mood" class="btn" type="submit">
+        <% if (cookies[:mood] == "meh") && dark_mode_enabled?%>
+          <img src="<%= asset_path('circle_meh_dark.png') %>" alt="meh face button image" class="face-button img-responsive">
+        <% elsif cookies[:mood] == "meh" %>
+          <img src="<%= asset_path('circle_meh_light.png') %>" alt="meh face button image" class="face-button img-responsive">
+        <% else %>
           <img src="<%= asset_path('legit_meh.png') %>" alt="meh face button image" class="face-button img-responsive">
+        <% end %>
         </button>
       <% end %>
 
@@ -21,7 +33,13 @@
       <%= form_tag(dashboard_path, method: :get) do %>
         <%= hidden_field_tag :mood, 'good' %>
         <button title="Good Mood" class="btn" type="submit">
+        <% if (cookies[:mood] == "good") && dark_mode_enabled?%>
+          <img src="<%= asset_path('circle_happy_dark.png') %>" alt="happy face button image" class="face-button img-responsive">
+        <% elsif cookies[:mood] == "good" %>
+          <img src="<%= asset_path('circle_happy_light.png') %>" alt="happy face button image" class="face-button img-responsive">
+        <% else %>
           <img src="<%= asset_path('legit_happy.png') %>" alt="happy face button image" class="face-button img-responsive">
+        <% end %>
         </button>
       <% end %>
   </div>
@@ -38,70 +56,12 @@
             <%= image_tag("postit_light.png", class: "mx-auto d-block img-fluid") %>
           <% end %>
 
-          <div class="text-overlay position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
-            <% if cookies[:mood] && @task.present? %>
-              <p> <%= @task.name %> </p><br><br><br><br>
-              <%= form_tag(task_path(@task.id), method: :patch, data: { turbo: false }) do %>
-                <%= hidden_field_tag 'skipped', true %>
-                <%= submit_tag "skip", class: "btn btn-secondary rounded-pill" %>
-              <% end %>
+          <div class="text-overlay position-absolute top-0 start-0 d-flex">
 
-              <% if @task.frequency == "once" %>
-                <%= button_to "completed", task_path(@task.id), method: :delete, class: "btn btn-secondary rounded-pill" %>
-              <% else %>
-                <%= button_to "completed", task_path(@task.id), method: :patch, params: {completed: true}, class: "btn btn-secondary rounded-pill" %>
-              <% end %>
-            <% else %>
-              <p> Please add a task or select a mood ~! </p>
-            <% end %>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="row">
-<div class="col-1 align-self-start">
-<div class="offcanvas offcanvas-start" id="holidays_and_events">
-  <div class="offcanvas-header">
-    <h2 class="offcanvas-title">Upcoming Events</h2>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-  </div>
-  <div class="offcanvas-body">
-    <ol id='calendar_events'>
-      <% if @calendar_events != nil %>
-        <p>Upcoming Events</p>
-          <% @calendar_events.each do |event| %>
-            <li><%= event.name %>, <%= event.start_date %>, <%= event.description %></li>
-          <% end %>
-      <% else %>
-        <%= link_to "Integrate Google Calendar", "/dashboard?calendar=true" %>
-      <% end %>
-    </ol><br><br>
-
-    <ol id='holidays'>
-      <p>Upcoming Holidays</p>
-      <% @holidays.each do |holiday| %>
-        <li><%= holiday.name %>, <%= holiday.date %></li>
-      <% end %>
-    </ol>
-  </div>
-</div>
-
-<div class="container-fluid mt-3">
-  <button class="btn icon-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#holidays_and_events">
-    <%= image_tag("calendar_light.png", class: "img-fluid custom-icons") %>
-  </button>
-</div>
-</div>
-
-
-<div class="d-flex">
-<div class="col align-self-center">
 <!-- Button to Open the Modal -->
-<button type="button" class="btn btn-secondary rounded-pill" data-bs-toggle="modal" data-bs-target="#myModal">
-  View Image
+<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">
+    <%= image_tag("polaroid_light.png", id: "polaroid-btn", class: "img-fluid custom-icons") %>
+
 </button>
 
 <!-- The Modal -->
@@ -131,10 +91,69 @@
   </div>
 </div>
 
+          </div>
+
+
+          <div class="position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
+            <% if cookies[:mood] && @task.present? %>
+              <p style="font-family: Chalkduster, fantasy"> <%= @task.name %> </p>
+              <p><%= form_tag(task_path(@task.id), method: :patch, data: { turbo: false }) do %>
+                <%= hidden_field_tag 'skipped', true %>
+                <%= submit_tag "skip", class: "btn btn-secondary rounded-pill" %>
+              <% end %>
+
+              <% if @task.frequency == "once" %>
+                <%= button_to "completed", task_path(@task.id), method: :delete, class: "btn btn-secondary rounded-pill" %>
+              <% else %>
+                <%= button_to "completed", task_path(@task.id), method: :patch, params: {completed: true}, class: "btn btn-secondary rounded-pill" %>
+              <% end %>
+            <% else %>
+              <p style="font-family: Chalkduster, fantasy"> Please add a task or select a mood ~! </p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+
+
+<div class="col">
+<div class="float-left">
+<div class="offcanvas offcanvas-start" id="holidays_and_events">
+  <div class="offcanvas-header">
+    <h2 class="offcanvas-title">Upcoming Events</h2>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ol id='calendar_events'>
+      <% if @calendar_events != nil %>
+        <p>Upcoming Events</p>
+          <% @calendar_events.each do |event| %>
+            <li><%= event.name %>, <%= event.start_date %>, <%= event.description %></li>
+          <% end %>
+      <% else %>
+        <%= link_to "Integrate Google Calendar", "/dashboard?calendar=true" %>
+      <% end %>
+    </ol><br><br>
+
+    <ol id='holidays'>
+      <p>Upcoming Holidays</p>
+      <% @holidays.each do |holiday| %>
+        <li><%= holiday.name %>, <%= holiday.date %></li>
+      <% end %>
+    </ol>
+  </div>
+</div>
+</div>
+
+<div class="container-fluid mt-3">
+  <button class="btn icon-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#holidays_and_events">
+    <%= image_tag("calendar_light.png", class: "img-fluid custom-icons") %>
+  </button>
 </div>
 
 
 </div>
-
 
