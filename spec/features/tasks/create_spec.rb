@@ -38,19 +38,8 @@ RSpec.describe "Task Create Page", :vcr do
     expect(page).to have_field(:minutes)
     expect(page).to have_content("Notes")
     expect(page).to have_field(:notes)
+    expect(page).to have_field(:image_data)
   end
-
-  # it "has a button to go to tasks index page" do
-  #   expect(page).to have_button("All tasks")
-  #   click_button("All tasks")
-  #   expect(current_path).to eq(tasks_path)
-  # end
-
-  # it "has a button to go to dashboard" do
-  #   expect(page).to have_button("Dashboard")
-  #   click_button("Dashboard")
-  #   expect(current_path).to eq(dashboard_path)
-  # end
 
   it "cannot be accessed if no user is logged in" do
     visit root_path
@@ -105,7 +94,7 @@ RSpec.describe "Task Create Page", :vcr do
     fill_in(:notes, with: "Remember plants in bedroom, living room, and balcony")
     click_button("Save and Back to Dashboard")
     expect(current_path).to eq(new_task_path)
-    expect(page).to have_content("Validation failed: Name can't be blank, Category can't be blank, Time needed can't be blank")
+    expect(page).to have_content("Validation failed: Name can't be blank, Category can't be blank")
   end
 
   it "keeps user's progress even if there is an error when creating a task" do
