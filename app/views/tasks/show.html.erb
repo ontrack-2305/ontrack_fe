@@ -6,13 +6,8 @@
       button_text: "Save Changes"
       }
     %>
+  
   </div>
 
   <br>
-  
-  <div class="row">
-    <% if !@task.image_url.nil? %>  
-      <%= image_tag(@task.image_url, alt: "Uploaded Image", class: "rounded mx-auto d-block medium-image img-responsive") %>
-    <% end %>
-  </div>
 </div>
