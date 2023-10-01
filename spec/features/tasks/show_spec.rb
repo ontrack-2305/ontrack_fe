@@ -15,8 +15,7 @@ RSpec.describe "Task Show/Edit Page", :vcr do
       "mandatory"=>"1",
       "event_date"=>"",
       "frequency"=>"weekly",
-      "notes"=>"Remember plants in bedroom, living room, and balcony",
-      "time_needed"=>20}, @user.id)
+      "notes"=>"Remember plants in bedroom, living room, and balcony"}, @user.id)
 
     @task = @facade.get_tasks(@user.id).last
 
@@ -39,9 +38,6 @@ RSpec.describe "Task Show/Edit Page", :vcr do
     expect(page).to have_field(:event_date, with: @task.event_date)
     expect(page).to have_content("Frequency")
     expect(page).to have_select(:frequency, with_options: [:once, :daily, :weekly, :monthly, :annual], selected: @task.frequency)
-    expect(page).to have_content("Expected time needed")
-    expect(page).to have_field(:hours, with: @task.hours)
-    expect(page).to have_field(:minutes, with: @task.minutes)
     expect(page).to have_content("Notes")
     expect(page).to have_field(:notes, with: @task.notes)
   end

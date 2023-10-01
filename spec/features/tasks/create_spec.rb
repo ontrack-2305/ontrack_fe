@@ -33,9 +33,6 @@ RSpec.describe "Task Create Page", :vcr do
     expect(page).to have_field(:event_date)
     expect(page).to have_content("Frequency")
     expect(page).to have_select(:frequency, with_options: [:once, :daily, :weekly, :monthly, :annual])
-    expect(page).to have_content("Expected time needed")
-    expect(page).to have_field(:hours)
-    expect(page).to have_field(:minutes)
     expect(page).to have_content("Notes")
     expect(page).to have_field(:notes)
     expect(page).to have_field(:image_data)
@@ -58,7 +55,6 @@ RSpec.describe "Task Create Page", :vcr do
     select(:chore, from: :category)
     check(:mandatory)
     select(:weekly, from: :frequency)
-    fill_in(:minutes, with: 20)
     fill_in(:notes, with: "Remember plants in bedroom, living room, and balcony")
     click_button("Save and Back to Dashboard")
     
@@ -77,7 +73,6 @@ RSpec.describe "Task Create Page", :vcr do
     select(:chore, from: :category)
     check(:mandatory)
     select(:weekly, from: :frequency)
-    fill_in(:minutes, with: 20)
     fill_in(:notes, with: "Remember plants in bedroom, living room, and balcony")
     click_button("Save and Create Another Task")
     
@@ -102,7 +97,6 @@ RSpec.describe "Task Create Page", :vcr do
     fill_in(:event_date, with: "2024-04-04")
     select(:annual, from: :frequency)
     check(:mandatory)
-    fill_in(:hours, with: 1)
     fill_in(:notes, with: "Some random notes")
     click_button("Save and Back to Dashboard")
 
@@ -112,7 +106,6 @@ RSpec.describe "Task Create Page", :vcr do
     expect(page).to have_field(:event_date, with: "2024-04-04")
     expect(page).to have_select(:frequency, selected: "annual")
     expect(page).to have_checked_field(:mandatory)
-    expect(page).to have_field(:hours, with: 1)
     expect(page).to have_field(:notes, with: "Some random notes")
   end
 
@@ -120,7 +113,6 @@ RSpec.describe "Task Create Page", :vcr do
     fill_in(:name, with: "Water Plants")
     select(:chore, from: :category)
     select(:weekly, from: :frequency)
-    fill_in(:minutes, with: 20)
     click_button("Save and Back to Dashboard")
     expect(page).to have_content("'Water Plants' added!") 
   end

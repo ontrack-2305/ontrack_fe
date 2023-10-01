@@ -15,48 +15,42 @@ RSpec.describe "the user dashboard page", :vcr do
       "mandatory"=>"1",
       "event_date"=>"",
       "frequency"=>"daily",
-      "notes"=>"flintstone gummies all dayeee",
-      "time_needed"=>5}, @user.id)
+      "notes"=>"flintstone gummies all dayeee"}, @user.id)
     
       @facade.post({"name"=>"crochet",
       "category"=>"hobby",
       "mandatory"=>"0",
       "event_date"=>"",
       "frequency"=>"weekly",
-      "notes"=>"granny squares",
-      "time_needed"=>60}, @user.id)
+      "notes"=>"granny squares"}, @user.id)
 
       @facade.post({"name"=>"read a book",
       "category"=>"rest",
       "mandatory"=>"0",
       "event_date"=>"",
       "frequency"=>"daily",
-      "notes"=>"smut",
-      "time_needed"=>45}, @user.id)
+      "notes"=>"smut"}, @user.id)
 
       @facade.post({"name"=>"go on a walk",
       "category"=>"rest",
       "mandatory"=>"0",
       "event_date"=>"",
       "frequency"=>"daily",
-      "notes"=>"",
-      "time_needed"=>30}, @user.id)
+      "notes"=>""}, @user.id)
 
       @facade.post({"name"=>"try macrame",
       "category"=>"hobby",
       "mandatory"=>"0",
       "event_date"=>"",
       "frequency"=>"once",
-      "notes"=>"",
-      "time_needed"=>40}, @user.id)
+      "notes"=>""}, @user.id)
 
       @facade.post({"name"=>"do the dishes",
       "category"=>"chore",
       "mandatory"=>"0",
       "event_date"=>"",
       "frequency"=>"daily",
-      "notes"=>"",
-      "time_needed"=>15}, @user.id)
+      "notes"=>""}, @user.id)
 
       tasks = @facade.get_tasks(@user.id)
 
