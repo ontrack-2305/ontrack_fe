@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   def create
-    user = User.update_or_create(request.env['omniauth.auth'])
+    user = User.from_google_auth(request.env['omniauth.auth'])
     if user.errors.present?
       flash[:alert] = user.errors.full_messages.join(', ')
       redirect_to root_path

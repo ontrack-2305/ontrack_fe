@@ -11,7 +11,7 @@ RSpec.describe User, type: :model do
 
   describe "unit testing" do
     it "creates or updates itself from an oauth hash" do
-      auth = {
+      auth_info = {
         provider: "google",
         uid: "12345678910",
         info: {
@@ -24,7 +24,7 @@ RSpec.describe User, type: :model do
           refresh_token: "12345abcdefg"
         }
       }
-      User.update_or_create(auth)
+      User.from_google_auth(auth_info)
       
       new_user = User.first
   
