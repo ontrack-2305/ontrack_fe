@@ -74,9 +74,10 @@ RSpec.describe "Task Show/Edit Page", :vcr do
 
     visit task_path(@task.id)
     expect(page).to have_button("Delete")
-    click_button("Delete")
 
-    expect(current_path).to eq(dashboard_path)
+    click_button("Delete")
+    expect(page).to have_css('#myModal', visible: true)
+    click_button 'Delete My Task'
     expect(page).to have_content("'Water Plants' deleted.")
 
     visit tasks_path
@@ -87,7 +88,7 @@ RSpec.describe "Task Show/Edit Page", :vcr do
     old_notes = @task.notes
     expect(page).to have_field(:notes, with: old_notes)
     click_button("Generate a Suggested Breakdown\nof this Task (Powered by AI)")
-    
+
     expect(page).to have_field(:name, with: "Water Plants")
     expect(page).to_not have_field(:notes, with: @task.notes)
 
