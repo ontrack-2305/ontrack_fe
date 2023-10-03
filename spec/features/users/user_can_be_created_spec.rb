@@ -1,19 +1,19 @@
 require 'rails_helper'
 
 RSpec.describe 'User registration form' do
-  it 'creates a new user' do
+  it 'creates a new user', :vcr do
     visit root_path
 
-    click_on 'Register with us!'
+    click_on 'Create an Account'
 
     expect(current_path).to eq(new_user_path)
 
-    fill_in :first_name, with: 'John'
-    fill_in :last_name, with: 'Doe'
-    fill_in :email, with: 'John@imjohn.com'
-    fill_in :password, with: 'password'
-    fill_in :password_confirmation, with: 'password'
-    click_button 'Create User'
+    fill_in :user_first_name, with: 'John'
+    fill_in :user_last_name, with: 'Doe'
+    fill_in :user_email, with: 'John@imjohn.com'
+    fill_in :user_password, with: 'password'
+    fill_in :user_password_confirmation, with: 'password'
+    click_button 'Create Account'
 
     expect(current_path).to eq(dashboard_path)
   end
