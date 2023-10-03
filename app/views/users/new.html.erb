@@ -1,5 +1,5 @@
 <h2>Please Sign Up Below!</h2>
-<%= form_with model: @user, data: { turbo: false } do |f| %>
+<%= form_with model: @user do |f| %>
   <%= f.label :first_name, 'First Name' %>
   <%= f.text_field :first_name %>
   <br>
