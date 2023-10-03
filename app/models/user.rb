@@ -1,11 +1,10 @@
 class User < ApplicationRecord
   validates_presence_of :first_name, :last_name, allow_nil: true
+  validates_presence_of :google_id, allow_nil: true
+  validates_presence_of :token, allow_nil: true
   validates :email, uniqueness: true, presence: true
   validates :password_digest, presence: true, confirmation: true
   has_secure_password
-
-  validates_presence_of :google_id, allow_nil: true
-  validates_presence_of :token, allow_nil: true
 
   validate do |user|
     user.errors.add(:base, "Invalid Credentials") if user.email.blank?
