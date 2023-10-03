@@ -5,8 +5,10 @@ RSpec.describe User, type: :model do
     it { should validate_presence_of :first_name }
     it { should validate_presence_of :last_name }
     it { should validate_presence_of :email }
+    it { should validate_uniqueness_of :email }
     # it { should validate_presence_of :token }
     # it { should validate_presence_of :google_id }
+    it { should validate_presence_of :password }
   end
 
   describe "unit testing" do
@@ -24,10 +26,10 @@ RSpec.describe User, type: :model do
           refresh_token: "12345abcdefg"
         }
       }
-      User.from_google_auth(auth_info)
-      
+      user = User.from_google_auth(auth_info)
       new_user = User.first
-  
+      # require 'pry'; binding.pry
+
       expect(new_user.google_id).to eq("12345678910")
       expect(new_user.email).to eq("dwilson23@turing.edu")
       expect(new_user.first_name).to eq("Dani")
