@@ -1,0 +1,19 @@
+<h2>Please Sign Up Below!</h2>
+<%= form_with model: @user, data: { turbo: false } do |f| %>
+  <%= f.label :first_name, 'First Name' %>
+  <%= f.text_field :first_name %>
+  <br>
+  <%= f.label :last_name, 'Last Name' %>
+  <%= f.text_field :last_name %>
+  <br>
+  <%= f.label :email, 'Email' %>
+  <%= f.text_field :email %>
+  <br>
+  <%= f.label :password, 'Password' %>
+  <%= f.password_field :password %>
+  <br>
+  <%= f.label :password_confirmation, 'Password Confirmation' %>
+  <%= f.password_field :password_confirmation %>
+  <br>
+  <%= f.submit 'Create Account' %>
+<% end %>
