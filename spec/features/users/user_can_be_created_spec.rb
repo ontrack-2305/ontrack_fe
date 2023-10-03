@@ -38,5 +38,25 @@ RSpec.describe 'User registration form' do
       expect(current_path).to eq(new_user_path)
       expect(page).to have_content("Password confirmation doesn't match Password")
     end
+
+    it 'does not create a new user if email is already taken', :vcr do
+      user1 = User.create!(email: "Jbob@somewhere.com", password: 'password123', password_confirmation: 'password123')
+    
+      visit root_path
+      
+      click_on 'Create an Account'
+      
+      expect(current_path).to eq(new_user_path)
+      
+      fill_in :user_first_name, with: 'John'
+      fill_in :user_last_name, with: 'Doe'
+      fill_in :user_email, with: 'Jbob@somewhere.com'
+      fill_in :user_password, with: 'password'
+      fill_in :user_password_confirmation, with: 'password'
+      click_button 'Create Account'
+
+      expect(current_path).to eq(new_user_path)
+      expect(page).to have_content("Email has already been taken")
+    end
   end
 end
