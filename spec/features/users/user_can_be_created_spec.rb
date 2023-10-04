@@ -5,7 +5,7 @@ RSpec.describe 'User registration form' do
     it 'creates a new user', :vcr do
       visit root_path
       
-      click_on 'Create an Account'
+      click_button 'Create an Account'
       
       expect(current_path).to eq(new_user_path)
       
