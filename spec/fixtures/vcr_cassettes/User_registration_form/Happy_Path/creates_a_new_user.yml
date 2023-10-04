@@ -1636,4 +1636,100 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":[]}'
   recorded_at: Wed, 04 Oct 2023 15:04:42 GMT
+- request:
+    method: get
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/1/daily_tasks/?mood
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 04 Oct 2023 18:02:15 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1696442536&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=QoHy0IjtjVfMGzxSVWghG%2BGE%2F4Yg5gxV2bRjHmPl058%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1696442536&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=QoHy0IjtjVfMGzxSVWghG%2BGE%2F4Yg5gxV2bRjHmPl058%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"10f750c11ff91d77dc2247c90ed72934"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d64e1919-52bc-4758-a962-74bfa549a0a5
+      X-Runtime:
+      - '0.100718'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"435","type":"task","attributes":{"name":"name","category":"rest","mandatory":false,"event_date":"","frequency":"once","user_id":1,"notes":"its
+        a meme","skipped":false,"image_url":"https://ontrack2305.s3.us-west-1.amazonaws.com/e56c5591a895603b5e41c61c0f930d19aa87cfc00f6c77761e8fcd23102d709c.jpg"}},{"id":"431","type":"task","attributes":{"name":"now
+        editing this task''s image","category":"rest","mandatory":false,"event_date":"","frequency":"monthly","user_id":1,"notes":"1.
+        Open image editing software. 2. Import task image. 3. Make necessary edits
+        to the image. 4. Save changes to the image. 5. Close the image editing software.","skipped":false,"image_url":"https://ontrack2305.s3.us-west-1.amazonaws.com/53sbxo.jpg"}},{"id":"434","type":"task","attributes":{"name":"something","category":"rest","mandatory":false,"event_date":"","frequency":"once","user_id":1,"notes":"1.
+        Define the task objectives and requirements. 2. Identify the necessary resources
+        and tools. 3. Break the task into smaller subtasks. 4. Assign specific responsibilities
+        to team members. 5. Set deadlines for each subtask and monitor progress.","skipped":false,"image_url":"https://ontrack2305.s3.us-west-1.amazonaws.com/download.jpeg"}},{"id":"432","type":"task","attributes":{"name":"make
+        a new laundry task","category":"rest","mandatory":false,"event_date":"","frequency":"once","user_id":1,"notes":"1.
+        Sort laundry by color and fabric type. 2. Pre-treat any stains or heavily
+        soiled items. 3. Load the washing machine with the sorted laundry. 4. Add
+        detergent and select appropriate wash cycle. 5. Transfer cleaned laundry to
+        the dryer or hang to dry.","skipped":false,"image_url":"https://ontrack2305.s3.us-west-1.amazonaws.com/plants-silphium-1.jpeg"}},{"id":"423","type":"task","attributes":{"name":"asfdgsfh","category":"rest","mandatory":false,"event_date":"","frequency":"once","user_id":1,"notes":"","skipped":false,"image_url":"https://ontrack2305.s3.us-west-1.amazonaws.com/Screenshot%202023-09-27%20at%208.34.29%20PM.png"}},{"id":"310","type":"task","attributes":{"name":"Luigi99999","category":"chore","mandatory":false,"event_date":"","frequency":"once","user_id":1,"notes":"","skipped":true,"image_url":"https://ontrack2305.s3.us-west-1.amazonaws.com/IMG_2055.jpeg"}},{"id":"317","type":"task","attributes":{"name":"walk","category":"rest","mandatory":true,"event_date":"","frequency":"once","user_id":1,"notes":"","skipped":true,"image_url":"https://ontrack2305.s3.us-west-1.amazonaws.com/761283EE-824B-4150-A536-7A09CAF86F5B.jpg"}},{"id":"315","type":"task","attributes":{"name":"was
+        dog","category":"chore","mandatory":false,"event_date":"","frequency":"once","user_id":1,"notes":"dog
+        is stinky!! he needs wash!!","skipped":true,"image_url":"https://ontrack2305.s3.us-west-1.amazonaws.com/761283EE-824B-4150-A536-7A09CAF86F5B.jpg"}},{"id":"421","type":"task","attributes":{"name":"landry","category":"chore","mandatory":false,"event_date":"","frequency":"once","user_id":1,"notes":"1.
+        Gather dirty laundry from different areas of the house. 2. Sort laundry by
+        color and fabric type. 3. Pre-treat stains or heavily soiled items. 4. Load
+        laundry into the washing machine and add detergent. 5. Start the washing machine
+        and wait for the cycle to complete.","skipped":true,"image_url":"https://ontrack2305.s3.us-west-1.amazonaws.com/Screenshot%202023-09-22%20at%2010.42.24%20AM.png"}},{"id":"420","type":"task","attributes":{"name":"testing
+        testy testy","category":"hobby","mandatory":false,"event_date":"","frequency":"once","user_id":1,"notes":"","skipped":true,"image_url":"https://ontrack2305.s3.us-west-1.amazonaws.com/d743f21b3a277e3b32e8e7fc416149f6.jpg"}},{"id":"422","type":"task","attributes":{"name":"Wash
+        dog","category":"hobby","mandatory":false,"event_date":"","frequency":"once","user_id":1,"notes":"","skipped":true,"image_url":null}},{"id":"314","type":"task","attributes":{"name":"Luigi9898989","category":"rest","mandatory":false,"event_date":"","frequency":"once","user_id":1,"notes":"","skipped":true,"image_url":"https://ontrack2305.s3.us-west-1.amazonaws.com/IMG_2055.jpeg"}},{"id":"1","type":"task","attributes":{"name":"Image
+        test23","category":"rest","mandatory":false,"event_date":"","frequency":"once","user_id":1,"notes":"","skipped":true,"image_url":""}},{"id":"318","type":"task","attributes":{"name":"Wash
+        dog","category":"chore","mandatory":false,"event_date":"","frequency":"once","user_id":1,"notes":"","skipped":true,"image_url":"https://ontrack2305.s3.us-west-1.amazonaws.com/761283EE-824B-4150-A536-7A09CAF86F5B.heic"}},{"id":"8","type":"task","attributes":{"name":"Build
+        catio25","category":"hobby","mandatory":false,"event_date":null,"frequency":"once","user_id":1,"notes":null,"skipped":true,"image_url":"https://ontrack2305.s3.us-west-1.amazonaws.com/IMG_5810.jpeg"}},{"id":"327","type":"task","attributes":{"name":"another
+        task with an image","category":"hobby","mandatory":false,"event_date":"","frequency":"once","user_id":1,"notes":"","skipped":true,"image_url":"https://ontrack2305.s3.us-west-1.amazonaws.com/s-l1200.webp"}},{"id":"329","type":"task","attributes":{"name":"updated
+        task with new image and AI","category":"hobby","mandatory":true,"event_date":"","frequency":"weekly","user_id":1,"notes":"1.
+        Analyze the new image and AI requirements. 2. Identify necessary updates to
+        incorporate the new image and AI. 3. Modify the existing systems to accommodate
+        the new image and AI. 4. Test the updated systems to ensure proper integration
+        and functionality. 5. Finalize the changes and confirm successful implementation.","skipped":true,"image_url":null}},{"id":"433","type":"task","attributes":{"name":"new
+        dish washing task","category":"chore","mandatory":false,"event_date":"","frequency":"once","user_id":1,"notes":"1.
+        Gather dirty dishes and utensils from the sink and countertop. 2. Pre-rinse
+        dishes to remove excess food particles. 3. Load dishwasher with dishes, placing
+        them in an organized manner. 4. Add dishwasher detergent and select appropriate
+        wash cycle. 5. Start dishwasher and let it complete the cleaning cycle.","skipped":true,"image_url":"https://ontrack2305.s3.us-west-1.amazonaws.com/e56c5591a895603b5e41c61c0f930d19aa87cfc00f6c77761e8fcd23102d709c.jpg"}}]}'
+  recorded_at: Wed, 04 Oct 2023 18:02:16 GMT
 recorded_with: VCR 6.2.0
