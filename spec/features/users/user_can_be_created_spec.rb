@@ -58,5 +58,21 @@ RSpec.describe 'User registration form' do
       expect(current_path).to eq(new_user_path)
       expect(page).to have_content("Email has already been taken")
     end
+
+    it 'does not create new user without a password', :vcr do
+      visit root_path
+      
+      click_on 'Create an Account'
+      
+      expect(current_path).to eq(new_user_path)
+      
+      fill_in :user_first_name, with: 'John'
+      fill_in :user_last_name, with: 'Doe'
+      fill_in :user_email, with: 'DoeyJohn@john.com'
+      click_button 'Create Account'
+
+      expect(current_path).to eq(new_user_path)
+      expect(page).to have_content("Password can't be blank")
+    end
   end
 end
