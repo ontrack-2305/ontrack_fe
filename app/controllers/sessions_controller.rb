@@ -7,7 +7,8 @@ class SessionsController < ApplicationController
         flash[:success] = "Welcome, #{user.email}"
         redirect_to dashboard_path
       else
-        flash[:alert] = user.errors.full_messages.join(', ')
+        flash[:alert] = "Sorry, your credentials are bad."
+        redirect_to root_path
       end
     else
       user = User.from_google_auth(request.env['omniauth.auth'])

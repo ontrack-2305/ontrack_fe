@@ -2,6 +2,7 @@
 <% if current_user %>
 <% else %>
   <%= button_to "Log In With Google", "/auth/google_oauth2", data: {turbo: false}, class: "btn btn-secondary rounded-pill" %>
+  <br>
   <%= button_to "Create an Account", new_user_path, method: :get, data: {turbo: false}, class: "btn btn-secondary rounded-pill" %>
   <h4>Already a user? Login below</h4>
   <%= form_with url: login_path, method: :post do |f| %>
