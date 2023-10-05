@@ -101,7 +101,11 @@ RSpec.describe "the user dashboard page", :vcr do
 
       expect(page).to have_content("Take Vitamins")
       expect(page).to have_button("skip")
+      expect(page).to have_css('#skipModal', visible: false)
       click_button("skip")
+      expect(page).to have_css('#skipModal', visible: true)
+
+      click_button "Skip"
       expect(page).to have_content("do the dishes")
       expect(page).to_not have_content("Take Vitamins")
     end
