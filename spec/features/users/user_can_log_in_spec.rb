@@ -39,5 +39,17 @@ RSpec.describe "Logging in" do
       expect(current_path).to eq(root_path)
       expect(page).to have_content("Sorry, your credentials are bad.")
     end
+
+    it "does not log in without a password", :vcr do
+      user1 = User.create!(email: "Jbob@somewhere.com", password: 'password123', password_confirmation: 'password123')
+
+      visit root_path
+      fill_in :email, with: 'Jbob@somewhere.com'
+      fill_in :password, with: ''
+      click_button 'Log In'
+
+      expect(current_path).to eq(root_path)
+      expect(page).to have_content("Sorry, your credentials are bad.")
+    end
   end
 end
