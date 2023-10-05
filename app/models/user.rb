@@ -5,6 +5,7 @@ class User < ApplicationRecord
   validates :email, uniqueness: true, presence: true
   validates :password_digest, presence: true, confirmation: true
   has_secure_password
+  
 
   validate do |user|
     user.errors.add(:base, "Invalid Credentials") if user.email.blank?
@@ -18,7 +19,8 @@ class User < ApplicationRecord
       first_name: auth[:info][:first_name],
       last_name: auth[:info][:last_name],
       token: auth[:credentials][:token],
-      refresh_token: auth[:credentials][:refresh_token]
+      refresh_token: auth[:credentials][:refresh_token],
+      password: SecureRandom.hex(15)
     }
     if user.save
       user
