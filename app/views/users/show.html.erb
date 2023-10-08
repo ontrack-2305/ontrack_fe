@@ -153,7 +153,42 @@
     <%= image_tag("calendar_light.png", class: "img-fluid custom-icons") %>
   </button>
 </div>
-
-
+</div>
+<div id="chat-box">
+  <!-- Messages will be displayed here -->
 </div>
 
+<input type="text" id="message-input" placeholder="Type your message...">
+<button onclick="sendMessage()">Send</button>
+
+<script>
+  // Create the ActionCable consumer
+  const cable = ActionCable.createConsumer('ws://localhost:3000/cable');
+
+  // Set up the subscription
+  const chat = cable.subscriptions.create("ChatChannel", {
+    connected: function() {
+      console.log("Connected to ChatChannel!");
+    },
+    disconnected: function() {
+      console.log("Disconnected from ChatChannel.");
+    },
+    received: function(data) {
+      const chatBox = document.querySelector('#chat-box');
+      const message = JSON.parse(data).message;
+      chatBox.innerHTML += `<p>${message}</p>`;
+    },
+    speak: function(message) {
+      this.perform('speak', { message: message });
+    }
+  });
+
+  function sendMessage() {
+    const messageInput = document.querySelector('#message-input');
+    const message = messageInput.value;
+    if (message.trim() !== "") {
+      chat.speak(message);
+      messageInput.value = ''; // Clear the input
+    }
+  }
+</script>
