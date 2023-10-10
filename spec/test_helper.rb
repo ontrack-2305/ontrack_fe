@@ -1,6 +1,6 @@
 def stub_user
   @user = User.create({id: "123", first_name: "John"})
-  allow(User).to receive(:update_or_create).and_return(@user)
+  allow(User).to receive(:from_google_auth).and_return(@user)
   allow(@user).to receive(:errors).and_return(nil)
   allow(User).to receive(:find_by).and_return(@user)
   allow(User).to receive(:find).and_return(@user)
