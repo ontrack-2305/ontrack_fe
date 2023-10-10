@@ -1,5 +1,47 @@
+<div class="col">
+<div class="float-left">
+<div class="offcanvas offcanvas-start" id="holidays_and_events">
+  <div class="offcanvas-header">
+    <h2 class="offcanvas-title">Upcoming Events</h2>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ol id='calendar_events'>
+      <% if @calendar_events != nil %>
+        <p>Upcoming Events</p>
+          <% @calendar_events.each do |event| %>
+            <li><%= event.name %>, <%= event.start_date %>, <%= event.description %></li>
+          <% end %>
+      <% else %>
+        <%= link_to "Integrate Google Calendar", "/dashboard?calendar=true" %>
+      <% end %>
+    </ol><br><br>
+
+    <ol id='holidays'>
+      <p>Upcoming Holidays</p>
+      <% @holidays.each do |holiday| %>
+        <li><%= holiday.name %>, <%= holiday.date %></li>
+      <% end %>
+    </ol>
+  </div>
+</div>
+</div>
+
+<div class="container-fluid mt-3">
+  <button class="btn icon-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#holidays_and_events">
+    <% if dark_mode_enabled? %>
+      <%= image_tag("calendar_dark.png", class: "img-fluid custom-icons") %>
+    <% else %>
+      <%= image_tag("calendar_light.png", class: "img-fluid custom-icons") %>
+    <% end %>
+  </button>
+</div>
+
+
+</div> 
 
 <div class="row">
+
     <div id="mood_buttons" class="container">
 
       <%= form_tag(dashboard_path, method: :get) do %>
@@ -43,62 +85,76 @@
         </button>
       <% end %>
   </div>
-</div>
 
-<div class="row">
-  <div class="col align-self-center">
-    <div id="postit"  class="container">
-      <div class="row">
-        <div class="position-relative">
-          <% if dark_mode_enabled? %>
-            <%= image_tag("postit_dark_alt.png", class: "mx-auto d-block img-fluid") %>
-          <% else %>
-            <%= image_tag("postit_light.png", class: "mx-auto d-block img-fluid") %>
-          <% end %>
+</div>
+<%
+=begin%>
+ 
+
+
+
+
+
+
+<div class="image-container">
+  <% if dark_mode_enabled? %>
+    <%= image_tag("postit_dark_alt.png", class: "mx-auto d-block img-fluid post-it") %>
+  <% else %>
+    <%= image_tag("postit_light.png", class: "mx-auto d-block img-fluid post-it") %>
+  <% end %>
 
           <div class="text-overlay position-absolute top-0 start-0 d-flex">
 
-<!-- Button to Open the Modal -->
-<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">
-    <%= image_tag("polaroid_light.png", id: "polaroid-btn", class: "img-fluid custom-icons") %>
-
-</button>
-
-<!-- The Modal -->
-<div class="modal" id="myModal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-
-      <!-- Modal Header -->
-      <div class="modal-header">
-        <h4 class="modal-title">Modal Heading</h4>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-
-      <!-- Modal body -->
-      <div class="modal-body">
-        <% if @task && @task.image_url %>  
-      <%= image_tag(@task.image_url, alt: "Uploaded Image", class: "rounded mx-auto d-block image-small img-responsive") %>
+  <div class="row">
+    <!-- Button to Open the Image Modal -->
+    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">
+    <% if dark_mode_enabled? %>
+      <%= image_tag("polaroid_dark.png", id: "polaroid-btn", class: "img-fluid custom-icons") %>
+    <% else %>
+      <%= image_tag("polaroid_light.png", id: "polaroid-btn", class: "img-fluid custom-icons") %>
     <% end %>
-      </div>
+    </button>
 
-      <!-- Modal footer -->
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-      </div>
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
 
-    </div>
-  </div>
-</div>
-
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Modal Heading</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
           </div>
 
+          <!-- Modal body -->
+          <div class="modal-body">
+            <% if @task && @task.image_url %>  
+          <%= image_tag(@task.image_url, alt: "Uploaded Image", class: "rounded mx-auto d-block image-small img-responsive") %>
+        <% end %>
+          </div>
 
-          <div class="position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
-            <% if cookies[:mood] && @task.present? %>
-              <p style="font-family: Chalkduster, fantasy"> <%= @task.name %> </p>
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          </div>
 
-            <% if @task.mandatory == true %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+
+
+
+
+      <div class="position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
+        <% if cookies[:mood] && @task.present? %>
+          <p style="font-family: Chalkduster, fantasy"> <%= @task.name %> </p>
+  </div>
+  <div class="row">
+
+        <% if @task.mandatory == true %>
 
 <!-- Button to Open the Skip Modal -->
 <button type="button" class="btn btn-secondary rounded-pill" data-bs-toggle="modal" data-bs-target="#skipModal">skip</button>
@@ -140,15 +196,23 @@
               <% else %>
                 <%= button_to "completed", task_path(@task.id), method: :patch, params: {completed: true}, class: "btn btn-secondary rounded-pill" %>
               <% end %>
+  </div>
+
             <% else %>
               <p style="font-family: Chalkduster, fantasy"> Please add a task or select a mood ~! </p>
             <% end %>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
+
 </div>
+</div>
+
+
+
+
+
+
+
 
 
 
@@ -188,5 +252,179 @@
 </div>
 
 
+</div> 
+<%
+=end%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+
+
+      <div class="position-relative">
+        <% if dark_mode_enabled? %>
+          <%= image_tag("postit_dark_alt.png", class: "mx-auto d-block img-fluid post-it") %>
+        <% else %>
+          <%= image_tag("postit_light.png", class: "mx-auto d-block img-fluid post-it") %>
+        <% end %>
+
+        <div class="text-overlay position-absolute top-0 start-0 d-flex">
+          <div class="row d-flex align-items-center justify-content-center">
+            <!-- Button to Open the Image Modal -->
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">
+              <% if dark_mode_enabled? %>
+                <%= image_tag("polaroid_dark.png", id: "polaroid-btn", class: "img-fluid custom-icons") %>
+              <% else %>
+                <%= image_tag("polaroid_light.png", id: "polaroid-btn", class: "img-fluid custom-icons") %>
+              <% end %>
+            </button>
+
+            <!-- The Modal -->
+            
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Modal Heading</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <% if @task && @task.image_url %>  
+          <%= image_tag(@task.image_url, alt: "Uploaded Image", class: "rounded mx-auto d-block image-small img-responsive") %>
+        <% end %>
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+          <div class="row d-flex align-items-center justify-content-center mx-auto">
+          <div class="col mt-4 ms-auto">
+            <% if cookies[:mood] && @task.present? %>
+              <p> <%= @task.name %> </p>
+
+        <% if !@task.notes.nil? && @task.notes != "" %>
+
+<!-- Button to Open the Notes Modal -->
+<button type="button" class="btn btn-secondary rounded-pill" data-bs-toggle="modal" data-bs-target="#notesModal">notes</button>
+
+
+<!-- The Modal -->
+<div class="modal fade" id="notesModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Notes on Task</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <%= @task.notes %>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Dismiss</button>
+      </div>
+
+    </div>
+  </div>
 </div>
 
+            <% end %>
+
+        <% if @task.mandatory == true %>
+
+<!-- Button to Open the Skip Modal -->
+<button type="button" class="btn btn-secondary rounded-pill" data-bs-toggle="modal" data-bs-target="#skipModal">skip</button>
+
+
+<!-- The Modal -->
+<div class="modal fade" id="skipModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Confirm Skip</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        This task is marked as mandatory. Are you sure you want to skip it?
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <%= button_to "Skip", task_path(@task.id), method: :patch, params: {skipped: true}, class: "btn btn-secondary" %>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<% else %>
+        <%= button_to "skip", task_path(@task.id), method: :patch, params: {skipped: true}, class: "btn btn-secondary rounded-pill" %>
+
+<% end %>
+
+              <% if @task.frequency == "once" %>
+                <%= button_to "completed", task_path(@task.id), method: :delete, class: "btn btn-secondary rounded-pill" %>
+              <% else %>
+                <%= button_to "completed", task_path(@task.id), method: :patch, params: {completed: true}, class: "btn btn-secondary rounded-pill" %>
+              <% end %>
+  </div>
+
+            <% else %>
+              <p> Please add a task or select a mood ~! </p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+  </div>
+</div>
