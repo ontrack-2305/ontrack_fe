@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 23:06:46 GMT
+      - Fri, 13 Oct 2023 03:31:59 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -41,23 +41,23 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"129959a1fdf972341273461aaa7e5be4"
+      - W/"31a3104598e3b1bd4b7f896573a4f8ec"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7c0e2997-bf93-41c7-b7d2-653e61b31f77
+      - 584e662a-2789-46ac-859f-c704ac8e0b0f
       X-Runtime:
-      - '0.028715'
+      - '0.030581'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"type":"holiday","attributes":{"name":"Columbus Day","date":"2023-10-09"}},{"type":"holiday","attributes":{"name":"Veterans
-        Day","date":"2023-11-10"}},{"type":"holiday","attributes":{"name":"Thanksgiving
-        Day","date":"2023-11-23"}}]}'
-  recorded_at: Wed, 20 Sep 2023 23:06:47 GMT
+      string: '{"data":[{"type":"holiday","attributes":{"name":"Veterans Day","date":"2023-11-10"}},{"type":"holiday","attributes":{"name":"Thanksgiving
+        Day","date":"2023-11-23"}},{"type":"holiday","attributes":{"name":"Christmas
+        Day","date":"2023-12-25"}}]}'
+  recorded_at: Fri, 13 Oct 2023 03:32:00 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/daily_tasks/?mood
@@ -79,7 +79,13 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 23:06:47 GMT
+      - Fri, 13 Oct 2023 03:32:00 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697167920&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=1ws58A7z9QNreQB7ymwjx4UrXAFuY4Ak0bfIhDFH3wc%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1697167920&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=1ws58A7z9QNreQB7ymwjx4UrXAFuY4Ak0bfIhDFH3wc%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -103,9 +109,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 127843a1-ecb3-4d4f-91e7-b2dc7f14eba4
+      - 32989488-6329-4aa5-b553-ad5b1bb73a27
       X-Runtime:
-      - '0.010792'
+      - '0.009750'
       Transfer-Encoding:
       - chunked
       Via:
@@ -113,5 +119,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Wed, 20 Sep 2023 23:06:47 GMT
+  recorded_at: Fri, 13 Oct 2023 03:32:00 GMT
 recorded_with: VCR 6.2.0
