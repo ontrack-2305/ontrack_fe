@@ -196,6 +196,7 @@ RSpec.describe DatabaseService, :vcr do
       parsed = JSON.parse(response.body, symbolize_names: true)
 
       expect(parsed).to have_key(:data)
+      expect(parsed[:data].count).to eq(5)
       expect(parsed[:data][0][:attributes][:name]).to eq("Take Vitamins")
       expect(parsed[:data][0][:attributes][:category]).to eq("chore")
       expect(parsed[:data][0][:attributes][:mandatory]).to eq(true)
@@ -205,9 +206,12 @@ RSpec.describe DatabaseService, :vcr do
       expect(parsed[:data][2][:attributes][:name]).to eq("crochet")
       expect(parsed[:data][2][:attributes][:category]).to eq("hobby")
       expect(parsed[:data][2][:attributes][:mandatory]).to eq(false)
-      expect(parsed[:data][3][:attributes][:name]).to eq("practice juggling")
-      expect(parsed[:data][3][:attributes][:category]).to eq("hobby")
+      expect(parsed[:data][3][:attributes][:name]).to eq("read a book")
+      expect(parsed[:data][3][:attributes][:category]).to eq("rest")
       expect(parsed[:data][3][:attributes][:mandatory]).to eq(false)
+      expect(parsed[:data][4][:attributes][:name]).to eq("practice juggling")
+      expect(parsed[:data][4][:attributes][:category]).to eq("hobby")
+      expect(parsed[:data][4][:attributes][:mandatory]).to eq(false)
     end
   end
 
