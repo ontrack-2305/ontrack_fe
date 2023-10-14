@@ -1,174 +1,6 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks?category=&event_date=2024-04-04&frequency=annual&mandatory=1&name=do%20taxes&notes=Some%20random%20notes&time_needed=60
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Content-Length:
-      - '0'
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Server:
-      - Cowboy
-      Date:
-      - Wed, 20 Sep 2023 23:05:28 GMT
-      Connection:
-      - keep-alive
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Cache-Control:
-      - no-cache
-      X-Request-Id:
-      - 8e3374b8-2f59-4036-87be-40ce26141ba4
-      X-Runtime:
-      - '0.003944'
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: '{"errors":[{"detail":"Validation failed: Category can''t be blank"}]}'
-  recorded_at: Wed, 20 Sep 2023 23:05:28 GMT
-- request:
-    method: post
-    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks?category=&event_date=2024-04-04&frequency=annual&image&mandatory=1&name=do%20taxes&notes=Some%20random%20notes&time_needed=60
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Content-Length:
-      - '0'
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Server:
-      - Cowboy
-      Date:
-      - Fri, 22 Sep 2023 13:52:36 GMT
-      Connection:
-      - keep-alive
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Cache-Control:
-      - no-cache
-      X-Request-Id:
-      - 67e07a39-de2d-4f4a-863c-b901d62131af
-      X-Runtime:
-      - '0.003131'
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: '{"errors":[{"detail":"Validation failed: Category can''t be blank"}]}'
-  recorded_at: Fri, 22 Sep 2023 13:52:36 GMT
-- request:
-    method: post
-    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks?category=&event_date=2024-04-04&frequency=annual&image_url=&mandatory=1&name=do%20taxes&notes=Some%20random%20notes&time_needed=60
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Content-Length:
-      - '0'
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Server:
-      - Cowboy
-      Date:
-      - Sun, 01 Oct 2023 04:16:39 GMT
-      Connection:
-      - keep-alive
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Cache-Control:
-      - no-cache
-      X-Request-Id:
-      - 23ef1739-5564-43b9-b36d-cd224d2c9770
-      X-Runtime:
-      - '0.003375'
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: '{"errors":[{"detail":"Validation failed: Category can''t be blank"}]}'
-  recorded_at: Sun, 01 Oct 2023 04:16:39 GMT
-- request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/holidays
     body:
@@ -189,11 +21,11 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 13 Oct 2023 03:40:59 GMT
+      - Sat, 14 Oct 2023 16:25:14 GMT
       Report-To:
-      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697168459&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=NzOHM3i%2FDCwqmitCVrAmo3w%2BUjuLPqW1jGZgV%2BjuBhA%3D"}]}'
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697300715&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=wTgjRnGBznkBTGpJSj%2FJwiYyn2U%2FhH2t5lTO5h1l%2Fig%3D"}]}'
       Reporting-Endpoints:
-      - heroku-nel=https://nel.heroku.com/reports?ts=1697168459&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=NzOHM3i%2FDCwqmitCVrAmo3w%2BUjuLPqW1jGZgV%2BjuBhA%3D
+      - heroku-nel=https://nel.heroku.com/reports?ts=1697300715&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=wTgjRnGBznkBTGpJSj%2FJwiYyn2U%2FhH2t5lTO5h1l%2Fig%3D
       Nel:
       - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
@@ -219,9 +51,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 35c606f0-aad6-47c4-8cbf-995fc97fa27c
+      - 5fb445cf-6dd2-4cde-bd18-c56cdff41e95
       X-Runtime:
-      - '0.027790'
+      - '0.023997'
       Transfer-Encoding:
       - chunked
       Via:
@@ -231,7 +63,7 @@ http_interactions:
       string: '{"data":[{"type":"holiday","attributes":{"name":"Veterans Day","date":"2023-11-10"}},{"type":"holiday","attributes":{"name":"Thanksgiving
         Day","date":"2023-11-23"}},{"type":"holiday","attributes":{"name":"Christmas
         Day","date":"2023-12-25"}}]}'
-  recorded_at: Fri, 13 Oct 2023 03:40:59 GMT
+  recorded_at: Sat, 14 Oct 2023 16:25:15 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/daily_tasks/?mood
@@ -253,7 +85,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 13 Oct 2023 03:41:00 GMT
+      - Sat, 14 Oct 2023 16:25:15 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -277,9 +109,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e4459c0a-7a79-4cdb-92e4-588a21f7afdc
+      - 59b30623-1823-4b6c-a0e6-b1219f9f0dc4
       X-Runtime:
-      - '0.008778'
+      - '0.008838'
       Transfer-Encoding:
       - chunked
       Via:
@@ -287,7 +119,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Fri, 13 Oct 2023 03:41:00 GMT
+  recorded_at: Sat, 14 Oct 2023 16:25:15 GMT
 - request:
     method: post
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks?category=&event_date=2024-04-04&frequency=annual&image_url=&mandatory=1&name=do%20taxes&notes=Some%20random%20notes
@@ -311,7 +143,13 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 13 Oct 2023 03:41:00 GMT
+      - Sat, 14 Oct 2023 16:25:14 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697300715&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=wTgjRnGBznkBTGpJSj%2FJwiYyn2U%2FhH2t5lTO5h1l%2Fig%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1697300715&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=wTgjRnGBznkBTGpJSj%2FJwiYyn2U%2FhH2t5lTO5h1l%2Fig%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -333,9 +171,9 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - b95a94ab-88a8-4aeb-b730-d27735668d52
+      - 4cf8e69d-3787-43ae-8ba8-b6387b2cd22e
       X-Runtime:
-      - '0.003340'
+      - '0.003061'
       Transfer-Encoding:
       - chunked
       Via:
@@ -343,7 +181,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"errors":[{"detail":"Validation failed: Category can''t be blank"}]}'
-  recorded_at: Fri, 13 Oct 2023 03:41:00 GMT
+  recorded_at: Sat, 14 Oct 2023 16:25:15 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks
@@ -365,7 +203,13 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 13 Oct 2023 03:41:00 GMT
+      - Sat, 14 Oct 2023 16:25:15 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697300715&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=wTgjRnGBznkBTGpJSj%2FJwiYyn2U%2FhH2t5lTO5h1l%2Fig%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1697300715&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=wTgjRnGBznkBTGpJSj%2FJwiYyn2U%2FhH2t5lTO5h1l%2Fig%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -389,9 +233,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2972daca-d87e-4469-9e36-7869c2b1313c
+      - 8efd2022-f2b3-470a-ac88-7ca947b36113
       X-Runtime:
-      - '0.004207'
+      - '0.003597'
       Transfer-Encoding:
       - chunked
       Via:
@@ -399,5 +243,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Fri, 13 Oct 2023 03:41:00 GMT
+  recorded_at: Sat, 14 Oct 2023 16:25:15 GMT
 recorded_with: VCR 6.2.0
