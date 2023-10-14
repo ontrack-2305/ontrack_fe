@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/20/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Repot%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony&time_needed=20
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/20/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Repot%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony
     body:
       encoding: UTF-8
       string: ''
@@ -23,7 +23,13 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 23:04:23 GMT
+      - Sat, 14 Oct 2023 17:18:11 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697303891&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=NSoPlczqoQr3n%2FK3t%2FLPlPJg3itB3UhW138tQD4fpIc%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1697303891&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=NSoPlczqoQr3n%2FK3t%2FLPlPJg3itB3UhW138tQD4fpIc%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -47,9 +53,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d2153174-b541-4ac4-a29d-c54d96a7d989
+      - 40cf3908-b5a5-490a-a441-a20b454623ad
       X-Runtime:
-      - '0.010136'
+      - '0.007236'
       Transfer-Encoding:
       - chunked
       Via:
@@ -57,7 +63,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''Repot Plants'' added!"}'
-  recorded_at: Wed, 20 Sep 2023 23:04:24 GMT
+  recorded_at: Sat, 14 Oct 2023 17:18:11 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/20/tasks
@@ -79,7 +85,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 23:04:24 GMT
+      - Sat, 14 Oct 2023 17:18:11 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -99,25 +105,25 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"959ca479791074ceae80d3b6acd36174"
+      - W/"3c31c59aaa662005fd032bdcdd6143fb"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b6daae1b-7d97-4bdd-8541-c151be25e42b
+      - 212c036e-5517-4acb-abb7-f16130101234
       X-Runtime:
-      - '0.004287'
+      - '0.003946'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"536","type":"task","attributes":{"name":"Repot Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":20,"notes":"Remember
-        plants in bedroom, living room, and balcony","skipped":false}}]}'
-  recorded_at: Wed, 20 Sep 2023 23:04:24 GMT
+      string: '{"data":[{"id":"8","type":"task","attributes":{"name":"Repot Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","user_id":20,"notes":"Remember
+        plants in bedroom, living room, and balcony","skipped":false,"image_url":null}}]}'
+  recorded_at: Sat, 14 Oct 2023 17:18:11 GMT
 - request:
     method: get
-    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/20/tasks/536
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/20/tasks/8
     body:
       encoding: US-ASCII
       string: ''
@@ -136,7 +142,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 23:04:24 GMT
+      - Sat, 14 Oct 2023 17:18:11 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -156,22 +162,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"a1c9be78763e8e1a51bfbd6bb2bf3b11"
+      - W/"42dd80ee9ced70a461a7781ff314d56d"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 539760c1-eb87-4103-9d40-18f897555e04
+      - a259126b-6042-41c2-a9eb-1b4cb954a6dc
       X-Runtime:
-      - '0.004847'
+      - '0.003327'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"536","type":"task","attributes":{"name":"Repot Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":20,"notes":"Remember
-        plants in bedroom, living room, and balcony","skipped":false}}}'
-  recorded_at: Wed, 20 Sep 2023 23:04:24 GMT
+      string: '{"data":{"id":"8","type":"task","attributes":{"name":"Repot Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","user_id":20,"notes":"Remember
+        plants in bedroom, living room, and balcony","skipped":false,"image_url":null}}}'
+  recorded_at: Sat, 14 Oct 2023 17:18:12 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/20/tasks
@@ -193,7 +199,13 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 23:04:24 GMT
+      - Sat, 14 Oct 2023 17:18:11 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697303892&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=hWE4D5eYOfLPGl%2BO0qqzEDKN1V2rucBYAK%2F1okuYg0Q%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1697303892&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=hWE4D5eYOfLPGl%2BO0qqzEDKN1V2rucBYAK%2F1okuYg0Q%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -213,25 +225,25 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"959ca479791074ceae80d3b6acd36174"
+      - W/"3c31c59aaa662005fd032bdcdd6143fb"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 39741a98-1201-4e83-a3e3-7099fd9d2172
+      - 3d954278-41ed-4bdc-a38b-dfeb742f1141
       X-Runtime:
-      - '0.004784'
+      - '0.004263'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"536","type":"task","attributes":{"name":"Repot Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","time_needed":20,"user_id":20,"notes":"Remember
-        plants in bedroom, living room, and balcony","skipped":false}}]}'
-  recorded_at: Wed, 20 Sep 2023 23:04:25 GMT
+      string: '{"data":[{"id":"8","type":"task","attributes":{"name":"Repot Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","user_id":20,"notes":"Remember
+        plants in bedroom, living room, and balcony","skipped":false,"image_url":null}}]}'
+  recorded_at: Sat, 14 Oct 2023 17:18:12 GMT
 - request:
     method: delete
-    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/20/tasks/536
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/20/tasks/8
     body:
       encoding: US-ASCII
       string: ''
@@ -250,7 +262,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 23:04:24 GMT
+      - Sat, 14 Oct 2023 17:18:12 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -274,9 +286,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3276a473-ac4d-4871-a8a5-8f1543849bb8
+      - 2081b524-4412-41ef-93f1-9f5215ae22d7
       X-Runtime:
-      - '0.009449'
+      - '0.007349'
       Transfer-Encoding:
       - chunked
       Via:
@@ -284,63 +296,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''Repot Plants'' deleted."}'
-  recorded_at: Wed, 20 Sep 2023 23:04:25 GMT
-- request:
-    method: post
-    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/20/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Repot%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Content-Length:
-      - '0'
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 201
-      message: Created
-    headers:
-      Server:
-      - Cowboy
-      Date:
-      - Sun, 01 Oct 2023 21:15:21 GMT
-      Connection:
-      - keep-alive
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"b0ac0dd06b5cd52efa10a017ab4954f2"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 03df1e5b-40ef-4a17-b53e-4ad222268025
-      X-Runtime:
-      - '0.008939'
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: '{"message":"''Repot Plants'' added!"}'
-  recorded_at: Sun, 01 Oct 2023 21:15:22 GMT
+  recorded_at: Sat, 14 Oct 2023 17:18:12 GMT
 recorded_with: VCR 6.2.0

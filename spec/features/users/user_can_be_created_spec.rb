@@ -13,6 +13,9 @@ RSpec.describe 'User registration form' do
       fill_in :user_email, with: 'John@imjohn.com'
       fill_in :user_password, with: 'password'
       fill_in :user_password_confirmation, with: 'password'
+
+      allow_any_instance_of(TasksFacade).to receive(:task_by_mood).and_return(nil)
+
       click_button 'Create Account'
       
       expect(current_path).to eq(dashboard_path)
@@ -38,7 +41,7 @@ RSpec.describe 'User registration form' do
     end
 
     it 'does not create a new user if email is already taken', :vcr do
-      user1 = User.create!(email: "Jbob@somewhere.com", password: 'password123', password_confirmation: 'password123')
+      user1 = User.create!(email: "Jbob@somewhere.com", password: 'password123', password_confirmation: 'password123', id: "123")
     
       visit root_path
       click_on 'Create an Account'

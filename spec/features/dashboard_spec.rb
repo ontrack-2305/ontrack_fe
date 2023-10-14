@@ -6,10 +6,15 @@ RSpec.describe "the user dashboard page", :vcr do
   before(:each) do
     @facade = TasksFacade.new
     stub_user
+
+    tasks = @facade.get_tasks(@user.id)
+      tasks.each do |task|
+        @facade.delete(task.id, @user.id)
+      end
+
     stub_omniauth
     visit root_path
     click_button "Log In With Google"
-
     @facade.post({"name"=>"Take Vitamins",
       "category"=>"chore",
       "mandatory"=>"1",
@@ -62,12 +67,12 @@ RSpec.describe "the user dashboard page", :vcr do
       @dishes = tasks.last
     end
 
-    after(:each) do
-      tasks = @facade.get_tasks(@user.id)
-      tasks.each do |task|
-        @facade.delete(task.id, @user.id)
-      end
-    end
+    # after(:each) do
+    #   tasks = @facade.get_tasks(@user.id)
+    #   tasks.each do |task|
+    #     @facade.delete(task.id, @user.id)
+    #   end
+    # end
 
     it "displays a mood button for 'meh', 'good', and 'bad' days" do
       page.has_css?("good_button")
@@ -137,9 +142,9 @@ RSpec.describe "the user dashboard page", :vcr do
     it "displays a list of upcoming holidays" do
       within("#holidays") do
         expect(page).to have_content("Upcoming Holidays")
-        expect(page).to have_content("Columbus Day")
         expect(page).to have_content("Veterans Day")
         expect(page).to have_content("Thanksgiving Day")
+        expect(page).to have_content("Christmas Day")
       end
     end
 end

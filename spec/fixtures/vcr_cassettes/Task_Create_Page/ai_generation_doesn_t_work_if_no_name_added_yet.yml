@@ -21,7 +21,13 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 23:05:37 GMT
+      - Sat, 14 Oct 2023 17:19:35 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697303976&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=5EnO1CKPmih1Pj5ZFlHCL5sOD1dP7%2FtpKqNGYRryqdI%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1697303976&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=5EnO1CKPmih1Pj5ZFlHCL5sOD1dP7%2FtpKqNGYRryqdI%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -41,23 +47,23 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"129959a1fdf972341273461aaa7e5be4"
+      - W/"31a3104598e3b1bd4b7f896573a4f8ec"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - edb98509-1929-45a6-b7bb-7113ea33a251
+      - f03a9403-136e-40ea-b594-0c5ef09b63eb
       X-Runtime:
-      - '0.022882'
+      - '0.032359'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"type":"holiday","attributes":{"name":"Columbus Day","date":"2023-10-09"}},{"type":"holiday","attributes":{"name":"Veterans
-        Day","date":"2023-11-10"}},{"type":"holiday","attributes":{"name":"Thanksgiving
-        Day","date":"2023-11-23"}}]}'
-  recorded_at: Wed, 20 Sep 2023 23:05:37 GMT
+      string: '{"data":[{"type":"holiday","attributes":{"name":"Veterans Day","date":"2023-11-10"}},{"type":"holiday","attributes":{"name":"Thanksgiving
+        Day","date":"2023-11-23"}},{"type":"holiday","attributes":{"name":"Christmas
+        Day","date":"2023-12-25"}}]}'
+  recorded_at: Sat, 14 Oct 2023 17:19:36 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/daily_tasks/?mood
@@ -79,7 +85,13 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 23:05:37 GMT
+      - Sat, 14 Oct 2023 17:19:36 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697303976&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=5EnO1CKPmih1Pj5ZFlHCL5sOD1dP7%2FtpKqNGYRryqdI%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1697303976&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=5EnO1CKPmih1Pj5ZFlHCL5sOD1dP7%2FtpKqNGYRryqdI%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -103,9 +115,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 419e63eb-0ece-465e-8ea1-0c5c8282dbfb
+      - 823e499a-ec0d-42a1-b21d-e17ca59972b0
       X-Runtime:
-      - '0.010586'
+      - '0.008848'
       Transfer-Encoding:
       - chunked
       Via:
@@ -113,7 +125,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Wed, 20 Sep 2023 23:05:37 GMT
+  recorded_at: Sat, 14 Oct 2023 17:19:36 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/chat_service?task=
@@ -135,7 +147,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 23:05:37 GMT
+      - Sat, 14 Oct 2023 17:19:36 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -157,9 +169,9 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 8ee3920f-8a2e-40cc-aef0-08898a509238
+      - dae967ff-a4d4-4105-8d1e-f5b787cf9e88
       X-Runtime:
-      - '0.001305'
+      - '0.001655'
       Transfer-Encoding:
       - chunked
       Via:
@@ -167,7 +179,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"errors":[{"detail":"No task provided to breakdown"}]}'
-  recorded_at: Wed, 20 Sep 2023 23:05:38 GMT
+  recorded_at: Sat, 14 Oct 2023 17:19:36 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks
@@ -189,7 +201,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 20 Sep 2023 23:05:37 GMT
+      - Sat, 14 Oct 2023 17:19:36 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -213,9 +225,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0270b2be-1e18-4efe-bf56-4a35d01d8f6c
+      - 5b098e64-19b8-4da1-9f64-b251a77e6705
       X-Runtime:
-      - '0.005194'
+      - '0.003521'
       Transfer-Encoding:
       - chunked
       Via:
@@ -223,5 +235,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Wed, 20 Sep 2023 23:05:38 GMT
+  recorded_at: Sat, 14 Oct 2023 17:19:37 GMT
 recorded_with: VCR 6.2.0
