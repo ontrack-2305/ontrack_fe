@@ -1,3 +1,66 @@
+<style>
+  #chat-box {
+    border: 1px solid #ccc;
+    height: 300px;
+    width: 80%;
+    margin: 20px auto;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+
+  .message {
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #e1f5fe;
+    border: 1px solid #b3e5fc;
+  }
+</style>
+
+<div id="chat-box">
+  <!-- Messages will be displayed here -->
+</div>
+
+<script>
+  const cable = ActionCable.createConsumer('ws://localhost:3000/cable');
+
+  // Set up the subscription
+  const chat = cable.subscriptions.create("ChatChannel", {
+    connected: function() {
+      console.log("Connected to ChatChannel!");
+      
+      // When connected, request to start the loop
+      this.start();
+    },
+    disconnected: function() {
+      console.log("Disconnected from ChatChannel.");
+    },
+    received: function(data) {
+      const chatBox = document.querySelector('#chat-box');
+      console.log("Received function activated");
+      console.log(data);
+      if (data) {
+        
+        // Create a new paragraph element for each message and append it to the chat box
+        const messageElement = document.createElement('p');
+        messageElement.textContent = data;
+        chatBox.appendChild(messageElement);
+      }
+    },
+    start: function() {
+      // Send a request to the server to start the loop
+      this.perform('start');
+    },
+    notification: function(content) {
+      // Handle notification data when received from the server
+      console.log(`Received notification: ${content}`);
+      // You can update the UI or perform any other actions here
+    }
+  });
+</script>
 
 <div class="row">
     <div id="mood_buttons" class="container">
@@ -156,41 +219,5 @@
 </div>
 
 
-<div id="chat-box">
-  <!-- Messages will be displayed here -->
-</div>
 
-<input type="text" id="message-input" placeholder="Type your message...">
-<button onclick="sendMessage()">Send</button>
 
-<script>
-  // Create the ActionCable consumer
-  const cable = ActionCable.createConsumer('ws://localhost:3000/cable');
-
-  // Set up the subscription
-  const chat = cable.subscriptions.create("ChatChannel", {
-    connected: function() {
-      console.log("Connected to ChatChannel!");
-    },
-    disconnected: function() {
-      console.log("Disconnected from ChatChannel.");
-    },
-    received: function(data) {
-      const chatBox = document.querySelector('#chat-box');
-      const message = JSON.parse(data).message;
-      chatBox.innerHTML += `<p>${message}</p>`;
-    },
-    speak: function(message) {
-      this.perform('speak', { message: message });
-    }
-  });
-
-  function sendMessage() {
-    const messageInput = document.querySelector('#message-input');
-    const message = messageInput.value;
-    if (message.trim() !== "") {
-      chat.speak(message);
-      messageInput.value = ''; // Clear the input
-    }
-  }
-</script>
