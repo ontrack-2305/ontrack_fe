@@ -120,8 +120,8 @@
 }
 
 .image-smallest {
-  height: 25px;
-  width: auto;
+  width: 50px;
+  height: auto;
 }
 
 .modal-image {
@@ -140,42 +140,6 @@
   width: 100%;
   height: auto;
   display: block;
-}
-
-
-$position-values: (
-  "top-0": 0,
-  "start-0": 0,
-  "top-50": 50%,
-  "start-50": 50%,
-  "bottom-0": 100%, // Added entry
-  "end-0": 100%,    // Added entry
-  "center": 50%     // Added entry for center
-  "top-20": 20%,
-  "start-75": 75%,
-);
-
-@mixin position-values($property, $value) {
-  @each $key, $position in $position-values {
-    .#{$property}-#{$key} {
-      #{$property}: $position + $value;
-    }
-  }
-}
-
-.maintxt {
-  @include position-values(top, 0);
-  @include position-values(start, 0);
-}
-
-.overlay-text {
-  @include position-values(top, 50%);
-  @include position-values(start, 50%);
-  @include position-values(top, 20%);
-  @include position-values(start, 75%);
-  @include position-values(top, 0); // Center vertically
-  @include position-values(start, 0); // Center horizontally
-  // Add more positions if needed
 }
 
 .task-image-div {
