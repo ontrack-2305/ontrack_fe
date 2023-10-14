@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:24:32 GMT
+      - Sat, 14 Oct 2023 17:18:21 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -41,24 +41,24 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"8d3153b68d9668571fcc580491f0fc25"
+      - W/"c4e41473a1cbc92ae92fee69164d7572"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 814d926b-1ef2-41cf-bdad-5066726f200b
+      - a93f867c-3ac2-4737-9270-19b22db484e1
       X-Runtime:
-      - '6.470653'
+      - '7.781610'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"response":[{"text":"1. Gather watering can and necessary tools. 2.
-        Check plants'' watering needs and schedule. 3. Fill watering can with appropriate
-        amount of water. 4. Water plants thoroughly, ensuring all areas are covered.
-        5. Dispose of excess water and store tools."}]}'
-  recorded_at: Sat, 14 Oct 2023 16:24:33 GMT
+      string: '{"response":[{"text":"1. Gather necessary materials (watering can,
+        plants). 2. Check soil moisture level for each plant. 3. Pour appropriate
+        amount of water into each plant''s soil. 4. Ensure excess water drains out
+        of pots. 5. Clean up any spills or messes."}]}'
+  recorded_at: Sat, 14 Oct 2023 17:18:21 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/chat_service?task=
@@ -80,13 +80,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:24:33 GMT
-      Report-To:
-      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697300673&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=T%2BPvFPQCOCyDwySZ1jffOjLQvkTqP2z4ijCH52n76IU%3D"}]}'
-      Reporting-Endpoints:
-      - heroku-nel=https://nel.heroku.com/reports?ts=1697300673&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=T%2BPvFPQCOCyDwySZ1jffOjLQvkTqP2z4ijCH52n76IU%3D
-      Nel:
-      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      - Sat, 14 Oct 2023 17:18:21 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -108,9 +102,9 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - bb6ac6c7-5c09-4fa7-9846-ca200010cbe5
+      - 21fd6be6-a0a3-4c35-a60f-0916937af181
       X-Runtime:
-      - '0.001413'
+      - '0.001648'
       Transfer-Encoding:
       - chunked
       Via:
@@ -118,7 +112,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"errors":[{"detail":"No task provided to breakdown"}]}'
-  recorded_at: Sat, 14 Oct 2023 16:24:33 GMT
+  recorded_at: Sat, 14 Oct 2023 17:18:22 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/20/tasks
@@ -140,11 +134,11 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:24:33 GMT
+      - Sat, 14 Oct 2023 17:18:21 GMT
       Report-To:
-      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697300673&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=T%2BPvFPQCOCyDwySZ1jffOjLQvkTqP2z4ijCH52n76IU%3D"}]}'
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697303902&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=a2F%2FvB5DwkD4VfMG9YuDFKqOeQzewp9iyu42s%2BFBmgU%3D"}]}'
       Reporting-Endpoints:
-      - heroku-nel=https://nel.heroku.com/reports?ts=1697300673&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=T%2BPvFPQCOCyDwySZ1jffOjLQvkTqP2z4ijCH52n76IU%3D
+      - heroku-nel=https://nel.heroku.com/reports?ts=1697303902&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=a2F%2FvB5DwkD4VfMG9YuDFKqOeQzewp9iyu42s%2BFBmgU%3D
       Nel:
       - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
@@ -170,9 +164,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 242cbcbf-197f-4827-9f5a-fb0aba53e27f
+      - b19b08d0-3986-4c8d-a2d3-a90d2aa5fcf5
       X-Runtime:
-      - '0.003030'
+      - '0.003685'
       Transfer-Encoding:
       - chunked
       Via:
@@ -180,5 +174,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Sat, 14 Oct 2023 16:24:33 GMT
+  recorded_at: Sat, 14 Oct 2023 17:18:22 GMT
 recorded_with: VCR 6.2.0

@@ -21,11 +21,11 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:25:13 GMT
+      - Sat, 14 Oct 2023 17:19:00 GMT
       Report-To:
-      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697300714&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=EIrDksrlQCJT5JRCl1Mpge6vJANZzErNJ66Ry%2Fac3qE%3D"}]}'
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697303941&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=x%2BPVHkBzWDBwVk102pJYZsciiE19PokxHribFYrvY9A%3D"}]}'
       Reporting-Endpoints:
-      - heroku-nel=https://nel.heroku.com/reports?ts=1697300714&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=EIrDksrlQCJT5JRCl1Mpge6vJANZzErNJ66Ry%2Fac3qE%3D
+      - heroku-nel=https://nel.heroku.com/reports?ts=1697303941&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=x%2BPVHkBzWDBwVk102pJYZsciiE19PokxHribFYrvY9A%3D
       Nel:
       - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
@@ -51,9 +51,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 43fbac62-7433-4cd4-9853-5af00f1969b6
+      - afe2091b-006d-40d9-8dc0-23d6c3e53abe
       X-Runtime:
-      - '0.022295'
+      - '0.024608'
       Transfer-Encoding:
       - chunked
       Via:
@@ -63,7 +63,7 @@ http_interactions:
       string: '{"data":[{"type":"holiday","attributes":{"name":"Veterans Day","date":"2023-11-10"}},{"type":"holiday","attributes":{"name":"Thanksgiving
         Day","date":"2023-11-23"}},{"type":"holiday","attributes":{"name":"Christmas
         Day","date":"2023-12-25"}}]}'
-  recorded_at: Sat, 14 Oct 2023 16:25:14 GMT
+  recorded_at: Sat, 14 Oct 2023 17:19:01 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/daily_tasks/?mood
@@ -85,7 +85,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:25:13 GMT
+      - Sat, 14 Oct 2023 17:19:00 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -109,9 +109,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 15877b09-ca6d-43c8-90b1-4f9106f879c1
+      - 383dc673-375e-4516-b9b7-2c0b3bedca26
       X-Runtime:
-      - '0.008107'
+      - '0.008693'
       Transfer-Encoding:
       - chunked
       Via:
@@ -119,7 +119,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Sat, 14 Oct 2023 16:25:14 GMT
+  recorded_at: Sat, 14 Oct 2023 17:19:01 GMT
 - request:
     method: post
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks?category=&event_date=&frequency=weekly&image_url=&mandatory=0&name=&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony
@@ -143,13 +143,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:25:13 GMT
-      Report-To:
-      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697300714&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=EIrDksrlQCJT5JRCl1Mpge6vJANZzErNJ66Ry%2Fac3qE%3D"}]}'
-      Reporting-Endpoints:
-      - heroku-nel=https://nel.heroku.com/reports?ts=1697300714&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=EIrDksrlQCJT5JRCl1Mpge6vJANZzErNJ66Ry%2Fac3qE%3D
-      Nel:
-      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      - Sat, 14 Oct 2023 17:19:01 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -171,9 +165,9 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 83d93f43-859f-412d-8e0e-bf85bb83766c
+      - 64c48c02-f975-46c9-b9c8-76306b7e8cf7
       X-Runtime:
-      - '0.003083'
+      - '0.003935'
       Transfer-Encoding:
       - chunked
       Via:
@@ -182,7 +176,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"errors":[{"detail":"Validation failed: Name can''t be blank, Category
         can''t be blank"}]}'
-  recorded_at: Sat, 14 Oct 2023 16:25:14 GMT
+  recorded_at: Sat, 14 Oct 2023 17:19:01 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks
@@ -204,7 +198,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:25:14 GMT
+      - Sat, 14 Oct 2023 17:19:00 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -228,9 +222,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8807938f-86ec-4a08-b016-fcef24e480c9
+      - 55b9b71b-b10a-4bad-ba60-a3a03a09d646
       X-Runtime:
-      - '0.003185'
+      - '0.003459'
       Transfer-Encoding:
       - chunked
       Via:
@@ -238,5 +232,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Sat, 14 Oct 2023 16:25:14 GMT
+  recorded_at: Sat, 14 Oct 2023 17:19:01 GMT
 recorded_with: VCR 6.2.0

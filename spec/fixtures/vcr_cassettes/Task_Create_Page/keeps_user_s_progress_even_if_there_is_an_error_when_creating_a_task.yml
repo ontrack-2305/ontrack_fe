@@ -21,13 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:25:14 GMT
-      Report-To:
-      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697300715&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=wTgjRnGBznkBTGpJSj%2FJwiYyn2U%2FhH2t5lTO5h1l%2Fig%3D"}]}'
-      Reporting-Endpoints:
-      - heroku-nel=https://nel.heroku.com/reports?ts=1697300715&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=wTgjRnGBznkBTGpJSj%2FJwiYyn2U%2FhH2t5lTO5h1l%2Fig%3D
-      Nel:
-      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      - Sat, 14 Oct 2023 17:19:01 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -51,9 +45,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 5fb445cf-6dd2-4cde-bd18-c56cdff41e95
+      - 276366dc-0963-431d-80b9-2e2afafdf304
       X-Runtime:
-      - '0.023997'
+      - '0.025296'
       Transfer-Encoding:
       - chunked
       Via:
@@ -63,7 +57,7 @@ http_interactions:
       string: '{"data":[{"type":"holiday","attributes":{"name":"Veterans Day","date":"2023-11-10"}},{"type":"holiday","attributes":{"name":"Thanksgiving
         Day","date":"2023-11-23"}},{"type":"holiday","attributes":{"name":"Christmas
         Day","date":"2023-12-25"}}]}'
-  recorded_at: Sat, 14 Oct 2023 16:25:15 GMT
+  recorded_at: Sat, 14 Oct 2023 17:19:02 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/daily_tasks/?mood
@@ -85,7 +79,13 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:25:15 GMT
+      - Sat, 14 Oct 2023 17:19:01 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697303942&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=N0t3pmFUljBhPsX%2BxX4ACt9upe3XJ7icdRpy%2BIW%2FkyI%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1697303942&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=N0t3pmFUljBhPsX%2BxX4ACt9upe3XJ7icdRpy%2BIW%2FkyI%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -109,9 +109,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 59b30623-1823-4b6c-a0e6-b1219f9f0dc4
+      - f1d51486-5e30-4f20-91df-fd5c34d861b7
       X-Runtime:
-      - '0.008838'
+      - '0.009510'
       Transfer-Encoding:
       - chunked
       Via:
@@ -119,7 +119,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Sat, 14 Oct 2023 16:25:15 GMT
+  recorded_at: Sat, 14 Oct 2023 17:19:02 GMT
 - request:
     method: post
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks?category=&event_date=2024-04-04&frequency=annual&image_url=&mandatory=1&name=do%20taxes&notes=Some%20random%20notes
@@ -143,13 +143,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:25:14 GMT
-      Report-To:
-      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697300715&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=wTgjRnGBznkBTGpJSj%2FJwiYyn2U%2FhH2t5lTO5h1l%2Fig%3D"}]}'
-      Reporting-Endpoints:
-      - heroku-nel=https://nel.heroku.com/reports?ts=1697300715&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=wTgjRnGBznkBTGpJSj%2FJwiYyn2U%2FhH2t5lTO5h1l%2Fig%3D
-      Nel:
-      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      - Sat, 14 Oct 2023 17:19:02 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -171,9 +165,9 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 4cf8e69d-3787-43ae-8ba8-b6387b2cd22e
+      - 78786435-1a07-4cc4-b748-be5a5b47c140
       X-Runtime:
-      - '0.003061'
+      - '0.003300'
       Transfer-Encoding:
       - chunked
       Via:
@@ -181,7 +175,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"errors":[{"detail":"Validation failed: Category can''t be blank"}]}'
-  recorded_at: Sat, 14 Oct 2023 16:25:15 GMT
+  recorded_at: Sat, 14 Oct 2023 17:19:02 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks
@@ -203,11 +197,11 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:25:15 GMT
+      - Sat, 14 Oct 2023 17:19:02 GMT
       Report-To:
-      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697300715&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=wTgjRnGBznkBTGpJSj%2FJwiYyn2U%2FhH2t5lTO5h1l%2Fig%3D"}]}'
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697303942&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=N0t3pmFUljBhPsX%2BxX4ACt9upe3XJ7icdRpy%2BIW%2FkyI%3D"}]}'
       Reporting-Endpoints:
-      - heroku-nel=https://nel.heroku.com/reports?ts=1697300715&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=wTgjRnGBznkBTGpJSj%2FJwiYyn2U%2FhH2t5lTO5h1l%2Fig%3D
+      - heroku-nel=https://nel.heroku.com/reports?ts=1697303942&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=N0t3pmFUljBhPsX%2BxX4ACt9upe3XJ7icdRpy%2BIW%2FkyI%3D
       Nel:
       - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
@@ -233,9 +227,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8efd2022-f2b3-470a-ac88-7ca947b36113
+      - a337bbb7-9837-484a-93d1-9ee6d91f563d
       X-Runtime:
-      - '0.003597'
+      - '0.004712'
       Transfer-Encoding:
       - chunked
       Via:
@@ -243,5 +237,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Sat, 14 Oct 2023 16:25:15 GMT
+  recorded_at: Sat, 14 Oct 2023 17:19:02 GMT
 recorded_with: VCR 6.2.0

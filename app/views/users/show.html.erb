@@ -89,126 +89,59 @@
   </div>
 </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-6 mx-auto">
-      <div class="position-relative">
 
-        <% if dark_mode_enabled? %>
-          <%= image_tag("postit_dark_alt.png", class: "mx-auto d-block img-fluid post-it") %>
-        <% else %>
-          <%= image_tag("postit_light.png", class: "mx-auto d-block img-fluid post-it") %>
-        <% end %>
+<div class="container d-flex align-items-center justify-content-center">
 
-        <div class="text-overlay position-absolute top-0 start-0 d-flex">
-          <div class="row d-flex align-items-center justify-content-center">
+        <div class="col-xs-12 col-sm-6 col-md-8 mx-auto position-relative text-center">
+            <div class="maintxt text-center">
 
-            <!-- Button to Open the Image Modal -->
-            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">
-              <% if dark_mode_enabled? %>
-                <%= image_tag("polaroid_dark.png", id: "polaroid-btn", class: "img-fluid custom-icons") %>
-              <% else %>
-                <%= image_tag("polaroid_light.png", id: "polaroid-btn", class: "img-fluid custom-icons") %>
-              <% end %>
-            </button>
 
-            <!-- The Modal -->
-            <div class="modal" id="myModal">
-              <div class="modal-dialog">
-                <div class="modal-content">
+                <% if dark_mode_enabled? %>
+                  <%= image_tag("postit_dark_alt.png", class: "img-fluid") %>
+                <% else %>
+                  <%= image_tag("postit_light.png", class: "img-fluid") %>
+                <% end %>
 
-                  <!-- Modal Header -->
-                  <div class="modal-header">
-                    <h4 class="modal-title">Modal Heading</h4>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                  </div>
 
-                  <!-- Modal body -->
-                  <div class="modal-body">
-                    <% if @task && @task.image_url %>  
-                      <%= image_tag(@task.image_url, alt: "Uploaded Image", class: "rounded mx-auto d-block image-small img-responsive") %>
-                    <% end %>
-                  </div>
+            
 
-                  <!-- Modal footer -->
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                  </div>
 
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <div class="row d-flex align-items-center justify-content-center mx-auto">
-            <div class="col mt-4 ms-auto">
-              <% if cookies[:mood] && @task.present? %>
+
+
+                <span class="overlay-text position-absolute top-50 start-50 translate-middle">
+                
+
+
+                
+
+            
+
+
+
+<% if cookies[:mood] && @task.present? %>
                 <p> <%= @task.name %> </p>
+
+<p>
+                <% if !@task.image_url.nil? && @task.image_url != "" %>
+                <!-- Button to Open the Image Modal -->
+                <button type="button" data-bs-toggle="modal" data-bs-target="#myModal">
+                    <%= image_tag(@task.image_url, alt: "Uploaded Image", class: "rounded img-fluid", style: "max-height: 100px;") %>
+                </button>
+                <% end %>
+
 
                 <% if !@task.notes.nil? && @task.notes != "" %>
 
                   <!-- Button to Open the Notes Modal -->
-                  <button type="button" class="btn btn-secondary rounded-pill" data-bs-toggle="modal" data-bs-target="#notesModal">notes</button>
-
-
-                  <!-- The Modal -->
-                  <div class="modal fade" id="notesModal">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-
-                        <!-- Modal Header -->
-                        <div class="modal-header">
-                          <h4 class="modal-title">Notes on Task</h4>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-
-                        <!-- Modal body -->
-                        <div class="modal-body">
-                          <%= @task.notes %>
-                        </div>
-
-                        <!-- Modal footer -->
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Dismiss</button>
-                        </div>
-
-                      </div>
-                    </div>
-                  </div>
-
+                  <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#notesModal">notes</button>
                 <% end %>
-
+</p>
+<p>
                 <% if @task.mandatory == true %>
 
                   <!-- Button to Open the Skip Modal -->
                   <button type="button" class="btn btn-secondary rounded-pill" data-bs-toggle="modal" data-bs-target="#skipModal">skip</button>
-
-
-                  <!-- The Modal -->
-                  <div class="modal fade" id="skipModal">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-
-                        <!-- Modal Header -->
-                        <div class="modal-header">
-                          <h4 class="modal-title">Confirm Skip</h4>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-
-                        <!-- Modal body -->
-                        <div class="modal-body">
-                          This task is marked as mandatory. Are you sure you want to skip it?
-                        </div>
-
-                        <!-- Modal footer -->
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                          <%= button_to "Skip", task_path(@task.id), method: :patch, params: {skipped: true}, class: "btn btn-secondary" %>
-                        </div>
-
-                      </div>
-                    </div>
-                  </div>
 
                 <% else %>
                   <%= button_to "skip", task_path(@task.id), method: :patch, params: {skipped: true}, class: "btn btn-secondary rounded-pill" %>
@@ -219,14 +152,110 @@
                 <% else %>
                   <%= button_to "completed", task_path(@task.id), method: :patch, params: {completed: true}, class: "btn btn-secondary rounded-pill" %>
                 <% end %>
+</p>
+                </span>
+
+<!-- The Image Modal -->
+            <div class="modal" id="myModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+
+                  <!-- Image Modal Header -->
+                  <div class="modal-header">
+                    <h4 class="modal-title">Modal Heading</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+
+                  <!-- Image Modal body -->
+                  <div class="modal-body">
+                    <% if @task && @task.image_url %>  
+                      <%= image_tag(@task.image_url, alt: "Uploaded Image", class: "rounded mx-auto d-block image-small img-responsive") %>
+                    <% end %>
+                  </div>
+
+                  <!-- Image Modal footer -->
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            
+
+<!-- The Notes Modal -->
+                  <div class="modal fade" id="notesModal">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+
+                        <!-- Notes Modal Header -->
+                        <div class="modal-header">
+                          <h4 class="modal-title">Notes on Task</h4>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <!-- Notes Modal body -->
+                        <div class="modal-body">
+                          <%= @task.notes %>
+                        </div>
+
+                        <!-- Notes Modal footer -->
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Dismiss</button>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+
+<!-- The Skip Modal -->
+                  <div class="modal fade" id="skipModal">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+
+                        <!-- Skip Modal Header -->
+                        <div class="modal-header">
+                          <h4 class="modal-title">Confirm Skip</h4>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <!-- Skip Modal body -->
+                        <div class="modal-body">
+                          This task is marked as mandatory. Are you sure you want to skip it?
+                        </div>
+
+                        <!-- Skip Modal footer -->
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                          <%= button_to "Skip", task_path(@task.id), method: :patch, params: {skipped: true}, class: "btn btn-secondary" %>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
 
               <% else %>
-                <p> Please add a task or select a mood ~! </p>
+                <p> Please add a task and select a mood! </p>
               <% end %>
+
+
+
+
+
+
+
+
+
+
+
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </div>
+
+</div>
 </div>

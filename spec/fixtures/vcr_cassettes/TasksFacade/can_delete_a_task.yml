@@ -23,11 +23,11 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:24:25 GMT
+      - Sat, 14 Oct 2023 17:18:11 GMT
       Report-To:
-      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697300665&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=QGnFuc3oPjAS3e60Dn2lNTcpLGXtnhKrQf%2FTlzXEy3c%3D"}]}'
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697303892&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=hWE4D5eYOfLPGl%2BO0qqzEDKN1V2rucBYAK%2F1okuYg0Q%3D"}]}'
       Reporting-Endpoints:
-      - heroku-nel=https://nel.heroku.com/reports?ts=1697300665&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=QGnFuc3oPjAS3e60Dn2lNTcpLGXtnhKrQf%2FTlzXEy3c%3D
+      - heroku-nel=https://nel.heroku.com/reports?ts=1697303892&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=hWE4D5eYOfLPGl%2BO0qqzEDKN1V2rucBYAK%2F1okuYg0Q%3D
       Nel:
       - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
@@ -53,9 +53,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6e78b9a6-4978-4e98-80fd-90af478f9119
+      - bdbcc2b4-df2d-46a1-9860-fab7e47eed12
       X-Runtime:
-      - '0.009009'
+      - '0.008107'
       Transfer-Encoding:
       - chunked
       Via:
@@ -63,7 +63,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''Water Plants'' added!"}'
-  recorded_at: Sat, 14 Oct 2023 16:24:25 GMT
+  recorded_at: Sat, 14 Oct 2023 17:18:12 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/20/tasks
@@ -85,7 +85,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:24:25 GMT
+      - Sat, 14 Oct 2023 17:18:12 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -105,25 +105,25 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"c666c9b011287f69b6ee81e5bdbb292f"
+      - W/"374f93e5f9ec41d4d10711ee69c5ae30"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - aa5c891f-4e45-431f-9edf-5630b24d38f8
+      - cd5ba14f-edbf-49a0-9e82-07440f7c0446
       X-Runtime:
-      - '0.003797'
+      - '0.003289'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1971","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","user_id":20,"notes":"Remember
+      string: '{"data":[{"id":"9","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","user_id":20,"notes":"Remember
         plants in bedroom, living room, and balcony","skipped":false,"image_url":null}}]}'
-  recorded_at: Sat, 14 Oct 2023 16:24:25 GMT
+  recorded_at: Sat, 14 Oct 2023 17:18:12 GMT
 - request:
     method: get
-    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/20/tasks/1971
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/20/tasks/9
     body:
       encoding: US-ASCII
       string: ''
@@ -142,7 +142,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:24:25 GMT
+      - Sat, 14 Oct 2023 17:18:12 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -162,22 +162,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"4a6ed72317a1f2a5b500af5292f5ff37"
+      - W/"258c364500eab5b7f91327938be2db58"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 66ddd52f-c9ee-4f41-9099-3f0178e2524b
+      - fa9acdd5-aeb9-4114-8656-7fd106e0bbb2
       X-Runtime:
-      - '0.003572'
+      - '0.003036'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1971","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","user_id":20,"notes":"Remember
+      string: '{"data":{"id":"9","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","user_id":20,"notes":"Remember
         plants in bedroom, living room, and balcony","skipped":false,"image_url":null}}}'
-  recorded_at: Sat, 14 Oct 2023 16:24:26 GMT
+  recorded_at: Sat, 14 Oct 2023 17:18:13 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/20/tasks
@@ -199,7 +199,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:24:25 GMT
+      - Sat, 14 Oct 2023 17:18:12 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -219,25 +219,25 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"c666c9b011287f69b6ee81e5bdbb292f"
+      - W/"374f93e5f9ec41d4d10711ee69c5ae30"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b7c0957c-e20f-4cb6-9b5d-6e86b1b1d5b8
+      - 27bc345e-745f-411a-8cf5-f0f96f416a96
       X-Runtime:
-      - '0.003583'
+      - '0.004700'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1971","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","user_id":20,"notes":"Remember
+      string: '{"data":[{"id":"9","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","user_id":20,"notes":"Remember
         plants in bedroom, living room, and balcony","skipped":false,"image_url":null}}]}'
-  recorded_at: Sat, 14 Oct 2023 16:24:26 GMT
+  recorded_at: Sat, 14 Oct 2023 17:18:13 GMT
 - request:
     method: delete
-    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/20/tasks/1971
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/20/tasks/9
     body:
       encoding: US-ASCII
       string: ''
@@ -256,7 +256,13 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:24:25 GMT
+      - Sat, 14 Oct 2023 17:18:12 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697303893&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=Bag4oX29oajh9Gpp2QnvYAmXtonIDgnBlF%2FIZCzmWGU%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1697303893&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=Bag4oX29oajh9Gpp2QnvYAmXtonIDgnBlF%2FIZCzmWGU%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -280,9 +286,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 86719cbf-c849-45d5-87d7-1d17df23abf3
+      - 6cbac79d-fac4-4bb0-887c-4158908bd36f
       X-Runtime:
-      - '0.007187'
+      - '0.006718'
       Transfer-Encoding:
       - chunked
       Via:
@@ -290,7 +296,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''Water Plants'' deleted."}'
-  recorded_at: Sat, 14 Oct 2023 16:24:26 GMT
+  recorded_at: Sat, 14 Oct 2023 17:18:13 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/20/tasks
@@ -312,7 +318,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:24:25 GMT
+      - Sat, 14 Oct 2023 17:18:13 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -336,9 +342,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 060a233c-d178-447f-b758-4b5db891f1df
+      - 04f13ec6-1866-4712-941a-1f6e249186f5
       X-Runtime:
-      - '0.003606'
+      - '0.004044'
       Transfer-Encoding:
       - chunked
       Via:
@@ -346,7 +352,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Sat, 14 Oct 2023 16:24:26 GMT
+  recorded_at: Sat, 14 Oct 2023 17:18:13 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/20/tasks
@@ -368,11 +374,11 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:24:26 GMT
+      - Sat, 14 Oct 2023 17:18:13 GMT
       Report-To:
-      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697300666&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=YzA6LToEOsY2RZyb9Mf60QW%2FXg%2FR3FupKGATHbEL0qk%3D"}]}'
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697303893&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=Bag4oX29oajh9Gpp2QnvYAmXtonIDgnBlF%2FIZCzmWGU%3D"}]}'
       Reporting-Endpoints:
-      - heroku-nel=https://nel.heroku.com/reports?ts=1697300666&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=YzA6LToEOsY2RZyb9Mf60QW%2FXg%2FR3FupKGATHbEL0qk%3D
+      - heroku-nel=https://nel.heroku.com/reports?ts=1697303893&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=Bag4oX29oajh9Gpp2QnvYAmXtonIDgnBlF%2FIZCzmWGU%3D
       Nel:
       - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
@@ -398,9 +404,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d121b10a-f721-4153-a120-67cc89f8d1e5
+      - 46a561d0-f783-4447-8654-3d5ee1fc66f0
       X-Runtime:
-      - '0.004058'
+      - '0.003721'
       Transfer-Encoding:
       - chunked
       Via:
@@ -408,5 +414,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Sat, 14 Oct 2023 16:24:26 GMT
+  recorded_at: Sat, 14 Oct 2023 17:18:13 GMT
 recorded_with: VCR 6.2.0

@@ -23,11 +23,11 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:24:24 GMT
+      - Sat, 14 Oct 2023 17:18:11 GMT
       Report-To:
-      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697300664&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=RLokVFdQg6pmwKB4T4AvgBvWZU5bMq2vm2oMbmJLyyw%3D"}]}'
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697303891&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=NSoPlczqoQr3n%2FK3t%2FLPlPJg3itB3UhW138tQD4fpIc%3D"}]}'
       Reporting-Endpoints:
-      - heroku-nel=https://nel.heroku.com/reports?ts=1697300664&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=RLokVFdQg6pmwKB4T4AvgBvWZU5bMq2vm2oMbmJLyyw%3D
+      - heroku-nel=https://nel.heroku.com/reports?ts=1697303891&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=NSoPlczqoQr3n%2FK3t%2FLPlPJg3itB3UhW138tQD4fpIc%3D
       Nel:
       - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
@@ -53,9 +53,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 5ee4fd50-1def-4ccf-8999-d672c3dfa83d
+      - 40cf3908-b5a5-490a-a441-a20b454623ad
       X-Runtime:
-      - '0.009575'
+      - '0.007236'
       Transfer-Encoding:
       - chunked
       Via:
@@ -63,7 +63,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''Repot Plants'' added!"}'
-  recorded_at: Sat, 14 Oct 2023 16:24:24 GMT
+  recorded_at: Sat, 14 Oct 2023 17:18:11 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/20/tasks
@@ -85,11 +85,125 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:24:24 GMT
+      - Sat, 14 Oct 2023 17:18:11 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"3c31c59aaa662005fd032bdcdd6143fb"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 212c036e-5517-4acb-abb7-f16130101234
+      X-Runtime:
+      - '0.003946'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"8","type":"task","attributes":{"name":"Repot Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","user_id":20,"notes":"Remember
+        plants in bedroom, living room, and balcony","skipped":false,"image_url":null}}]}'
+  recorded_at: Sat, 14 Oct 2023 17:18:11 GMT
+- request:
+    method: get
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/20/tasks/8
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sat, 14 Oct 2023 17:18:11 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"42dd80ee9ced70a461a7781ff314d56d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a259126b-6042-41c2-a9eb-1b4cb954a6dc
+      X-Runtime:
+      - '0.003327'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"8","type":"task","attributes":{"name":"Repot Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","user_id":20,"notes":"Remember
+        plants in bedroom, living room, and balcony","skipped":false,"image_url":null}}}'
+  recorded_at: Sat, 14 Oct 2023 17:18:12 GMT
+- request:
+    method: get
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/20/tasks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sat, 14 Oct 2023 17:18:11 GMT
       Report-To:
-      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697300664&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=RLokVFdQg6pmwKB4T4AvgBvWZU5bMq2vm2oMbmJLyyw%3D"}]}'
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697303892&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=hWE4D5eYOfLPGl%2BO0qqzEDKN1V2rucBYAK%2F1okuYg0Q%3D"}]}'
       Reporting-Endpoints:
-      - heroku-nel=https://nel.heroku.com/reports?ts=1697300664&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=RLokVFdQg6pmwKB4T4AvgBvWZU5bMq2vm2oMbmJLyyw%3D
+      - heroku-nel=https://nel.heroku.com/reports?ts=1697303892&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=hWE4D5eYOfLPGl%2BO0qqzEDKN1V2rucBYAK%2F1okuYg0Q%3D
       Nel:
       - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
@@ -111,139 +225,25 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"aa5bee953b80115866504c69cf3f649e"
+      - W/"3c31c59aaa662005fd032bdcdd6143fb"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9541be68-5eb1-49be-962d-287e3004b098
+      - 3d954278-41ed-4bdc-a38b-dfeb742f1141
       X-Runtime:
-      - '0.004571'
+      - '0.004263'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1968","type":"task","attributes":{"name":"Repot Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","user_id":20,"notes":"Remember
+      string: '{"data":[{"id":"8","type":"task","attributes":{"name":"Repot Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","user_id":20,"notes":"Remember
         plants in bedroom, living room, and balcony","skipped":false,"image_url":null}}]}'
-  recorded_at: Sat, 14 Oct 2023 16:24:24 GMT
-- request:
-    method: get
-    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/20/tasks/1968
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Cowboy
-      Date:
-      - Sat, 14 Oct 2023 16:24:24 GMT
-      Connection:
-      - keep-alive
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"42a92d708f62faf8c77876489d777b07"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 75980ecf-474e-4540-a399-573008bc1e24
-      X-Runtime:
-      - '0.004227'
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"1968","type":"task","attributes":{"name":"Repot Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","user_id":20,"notes":"Remember
-        plants in bedroom, living room, and balcony","skipped":false,"image_url":null}}}'
-  recorded_at: Sat, 14 Oct 2023 16:24:24 GMT
-- request:
-    method: get
-    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/20/tasks
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Cowboy
-      Date:
-      - Sat, 14 Oct 2023 16:24:24 GMT
-      Connection:
-      - keep-alive
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"aa5bee953b80115866504c69cf3f649e"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 0c1a444e-89e0-4ef0-b22d-c11ade842141
-      X-Runtime:
-      - '0.004742'
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: '{"data":[{"id":"1968","type":"task","attributes":{"name":"Repot Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","user_id":20,"notes":"Remember
-        plants in bedroom, living room, and balcony","skipped":false,"image_url":null}}]}'
-  recorded_at: Sat, 14 Oct 2023 16:24:25 GMT
+  recorded_at: Sat, 14 Oct 2023 17:18:12 GMT
 - request:
     method: delete
-    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/20/tasks/1968
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/20/tasks/8
     body:
       encoding: US-ASCII
       string: ''
@@ -262,7 +262,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:24:24 GMT
+      - Sat, 14 Oct 2023 17:18:12 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -286,9 +286,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d00d763a-294c-4e8a-81c7-c7773ce54f9a
+      - 2081b524-4412-41ef-93f1-9f5215ae22d7
       X-Runtime:
-      - '0.007963'
+      - '0.007349'
       Transfer-Encoding:
       - chunked
       Via:
@@ -296,5 +296,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''Repot Plants'' deleted."}'
-  recorded_at: Sat, 14 Oct 2023 16:24:25 GMT
+  recorded_at: Sat, 14 Oct 2023 17:18:12 GMT
 recorded_with: VCR 6.2.0

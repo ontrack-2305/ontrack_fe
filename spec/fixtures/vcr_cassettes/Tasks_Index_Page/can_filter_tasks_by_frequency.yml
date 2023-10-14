@@ -21,11 +21,11 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:25:30 GMT
+      - Sat, 14 Oct 2023 17:19:40 GMT
       Report-To:
-      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697300730&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=POBEl0RrO25uPGLS0mZew1fHMhTsFkWuo3TCu5WINmA%3D"}]}'
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697303981&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=uZ%2B4%2BV%2B%2BfiTeOlClvf%2FpnYyVVrXNtT1zW2AmJt4UunI%3D"}]}'
       Reporting-Endpoints:
-      - heroku-nel=https://nel.heroku.com/reports?ts=1697300730&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=POBEl0RrO25uPGLS0mZew1fHMhTsFkWuo3TCu5WINmA%3D
+      - heroku-nel=https://nel.heroku.com/reports?ts=1697303981&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=uZ%2B4%2BV%2B%2BfiTeOlClvf%2FpnYyVVrXNtT1zW2AmJt4UunI%3D
       Nel:
       - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
@@ -51,9 +51,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6e4e7ba2-b8c6-4546-8f58-8727258551d3
+      - 5d1f4bda-4e2d-401f-9d39-f5e9f1ee50ed
       X-Runtime:
-      - '0.021938'
+      - '0.024284'
       Transfer-Encoding:
       - chunked
       Via:
@@ -63,7 +63,7 @@ http_interactions:
       string: '{"data":[{"type":"holiday","attributes":{"name":"Veterans Day","date":"2023-11-10"}},{"type":"holiday","attributes":{"name":"Thanksgiving
         Day","date":"2023-11-23"}},{"type":"holiday","attributes":{"name":"Christmas
         Day","date":"2023-12-25"}}]}'
-  recorded_at: Sat, 14 Oct 2023 16:25:30 GMT
+  recorded_at: Sat, 14 Oct 2023 17:19:41 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/daily_tasks/?mood
@@ -85,7 +85,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:25:30 GMT
+      - Sat, 14 Oct 2023 17:19:41 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -109,9 +109,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 388e3988-5e92-4aaa-8b58-10c9f4673ede
+      - 8a955cc3-98cb-416e-8273-0c086728ec3b
       X-Runtime:
-      - '0.008517'
+      - '0.008930'
       Transfer-Encoding:
       - chunked
       Via:
@@ -119,7 +119,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Sat, 14 Oct 2023 16:25:30 GMT
+  recorded_at: Sat, 14 Oct 2023 17:19:41 GMT
 - request:
     method: post
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Water%20Plants&notes=Remember%20plants%20in%20bedroom,%20living%20room,%20and%20balcony
@@ -143,7 +143,13 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:25:30 GMT
+      - Sat, 14 Oct 2023 17:19:41 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697303981&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=uZ%2B4%2BV%2B%2BfiTeOlClvf%2FpnYyVVrXNtT1zW2AmJt4UunI%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1697303981&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=uZ%2B4%2BV%2B%2BfiTeOlClvf%2FpnYyVVrXNtT1zW2AmJt4UunI%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -167,9 +173,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 076cc95c-e6d2-4714-987c-e14a7882503d
+      - 79b2b65f-7d56-4c8d-b049-63cc676eb994
       X-Runtime:
-      - '0.008880'
+      - '0.009707'
       Transfer-Encoding:
       - chunked
       Via:
@@ -177,7 +183,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''Water Plants'' added!"}'
-  recorded_at: Sat, 14 Oct 2023 16:25:30 GMT
+  recorded_at: Sat, 14 Oct 2023 17:19:42 GMT
 - request:
     method: post
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks?category=chore&event_date=&frequency=weekly&mandatory=1&name=Clean%20fish%20tank&notes=Vacuum%20the%20gravel,%20wipe%20algae%20off%20plants
@@ -201,13 +207,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:25:30 GMT
-      Report-To:
-      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697300730&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=POBEl0RrO25uPGLS0mZew1fHMhTsFkWuo3TCu5WINmA%3D"}]}'
-      Reporting-Endpoints:
-      - heroku-nel=https://nel.heroku.com/reports?ts=1697300730&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=POBEl0RrO25uPGLS0mZew1fHMhTsFkWuo3TCu5WINmA%3D
-      Nel:
-      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      - Sat, 14 Oct 2023 17:19:41 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -231,9 +231,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a89914c9-e10a-475e-acf1-1c775e09c951
+      - 7807801f-9b4e-4107-b04d-ebab29221264
       X-Runtime:
-      - '0.008964'
+      - '0.010215'
       Transfer-Encoding:
       - chunked
       Via:
@@ -241,7 +241,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''Clean fish tank'' added!"}'
-  recorded_at: Sat, 14 Oct 2023 16:25:30 GMT
+  recorded_at: Sat, 14 Oct 2023 17:19:42 GMT
 - request:
     method: post
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks?category=rest&event_date=&frequency=monthly&mandatory=0&name=Take%20nice%20bath&notes=Remember%20the%20fancy%20bathbombs%20under%20the%20cupboard,%20get%20a%20milkshake%20and%20light%20a%20candle
@@ -265,7 +265,13 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:25:30 GMT
+      - Sat, 14 Oct 2023 17:19:41 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697303982&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=a39fMwCYeCywjrC%2BXq5sGS1V8AluQ%2BPv%2FCm5gfQ%2BSWo%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1697303982&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=a39fMwCYeCywjrC%2BXq5sGS1V8AluQ%2BPv%2FCm5gfQ%2BSWo%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -289,9 +295,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4e7121f1-6abd-44d7-a17c-0297a0c97bea
+      - 6e34b350-72c2-4142-8720-fd5ee3d12571
       X-Runtime:
-      - '0.008156'
+      - '0.008558'
       Transfer-Encoding:
       - chunked
       Via:
@@ -299,7 +305,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''Take nice bath'' added!"}'
-  recorded_at: Sat, 14 Oct 2023 16:25:31 GMT
+  recorded_at: Sat, 14 Oct 2023 17:19:42 GMT
 - request:
     method: post
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks?category=rest&event_date=&frequency=daily&mandatory=0&name=Meditate&notes=
@@ -323,7 +329,13 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:25:30 GMT
+      - Sat, 14 Oct 2023 17:19:42 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697303982&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=a39fMwCYeCywjrC%2BXq5sGS1V8AluQ%2BPv%2FCm5gfQ%2BSWo%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1697303982&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=a39fMwCYeCywjrC%2BXq5sGS1V8AluQ%2BPv%2FCm5gfQ%2BSWo%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -347,9 +359,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - cf63f8fd-dc7a-4304-a815-10e9f5c0041c
+      - 25fbb39b-b5e0-4c74-8b06-fc6d1e79d625
       X-Runtime:
-      - '0.008582'
+      - '0.008355'
       Transfer-Encoding:
       - chunked
       Via:
@@ -357,7 +369,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''Meditate'' added!"}'
-  recorded_at: Sat, 14 Oct 2023 16:25:31 GMT
+  recorded_at: Sat, 14 Oct 2023 17:19:42 GMT
 - request:
     method: post
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks?category=hobby&event_date=&frequency=daily&mandatory=0&name=Practice%20guitar&notes=Do%20scale%20exercises,%20work%20through%20the%20books%20I%20bought
@@ -381,7 +393,13 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:25:30 GMT
+      - Sat, 14 Oct 2023 17:19:42 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697303982&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=a39fMwCYeCywjrC%2BXq5sGS1V8AluQ%2BPv%2FCm5gfQ%2BSWo%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1697303982&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=a39fMwCYeCywjrC%2BXq5sGS1V8AluQ%2BPv%2FCm5gfQ%2BSWo%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -405,9 +423,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c9733674-32c4-41ad-8266-8e86e483ee15
+      - 596d27c5-dfd1-42a6-a0c4-480d3a095386
       X-Runtime:
-      - '0.009456'
+      - '0.008438'
       Transfer-Encoding:
       - chunked
       Via:
@@ -415,7 +433,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''Practice guitar'' added!"}'
-  recorded_at: Sat, 14 Oct 2023 16:25:31 GMT
+  recorded_at: Sat, 14 Oct 2023 17:19:42 GMT
 - request:
     method: post
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks?category=hobby&event_date=&frequency=daily&mandatory=0&name=Practice%20drawing&notes=Do%20some%20studies%20on%20hands%20and%20gestures
@@ -439,13 +457,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:25:31 GMT
-      Report-To:
-      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697300731&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=h82K0eyWzSr2ruJirgM1DuHY0NL2jgo2nO5f6WMIXrM%3D"}]}'
-      Reporting-Endpoints:
-      - heroku-nel=https://nel.heroku.com/reports?ts=1697300731&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=h82K0eyWzSr2ruJirgM1DuHY0NL2jgo2nO5f6WMIXrM%3D
-      Nel:
-      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      - Sat, 14 Oct 2023 17:19:42 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -469,9 +481,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - cf2d5855-9f1c-484c-9751-7c21f250749a
+      - e42d206e-9108-4e5f-a147-fa4420059248
       X-Runtime:
-      - '0.008614'
+      - '0.008280'
       Transfer-Encoding:
       - chunked
       Via:
@@ -479,7 +491,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''Practice drawing'' added!"}'
-  recorded_at: Sat, 14 Oct 2023 16:25:31 GMT
+  recorded_at: Sat, 14 Oct 2023 17:19:43 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks
@@ -501,11 +513,11 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:25:31 GMT
+      - Sat, 14 Oct 2023 17:19:42 GMT
       Report-To:
-      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697300732&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=CXxMesALcbPjl1xIXsHhvmyuHZR%2FowmQIYaonnwdLVo%3D"}]}'
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697303983&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=rQB3gsLLG5FwgJCW%2FKKcrWK8i%2BjzRDahawkJKjYedGg%3D"}]}'
       Reporting-Endpoints:
-      - heroku-nel=https://nel.heroku.com/reports?ts=1697300732&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=CXxMesALcbPjl1xIXsHhvmyuHZR%2FowmQIYaonnwdLVo%3D
+      - heroku-nel=https://nel.heroku.com/reports?ts=1697303983&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=rQB3gsLLG5FwgJCW%2FKKcrWK8i%2BjzRDahawkJKjYedGg%3D
       Nel:
       - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
@@ -527,30 +539,30 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"d0865bed9b450d1fc5dd18538eed0e0c"
+      - W/"fb8fbf05a00dedf11568df6f16ed19c9"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 92a8727e-6206-4258-b4ac-e72b6a55a168
+      - e10d9ae8-1eb4-41a1-b54f-bd4bc30d5d0e
       X-Runtime:
-      - '0.005073'
+      - '0.004014'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"2078","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","user_id":123,"notes":"Remember
-        plants in bedroom, living room, and balcony","skipped":false,"image_url":null}},{"id":"2079","type":"task","attributes":{"name":"Clean
+      string: '{"data":[{"id":"65","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","user_id":123,"notes":"Remember
+        plants in bedroom, living room, and balcony","skipped":false,"image_url":null}},{"id":"66","type":"task","attributes":{"name":"Clean
         fish tank","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","user_id":123,"notes":"Vacuum
-        the gravel, wipe algae off plants","skipped":false,"image_url":null}},{"id":"2080","type":"task","attributes":{"name":"Take
+        the gravel, wipe algae off plants","skipped":false,"image_url":null}},{"id":"67","type":"task","attributes":{"name":"Take
         nice bath","category":"rest","mandatory":false,"event_date":"","frequency":"monthly","user_id":123,"notes":"Remember
-        the fancy bathbombs under the cupboard, get a milkshake and light a candle","skipped":false,"image_url":null}},{"id":"2081","type":"task","attributes":{"name":"Meditate","category":"rest","mandatory":false,"event_date":"","frequency":"daily","user_id":123,"notes":"","skipped":false,"image_url":null}},{"id":"2082","type":"task","attributes":{"name":"Practice
+        the fancy bathbombs under the cupboard, get a milkshake and light a candle","skipped":false,"image_url":null}},{"id":"68","type":"task","attributes":{"name":"Meditate","category":"rest","mandatory":false,"event_date":"","frequency":"daily","user_id":123,"notes":"","skipped":false,"image_url":null}},{"id":"69","type":"task","attributes":{"name":"Practice
         guitar","category":"hobby","mandatory":false,"event_date":"","frequency":"daily","user_id":123,"notes":"Do
-        scale exercises, work through the books I bought","skipped":false,"image_url":null}},{"id":"2083","type":"task","attributes":{"name":"Practice
+        scale exercises, work through the books I bought","skipped":false,"image_url":null}},{"id":"70","type":"task","attributes":{"name":"Practice
         drawing","category":"hobby","mandatory":false,"event_date":"","frequency":"daily","user_id":123,"notes":"Do
         some studies on hands and gestures","skipped":false,"image_url":null}}]}'
-  recorded_at: Sat, 14 Oct 2023 16:25:32 GMT
+  recorded_at: Sat, 14 Oct 2023 17:19:43 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks
@@ -572,13 +584,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:25:31 GMT
-      Report-To:
-      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697300732&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=CXxMesALcbPjl1xIXsHhvmyuHZR%2FowmQIYaonnwdLVo%3D"}]}'
-      Reporting-Endpoints:
-      - heroku-nel=https://nel.heroku.com/reports?ts=1697300732&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=CXxMesALcbPjl1xIXsHhvmyuHZR%2FowmQIYaonnwdLVo%3D
-      Nel:
-      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      - Sat, 14 Oct 2023 17:19:43 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -598,30 +604,30 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"d0865bed9b450d1fc5dd18538eed0e0c"
+      - W/"fb8fbf05a00dedf11568df6f16ed19c9"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9e6252b0-2184-4b2a-83de-edbb525158ce
+      - d27b916b-65da-41d0-8f5e-43204aeffeaf
       X-Runtime:
-      - '0.004490'
+      - '0.004184'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"2078","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","user_id":123,"notes":"Remember
-        plants in bedroom, living room, and balcony","skipped":false,"image_url":null}},{"id":"2079","type":"task","attributes":{"name":"Clean
+      string: '{"data":[{"id":"65","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","user_id":123,"notes":"Remember
+        plants in bedroom, living room, and balcony","skipped":false,"image_url":null}},{"id":"66","type":"task","attributes":{"name":"Clean
         fish tank","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","user_id":123,"notes":"Vacuum
-        the gravel, wipe algae off plants","skipped":false,"image_url":null}},{"id":"2080","type":"task","attributes":{"name":"Take
+        the gravel, wipe algae off plants","skipped":false,"image_url":null}},{"id":"67","type":"task","attributes":{"name":"Take
         nice bath","category":"rest","mandatory":false,"event_date":"","frequency":"monthly","user_id":123,"notes":"Remember
-        the fancy bathbombs under the cupboard, get a milkshake and light a candle","skipped":false,"image_url":null}},{"id":"2081","type":"task","attributes":{"name":"Meditate","category":"rest","mandatory":false,"event_date":"","frequency":"daily","user_id":123,"notes":"","skipped":false,"image_url":null}},{"id":"2082","type":"task","attributes":{"name":"Practice
+        the fancy bathbombs under the cupboard, get a milkshake and light a candle","skipped":false,"image_url":null}},{"id":"68","type":"task","attributes":{"name":"Meditate","category":"rest","mandatory":false,"event_date":"","frequency":"daily","user_id":123,"notes":"","skipped":false,"image_url":null}},{"id":"69","type":"task","attributes":{"name":"Practice
         guitar","category":"hobby","mandatory":false,"event_date":"","frequency":"daily","user_id":123,"notes":"Do
-        scale exercises, work through the books I bought","skipped":false,"image_url":null}},{"id":"2083","type":"task","attributes":{"name":"Practice
+        scale exercises, work through the books I bought","skipped":false,"image_url":null}},{"id":"70","type":"task","attributes":{"name":"Practice
         drawing","category":"hobby","mandatory":false,"event_date":"","frequency":"daily","user_id":123,"notes":"Do
         some studies on hands and gestures","skipped":false,"image_url":null}}]}'
-  recorded_at: Sat, 14 Oct 2023 16:25:32 GMT
+  recorded_at: Sat, 14 Oct 2023 17:19:43 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks?search_params%5Bfrequency%5D=daily
@@ -643,71 +649,11 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:25:31 GMT
-      Connection:
-      - keep-alive
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"4d5a83d3b232f009d3c55fbc93b6bed4"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 32622fd9-013b-4802-b11a-812867a576b2
-      X-Runtime:
-      - '0.004597'
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: '{"data":[{"id":"2081","type":"task","attributes":{"name":"Meditate","category":"rest","mandatory":false,"event_date":"","frequency":"daily","user_id":123,"notes":"","skipped":false,"image_url":null}},{"id":"2082","type":"task","attributes":{"name":"Practice
-        guitar","category":"hobby","mandatory":false,"event_date":"","frequency":"daily","user_id":123,"notes":"Do
-        scale exercises, work through the books I bought","skipped":false,"image_url":null}},{"id":"2083","type":"task","attributes":{"name":"Practice
-        drawing","category":"hobby","mandatory":false,"event_date":"","frequency":"daily","user_id":123,"notes":"Do
-        some studies on hands and gestures","skipped":false,"image_url":null}}]}'
-  recorded_at: Sat, 14 Oct 2023 16:25:32 GMT
-- request:
-    method: get
-    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Cowboy
-      Date:
-      - Sat, 14 Oct 2023 16:25:32 GMT
+      - Sat, 14 Oct 2023 17:19:43 GMT
       Report-To:
-      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697300732&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=CXxMesALcbPjl1xIXsHhvmyuHZR%2FowmQIYaonnwdLVo%3D"}]}'
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697303983&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=rQB3gsLLG5FwgJCW%2FKKcrWK8i%2BjzRDahawkJKjYedGg%3D"}]}'
       Reporting-Endpoints:
-      - heroku-nel=https://nel.heroku.com/reports?ts=1697300732&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=CXxMesALcbPjl1xIXsHhvmyuHZR%2FowmQIYaonnwdLVo%3D
+      - heroku-nel=https://nel.heroku.com/reports?ts=1697303983&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=rQB3gsLLG5FwgJCW%2FKKcrWK8i%2BjzRDahawkJKjYedGg%3D
       Nel:
       - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
@@ -729,33 +675,28 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"d0865bed9b450d1fc5dd18538eed0e0c"
+      - W/"52cacc32a38a94894a659d298762e76a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 30048ced-042f-4c79-87e4-28d3b3371e41
+      - dd8072ae-53fe-4644-b9e0-837d92f753d3
       X-Runtime:
-      - '0.003747'
+      - '0.004668'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"2078","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","user_id":123,"notes":"Remember
-        plants in bedroom, living room, and balcony","skipped":false,"image_url":null}},{"id":"2079","type":"task","attributes":{"name":"Clean
-        fish tank","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","user_id":123,"notes":"Vacuum
-        the gravel, wipe algae off plants","skipped":false,"image_url":null}},{"id":"2080","type":"task","attributes":{"name":"Take
-        nice bath","category":"rest","mandatory":false,"event_date":"","frequency":"monthly","user_id":123,"notes":"Remember
-        the fancy bathbombs under the cupboard, get a milkshake and light a candle","skipped":false,"image_url":null}},{"id":"2081","type":"task","attributes":{"name":"Meditate","category":"rest","mandatory":false,"event_date":"","frequency":"daily","user_id":123,"notes":"","skipped":false,"image_url":null}},{"id":"2082","type":"task","attributes":{"name":"Practice
+      string: '{"data":[{"id":"68","type":"task","attributes":{"name":"Meditate","category":"rest","mandatory":false,"event_date":"","frequency":"daily","user_id":123,"notes":"","skipped":false,"image_url":null}},{"id":"69","type":"task","attributes":{"name":"Practice
         guitar","category":"hobby","mandatory":false,"event_date":"","frequency":"daily","user_id":123,"notes":"Do
-        scale exercises, work through the books I bought","skipped":false,"image_url":null}},{"id":"2083","type":"task","attributes":{"name":"Practice
+        scale exercises, work through the books I bought","skipped":false,"image_url":null}},{"id":"70","type":"task","attributes":{"name":"Practice
         drawing","category":"hobby","mandatory":false,"event_date":"","frequency":"daily","user_id":123,"notes":"Do
         some studies on hands and gestures","skipped":false,"image_url":null}}]}'
-  recorded_at: Sat, 14 Oct 2023 16:25:32 GMT
+  recorded_at: Sat, 14 Oct 2023 17:19:43 GMT
 - request:
-    method: delete
-    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks/2078
+    method: get
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks
     body:
       encoding: US-ASCII
       string: ''
@@ -774,11 +715,76 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:25:32 GMT
+      - Sat, 14 Oct 2023 17:19:43 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"fb8fbf05a00dedf11568df6f16ed19c9"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1483812a-5b69-4c6e-9366-9956ccdfa8c7
+      X-Runtime:
+      - '0.005145'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"65","type":"task","attributes":{"name":"Water Plants","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","user_id":123,"notes":"Remember
+        plants in bedroom, living room, and balcony","skipped":false,"image_url":null}},{"id":"66","type":"task","attributes":{"name":"Clean
+        fish tank","category":"chore","mandatory":true,"event_date":"","frequency":"weekly","user_id":123,"notes":"Vacuum
+        the gravel, wipe algae off plants","skipped":false,"image_url":null}},{"id":"67","type":"task","attributes":{"name":"Take
+        nice bath","category":"rest","mandatory":false,"event_date":"","frequency":"monthly","user_id":123,"notes":"Remember
+        the fancy bathbombs under the cupboard, get a milkshake and light a candle","skipped":false,"image_url":null}},{"id":"68","type":"task","attributes":{"name":"Meditate","category":"rest","mandatory":false,"event_date":"","frequency":"daily","user_id":123,"notes":"","skipped":false,"image_url":null}},{"id":"69","type":"task","attributes":{"name":"Practice
+        guitar","category":"hobby","mandatory":false,"event_date":"","frequency":"daily","user_id":123,"notes":"Do
+        scale exercises, work through the books I bought","skipped":false,"image_url":null}},{"id":"70","type":"task","attributes":{"name":"Practice
+        drawing","category":"hobby","mandatory":false,"event_date":"","frequency":"daily","user_id":123,"notes":"Do
+        some studies on hands and gestures","skipped":false,"image_url":null}}]}'
+  recorded_at: Sat, 14 Oct 2023 17:19:44 GMT
+- request:
+    method: delete
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks/65
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sat, 14 Oct 2023 17:19:43 GMT
       Report-To:
-      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697300732&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=CXxMesALcbPjl1xIXsHhvmyuHZR%2FowmQIYaonnwdLVo%3D"}]}'
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697303984&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=Z%2Fy110JlbUQ5T6hSm84L%2F6oO4uwcFzd5o5rhifwKoJ0%3D"}]}'
       Reporting-Endpoints:
-      - heroku-nel=https://nel.heroku.com/reports?ts=1697300732&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=CXxMesALcbPjl1xIXsHhvmyuHZR%2FowmQIYaonnwdLVo%3D
+      - heroku-nel=https://nel.heroku.com/reports?ts=1697303984&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=Z%2Fy110JlbUQ5T6hSm84L%2F6oO4uwcFzd5o5rhifwKoJ0%3D
       Nel:
       - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
@@ -804,9 +810,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 04231bda-1e3c-4f1c-8101-493b2e2acbc2
+      - 543e1e89-7002-4e57-9e19-7f8c336dd05b
       X-Runtime:
-      - '0.006988'
+      - '0.007868'
       Transfer-Encoding:
       - chunked
       Via:
@@ -814,10 +820,10 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''Water Plants'' deleted."}'
-  recorded_at: Sat, 14 Oct 2023 16:25:32 GMT
+  recorded_at: Sat, 14 Oct 2023 17:19:44 GMT
 - request:
     method: delete
-    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks/2079
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks/66
     body:
       encoding: US-ASCII
       string: ''
@@ -836,7 +842,13 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:25:32 GMT
+      - Sat, 14 Oct 2023 17:19:44 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697303984&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=Z%2Fy110JlbUQ5T6hSm84L%2F6oO4uwcFzd5o5rhifwKoJ0%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1697303984&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=Z%2Fy110JlbUQ5T6hSm84L%2F6oO4uwcFzd5o5rhifwKoJ0%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -860,9 +872,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7ccf1a1e-051e-450b-a3e3-07c61d8a62ae
+      - b0328b62-f67f-41e8-8a63-ba9d6d121d8a
       X-Runtime:
-      - '0.006376'
+      - '0.007302'
       Transfer-Encoding:
       - chunked
       Via:
@@ -870,10 +882,10 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''Clean fish tank'' deleted."}'
-  recorded_at: Sat, 14 Oct 2023 16:25:33 GMT
+  recorded_at: Sat, 14 Oct 2023 17:19:44 GMT
 - request:
     method: delete
-    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks/2080
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks/67
     body:
       encoding: US-ASCII
       string: ''
@@ -892,11 +904,11 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:25:32 GMT
+      - Sat, 14 Oct 2023 17:19:43 GMT
       Report-To:
-      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697300733&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=y4Z2k4LTue9VGCiOMxJZfAJon%2FFOXpIneN9gTm7nQYQ%3D"}]}'
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697303984&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=Z%2Fy110JlbUQ5T6hSm84L%2F6oO4uwcFzd5o5rhifwKoJ0%3D"}]}'
       Reporting-Endpoints:
-      - heroku-nel=https://nel.heroku.com/reports?ts=1697300733&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=y4Z2k4LTue9VGCiOMxJZfAJon%2FFOXpIneN9gTm7nQYQ%3D
+      - heroku-nel=https://nel.heroku.com/reports?ts=1697303984&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=Z%2Fy110JlbUQ5T6hSm84L%2F6oO4uwcFzd5o5rhifwKoJ0%3D
       Nel:
       - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
@@ -922,9 +934,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 547e7c71-d97d-4b2b-882b-e307d16e9f8d
+      - 9ee2a30e-aef5-4ace-b465-8c40abe3f9ef
       X-Runtime:
-      - '0.006295'
+      - '0.006892'
       Transfer-Encoding:
       - chunked
       Via:
@@ -932,10 +944,10 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''Take nice bath'' deleted."}'
-  recorded_at: Sat, 14 Oct 2023 16:25:33 GMT
+  recorded_at: Sat, 14 Oct 2023 17:19:44 GMT
 - request:
     method: delete
-    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks/2081
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks/68
     body:
       encoding: US-ASCII
       string: ''
@@ -954,7 +966,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:25:33 GMT
+      - Sat, 14 Oct 2023 17:19:44 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -978,9 +990,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1106c2f2-9806-4932-a959-88a305f4f18c
+      - 812e109c-c245-427d-8635-495d5ddfec1c
       X-Runtime:
-      - '0.006247'
+      - '0.006980'
       Transfer-Encoding:
       - chunked
       Via:
@@ -988,10 +1000,10 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''Meditate'' deleted."}'
-  recorded_at: Sat, 14 Oct 2023 16:25:33 GMT
+  recorded_at: Sat, 14 Oct 2023 17:19:44 GMT
 - request:
     method: delete
-    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks/2082
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks/69
     body:
       encoding: US-ASCII
       string: ''
@@ -1010,13 +1022,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:25:33 GMT
-      Report-To:
-      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697300733&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=y4Z2k4LTue9VGCiOMxJZfAJon%2FFOXpIneN9gTm7nQYQ%3D"}]}'
-      Reporting-Endpoints:
-      - heroku-nel=https://nel.heroku.com/reports?ts=1697300733&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=y4Z2k4LTue9VGCiOMxJZfAJon%2FFOXpIneN9gTm7nQYQ%3D
-      Nel:
-      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      - Sat, 14 Oct 2023 17:19:44 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -1040,9 +1046,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 341449b8-1791-4f82-ad19-3e0c03a91245
+      - 71eca56f-7b11-418f-bfe1-d6847bbbaaee
       X-Runtime:
-      - '0.006243'
+      - '0.007129'
       Transfer-Encoding:
       - chunked
       Via:
@@ -1050,10 +1056,10 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''Practice guitar'' deleted."}'
-  recorded_at: Sat, 14 Oct 2023 16:25:33 GMT
+  recorded_at: Sat, 14 Oct 2023 17:19:45 GMT
 - request:
     method: delete
-    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks/2083
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks/70
     body:
       encoding: US-ASCII
       string: ''
@@ -1072,7 +1078,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 16:25:33 GMT
+      - Sat, 14 Oct 2023 17:19:44 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -1096,9 +1102,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - bc2cecbe-d6a1-4d3e-91d7-16ccc6777ff7
+      - 0c824c48-8ee4-4f0e-9531-40b2b5000923
       X-Runtime:
-      - '0.007395'
+      - '0.006751'
       Transfer-Encoding:
       - chunked
       Via:
@@ -1106,5 +1112,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"message":"''Practice drawing'' deleted."}'
-  recorded_at: Sat, 14 Oct 2023 16:25:33 GMT
+  recorded_at: Sat, 14 Oct 2023 17:19:45 GMT
 recorded_with: VCR 6.2.0
