@@ -21,11 +21,11 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 17:19:04 GMT
+      - Sat, 14 Oct 2023 20:17:47 GMT
       Report-To:
-      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697303944&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=yNUbMFDEl1a%2FJ4zmo%2BBPbTzWdPU9GWU36bIDdJglz0o%3D"}]}'
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697314667&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=UhcaLs1Le7eQpW5iXBWyr9Y1h03C1sLJjAC1KKn2x9E%3D"}]}'
       Reporting-Endpoints:
-      - heroku-nel=https://nel.heroku.com/reports?ts=1697303944&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=yNUbMFDEl1a%2FJ4zmo%2BBPbTzWdPU9GWU36bIDdJglz0o%3D
+      - heroku-nel=https://nel.heroku.com/reports?ts=1697314667&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=UhcaLs1Le7eQpW5iXBWyr9Y1h03C1sLJjAC1KKn2x9E%3D
       Nel:
       - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
@@ -51,9 +51,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 477aae68-59cb-4bc3-93b0-d7ee95d8da4e
+      - f4f6c146-ae72-4dbe-8a9b-ccf8e3f8ec11
       X-Runtime:
-      - '0.026721'
+      - '0.126996'
       Transfer-Encoding:
       - chunked
       Via:
@@ -63,7 +63,7 @@ http_interactions:
       string: '{"data":[{"type":"holiday","attributes":{"name":"Veterans Day","date":"2023-11-10"}},{"type":"holiday","attributes":{"name":"Thanksgiving
         Day","date":"2023-11-23"}},{"type":"holiday","attributes":{"name":"Christmas
         Day","date":"2023-12-25"}}]}'
-  recorded_at: Sat, 14 Oct 2023 17:19:04 GMT
+  recorded_at: Sat, 14 Oct 2023 20:17:47 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/daily_tasks/?mood
@@ -85,7 +85,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 17:19:04 GMT
+      - Sat, 14 Oct 2023 20:17:47 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -109,9 +109,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d5fea450-2629-40aa-902d-8ddb25b27e9b
+      - cf80ed53-78b7-4d52-8354-fd30c3936844
       X-Runtime:
-      - '0.009310'
+      - '0.044762'
       Transfer-Encoding:
       - chunked
       Via:
@@ -119,50 +119,10 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Sat, 14 Oct 2023 17:19:04 GMT
+  recorded_at: Sat, 14 Oct 2023 20:17:47 GMT
 - request:
     method: get
     uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/chat_service?task=water%20plants
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 503
-      message: Service Unavailable
-    headers:
-      Connection:
-      - keep-alive
-      Server:
-      - Cowboy
-      Date:
-      - Sat, 14 Oct 2023 17:19:34 GMT
-      Content-Length:
-      - '506'
-      Content-Type:
-      - text/html; charset=utf-8
-      Cache-Control:
-      - no-cache, no-store
-    body:
-      encoding: UTF-8
-      string: "<!DOCTYPE html>\n\t<html>\n\t  <head>\n\t\t<meta name=\"viewport\"
-        content=\"width=device-width, initial-scale=1\">\n\t\t<meta charset=\"utf-8\">\n\t\t<title>Application
-        Error</title>\n\t\t<style media=\"screen\">\n\t\t  html,body,iframe {\n\t\t\tmargin:
-        0;\n\t\t\tpadding: 0;\n\t\t  }\n\t\t  html,body {\n\t\t\theight: 100%;\n\t\t\toverflow:
-        hidden;\n\t\t  }\n\t\t  iframe {\n\t\t\twidth: 100%;\n\t\t\theight: 100%;\n\t\t\tborder:
-        0;\n\t\t  }\n\t\t</style>\n\t  </head>\n\t  <body>\n\t\t<iframe src=\"//www.herokucdn.com/error-pages/application-error.html\"></iframe>\n\t
-        \ </body>\n\t</html>"
-  recorded_at: Sat, 14 Oct 2023 17:19:35 GMT
-- request:
-    method: get
-    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks
     body:
       encoding: US-ASCII
       string: ''
@@ -181,11 +141,11 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 14 Oct 2023 17:19:35 GMT
+      - Sat, 14 Oct 2023 20:17:58 GMT
       Report-To:
-      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697303975&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=hSEKFpxATCcbogPhpQI1QegaBRTk86UAfyt798xGLU8%3D"}]}'
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1697314668&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=bbUVE1a1xCoauDS%2Bpnx%2FJWso8HW5RXE0fWKJrXRlunc%3D"}]}'
       Reporting-Endpoints:
-      - heroku-nel=https://nel.heroku.com/reports?ts=1697303975&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=hSEKFpxATCcbogPhpQI1QegaBRTk86UAfyt798xGLU8%3D
+      - heroku-nel=https://nel.heroku.com/reports?ts=1697314668&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=bbUVE1a1xCoauDS%2Bpnx%2FJWso8HW5RXE0fWKJrXRlunc%3D
       Nel:
       - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
@@ -207,13 +167,72 @@ http_interactions:
       Vary:
       - Accept
       Etag:
+      - W/"9b841a248e3b9bebe6f28f206e07a98f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 809e5592-c435-49f3-b338-e36e876a324c
+      X-Runtime:
+      - '10.942825'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"response":[{"text":"1. Gather necessary tools and supplies. 2. Position
+        the plants for easy access. 3. Water the plants thoroughly, making sure to
+        moisten the soil evenly. 4. Allow excess water to drain. 5. Clean up any spills
+        and return tools to their proper place."}]}'
+  recorded_at: Sat, 14 Oct 2023 20:17:59 GMT
+- request:
+    method: get
+    uri: https://ontrack-be-a58c9e421d34.herokuapp.com/api/v1/users/123/tasks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sat, 14 Oct 2023 20:17:58 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
       - W/"8fe32e407a1038ee38753b70e5374b3a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 26b9bb99-759d-4386-a9ce-6caa402a4569
+      - 51880018-561f-4da5-aead-f1ee013aeee3
       X-Runtime:
-      - '0.003809'
+      - '0.005249'
       Transfer-Encoding:
       - chunked
       Via:
@@ -221,5 +240,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Sat, 14 Oct 2023 17:19:35 GMT
+  recorded_at: Sat, 14 Oct 2023 20:17:59 GMT
 recorded_with: VCR 6.2.0
