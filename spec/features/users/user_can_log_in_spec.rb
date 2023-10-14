@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "Logging in" do
   describe "Happy Path" do
     it "logs in a user", :vcr do
-      user1 = User.create!(email: "Jbob@somewhere.com", password: 'password123', password_confirmation: 'password123')
+      user1 = User.create!(email: "Jbob@somewhere.com", password: 'password123', password_confirmation: 'password123', id: "123")
 
       visit root_path
       fill_in :email, with: 'Jbob@somewhere.com'
@@ -17,7 +17,7 @@ RSpec.describe "Logging in" do
 
   describe "Sad Path" do
     it "does not log in a user if password is incorrect", :vcr do
-      user1 = User.create!(email: "Jbob@somewhere.com", password: 'password123', password_confirmation: 'password123')
+      user1 = User.create!(email: "Jbob@somewhere.com", password: 'password123', password_confirmation: 'password123', id: "123")
       
       visit root_path
       fill_in :email, with: 'Jbob@somewhere.com'
@@ -29,7 +29,7 @@ RSpec.describe "Logging in" do
     end
     
     it "does not log in a user if email is incorrect", :vcr do
-      user1 = User.create!(email: "Jbob@somewhere.com", password: 'password123', password_confirmation: 'password123')
+      user1 = User.create!(email: "Jbob@somewhere.com", password: 'password123', password_confirmation: 'password123', id: "123")
 
       visit root_path
       fill_in :email, with: 'blahblah@coolplace.com'
@@ -41,7 +41,7 @@ RSpec.describe "Logging in" do
     end
 
     it "does not log in without a password", :vcr do
-      user1 = User.create!(email: "Jbob@somewhere.com", password: 'password123', password_confirmation: 'password123')
+      user1 = User.create!(email: "Jbob@somewhere.com", password: 'password123', password_confirmation: 'password123', id: "123")
 
       visit root_path
       fill_in :email, with: 'Jbob@somewhere.com'
