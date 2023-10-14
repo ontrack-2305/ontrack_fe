@@ -19,12 +19,9 @@ Table of contents:
 
 
 ## Landing Page (Login)
-This page appears for users who are not logged in. Users see a button to log in with google.
+This page appears for users who are not logged in. Users see a button to log in with Google, a button to create an account, and a small form to log in with their existing credentials.
 
 All other pages are only accessible to users who are logged in. Attempting to access them manually through the url or through the navigation buttons will redirect user back to the Login Page with the flash message: “Please Log In”
-
-Log in uses Google OAuth (insert more details here)
-
 
 ## User Dashboard
 This is the homepage for logged in users. 
