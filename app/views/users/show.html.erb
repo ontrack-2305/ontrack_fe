@@ -30,16 +30,50 @@
   </div>
 
   <div class="container-fluid mt-3">
-    <button class="btn icon-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#holidays_and_events">
+    <button class="btn icon-btn" type="button" title="Upcoming Events" data-bs-toggle="offcanvas" data-bs-target="#holidays_and_events">
       <% if dark_mode_enabled? %>
         <%= image_tag("calendar_dark.png", class: "img-fluid custom-icons") %>
       <% else %>
         <%= image_tag("calendar_light.png", class: "img-fluid custom-icons") %>
       <% end %>
     </button>
+
+
+<!-- Button to Open the EncouragementBot Modal -->
+                  <button type="button" class="btn icon-btn" title="Encouragement Bot" data-bs-toggle="modal" data-bs-target="#encouragementModal">
+<% if dark_mode_enabled? %>
+      <%= image_tag("chat_dark.png", class: "img-fluid custom-icons mt-1") %>
+    <% else %>
+      <%= image_tag("chat_light.png", class: "img-fluid custom-icons mt-1") %>
+    <% end %>
+</button>
   </div>
 </div>
 
+<!-- The EncouragementBot Modal -->
+                  <div class="modal fade" id="encouragementModal">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+
+                        <!-- EncouragementBot Modal Header -->
+                        <div class="modal-header">
+                          <h4 class="modal-title">Encouragement Bot</h4>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <!-- EncouragementBot Modal body -->
+                        <div class="modal-body">
+                          Here is an encouraging message! The bot script will go here!
+                        </div>
+
+                        <!-- EncouragementBot Modal footer -->
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">I got this.</button>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
 
 <div class="row">
 
