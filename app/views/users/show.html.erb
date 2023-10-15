@@ -30,16 +30,87 @@
   </div>
 
   <div class="container-fluid mt-3">
-    <button class="btn icon-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#holidays_and_events">
+    <button class="btn icon-btn" type="button" title="Upcoming Events" data-bs-toggle="offcanvas" data-bs-target="#holidays_and_events">
       <% if dark_mode_enabled? %>
         <%= image_tag("calendar_dark.png", class: "img-fluid custom-icons") %>
       <% else %>
         <%= image_tag("calendar_light.png", class: "img-fluid custom-icons") %>
       <% end %>
     </button>
+
+
+<!-- Button to Open the EncouragementBot Modal -->
+                  <button type="button" class="btn icon-btn" title="Encouragement Bot" data-bs-toggle="modal" data-bs-target="#encouragementModal">
+<% if dark_mode_enabled? %>
+      <%= image_tag("chat_dark.png", class: "img-fluid custom-icons mt-1") %>
+    <% else %>
+      <%= image_tag("chat_light.png", class: "img-fluid custom-icons mt-1") %>
+    <% end %>
+</button>
   </div>
 </div>
 
+<!-- The EncouragementBot Modal -->
+                  <div class="modal fade" id="encouragementModal">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+
+                        <!-- EncouragementBot Modal Header -->
+                        <div class="modal-header">
+                          <h4 class="modal-title">Encouragement Bot</h4>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <!-- EncouragementBot Modal body -->
+                        <div id="chat-box" class="modal-body">
+                          
+                        </div>
+
+                        <!-- EncouragementBot Modal footer -->
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">I got this.</button>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+
+<script>
+  const cable = ActionCable.createConsumer('https://ontrack-be-a58c9e421d34.herokuapp.com/cable');
+
+  // Set up the subscription
+  const chat = cable.subscriptions.create("ChatChannel", {
+    connected: function() {
+      console.log("Connected to ChatChannel!");
+      
+      // When connected, request to start the loop
+      this.start();
+    },
+    disconnected: function() {
+      console.log("Disconnected from ChatChannel.");
+    },
+    received: function(data) {
+      const chatBox = document.querySelector('#chat-box');
+      if (data) {
+        
+        // Create a new paragraph element for each message and append it to the chat box
+        const messageElement = document.createElement('p');
+        messageElement.textContent = data;
+        chatBox.appendChild(messageElement);
+      }
+    },
+    start: function() {
+      // Send a request to the server to start the loop
+      this.perform('start');
+    },
+    notification: function(content) {
+      // Handle notification data when received from the server
+      console.log(`Received notification: ${content}`);
+      // You can update the UI or perform any other actions here
+    }
+  });
+</script>
 
 <div class="row">
 
