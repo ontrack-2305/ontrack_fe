@@ -25,7 +25,7 @@
 </div>
 
 <script>
-  const cable = ActionCable.createConsumer('ws://localhost:3000/cable');
+  const cable = ActionCable.createConsumer('https://ontrack-be-a58c9e421d34.herokuapp.com/cable');
 
   // Set up the subscription
   const chat = cable.subscriptions.create("ChatChannel", {

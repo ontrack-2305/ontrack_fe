@@ -59,6 +59,6 @@ class DatabaseService
   end
 
   def connection
-    Faraday.new("http://localhost:3000/")
+    Faraday.new("https://ontrack-be-a58c9e421d34.herokuapp.com/")
   end
 end
