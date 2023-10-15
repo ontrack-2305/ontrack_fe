@@ -62,8 +62,8 @@
                         </div>
 
                         <!-- EncouragementBot Modal body -->
-                        <div class="modal-body">
-                          Here is an encouraging message! The bot script will go here!
+                        <div id="chat-box" class="modal-body">
+                          
                         </div>
 
                         <!-- EncouragementBot Modal footer -->
@@ -74,31 +74,7 @@
                       </div>
                     </div>
                   </div>
-<style>
-  #chat-box {
-    border: 1px solid #ccc;
-    height: 100px;
-    width: 80%;
-    margin: 20px auto;
-    padding: 15px;
-    overflow-y: auto;
-    background-color: #f9f9f9;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-  }
 
-  .message {
-    padding: 5px 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    background-color: #e1f5fe;
-    border: 1px solid #b3e5fc;
-  }
-</style>
-
-<div id="chat-box">
-  <!-- Messages will be displayed here -->
-</div>
 
 <script>
   const cable = ActionCable.createConsumer('https://ontrack-be-a58c9e421d34.herokuapp.com/cable');
