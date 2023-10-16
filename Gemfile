@@ -60,7 +60,7 @@ gem "omniauth-rails_csrf_protection"
 gem "faraday"
 
 # Action cable / web socket setup
-gem "webpacker"
+gem 'webpacker', '~> 5.4', '>= 5.4.4'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
