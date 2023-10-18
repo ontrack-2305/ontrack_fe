@@ -77,7 +77,7 @@
 
 
 <script>
-  const cable = ActionCable.createConsumer('https://ontrack-be-a58c9e421d34.herokuapp.com/cable');
+  const cable = ActionCable.createConsumer('ws://localhost:3000/cable');
 
   // Set up the subscription
   const chat = cable.subscriptions.create("ChatChannel", {
@@ -85,7 +85,6 @@
       console.log("Connected to ChatChannel!");
       
       // When connected, request to start the loop
-      this.start();
     },
     disconnected: function() {
       console.log("Disconnected from ChatChannel.");
@@ -99,10 +98,6 @@
         messageElement.textContent = data;
         chatBox.appendChild(messageElement);
       }
-    },
-    start: function() {
-      // Send a request to the server to start the loop
-      this.perform('start');
     },
     notification: function(content) {
       // Handle notification data when received from the server
