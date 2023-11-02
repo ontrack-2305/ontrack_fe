@@ -85,7 +85,6 @@
       console.log("Connected to ChatChannel!");
       
       // When connected, request to start the loop
-      this.start();
     },
     disconnected: function() {
       console.log("Disconnected from ChatChannel.");
@@ -99,10 +98,6 @@
         messageElement.textContent = data;
         chatBox.appendChild(messageElement);
       }
-    },
-    start: function() {
-      // Send a request to the server to start the loop
-      this.perform('start');
     },
     notification: function(content) {
       // Handle notification data when received from the server
