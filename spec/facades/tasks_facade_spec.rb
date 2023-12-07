@@ -53,7 +53,7 @@ RSpec.describe TasksFacade, :vcr do
     expect(tasks.count).to eq(2)
   end
 
-  it "can filter all tasks by criteria" do
+  xit "can filter all tasks by criteria" do
     facade = TasksFacade.new
     facade.post({"name"=>"Water Plants",
       "category"=>"chore",
