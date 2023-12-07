@@ -241,4 +241,257 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":[]}'
   recorded_at: Sat, 14 Oct 2023 20:17:59 GMT
+- request:
+    method: get
+    uri: https://ontrack-be-2305-d5321563a2d4.herokuapp.com/api/v1/holidays
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 07 Dec 2023 02:13:39 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1701915219&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=LxyL4k9u%2BLv1j0jAwa7D%2F%2B%2BZO1h%2FT6GLc6mMN%2FOVOYY%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1701915219&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=LxyL4k9u%2BLv1j0jAwa7D%2F%2B%2BZO1h%2FT6GLc6mMN%2FOVOYY%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"fb6c5120fa47890f7d06d8cc883e6b1f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9cb3cfc6-4149-41d0-b0d9-ef16dc799269
+      X-Runtime:
+      - '0.031268'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"type":"holiday","attributes":{"name":"Christmas Day","date":"2023-12-25"}},{"type":"holiday","attributes":{"name":"New
+        Year''s Day","date":"2024-01-01"}},{"type":"holiday","attributes":{"name":"Martin
+        Luther King, Jr. Day","date":"2024-01-15"}}]}'
+  recorded_at: Thu, 07 Dec 2023 02:13:39 GMT
+- request:
+    method: get
+    uri: https://ontrack-be-2305-d5321563a2d4.herokuapp.com/api/v1/users/123/daily_tasks/?mood
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 07 Dec 2023 02:13:40 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1701915220&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=%2Fwwy5J0o5lBtvhDfd9oV%2F8TG0HuiRB4qRRBYSFKum5s%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1701915220&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=%2Fwwy5J0o5lBtvhDfd9oV%2F8TG0HuiRB4qRRBYSFKum5s%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2175bf97-4dd0-4d27-9186-4092164e260e
+      X-Runtime:
+      - '0.006817'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Thu, 07 Dec 2023 02:13:40 GMT
+- request:
+    method: get
+    uri: https://ontrack-be-2305-d5321563a2d4.herokuapp.com/api/v1/chat_service?task=water%20plants
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 07 Dec 2023 02:13:43 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1701915220&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=%2Fwwy5J0o5lBtvhDfd9oV%2F8TG0HuiRB4qRRBYSFKum5s%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1701915220&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=%2Fwwy5J0o5lBtvhDfd9oV%2F8TG0HuiRB4qRRBYSFKum5s%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"6c8496a17fafa11e572aaba85bb91a0c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 110ef1a3-2a81-43bd-975b-134c4fbfcb3d
+      X-Runtime:
+      - '3.094252'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"response":[{"text":"1. Gather necessary tools: watering can, plants,
+        and water source. 2. Check each plant for signs of wilting or dry soil. 3.
+        Fill the watering can with water. 4. Water each plant thoroughly, making sure
+        soil is evenly moist. 5. Clean up any excess water and return tools."}]}'
+  recorded_at: Thu, 07 Dec 2023 02:13:43 GMT
+- request:
+    method: get
+    uri: https://ontrack-be-2305-d5321563a2d4.herokuapp.com/api/v1/users/123/tasks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 07 Dec 2023 02:13:43 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1701915224&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=ctzO7hDdPh1OYODJCyJb97Mw2Xgl6y%2B%2BJOi11KiGjsU%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1701915224&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=ctzO7hDdPh1OYODJCyJb97Mw2Xgl6y%2B%2BJOi11KiGjsU%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 034e4a50-7df3-47e3-94a2-71609eadd4f0
+      X-Runtime:
+      - '0.003195'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Thu, 07 Dec 2023 02:13:44 GMT
 recorded_with: VCR 6.2.0

@@ -907,4 +907,959 @@ http_interactions:
         macrame","category":"hobby","mandatory":false,"event_date":"","frequency":"once","user_id":123,"notes":"","skipped":false,"image_url":null}},{"id":"55","type":"task","attributes":{"name":"do
         the dishes","category":"chore","mandatory":false,"event_date":"","frequency":"daily","user_id":123,"notes":"","skipped":false,"image_url":null}}]}'
   recorded_at: Sat, 14 Oct 2023 17:18:54 GMT
+- request:
+    method: get
+    uri: https://ontrack-be-2305-d5321563a2d4.herokuapp.com/api/v1/users/123/tasks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 07 Dec 2023 02:07:45 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1701914865&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=L56b%2FuJXGgF7O3i6yqHU53zTo7hT4EF7sEEl%2BtkprFY%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1701914865&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=L56b%2FuJXGgF7O3i6yqHU53zTo7hT4EF7sEEl%2BtkprFY%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"601dd525feb1eb3280a7ac02fedf24c0"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6bc47f07-bb2c-4187-aa56-a0e089381616
+      X-Runtime:
+      - '0.003206'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"46","type":"task","attributes":{"name":"read a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","user_id":123,"notes":"smut","skipped":false,"image_url":null}},{"id":"47","type":"task","attributes":{"name":"go
+        on a walk","category":"rest","mandatory":false,"event_date":"","frequency":"daily","user_id":123,"notes":"","skipped":false,"image_url":null}},{"id":"49","type":"task","attributes":{"name":"do
+        the dishes","category":"chore","mandatory":false,"event_date":"","frequency":"daily","user_id":123,"notes":"","skipped":false,"image_url":null}},{"id":"44","type":"task","attributes":{"name":"Take
+        Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","user_id":123,"notes":"flintstone
+        gummies all dayeee","skipped":false,"image_url":null}},{"id":"45","type":"task","attributes":{"name":"crochet","category":"hobby","mandatory":false,"event_date":"","frequency":"weekly","user_id":123,"notes":"granny
+        squares","skipped":false,"image_url":null}}]}'
+  recorded_at: Thu, 07 Dec 2023 02:07:45 GMT
+- request:
+    method: delete
+    uri: https://ontrack-be-2305-d5321563a2d4.herokuapp.com/api/v1/users/123/tasks/46
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 07 Dec 2023 02:07:45 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1701914866&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=ylXEV6b0zUg3dwMCOyVV3h3mCiiJ7Uw6GZnPq%2Bg0dWE%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1701914866&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=ylXEV6b0zUg3dwMCOyVV3h3mCiiJ7Uw6GZnPq%2Bg0dWE%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"910c649a1baa747a7f1ddce8662a94be"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e066a68b-7104-4cf8-9285-be2df090723f
+      X-Runtime:
+      - '0.005279'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"message":"''read a book'' deleted."}'
+  recorded_at: Thu, 07 Dec 2023 02:07:46 GMT
+- request:
+    method: delete
+    uri: https://ontrack-be-2305-d5321563a2d4.herokuapp.com/api/v1/users/123/tasks/47
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 07 Dec 2023 02:07:46 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1701914866&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=ylXEV6b0zUg3dwMCOyVV3h3mCiiJ7Uw6GZnPq%2Bg0dWE%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1701914866&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=ylXEV6b0zUg3dwMCOyVV3h3mCiiJ7Uw6GZnPq%2Bg0dWE%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"615f665c4fbcc5cce0eda03b15cc9a31"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ded01dc8-673b-4913-b242-6c4f24871044
+      X-Runtime:
+      - '0.005397'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"message":"''go on a walk'' deleted."}'
+  recorded_at: Thu, 07 Dec 2023 02:07:46 GMT
+- request:
+    method: delete
+    uri: https://ontrack-be-2305-d5321563a2d4.herokuapp.com/api/v1/users/123/tasks/49
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 07 Dec 2023 02:07:46 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1701914866&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=ylXEV6b0zUg3dwMCOyVV3h3mCiiJ7Uw6GZnPq%2Bg0dWE%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1701914866&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=ylXEV6b0zUg3dwMCOyVV3h3mCiiJ7Uw6GZnPq%2Bg0dWE%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"7771ddc0649563e0bb44ef553d2dca2e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - fc494e6b-ad18-47e2-adef-1b59e2016661
+      X-Runtime:
+      - '0.005231'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"message":"''do the dishes'' deleted."}'
+  recorded_at: Thu, 07 Dec 2023 02:07:46 GMT
+- request:
+    method: delete
+    uri: https://ontrack-be-2305-d5321563a2d4.herokuapp.com/api/v1/users/123/tasks/44
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 07 Dec 2023 02:07:46 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1701914867&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=NnbNpi7lpe7cYhol3CTJr5PBb4E0UciUYcz7d3gZONs%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1701914867&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=NnbNpi7lpe7cYhol3CTJr5PBb4E0UciUYcz7d3gZONs%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"3c34faca09aa8671bd5933e01c04e61a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4d68ad3d-71ed-479e-a758-4fbbf1e55edd
+      X-Runtime:
+      - '0.005577'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"message":"''Take Vitamins'' deleted."}'
+  recorded_at: Thu, 07 Dec 2023 02:07:47 GMT
+- request:
+    method: delete
+    uri: https://ontrack-be-2305-d5321563a2d4.herokuapp.com/api/v1/users/123/tasks/45
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 07 Dec 2023 02:07:46 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1701914867&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=NnbNpi7lpe7cYhol3CTJr5PBb4E0UciUYcz7d3gZONs%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1701914867&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=NnbNpi7lpe7cYhol3CTJr5PBb4E0UciUYcz7d3gZONs%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"bfde28d1188d18646fe880f2c8d198e1"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 858aba51-2d78-469e-947e-265fa8f029ca
+      X-Runtime:
+      - '0.004958'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"message":"''crochet'' deleted."}'
+  recorded_at: Thu, 07 Dec 2023 02:07:47 GMT
+- request:
+    method: get
+    uri: https://ontrack-be-2305-d5321563a2d4.herokuapp.com/api/v1/holidays
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 07 Dec 2023 02:07:47 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1701914868&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=iWF59eONZSKVJpJ0mDYQs2TC18%2F%2FMp4DWufddZzjvSg%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1701914868&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=iWF59eONZSKVJpJ0mDYQs2TC18%2F%2FMp4DWufddZzjvSg%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"fb6c5120fa47890f7d06d8cc883e6b1f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4265feea-4efe-46f1-b13c-a5e8a611cd5c
+      X-Runtime:
+      - '0.026420'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"type":"holiday","attributes":{"name":"Christmas Day","date":"2023-12-25"}},{"type":"holiday","attributes":{"name":"New
+        Year''s Day","date":"2024-01-01"}},{"type":"holiday","attributes":{"name":"Martin
+        Luther King, Jr. Day","date":"2024-01-15"}}]}'
+  recorded_at: Thu, 07 Dec 2023 02:07:48 GMT
+- request:
+    method: get
+    uri: https://ontrack-be-2305-d5321563a2d4.herokuapp.com/api/v1/users/123/daily_tasks/?mood
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 07 Dec 2023 02:07:47 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1701914868&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=iWF59eONZSKVJpJ0mDYQs2TC18%2F%2FMp4DWufddZzjvSg%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1701914868&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=iWF59eONZSKVJpJ0mDYQs2TC18%2F%2FMp4DWufddZzjvSg%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - bd5ce433-67c0-4d41-8d05-28b415fcc7b8
+      X-Runtime:
+      - '0.006915'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Thu, 07 Dec 2023 02:07:48 GMT
+- request:
+    method: post
+    uri: https://ontrack-be-2305-d5321563a2d4.herokuapp.com/api/v1/users/123/tasks?category=chore&event_date=&frequency=daily&mandatory=1&name=Take%20Vitamins&notes=flintstone%20gummies%20all%20dayeee
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 07 Dec 2023 02:07:48 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1701914868&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=iWF59eONZSKVJpJ0mDYQs2TC18%2F%2FMp4DWufddZzjvSg%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1701914868&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=iWF59eONZSKVJpJ0mDYQs2TC18%2F%2FMp4DWufddZzjvSg%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"dc487b8089b13547f16357043cceb0a1"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ebbeef43-5b0e-4051-bf84-5d3f38a90e6e
+      X-Runtime:
+      - '0.006409'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"message":"''Take Vitamins'' added!"}'
+  recorded_at: Thu, 07 Dec 2023 02:07:48 GMT
+- request:
+    method: post
+    uri: https://ontrack-be-2305-d5321563a2d4.herokuapp.com/api/v1/users/123/tasks?category=hobby&event_date=&frequency=weekly&mandatory=0&name=crochet&notes=granny%20squares
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 07 Dec 2023 02:07:48 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1701914869&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=rVsc27UEc5Hzx61JMM0oFBjUE2Ud585YlrVRSsWmt28%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1701914869&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=rVsc27UEc5Hzx61JMM0oFBjUE2Ud585YlrVRSsWmt28%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"fc5d1ed9e72efb216a0560d213c4832e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 84a04fe0-526c-406f-af7f-17a894ebadd9
+      X-Runtime:
+      - '0.006436'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"message":"''crochet'' added!"}'
+  recorded_at: Thu, 07 Dec 2023 02:07:49 GMT
+- request:
+    method: post
+    uri: https://ontrack-be-2305-d5321563a2d4.herokuapp.com/api/v1/users/123/tasks?category=rest&event_date=&frequency=daily&mandatory=0&name=read%20a%20book&notes=smut
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 07 Dec 2023 02:07:49 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1701914869&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=rVsc27UEc5Hzx61JMM0oFBjUE2Ud585YlrVRSsWmt28%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1701914869&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=rVsc27UEc5Hzx61JMM0oFBjUE2Ud585YlrVRSsWmt28%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"ffd92c2936995dba96227e4d89905666"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 66528354-abd0-41b4-a233-aedd6f8df462
+      X-Runtime:
+      - '0.007135'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"message":"''read a book'' added!"}'
+  recorded_at: Thu, 07 Dec 2023 02:07:49 GMT
+- request:
+    method: post
+    uri: https://ontrack-be-2305-d5321563a2d4.herokuapp.com/api/v1/users/123/tasks?category=rest&event_date=&frequency=daily&mandatory=0&name=go%20on%20a%20walk&notes=
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 07 Dec 2023 02:07:49 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1701914870&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=c%2BPK7MLhvNhc9kXybgp0L0AGeFhT3O7Es4E8CrasOiQ%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1701914870&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=c%2BPK7MLhvNhc9kXybgp0L0AGeFhT3O7Es4E8CrasOiQ%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"2638df9cff5a8b50bedc0f0229219734"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 42b65895-3643-4a9c-9cee-62c99187a9c6
+      X-Runtime:
+      - '0.006936'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"message":"''go on a walk'' added!"}'
+  recorded_at: Thu, 07 Dec 2023 02:07:50 GMT
+- request:
+    method: post
+    uri: https://ontrack-be-2305-d5321563a2d4.herokuapp.com/api/v1/users/123/tasks?category=hobby&event_date=&frequency=once&mandatory=0&name=try%20macrame&notes=
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 07 Dec 2023 02:07:49 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1701914870&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=c%2BPK7MLhvNhc9kXybgp0L0AGeFhT3O7Es4E8CrasOiQ%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1701914870&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=c%2BPK7MLhvNhc9kXybgp0L0AGeFhT3O7Es4E8CrasOiQ%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"28259a5426752adbab80fe59c592a37f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8861c1fb-5b89-47b2-9d53-0f3ae3e7eb29
+      X-Runtime:
+      - '0.006909'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"message":"''try macrame'' added!"}'
+  recorded_at: Thu, 07 Dec 2023 02:07:50 GMT
+- request:
+    method: post
+    uri: https://ontrack-be-2305-d5321563a2d4.herokuapp.com/api/v1/users/123/tasks?category=chore&event_date=&frequency=daily&mandatory=0&name=do%20the%20dishes&notes=
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 07 Dec 2023 02:07:50 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1701914870&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=c%2BPK7MLhvNhc9kXybgp0L0AGeFhT3O7Es4E8CrasOiQ%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1701914870&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=c%2BPK7MLhvNhc9kXybgp0L0AGeFhT3O7Es4E8CrasOiQ%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"537dad09722064138afb1afff244bdad"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 83d11e47-518b-41e4-8420-7303707fb4a5
+      X-Runtime:
+      - '0.007085'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"message":"''do the dishes'' added!"}'
+  recorded_at: Thu, 07 Dec 2023 02:07:50 GMT
+- request:
+    method: get
+    uri: https://ontrack-be-2305-d5321563a2d4.herokuapp.com/api/v1/users/123/tasks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 07 Dec 2023 02:07:50 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1701914871&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=JElwV5yv4UIVMKQ4jUubGipx5nuh%2F0KQhSIOzDePcDk%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1701914871&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=JElwV5yv4UIVMKQ4jUubGipx5nuh%2F0KQhSIOzDePcDk%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"f5963c637c244218439de4dc0e988938"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9b6a7773-4253-4ac6-bcaf-02466081953b
+      X-Runtime:
+      - '0.003506'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"50","type":"task","attributes":{"name":"Take Vitamins","category":"chore","mandatory":true,"event_date":"","frequency":"daily","user_id":123,"notes":"flintstone
+        gummies all dayeee","skipped":false,"image_url":null}},{"id":"51","type":"task","attributes":{"name":"crochet","category":"hobby","mandatory":false,"event_date":"","frequency":"weekly","user_id":123,"notes":"granny
+        squares","skipped":false,"image_url":null}},{"id":"52","type":"task","attributes":{"name":"read
+        a book","category":"rest","mandatory":false,"event_date":"","frequency":"daily","user_id":123,"notes":"smut","skipped":false,"image_url":null}},{"id":"53","type":"task","attributes":{"name":"go
+        on a walk","category":"rest","mandatory":false,"event_date":"","frequency":"daily","user_id":123,"notes":"","skipped":false,"image_url":null}},{"id":"54","type":"task","attributes":{"name":"try
+        macrame","category":"hobby","mandatory":false,"event_date":"","frequency":"once","user_id":123,"notes":"","skipped":false,"image_url":null}},{"id":"55","type":"task","attributes":{"name":"do
+        the dishes","category":"chore","mandatory":false,"event_date":"","frequency":"daily","user_id":123,"notes":"","skipped":false,"image_url":null}}]}'
+  recorded_at: Thu, 07 Dec 2023 02:07:51 GMT
 recorded_with: VCR 6.2.0
