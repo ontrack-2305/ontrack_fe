@@ -126,4 +126,131 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":[]}'
   recorded_at: Sat, 14 Oct 2023 17:20:42 GMT
+- request:
+    method: get
+    uri: https://ontrack-be-2305-d5321563a2d4.herokuapp.com/api/v1/chat_service?task=water%20plants
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 07 Dec 2023 02:15:25 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1701915321&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=pao0XJII9ugcxgqHobBSD%2BQNJVWWqT1PB9lcZIFU2W0%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1701915321&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=pao0XJII9ugcxgqHobBSD%2BQNJVWWqT1PB9lcZIFU2W0%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"cb3e8d0b4813967c12cb5708d6ba78c8"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 419d19ad-9611-4599-ab3c-a620f7ee05d2
+      X-Runtime:
+      - '4.505105'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"response":[{"text":"1. Gather necessary materials (watering can,
+        hose, or bucket). 2. Identify plants that need watering. 3. Check soil moisture
+        level. 4. Water plants according to their specific needs (indoor vs outdoor,
+        type of plant). 5. Monitor plants for over or under watering."}]}'
+  recorded_at: Thu, 07 Dec 2023 02:15:25 GMT
+- request:
+    method: get
+    uri: https://ontrack-be-2305-d5321563a2d4.herokuapp.com/api/v1/users/24/tasks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 07 Dec 2023 02:15:25 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1701915326&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=Fj2W0k0XWSkiLTDm0WCPnActx17nJUmtSA%2FhX45wieQ%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1701915326&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=Fj2W0k0XWSkiLTDm0WCPnActx17nJUmtSA%2FhX45wieQ%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1fd41d93-da05-4490-8af9-6bcabcc21a7b
+      X-Runtime:
+      - '0.004150'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Thu, 07 Dec 2023 02:15:26 GMT
 recorded_with: VCR 6.2.0
